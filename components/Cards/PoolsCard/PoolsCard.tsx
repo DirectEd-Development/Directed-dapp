@@ -46,7 +46,7 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
           <div className="pt-5 text-gray-600 md:-ml-20 ml-10">
             <div className="flex md:flex-col flex-row items-center w-full">
               <div className="py-2 flex-auto">
-                <h1 className="font-semibold text-xl text-center">2/40</h1>
+                <h1 className="font-semibold text-xl text-center">0/40</h1>
                 <p className="text-center text-sm">Scholarships <br/> funded</p>
               </div>
               <div className="md:border-2 md:border-transparent md:border-t-white md:w-14 md:h-2 border-2 border-transparent border-l-white w-2 h-14"></div>
