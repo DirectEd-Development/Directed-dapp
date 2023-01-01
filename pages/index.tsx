@@ -230,14 +230,12 @@ const Home: NextPage = () => {
         </p>
 
         <div className="w-full h-40 relative">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.loom.com/share/ad317540b22b4722b71410f15fb84a14">
           <Image
             onClick={() => setModal("video")}
             src="/static/images/video.png" width="300"
             height="200"
             alt="image"
           />
-          </a>
         </div>
         <Button
           onCick={handleDonationModal}
@@ -259,7 +257,9 @@ const Home: NextPage = () => {
         onClose={() => setModal("how-to-donate")}
         className="h-64 relative rounded-3xl overflow-hidden  w-full p-5 md:w-2/5 flex flex-col justify-center items-center"
       >
+        <a target="_blank" rel="noopener noreferrer" href="https://www.loom.com/share/ad317540b22b4722b71410f15fb84a14">
         <Image src="/static/images/video.png" alt="image" width="300" height="200"/>
+        </a>
       </Modal>
     </>
   );
