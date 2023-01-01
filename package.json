@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.4",
+    "@martifylabs/mesh": "^1.2.0",
+    "@martifylabs/mesh-react": "^1.0.1-beta.2",
+    "cookies-next": "^2.1.1",
+    "daisyui": "^2.31.0",
+    "next": "^13.0.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.35",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.5",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.2",
+    "typescript": "4.7.2"
+  }
+}
