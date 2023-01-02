@@ -226,7 +226,7 @@ const Home: NextPage = () => {
         </p>
         <p className="text-sm">
           After selecting an option and pressing continue, you’ll be directed to the dedicated 
-          NMKR pay gateway for you to complete your donation!”
+          NMKR pay gateway for you to complete your donation!
         </p>
 
         <div className="w-full h-40 relative">
