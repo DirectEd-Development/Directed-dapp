@@ -228,6 +228,9 @@ const Home: NextPage = () => {
           After selecting an option and pressing continue, you’ll be directed to the dedicated 
           NMKR pay gateway for you to complete your donation!
         </p>
+        <p className="text-sm">
+         If you are not a crypto user and want to donate using credit card, here's a video guide that'll walk you through the process
+        </p>
 
         <div className="w-full h-40 relative">
           <Image
