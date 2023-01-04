@@ -30,13 +30,13 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
           
           <div className="md:hidden block flex-auto">
             <div className="flex flex-col mt-8 text-end pr-2 text-sm justify-between">
-              <div className="flex-auto mb-20">₳200</div>
+              <div className="flex-auto mb-20">₳3108</div>
               <div className="flex-auto">Goal: ₳40,000</div>
             </div>
           </div>
           <div className="md:hidden block flex-auto ">
             <div className="flex flex-col flex-nowrap justify-end w-5 h-32 mt-8 overflow-hidden bg-[#385140]">
-              <progress className="bg-black overflow-hidden" style={{height: '6%'}} ></progress>
+              <progress className="bg-black overflow-hidden" style={{height: '13%'}} ></progress>
             </div>
           </div>
           </div>
@@ -46,7 +46,7 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
           <div className="pt-5 text-gray-600 md:-ml-20 ml-10">
             <div className="flex md:flex-col flex-row items-center w-full">
               <div className="py-2 flex-auto">
-                <h1 className="font-semibold text-xl text-center">0/40</h1>
+                <h1 className="font-semibold text-xl text-center">3/40</h1>
                 <p className="text-center text-sm">Scholarships <br/> funded</p>
               </div>
               <div className="md:border-2 md:border-transparent md:border-t-white md:w-14 md:h-2 border-2 border-transparent border-l-white w-2 h-14"></div>
@@ -63,13 +63,13 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
             <div className="hidden text-primary text-base md:flex items-start justify-between">
               <span className="flex items-center space-x-2">
                 {/* <MdOutlineAccessTime /> <span>6 days left</span> */}
-                <span className="text-sm">₳200</span>
+                <span className="text-sm">₳3,108</span>
               </span>
               <span className="text-sm">Goal: $40,000</span>
             </div>
             <progress
               className="hidden md:block rounded-none progress-primary w-full bg-slate-300"
-              value="3"
+              value="13"
               max="100"
             ></progress>
             <h1 className="hidden md:block italic text-xs text-end text-gray-600">
