@@ -219,16 +219,16 @@ const Home: NextPage = () => {
         <h1 className="text-3xl font-bold text-dark2 text-center">
           How To Donate
         </h1>
-        <p className="text-sm">
+        <p className="text-sm text-center">
           To donate, navigate to the scholarship pool of your choice and press donate. 
           There’s no need to connect your wallet for now! After this step, you’ll see two 
           options: Warrior tier (40 ADA) and Hero tier (1000 ADA).
         </p>
-        <p className="text-sm">
+        <p className="text-sm text-center">
           After selecting an option and pressing continue, you’ll be directed to the dedicated 
           NMKR pay gateway for you to complete your donation!
         </p>
-        <p className="text-sm">
+        <p className="text-sm text-center">
          If you are not a crypto user and want to donate using credit card, here's a video guide that'll walk you through the process
         </p>
 
