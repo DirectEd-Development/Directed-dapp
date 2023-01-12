@@ -264,7 +264,9 @@ const Home: NextPage = () => {
         className="h-64 relative rounded-3xl overflow-hidden  w-full p-5 md:w-2/5 flex flex-col justify-center items-center"
       >
         <a target="_blank" rel="noopener noreferrer" href="https://www.loom.com/share/ad317540b22b4722b71410f15fb84a14">
-        <Image src="/static/images/video.png" alt="image" width="300" height="200"/>
+        <video autoPlay style={{ width: '300px', height: '200px' }}>
+          <source src="/static/videos/how-to-donate.mp4" />
+        </video>
         </a>
       </Modal>
     </>
