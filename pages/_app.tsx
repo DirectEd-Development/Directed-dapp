@@ -1,19 +1,21 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { Footer, Navbar } from "../components";
-import { WalletProvider } from '../contexts/wallet';
+import { Footer, Navbar, Hero } from "../components";
+import { MeshProvider } from "@meshsdk/react";
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <WalletProvider>
+    <MeshProvider>
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <Hero />
       <div className="flex-grow">
         <Component {...pageProps} />
       </div>
       <Footer />
     </div>
-    </WalletProvider>
+    </MeshProvider>
   );
 }
 
