@@ -1,8 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import Link from "next/link";
-import Image from "next/image"
-import FilterMenu from "../FilterMenu"
+import Image from "next/image";
+import FilterMenu from "../FilterMenu";
 
 const Hero: NextPage = () => {
 return (
