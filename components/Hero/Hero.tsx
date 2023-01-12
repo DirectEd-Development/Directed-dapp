@@ -84,11 +84,11 @@ return (
                             </div>
                             <span className="flex justify-center items-center font-semibold text-sm">Donors' Dinner</span>
                         </div>
-                        </div>
+                    </div>
                 </div>
                 <div className="flex-auto md:w-2/5 h-full">
                     <div className="flex justify-center items-center mt-2">
-                        <div className="relative box-border border border-[#999999] bg-white w-4/5 h-fit rounded-lg shadow">
+                        <div className="box-border border border-[#999999] bg-white w-4/5 h-fit rounded-lg shadow">
                             <p className="text-center font-semibold m-3 text-lg">Naming Rights</p>
                             <div className="flex">
                                 <div className="flex-auto w-2/6 h-full">
