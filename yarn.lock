@@ -238,7 +238,7 @@
     "nanoid" "3.3.4"
     "zod" "3.19.1"
 
-"@meshsdk/core@1.3.0":
+"@meshsdk/core@^1.3.0", "@meshsdk/core@1.3.0":
   "integrity" "sha512-aml0M515VfDgLIblpwy4oaGCReyx+R1gWKbm+i5fBe2cRC5fghCZj13kkJTO4FXmClX/2YvD6XhSJZ6iFvYtUQ=="
   "resolved" "https://registry.npmjs.org/@meshsdk/core/-/core-1.3.0.tgz"
   "version" "1.3.0"
