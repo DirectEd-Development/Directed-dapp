@@ -24,7 +24,7 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
               <li className="pb-2"><Image className="inline" src="/static/images/clock.png"   alt="Pool Image" width="10" height="10" /> 7 days left</li>
               <li className="pb-2"><Image className="inline" src="/static/images/Vector.png"   alt="Pool Image" width="10" height="10" /> 5 person(s) have donated</li>
               <li className="pb-2"><Image className="inline" src="/static/images/dollar.png"   alt="Pool Image" width="10" height="10" /> Each scholarship costs ₳1000</li>
-              <li className="pb-2"><Image className="inline" src="/static/images/nft.png"   alt="Pool Image" width="10" height="10" /> 20 Digital art pieces available</li>
+              <li className="pb-2"><Image className="inline" src="/static/images/nft.png"   alt="Pool Image" width="10" height="10" /> Remaining Heroes: 20</li>
             </ul>
           </div>
           

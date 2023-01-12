@@ -97,7 +97,7 @@ const Navbar = () => {
             </div>
           </ul>
 
-          <div className="bg-light text-primary hover:bg-light font-semibold hover:border-none">
+          <div className="bg-[#F3EEE2] text-primary hover:bg-[#F3EEE2] font-semibold hover:border-none">
             <CardanoWallet/>
           </div>
         </div>
