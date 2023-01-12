@@ -263,8 +263,8 @@ const Home: NextPage = () => {
         onClose={() => setModal("how-to-donate")}
         className="h-64 relative rounded-3xl overflow-hidden  w-full p-5 md:w-2/5 flex flex-col justify-center items-center"
       >
-        <a target="_blank" rel="noopener noreferrer" href="https://www.loom.com/share/ad317540b22b4722b71410f15fb84a14">
-          <video autoPlay style={{ width: '300px', height: '200px' }}>
+        <a target="_blank" rel="noopener noreferrer">
+          <video style={{ width: '300px', height: '200px' }}>
             <source src="/static/videos/how-to-donate.mp4" />
           </video>
         </a>
