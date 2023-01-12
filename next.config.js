@@ -4,7 +4,6 @@ module.exports = {
     config.experiments = {
       asyncWebAssembly: true,
       layers: true,
-      distDir: 'build',
     };
 
     if (!dev && isServer) {

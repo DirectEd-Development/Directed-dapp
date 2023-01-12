@@ -18,7 +18,11 @@ const NavLinks: LinksType[] = [
 ];
 
 const Navbar = () => {
-const [open, setOpen] = React.useState<boolean>(false);
+  const [open, setOpen] = React.useState<boolean>(false);
+  // const utxos = await wallet.getUtxos();
+  // const addresses = await wallet.getUsedAddresses();
+  // const signature = await wallet.signData(addresses[0], 'mesh');
+  // const signedTx = await wallet.signTx(tx, partialSign?);
 
 
   const router = useRouter();
