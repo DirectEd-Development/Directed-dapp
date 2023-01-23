@@ -63,7 +63,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
               <h5 className="text-center">Muruthi</h5>
                 <Link href={"./stories/Muruthi"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Ngwenyama</h5>
                 <Link href={"./stories/Ngwenyama"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Sahara</h5>
                 <Link href={"./stories/Sahara"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Saritavak</h5>
                 <Link href={"./stories/Saritavak"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Ligaro</h5>
                 <Link href={"./stories/Ligaro"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Locan</h5>
                 <Link href={"./stories/Locan"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Jumbo</h5>
                 <Link href={"./stories/Jumbo"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -210,7 +210,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Theolas</h5>
                 <Link href={"./stories/Theolas"} >
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Shishu</h5>
                 <Link href={"./stories/Shishu"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Mojang</h5>
                 <Link href={"./stories/Mojang"} >
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -273,7 +273,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Zimba</h5>
                 <Link href={"./stories/Zimba"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -294,7 +294,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Tanya</h5>
                 <Link href={"./stories/Tanya"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Ciara</h5>
                 <Link href={"./stories/Ciara"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -336,7 +336,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Atilla</h5>
                 <Link href={"./stories/Atilla"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -357,7 +357,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Nemea</h5>
                 <Link href={"./stories/Nemea"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -378,7 +378,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Kasandra</h5>
                 <Link href={"./stories/Kasandra"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -399,7 +399,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Tefra</h5>
                 <Link href={"./stories/Tefra"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -420,7 +420,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Kaleen</h5>
                 <Link href={"./stories/Kaleen"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -441,7 +441,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Kola</h5>
                 <Link href={"./stories/Kola"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
@@ -462,7 +462,7 @@ export default function Home() {
               <div className="flex flex-col -space-y-0.5">
                 <h5 className="text-center">Kazu</h5>
                 <Link href={"./stories/Kazu"}>
-                  <p className="text-orange-500 text-xs text-center">View Story</p>
+                  <p className="text-[#374756] text-xs text-center">View Story</p>
                 </Link>
               </div>
             </div>
