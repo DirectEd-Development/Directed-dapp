@@ -229,7 +229,7 @@ const Home: NextPage = () => {
           After selecting an option and pressing continue, you’ll be directed to the dedicated 
           NMKR pay gateway for you to complete your donation!
         </p>
-        <p className="text-3xl font-bold text-dark2 text-center">
+        <p className="text-dark2 text-center">
           I don’t know about crypto. Can I still donate?
         </p>
         <p className="text-sm text-center">

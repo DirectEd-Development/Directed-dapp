@@ -1,9 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { useWallet, useWalletList, useAssets, useLovelace } from '@meshsdk/react';
+
 
 
 export default function Home() {
+  const { connected, wallet, connect, disconnect } = useWallet();
+  const walletList = useWalletList()
+  const assets = useAssets()
+  const [hasPolicyIdAssets, setHasPolicyIdAssets] = useState(false);
+  const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] = useState(false);
+  const lovelace: any = useLovelace();
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const checkPolicyIdAssets = async () => {
+      const assets = await wallet.getPolicyIdAssets('c117f33edeee4b531dfdb85ead5753433c9dbd875629bc971013ffac');
+      setHasPolicyIdAssetsChecked(true)
+      // setHasPolicyIdAssets(true)
+
+      if (!assets.length) {
+        return disconnect()
+      }
+      setHasPolicyIdAssets(true)
+    }
+
+    if (connected) {
+      checkPolicyIdAssets()
+    }
+
+  }, [connected])
+
+
+  const handleDisconnect = () => {
+    disconnect()
+    setHasPolicyIdAssetsChecked(false)
+    setHasPolicyIdAssets(false)
+  }
   return (
     <>
       <Head>
