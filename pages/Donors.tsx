@@ -6,39 +6,35 @@ import { useWallet, useWalletList, useAssets, useLovelace } from '@meshsdk/react
 
 
 export default function Home() {
-  const { connected, wallet, connect, disconnect } = useWallet();
-  const walletList = useWalletList()
-  const assets = useAssets()
-  const [hasPolicyIdAssets, setHasPolicyIdAssets] = useState(false);
-  const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] = useState(false);
-  const lovelace: any = useLovelace();
-
-  const [isVisible, setIsVisible] = useState(false);
+  const { wallet, connected, name, connecting, connect, disconnect, error } = useWallet();
+  const assets = useAssets();
+  const [hasPolicyIdAssets, setHasPolicyIdAssets] = useState(true);
+  const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] = useState(true);
 
   useEffect(() => {
-    const checkPolicyIdAssets = async () => {
-      const assets = await wallet.getPolicyIdAssets('c117f33edeee4b531dfdb85ead5753433c9dbd875629bc971013ffac');
-      setHasPolicyIdAssetsChecked(true)
-      // setHasPolicyIdAssets(true)
-
-      if (!assets.length) {
-        return disconnect()
+    if({connected}){
+      const checkPolicyIdAssets = async () => {
+        const assets = await wallet.getPolicyIdAssets('c117f33edeee4b531dfdb85ead5753433c9dbd875629bc971013ffac');
+        setHasPolicyIdAssetsChecked(true)
+        // setHasPolicyIdAssets(true)
+  
+        if (!assets.length) {
+          return disconnect()
+        }
+        setHasPolicyIdAssets(true)
       }
-      setHasPolicyIdAssets(true)
+  
+      if (connected) {
+        checkPolicyIdAssets
+      }
     }
-
-    if (connected) {
-      checkPolicyIdAssets()
+    else {
+      alert("please connect a wallet")
     }
+    
 
-  }, [connected])
+  });
 
-
-  const handleDisconnect = () => {
-    disconnect()
-    setHasPolicyIdAssetsChecked(false)
-    setHasPolicyIdAssets(false)
-  }
   return (
     <>
       <Head>
