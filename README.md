@@ -41,4 +41,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 <p> To view the NFT based restriction content, the visitors have to log in to the dapp using The connect wallet button on the dapp.</p>
 
-<h1> Donors </h1>
+<h1> DirectEd NFT Gated Content </h1>
+
+<ol>
+  <li>Donors Portal</li>
+  <li>Teachers Portal</li>
+</ol>
