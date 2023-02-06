@@ -13,8 +13,6 @@
   <li>Teachers Portal</li>
 </ol>
 
-<ul>
-  <li>Donors Portal</li>
-</ul>
+<h4>Donors Portal</h4>
 
 <p>The DirectEd Donors portal is gated and can only be accessed by donors with DirectEd nft (or policyID)</p>
