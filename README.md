@@ -30,3 +30,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+<h1> NFT based gated content </h1>
+
+<p> Non-fungible tokens are unique tokens used to register an image, video, or any form of digital item on the blockchain and are stored in cryptocurrency wallets.</p>
+
+<p> In gated content, also referred to as NFT content gating or NFT based restriction, website owners can restrict access to the content on their website and limit it to specific visitors by hiding the data behind NFT restricted portals.</p>
+
+<p> To view the NFT based restriction content, the visitors have to log in to the dapp using The connect wallet button on the dapp.</p>
+
+<h1> Donors </h1>
