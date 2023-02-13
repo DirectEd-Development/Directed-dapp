@@ -10,3 +10,5 @@ export { default as Modal } from './Modal/Modal'
 export { default as Button } from './Button/Button'
 export { default as ConnectWallet } from './ConnectWallet/ConnectWallet'
 export { default as SchoolCard } from './SchoolCard/SchoolCard'
+
+export { default as DropDown } from './DropDown/DropDown'
