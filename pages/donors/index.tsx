@@ -1,63 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
-import {
-	useWallet,
-	useWalletList,
-	useAssets,
-	useLovelace,
-} from '@meshsdk/react'
-import { BrowserWallet } from '@meshsdk/core'
-import { AssetCard, ConnectWallet } from '../../components'
+import { useWallet, useLovelace, useAssets } from '@meshsdk/react'
+import { AssetCard, DropDown } from '../../components'
 import { GetStaticProps } from 'next'
 import { Assets } from '../../types/assets'
 
 const server = 'http://localhost:3000'
 
+type Asset = {
+	unit: string
+	policyId: string
+	assetName: string
+	fingerprint: string
+	quantity: string
+}
+
 export default function Home({ assetsData }: { assetsData: Assets[] }) {
-	console.log(assetsData)
-
-	const { wallet, connected, name, connecting, connect, disconnect, error } =
-		useWallet()
-	const assets = useAssets()
-
-	const [hasPolicyIdAssets, setHasPolicyIdAssets] = useState<boolean>(false)
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
 		useState<boolean>(false)
 
-	// const connectWallet = async () => {
-	// 	try {
-	// 		const wallet = await connect('eternl')
-	// 		return wallet
-	// 	} catch (error) {}
-	// }
+	const { connected, wallet } = useWallet()
 
-	// useEffect(() => {
-	// 	connectWallet()
-	// }, [])
+	const assets: any = useAssets()
+	const policyId = assets?.map((asset: any) => asset.policyId)
 
-	useEffect(() => {
-		console.log(assets)
+	const checkPolicyIdAssets = async (policyId: any) => {
+		const assets = await wallet.getPolicyIdAssets(`${policyId}`)
 
-		if (connected) {
-			const checkPolicyIdAssets = async () => {
-				const assets = await wallet.getPolicyIdAssets(
-					'c117f33edeee4b531dfdb85ead5753433c9dbd875629bc971013ffac'
-				)
-
-				setHasPolicyIdAssetsChecked(true)
-
-				if (!assets.length) {
-					return disconnect()
-				}
-				setHasPolicyIdAssets(true)
-			}
-
-			if (connected) {
-				checkPolicyIdAssets
-			}
+		if (assets.length <= 0) {
+			console.log('zero values')
+		} else {
+			setHasPolicyIdAssetsChecked(true)
 		}
-	}, [assets])
+	}
+
+	if (connected) {
+		checkPolicyIdAssets(policyId)
+	}
 
 	return (
 		<>
@@ -68,7 +47,15 @@ export default function Home({ assetsData }: { assetsData: Assets[] }) {
 
 			<main className='container py-8'>
 				<div className='flex items-center justify-between gap-2 flex-wrap'>
-					<AssetCard assets={assetsData} />
+					<DropDown />
+					{hasPolicyIdAssetsChecked ? (
+						<>
+							{' '}
+							<AssetCard assets={assetsData} />{' '}
+						</>
+					) : (
+						<h1>You need to make a donation to access this page</h1>
+					)}
 				</div>
 			</main>
 		</>

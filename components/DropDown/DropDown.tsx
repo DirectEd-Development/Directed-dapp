@@ -1,31 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { useWallet, useWalletList } from '@meshsdk/react'
 
-const wallets = [
-	{
-		name: 'Wallet 1',
-		icon: 'icon-1',
-		amount: '100 ADA',
-	},
-	{
-		name: 'Wallet 2',
-		icon: 'icon-2',
-		amount: '200 ADA',
-	},
-	{
-		name: 'Wallet 3',
-		icon: 'icon-3',
-		amount: '300 ADA',
-	},
-]
+interface Wallet {
+	name: string
+	icon: string
+}
 
-const ConnectWallet = () => {
+const DropDown = () => {
+	const { wallet, connect, disconnect, connecting } = useWallet()
+	const wallets = useWalletList()
+
 	const [isOpen, setIsOpen] = useState(false)
-	const [selectedWallet, setSelectedWallet] = useState<object | null>([])
+	const [selectedWallet, setSelectedWallet] = useState<Wallet | null>(null)
 
 	useEffect(() => {
 		const storedWallet = localStorage.getItem('selectedWallet')
 		if (storedWallet) {
 			setSelectedWallet(JSON.parse(storedWallet))
+			connect(JSON.parse(storedWallet).name)
 		}
 	}, [])
 
@@ -33,24 +25,26 @@ const ConnectWallet = () => {
 		setIsOpen(!isOpen)
 	}
 
-	const handleWalletSelection = (wallet: any) => {
+	const handleWalletSelection = (wallet: Wallet) => {
 		localStorage.setItem('selectedWallet', JSON.stringify(wallet))
 		setSelectedWallet(wallet)
+		connect(wallet.name)
 		setIsOpen(false)
 	}
 
 	const handleDisconnect = () => {
 		localStorage.removeItem('selectedWallet')
+		disconnect()
 		setSelectedWallet(null)
 	}
 
 	return (
-		<div className='dropdown-button'>
+		<div className='bg-green-600 p-8'>
 			<button
-				className='dropdown-button__button'
+				className='bg-red-500'
 				onClick={toggleDropdown}
 				onMouseEnter={toggleDropdown}
-				onMouseLeave={toggleDropdown}
+				// onMouseLeave={toggleDropdown}
 			>
 				{selectedWallet ? (
 					<>
@@ -58,24 +52,20 @@ const ConnectWallet = () => {
 						<span className='dropdown-button__wallet-name'>
 							{selectedWallet.name}
 						</span>
-						<span className='dropdown-button__wallet-amount'>
-							{selectedWallet.amount}
-						</span>
 					</>
+				) : connecting ? (
+					'Connecting'
 				) : (
 					'Connect'
 				)}
 			</button>
-			{isOpen && (
+			{isOpen && !connecting && (
 				<ul className='dropdown-button__dropdown'>
-					{wallets.map((wallet) => (
+					{wallets.map((wallet: Wallet) => (
 						<li key={wallet.name} onClick={() => handleWalletSelection(wallet)}>
 							<span className={`icon-${wallet.icon}`} />
 							<span className='dropdown-button__wallet-name'>
 								{wallet.name}
-							</span>
-							<span className='dropdown-button__wallet-amount'>
-								{wallet.amount}
 							</span>
 						</li>
 					))}
@@ -93,4 +83,4 @@ const ConnectWallet = () => {
 	)
 }
 
-export default ConnectWallet
+export default DropDown
