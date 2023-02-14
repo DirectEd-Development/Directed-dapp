@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { Button, Modal, PoolCard, FilterMenu } from '../components'
+import { Button, Modal, PoolCard, FilterMenu, Meta } from '../components'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
@@ -49,6 +49,7 @@ const Home: NextPage = () => {
 
 	return (
 		<>
+			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 			<main className='container grid grid-cols-1 gap-y-7 py-8  justify-items-center h-fit'>
 				<div className='grid grid-cols-1 gap-y-7 py-8  justify-items-center h-fit'>
 					<div className='md:col-span-2'>
