@@ -9,6 +9,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.4",
     "@martifylabs/mesh": "1.2.0-beta.4",
+    "@next/swc-darwin-x64": "^14.0.0",
     "@martifylabs/mesh-react": "^1.0.1-beta.2",
     "@meshsdk/core": "1.4.0",
     "@meshsdk/react": "^1.1.3",
