@@ -1,17 +1,14 @@
 import { NextPage } from 'next'
-import Head from 'next/head'
-import { SchoolCard } from '../../components'
+import { Meta, SchoolCard } from '../../components'
 
 const Progress: NextPage = () => {
 	return (
 		<>
-			<Head>
-				<title>{'Scholars’ Progress'}</title>
-			</Head>
+			<Meta title='Scholars’ Progress' description='Scholars progress page' />
 			<main className='container py-8'>
 				<div className='w-full'>
 					<h1 className='text-5xl text-black font-semibold text-center'>
-						{'Scholars’ Progress'}
+						Scholars’ Progress
 					</h1>
 					<h4 className='text-2xl text-black mt-8 mb-4'>
 						Progress Track for St. Peters High School

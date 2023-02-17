@@ -1,22 +1,20 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Footer, Navbar } from '../components'
+import { Layout } from '../components'
 import { MeshProvider } from '@meshsdk/react'
-import Head from 'next/head'
+import { DefaultSeo } from 'next-seo'
+import SEO from '../next-seo.config'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<MeshProvider>
-			<Head>
-				<title>Direct Ed - Scholarship Pools</title>
-				<link rel='shortcut icon' href='/favicon.png' type='image/x-icon' />
-			</Head>
+			<DefaultSeo {...SEO} />
 			<div className='min-h-screen flex flex-col'>
-				<Navbar />
-				<div className='flex-grow'>
-					<Component {...pageProps} />
-				</div>
-				<Footer />
+				<Layout>
+					<div className='flex-grow'>
+						<Component {...pageProps} />
+					</div>
+				</Layout>
 			</div>
 		</MeshProvider>
 	)

@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
-import Head from 'next/head'
-import { useWallet, useLovelace, useAssets } from '@meshsdk/react'
-import { AssetCard, DropDown } from '../../components'
+import { useState } from 'react'
+import { useWallet, useAssets } from '@meshsdk/react'
+import { AssetCard, Meta } from '../../components'
 import { GetStaticProps } from 'next'
 import { Assets } from '../../types/assets'
 
@@ -40,18 +39,15 @@ export default function Home({ assetsData }: { assetsData: Assets[] }) {
 
 	return (
 		<>
-			<Head>
-				<title>Donors' Portal</title>
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
-
+			<Meta
+				title="Donor's Portal"
+				description='Direced Ed donors portal page'
+			/>
 			<main className='container py-8'>
 				<div className='flex items-center justify-between gap-2 flex-wrap'>
-					<DropDown />
 					{hasPolicyIdAssetsChecked ? (
 						<>
-							{' '}
-							<AssetCard assets={assetsData} />{' '}
+							<AssetCard assets={assetsData} />
 						</>
 					) : (
 						<h1>You need to make a donation to access this page</h1>

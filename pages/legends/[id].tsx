@@ -2,6 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { data } from '../../data/assets'
 import Image from 'next/image'
+import { Meta } from '../../components'
 
 const Legend = () => {
 	const router = useRouter()
@@ -13,6 +14,7 @@ const Legend = () => {
 		<>
 			{singleAsset.map((asset) => (
 				<>
+					<Meta title={asset.name} description={asset.caption} />
 					<div
 						className='w-max h-32 md:h-48 mx-auto mt-12 mb-80'
 						key={asset.id}
