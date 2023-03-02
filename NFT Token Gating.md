@@ -45,6 +45,8 @@ each students progress, eligibility status of each student and tokens issued to 
 <h2> DirectEd Contribution Using NFT Gated pages to the Cardano Blockchain/Network</h2>
 <p>By creating Cardano NFT gated pages or contents using meshsdk/core, Next.js, the Cardano blockchain, and Cardano wallets has the potential to make several contributions to the Cardano blockchain ecosystem:</p>
 
+<p><b>Build on this code:</b> DirectEd codebase is available as an open source project and anyone out there can build on this technology, improve it or even update it, giving access to young developers and startups who want to do the gated pages a boiler plate or template to work with.</p> 
+
 <p><b>Increased Adoption:</b> By providing a way for artists, content creators, and developers to monetize their work and provide exclusive content, the creation of Cardano NFT gated pages or contents could attract more users to the Cardano blockchain. This could lead to increased adoption of Cardano as a platform for creating and exchanging digital assets.</p>
 
 <p><b>Increased Use Cases:</b> The creation of Cardano NFT gated pages or contents demonstrates the versatility of the Cardano blockchain and its ability to support a wide range of applications beyond just cryptocurrency. This could inspire developers to explore new use cases for the Cardano blockchain and contribute to its growth.</p>
@@ -53,4 +55,4 @@ each students progress, eligibility status of each student and tokens issued to 
 
 <p><b>Increased Innovation:</b> The use of meshsdk/core, Next.js, and other technologies to create Cardano NFT gated pages or contents could inspire developers to explore new and innovative ways to build decentralized applications on the Cardano blockchain. This could lead to the creation of new tools, libraries, and frameworks that could benefit the entire Cardano ecosystem.</p>
 
-<p>Overall, the creation of Cardano NFT gated pages or contents using meshsdk/core, Next.js, the Cardano blockchain, and Cardano wallets has the potential to contribute to the growth, adoption, security, and innovation of the Cardano blockchain ecosystem.</p>
+<p>In Summary, the creation of Cardano NFT gated pages or contents using meshsdk/core, Next.js, the Cardano blockchain, and Cardano wallets has the potential to contribute to the growth, adoption, security, and innovation of the Cardano blockchain ecosystem.</p>
