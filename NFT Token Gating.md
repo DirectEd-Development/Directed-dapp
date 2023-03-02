@@ -6,7 +6,7 @@
 
 <p> When a user wants to access the gated content or page within the dApp, they would need to hold the specific NFT in their Cardano wallet. Using the onconneted function in mesh we would then check the user's wallet(assets) to see if they have the necessary NFT to access the content. If they do, they would be granted access to the content or page.</p>
 
-<h1> DirectEd NFT Gated Contents/Pages </h1>
+<h2> DirectEd NFT Gated Contents/Pages </h2>
 
 <ol>
   <li>Donors Portal</li>
@@ -26,3 +26,9 @@ each students progress, eligibility status of each student and tokens issued to 
 <h4>Student's Progress Pages</h4>
 
 <p>The Student's Progress page contains information about how far the student has gone and the current status or progress of the student. Donors are automatically redirected to this page after successfully dontation to a school of their choice.</p>
+
+<h2> Tech Used and How this is done </h2>
+
+<h4>Technologies</h4>
+<p>Meshsdk/core, Next.js, the Cardano blockchain, and Cardano wallets</p>
+
