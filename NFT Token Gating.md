@@ -21,7 +21,7 @@
 <h4>Teacher's Portal</h4>
 
 <p>The Teachers Portal is another restricted page and can only be accessed by higher users or donors with the DirectEd NFT. The Teachers portal contains 
-each students progress, eligibility status of each student and tokens issued to studnets. Milestone for each student is also recorded here. </p>
+each students progress, eligibility status of each student and tokens issued to students. Milestone for each student is also recorded here. </p>
 
 <h4>Student's Progress Pages</h4>
 
@@ -30,5 +30,15 @@ each students progress, eligibility status of each student and tokens issued to 
 <h2> Tech Used and How this is done </h2>
 
 <h4>Technologies</h4>
-<p>Meshsdk/core, Next.js, the Cardano blockchain, and Cardano wallets</p>
+<p>Meshsdk/core, Next.js, NMKR and Cardano wallets</p>
+
+<ol>
+  <li>Meshsdk/core to build a decentralized app (dApp) on top of the Cardano blockchain. Meshsdk/core is a framework for building decentralized applications that         provides tools and libraries for interacting with the Cardano blockchain.</li>
+
+  <li>Next.js to create the frontend of the dApp and write the logic to restric users. Next.js is a popular frontend development framework that allows for server-side    rendering and can be used to create responsive and dynamic user interfaces.</li>
+  
+  <li>NMKR: Upload NFTs and make them available for purchase in the dapp with nmkr payment links</li>
+
+  <li>Use Cardano Browser wallets such as Eternl, Flint and Typhoon to store and trade the NFTs. The function and rules created in 2 using Mesh(getassets) and NextJs     would ensure that only users who hold the necessary NFTs in their Cardano wallets would be able to access the gated content or page within the dApp.</li>
+</ol>
 
