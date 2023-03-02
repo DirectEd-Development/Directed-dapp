@@ -42,7 +42,7 @@ each students progress, eligibility status of each student and tokens issued to 
   <li>Use Cardano Browser wallets such as Eternl, Flint and Typhoon to store and trade the NFTs. The function and rules created in 2 using Mesh(getassets) and NextJs     would ensure that only users who hold the necessary NFTs in their Cardano wallets would be able to access the gated content or page within the dApp.</li>
 </ol>
 
-<h4> DirectEd Contribution Using NFT Gated pages to the Cardano Blockchain/Network</h4>
+<h3> DirectEd Contribution Using NFT Gated pages to the Cardano Blockchain/Network</h3>
 <p>By creating Cardano NFT gated pages or contents using meshsdk/core, Next.js, the Cardano blockchain, and Cardano wallets has the potential to make several contributions to the Cardano blockchain ecosystem:</p>
 
 <p>Increased Adoption: By providing a way for artists, content creators, and developers to monetize their work and provide exclusive content, the creation of Cardano NFT gated pages or contents could attract more users to the Cardano blockchain. This could lead to increased adoption of Cardano as a platform for creating and exchanging digital assets.</p>
