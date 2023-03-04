@@ -1,4 +1,3 @@
-import { NextPage } from 'next'
 import Link from 'next/link'
 import AssetImage from '../AssetImage/AssetImage'
 import { Assets } from '../../types/assets'

@@ -15,8 +15,8 @@ const TeacherPortal: NextPage = () => {
 				<title>Teacher's Portal</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main className='container pt-20 pb-8'>
-				<div className='flex items-center justify-between'>
+			<main className='teachers-portal'>
+				<div className='flex-between'>
 					<SchoolBio
 						name='Kagumo High School'
 						image='/static/images/kagumo-school.png'
@@ -24,14 +24,19 @@ const TeacherPortal: NextPage = () => {
 					/>
 					<CircularProgressBar />
 				</div>
-				<div className='flex items-center justify-between mt-16'>
+				<div className='flex-between teachers-portal__filter'>
 					<h3 className='text-black font-bold'>Active Student List: </h3>
 					<div>
 						<FilterOptions />
 					</div>
 				</div>
-				<div className='flex items-center justify-between mt-16 bg-light2 p-6 rounded-lg'>
-					<StudentProgressCard />
+				<div className='bg-light2 p-6 teachers-portal__student-info'>
+					<StudentProgressCard progress={20} />
+					<StudentProgressCard progress={30} />
+					<StudentProgressCard progress={50} />
+					<StudentProgressCard progress={90} />
+					<StudentProgressCard progress={60} />
+					<StudentProgressCard progress={70} />
 				</div>
 			</main>
 		</>

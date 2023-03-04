@@ -10,22 +10,22 @@ const FilterOptions = (props: Props) => {
 	const [issuance, setIssuance] = useState<boolean>(false)
 
 	return (
-		<div className='flex items-center gap-4'>
+		<div className='filter-options flex-gap'>
 			<MenuIcon />
-			<div className='flex items-center gap-4'>
-				<div className='filter-button'>
+			<div className='flex-gap'>
+				<div className='filter-options__toggle flex-gap'>
 					<span className='text-base text-primary'>Last Name</span>
 					{lastName ? <CaretUpIcon /> : <CaretDownIcon />}
 				</div>
-				<div className='filter-button'>
+				<div className='filter-options__toggle flex-gap'>
 					<span className='text-base text-primary'>First Name</span>
 					{firstName ? <CaretUpIcon /> : <CaretDownIcon />}
 				</div>
-				<div className='filter-button'>
+				<div className='filter-options__toggle flex-gap'>
 					<span className='text-base text-primary'>Progress</span>
 					{progress ? <CaretUpIcon /> : <CaretDownIcon />}
 				</div>
-				<div className='filter-button'>
+				<div className='filter-options__toggle flex-gap'>
 					<span className='text-base text-primary'>Issuance</span>
 					{issuance ? <CaretUpIcon /> : <CaretDownIcon />}
 				</div>

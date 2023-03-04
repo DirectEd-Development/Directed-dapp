@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
-import Modal from '../Modal/Modal'
 import { CardanoWallet } from '@meshsdk/react'
 
 type LinksType = {
@@ -12,8 +11,9 @@ type LinksType = {
 
 const NavLinks: LinksType[] = [
 	{ title: 'Scholarship Pools', link: '/' },
-	{ title: '', link: '/progress' },
-	{ title: "Donors' Portal", link: '/donors' },
+	{ title: "Teacher's Portal", link: '/teacher-portal' },
+	{ title: 'Scholar’s Progress', link: '/progress' },
+	// { title: "Donors' Portal", link: '/donors' },
 ]
 
 const Navbar = () => {
@@ -23,10 +23,10 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className='bg-primary h-fit py-2 w-full sticky z-10'>
-				<div className='container flex items-center justify-between w-full h-full'>
+			<nav className='nav'>
+				<div className='nav__items flex-between'>
 					<Link href='https://directed.dev/'>
-						<div className='flex items-center space-x-3 cursor-pointer'>
+						<div className='nav__logo-box'>
 							<Image
 								id='logo'
 								src='/static/images/logo.png'
@@ -35,31 +35,25 @@ const Navbar = () => {
 								alt='Direct Ed Logo'
 							/>
 							<div>
-								<h1 className='text-white text-l font-semibold' id='title'>
-									DirectEd Development
-								</h1>
-								<p className='text-white' id='subtitle'>
-									Realising Potential
-								</p>
+								<p>DirectEd Development</p>
+								<p>Realising Potential</p>
 							</div>
 						</div>
 					</Link>
 
-					<ul className='hidden md:flex items-center space-x-5'>
+					<ul className='nav__list-items'>
 						{NavLinks.map((link: LinksType, index: number) => (
 							<Link href={link.link} passHref key={index}>
 								<li
-									className={`text-xl text-white ${
-										router.pathname === link.link
-											? 'font-semibold'
-											: 'font-light'
+									className={` ${
+										router.pathname === link.link ? 'active' : ''
 									}`}
 								>
 									{link.title}
 								</li>
 							</Link>
 						))}
-						<div className='dropdown dropdown-hover'>
+						{/* <div className='dropdown dropdown-hover'>
 							<label tabIndex={0}>
 								<Link
 									href={'/transactions'}
@@ -67,13 +61,13 @@ const Navbar = () => {
 									passHref
 								>
 									<li
-										className={`text-xl text-white ${
+										className={`text-base text-white ${
 											router.pathname === '/transactions'
-												? 'font-semibold'
+												? 'font-semibold border-b-2'
 												: 'font-light'
 										}`}
 									>
-										{/* Transactions */}
+										Transactions
 									</li>
 								</Link>
 							</label>
@@ -88,30 +82,14 @@ const Navbar = () => {
 									</h3>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</ul>
 
-					<div className='bg-[#F3EEE2] text-primary hover:bg-[#F3EEE2] font-semibold hover:border-none z-10'>
+					<div>
 						<CardanoWallet />
 					</div>
 				</div>
 			</nav>
-			{/* Modal */}
-			<Modal
-				open={open}
-				onClose={() => setOpen(false)}
-				className='w-fit space-y-8'
-			>
-				<h3 className='font-semibold text-2xl text-center w-64 capitalize'>
-					you have successfully connected a wallet!
-				</h3>
-				<button
-					onClick={() => setOpen(false)}
-					className='btn btn-primary btn-block'
-				>
-					Close
-				</button>
-			</Modal>
 		</>
 	)
 }

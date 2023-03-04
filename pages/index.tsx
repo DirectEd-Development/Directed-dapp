@@ -50,24 +50,20 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
-			<main className='container grid grid-cols-1 gap-y-7 py-8  justify-items-center h-fit'>
-				<div className='grid grid-cols-1 gap-y-7 py-8  justify-items-center h-fit'>
-					<div className='md:col-span-2'>
-						<h1 className='text-2xl md:text-5xl text-black font-semibold text-center'>
-							Scholarship Pools
-						</h1>
+			<main className='scholarship-pool'>
+				<div className=''>
+					<div className=''>
+						<h1 className=''>Scholarship Pools</h1>
 					</div>
-					<div className='md:col-span-2 box-border h-auto w-full p-4 border-2 border-[#999999] bg-white'>
-						<div className='flex md:flex-row flex-col'>
-							<div className='flex-auto md:w-3/5 h-fit'>
-								<span className='w-full flex justify-center items-center font-semibold mb-5 text-xl'>
-									What Can I Receive as a Donor?
-								</span>
-								<div className='flex'>
-									<div className='flex-auto h-auto w-full ...'>
-										<div className='flex justify-center items-start'>
+					<div className=''>
+						<div className=''>
+							<div className=''>
+								<span className=''>What Can I Receive as a Donor?</span>
+								<div className=''>
+									<div className=''>
+										<div className=''>
 											<Image
-												className='px-0 ml-5 '
+												className=''
 												src='/static/images/acess.png'
 												alt='image'
 												width='90'
@@ -103,11 +99,9 @@ const Home: NextPage = () => {
 												</div>
 											</div>
 										</div>
-										<span className='flex justify-center items-center font-semibold text-sm'>
-											Access Token
-										</span>
+										<span className=''>Access Token</span>
 									</div>
-									<div className='flex-auto h-auto w-full ...'>
+									<div className=''>
 										<div className='flex justify-center items-start'>
 											<Image
 												className='px-0 ml-5 '
@@ -151,7 +145,7 @@ const Home: NextPage = () => {
 											Digital Art
 										</span>
 									</div>
-									<div className='flex-auto h-auto w-full ...'>
+									<div className=''>
 										<div className='flex justify-center items-start'>
 											<Image
 												className='px-0 ml-5 '
@@ -197,7 +191,7 @@ const Home: NextPage = () => {
 									</div>
 								</div>
 							</div>
-							<div className='flex-auto md:w-2/5 h-full'>
+							<div className=''>
 								<div className='flex justify-center items-center mt-2'>
 									<div className='box-border border border-[#999999] bg-white w-4/5 h-fit rounded-lg shadow'>
 										<div className='flex mb-2'>
@@ -214,7 +208,6 @@ const Home: NextPage = () => {
 												<p className='text-center font-semibold mt-3 mb-3 text-lg'>
 													Naming Rights
 												</p>
-
 												<p className='text-[13px] text-center'>
 													The donor naming rights for a given scholarship cohort
 													can be purchased for $3,000
@@ -271,9 +264,9 @@ const Home: NextPage = () => {
 							</div>
 						</div>
 					</div>
-					<div></div>
-					{/* <BsFilter className="p-0 text-[40px] cursor-pointer" /> */}
-					<FilterMenu />
+					<div className=''>
+						<FilterMenu />
+					</div>
 				</div>
 
 				{data.map((d: DataType) => (
@@ -297,7 +290,7 @@ const Home: NextPage = () => {
 				</p>
 
 				<Button
-					onCick={handleDonationModal}
+					onClick={handleDonationModal}
 					className='btn-ghost bg-light2 text-primary font-bold text-lg w-fit'
 				>
 					{'View Scholar’s Progress'}
@@ -340,7 +333,7 @@ const Home: NextPage = () => {
 					/>
 				</div>
 				<Button
-					onCick={handleDonationModal}
+					onClick={handleDonationModal}
 					className='btn-ghost bg-light2 text-primary font-bold text-lg w-fit'
 				>
 					<Link

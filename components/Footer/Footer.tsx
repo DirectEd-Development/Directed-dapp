@@ -15,8 +15,8 @@ const NavLinks: LinksType[] = [
 
 const Footer = () => {
 	return (
-		<footer className='bg-primary h-fit py-4 w-full'>
-			<div className='h-full w-full container flex flex-col md:flex-row items-center justify-between space-y-5 md:space-y-0'>
+		<footer className='bg-primary footer'>
+			<div className='footer__content container'>
 				<a
 					target='_blank'
 					rel='noopener noreferrer'

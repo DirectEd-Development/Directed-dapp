@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Button from '../Button/Button'
 import Link from 'next/link'
 import { FaChevronRight, FaChevronDown } from 'react-icons/fa'
-import ProgressBar from '../ProgressBar/ProgressBar'
+import ProgressBar from '../StudentProgressBar/StudentProgressBar'
 
 type SchoolCardProps = {
 	image?: string
@@ -25,22 +25,21 @@ const SchoolCard = ({
 
 	return (
 		<>
-			<div className='h-fit'>
-				<div className='p-3 flex items-center md:px-10'>
-					<div className='space-x-2 md:space-x-5 flex items-center  flex-grow'>
-						<div className='avatar'>
-							<div className='w-12 h-12 rounded-full'>
-								<Image src={image} alt='' width='300' height='300' />
-							</div>
+			<div className='school-card'>
+				<div className='school-card__top-content'>
+					<div className='flex-gap-two'>
+						<div className='school-card__image'>
+							<Image src={image} alt='' width='300' height='300' />
 						</div>
+
 						<h1 className='md:text-xl font-semibold text-dark2'>{name}</h1>
 					</div>
-					<div className='flex justify-center flex-grow'>
+					<div className='school-card__content'>
 						<ProgressBar progress={progress} />
 					</div>
-					<div className='flex justify-center flex-grow'>
+					<div className='school-card__content'>
 						<Button
-							onCick={() => setOpen(!open)}
+							onClick={() => setOpen(!open)}
 							className='btn-ghost text-primary font-bold gap-2 hover:bg-transparent'
 						>
 							{open ? (
@@ -66,7 +65,7 @@ const SchoolCard = ({
 					<div
 						className={open ? 'flex flex-col p-5 md:px-10 space-y-3' : 'hidden'}
 					>
-						<p className='gap-2 flex items-center'>
+						<p className='flex-gap'>
 							<IoLocationSharp />
 							<span>Naivasha, Kenya</span>
 						</p>
@@ -77,17 +76,17 @@ const SchoolCard = ({
 							website navigation and layout to a company's web hosting and
 							security architecture.
 						</p>
-						<div className='flex items-center justify-between'>
-							<Link href={'#'}>
-								<span className='truncate'>
+						<div className='flex-between'>
+							<Link href='#'>
+								<span className='school-card__student-link'>
 									{'https://{userid}.github.io/{reponame}'}
 								</span>
 							</Link>
-							<div className='flex items-center space-x-4'>
-								<button className='text-white bg-[#2867B2] p-3 rounded-lg'>
+							<div className='flex-gap'>
+								<button className='school-card__icon-button'>
 									<GrLinkedinOption />
 								</button>
-								<button className='text-white bg-[#0088CC] p-3 rounded-lg'>
+								<button className='school-card__icon-button'>
 									<TbBrandTelegram />
 								</button>
 							</div>

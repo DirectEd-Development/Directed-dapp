@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
 				<link rel='shortcut icon' href='/favicon.png' type='image/x-icon' />
 			</Head>
 			<Navbar />
-			{children}
+			<div className=''>{children}</div>
 			<Footer />
 		</>
 	)

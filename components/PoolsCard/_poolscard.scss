@@ -1,0 +1,70 @@
+@use '../../styles/sass/abstracts/mixins' as *;
+
+.pools-card {
+	height: fit-content;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+	&__container {
+		width: 100%;
+		display: flex;
+		position: relative;
+
+		@include mq(medium) {
+			flex-direction: row;
+		}
+	}
+
+	&__image {
+		object-fit: cover;
+		object-position: center;
+	}
+
+	&__text-content {
+		flex-basis: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		@include mq(medium) {
+			flex-direction: row;
+		}
+	}
+
+	&__details,
+	&__funds,
+	&__progress {
+		padding: 1rem;
+		display: flex;
+		gap: 1rem;
+
+		@include mq(medium) {
+			flex-direction: column;
+		}
+	}
+
+	&__details {
+		background: rebeccapurple;
+	}
+
+	&__funds {
+		background: navy;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__progress {
+		background: darkred;
+	}
+
+	// &__list-items {
+	// }
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+}

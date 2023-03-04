@@ -1,0 +1,24 @@
+@use '../abstracts/mixins' as *;
+
+.flex-between {
+	display: flex;
+	flex-direction: column;
+
+	@include mq(small) {
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.flex-gap {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.flex-gap-two {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}

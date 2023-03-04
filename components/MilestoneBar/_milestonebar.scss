@@ -1,0 +1,50 @@
+.milestone-bar {
+	flex-basis: 40%;
+	flex-direction: column;
+
+	&__milestones {
+		position: relative;
+		width: 1005;
+		height: 1rem;
+
+		&--bar {
+			height: 100%;
+		}
+	}
+
+	&__progress-level {
+		position: absolute;
+		width: 0.25rem;
+		height: 1rem;
+		top: 0;
+
+		&--1 {
+			left: 30%;
+		}
+
+		&--2 {
+			left: 60%;
+		}
+
+		&--3 {
+			left: 68%;
+		}
+
+		&--4 {
+			left: 76%;
+		}
+
+		&--5 {
+			left: 84%;
+		}
+
+		&--6 {
+			left: 92%;
+		}
+	}
+
+	&__text-content {
+		width: 100%;
+		padding-inline: 1rem;
+	}
+}

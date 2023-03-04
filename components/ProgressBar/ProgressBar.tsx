@@ -1,13 +1,25 @@
-const ProgressBar = ({ progress }: { progress: number }) => (
-	<div className='flex items-center space-x-4'>
-		{Array.from(Array(4).keys()).map((pro: number) => (
-			<div
-				className={`w-4 md:w-16 h-2 ${
-					pro <= progress - 1 ? 'bg-primary' : 'bg-gray-300'
-				}`}
-			/>
-		))}
-	</div>
-)
+type ProgressBarProps = {}
+
+const ProgressBar = ({}: ProgressBarProps) => {
+	return (
+		<div className='font-semibold'>
+			<div className='text-primary text-base md:flex items-start justify-between'>
+				<span className='flex items-center space-x-2'>
+					{/* <MdOutlineAccessTime /> <span>6 days left</span> */}
+					<span className='text-sm'>₳3,108</span>
+				</span>
+				<span className='text-sm'>Goal: $40,000</span>
+			</div>
+			<progress
+				className='hidden md:block rounded-none progress-primary w-full bg-slate-300'
+				value='13'
+				max='100'
+			></progress>
+			<h1 className='hidden md:block italic text-xs text-end text-gray-600'>
+				₳1000 to fund the next scholarship
+			</h1>
+		</div>
+	)
+}
 
 export default ProgressBar

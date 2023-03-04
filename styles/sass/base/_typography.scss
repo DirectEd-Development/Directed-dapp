@@ -1,0 +1,40 @@
+h1,
+h2,
+h3,
+h4 {
+	font-weight: bold;
+	font-stretch: 100%;
+	line-height: 1.1;
+}
+
+h1 {
+	--font-weight: 900;
+
+	color: var(--clr, var(--clr-primary-400));
+}
+
+// This is setting the font-sizes
+// based on the ones in the abstract
+// folder, go there to make updates
+
+h1 {
+	font-size: --fs-800;
+}
+
+h2 {
+	--flow-spacer: 1.5em;
+	font-size: --fs-700;
+}
+h3 {
+	--flow-spacer: 1.5em;
+	font-size: --fs-600;
+}
+
+h4 {
+	font-size: --fs-500;
+}
+
+p {
+	color: var(--clr-accent-100);
+	font-size: var(--fs-400);
+}

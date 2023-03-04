@@ -27,7 +27,7 @@ const Donate: NextPage = () => {
 	return (
 		<>
 			<Meta title='Donate' description='Donate to student' />
-			<div className='relative w-full h-32 md:h-48'>
+			<div className='donate-banner'>
 				<Image
 					src='/static/images/banner.png'
 					alt='banner'
@@ -35,25 +35,25 @@ const Donate: NextPage = () => {
 					width={1500}
 				/>
 			</div>
-			<main className='container w-full py-4 space-y-8'>
-				<div className='flex items-center'>
+			<main className='donate container'>
+				<div className='donate__title-section'>
 					<button
 						onClick={() => router.back()}
 						className='btn btn-ghost text-primary text-xl md:text-3xl'
 					>
 						<FaChevronLeft />
 					</button>
-					<div className='flex-grow'>
+					<div>
 						<h1 className='text-xl md:text-4xl text-dark2 text-center font-bold'>
 							Donate to Kagumo High School
 						</h1>
 					</div>
 				</div>
-				<div className='space-y-8 flex flex-col items-center justify-center'>
+				<div className='donate__donations'>
 					<h1 className='text-center text-2xl text-black'>
 						Select Donation Amount
 					</h1>
-					<div className='grid grid-cols-2 md:grid-cols-2 gap-10 justify-items-center justify-center'>
+					<div className='donate__donations-amounts'>
 						{amounts.map((amt: string, index: number) => (
 							<button
 								onClick={() => {
@@ -69,14 +69,14 @@ const Donate: NextPage = () => {
 						))}
 					</div>
 					{amount && (
-						<div className='space-y-2 flex flex-col items-center '>
+						<div className='donate__nft-content'>
 							<Image
 								onClick={() => setModal(true)}
 								src={`/static/images/${image ? image : 111}.png`}
 								alt='NFT'
 								width={100}
 								height={100}
-								className='rounded-md cursor-pointer'
+								className='donate__nft-image'
 							/>
 							<p>Click to see a sample NFT</p>
 						</div>

@@ -1,0 +1,24 @@
+.circular-progress {
+	background: conic-gradient(#395240 90deg, #c8c8c8 0deg);
+	width: 12rem;
+	height: 12rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-direction: column;
+
+	&::before {
+		content: '';
+		position: absolute;
+		height: 75%;
+		width: 75%;
+		border-radius: 50%;
+		background: rgb(255, 255, 255);
+	}
+
+	&__caption {
+		position: relative;
+	}
+}

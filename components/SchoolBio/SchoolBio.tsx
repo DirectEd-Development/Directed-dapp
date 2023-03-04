@@ -8,7 +8,7 @@ type SchoolBioType = {
 
 const SchoolBio = ({ name, studentsAmount, image }: SchoolBioType) => {
 	return (
-		<div className='flex items-center gap-8'>
+		<div className='flex-gap'>
 			<div>
 				<Image src={image} alt='school photo' width='150' height='150' />
 			</div>

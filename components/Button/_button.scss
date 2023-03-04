@@ -1,11 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer components {
-	.btn-primary {
-		@apply text-white;
-	}
+.btn {
 }
 
 .containerLoading {
@@ -16,20 +9,6 @@
 	gap: 0.3rem;
 	transform: rotate(-45deg);
 }
-
-.square {
-	background-color: white;
-	display: grid;
-	place-items: center;
-	border-radius: 5px;
-	animation: load 1.6s ease infinite;
-}
-
-/* .button-wrapper > button:hover,
-.button-wrapper > button:focus + .button-wallet {
-	top: 3rem;
-	transition: all 1s ease;
-} */
 
 @keyframes load {
 	0% {

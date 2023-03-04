@@ -39,7 +39,7 @@ const ConnectWallet = () => {
 	}
 
 	return (
-		<div className='bg-green-600 p-8'>
+		<div className='wallet-button'>
 			<button
 				className='bg-red-500'
 				onClick={toggleDropdown}

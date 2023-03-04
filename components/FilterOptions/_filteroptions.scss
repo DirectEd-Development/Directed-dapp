@@ -1,0 +1,10 @@
+.filter-options {
+	// color: var(--clr-primary-100);
+
+	&__toggle {
+		padding: 0.5rem 1rem;
+		border: 1px solid rgb(7, 39, 7);
+		border-radius: 1rem;
+		cursor: pointer;
+	}
+}

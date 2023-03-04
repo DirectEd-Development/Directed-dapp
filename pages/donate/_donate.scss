@@ -1,0 +1,78 @@
+@use '../../styles/sass/abstracts/mixins' as *;
+
+.donate-banner {
+	position: relative;
+	width: 100%;
+	height: 8rem;
+}
+
+.donate {
+	width: 100%;
+	padding: 1rem 0;
+
+	&__title-section {
+		display: flex;
+		align-items: center;
+	}
+
+	&__donations {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	&__donations-amounts {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 2.5rem;
+		justify-items: center;
+		justify-content: center;
+	}
+
+	&__nft-content {
+		gap: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__nft-image {
+		border-radius: 1rem;
+		cursor: pointer;
+	}
+}
+
+//Confirm page
+
+.confirm-donation {
+	width: 100%;
+	padding: 1rem 1rem;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__list-items {
+		margin: 1rem auto;
+		width: 100%;
+		height: fit-content;
+		padding: 1.25rem;
+		border-radius: 0.5rem;
+
+		@include mq(small) {
+			width: 50%;
+		}
+	}
+
+	&__list {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		gap: 2rem;
+	}
+}
