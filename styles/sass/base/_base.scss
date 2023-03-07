@@ -1,8 +1,4 @@
-// body {
-//   min-height: 100vh;
-//   display: grid;
-//   grid-template-rows: auto 1fr auto;
-// }
+@use '../abstracts/mixins' as *;
 
 *,
 *::after,
@@ -33,4 +29,16 @@ a:focus-visible {
 ul,
 li {
 	list-style: none;
+}
+
+.container {
+	padding-inline: 2rem;
+
+	@include mq(small) {
+		padding-inline: 6rem;
+	}
+
+	@include mq(medium) {
+		padding-inline: 10rem;
+	}
 }

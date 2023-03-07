@@ -13,8 +13,8 @@ const SchoolBio = ({ name, studentsAmount, image }: SchoolBioType) => {
 				<Image src={image} alt='school photo' width='150' height='150' />
 			</div>
 			<div>
-				<h2 className='text-2xl text-black font-bold'>{name}</h2>
-				<p className='text-sm text-gray-400'>
+				<h3>{name}</h3>
+				<p>
 					{studentsAmount} students are currently enrolled from this school.
 				</p>
 			</div>

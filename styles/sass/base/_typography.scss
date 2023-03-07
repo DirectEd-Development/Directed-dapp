@@ -1,7 +1,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
 	font-weight: bold;
 	font-stretch: 100%;
 	line-height: 1.1;
@@ -18,23 +19,26 @@ h1 {
 // folder, go there to make updates
 
 h1 {
-	font-size: --fs-800;
+	font-size: var(--fs-800);
 }
 
 h2 {
 	--flow-spacer: 1.5em;
-	font-size: --fs-700;
+	font-size: var(--fs-700);
 }
 h3 {
 	--flow-spacer: 1.5em;
-	font-size: --fs-600;
+	font-size: var(--fs-600);
 }
 
 h4 {
-	font-size: --fs-500;
+	font-size: var(--fs-400);
+}
+
+h5 {
+	font-size: var(--fs-300);
 }
 
 p {
-	color: var(--clr-accent-100);
-	font-size: var(--fs-400);
+	font-size: var(--fs-300);
 }

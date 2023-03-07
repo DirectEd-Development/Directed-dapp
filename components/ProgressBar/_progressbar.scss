@@ -1,0 +1,26 @@
+.progress-bar {
+	width: 100%;
+	color: #6c6c6c;
+
+	&__milestone-bar {
+		height: 2rem;
+		background: var(--clr-accent-400);
+		overflow: hidden;
+	}
+
+	&__milestone-progress {
+		height: 2.5rem;
+		background: var(--clr-primary-400);
+	}
+
+	&__funds {
+		display: flex;
+		justify-content: space-between;
+		font-size: var(--fs-100);
+	}
+
+	& > p {
+		font-style: italic;
+		text-align: right;
+	}
+}

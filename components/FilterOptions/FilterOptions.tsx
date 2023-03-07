@@ -14,19 +14,19 @@ const FilterOptions = (props: Props) => {
 			<MenuIcon />
 			<div className='flex-gap'>
 				<div className='filter-options__toggle flex-gap'>
-					<span className='text-base text-primary'>Last Name</span>
+					<span className='filter-options__filter-type'>Last Name</span>
 					{lastName ? <CaretUpIcon /> : <CaretDownIcon />}
 				</div>
 				<div className='filter-options__toggle flex-gap'>
-					<span className='text-base text-primary'>First Name</span>
+					<span className='filter-options__filter-type'>First Name</span>
 					{firstName ? <CaretUpIcon /> : <CaretDownIcon />}
 				</div>
 				<div className='filter-options__toggle flex-gap'>
-					<span className='text-base text-primary'>Progress</span>
+					<span className='filter-options__filter-type'>Progress</span>
 					{progress ? <CaretUpIcon /> : <CaretDownIcon />}
 				</div>
 				<div className='filter-options__toggle flex-gap'>
-					<span className='text-base text-primary'>Issuance</span>
+					<span className='filter-options__filter-type'>Issuance</span>
 					{issuance ? <CaretUpIcon /> : <CaretDownIcon />}
 				</div>
 			</div>

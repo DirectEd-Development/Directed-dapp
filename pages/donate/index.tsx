@@ -29,6 +29,7 @@ const Donate: NextPage = () => {
 			<Meta title='Donate' description='Donate to student' />
 			<div className='donate-banner'>
 				<Image
+					className='donate-banner__image'
 					src='/static/images/banner.png'
 					alt='banner'
 					height={500}
@@ -37,22 +38,15 @@ const Donate: NextPage = () => {
 			</div>
 			<main className='donate container'>
 				<div className='donate__title-section'>
-					<button
+					<FaChevronLeft
 						onClick={() => router.back()}
-						className='btn btn-ghost text-primary text-xl md:text-3xl'
-					>
-						<FaChevronLeft />
-					</button>
-					<div>
-						<h1 className='text-xl md:text-4xl text-dark2 text-center font-bold'>
-							Donate to Kagumo High School
-						</h1>
-					</div>
+						className='go-back'
+						size={35}
+					/>
+					<h3>Donate to Kagumo High School</h3>
 				</div>
 				<div className='donate__donations'>
-					<h1 className='text-center text-2xl text-black'>
-						Select Donation Amount
-					</h1>
+					<h4>Select Donation Amount</h4>
 					<div className='donate__donations-amounts'>
 						{amounts.map((amt: string, index: number) => (
 							<button
@@ -60,9 +54,7 @@ const Donate: NextPage = () => {
 									setAmount(amt)
 									setImage(index + 111)
 								}}
-								className={`btn w-36 ${
-									amount === amt ? 'btn-primary' : 'bg-gray-200 btn-ghost'
-								}`}
+								className={`${amount === amt ? '' : ''}`}
 							>
 								{amt}
 							</button>
@@ -81,27 +73,20 @@ const Donate: NextPage = () => {
 							<p>Click to see a sample NFT</p>
 						</div>
 					)}
-					<button
-						onClick={handleDonate}
-						className='capitalize btn btn-primary w-36'
-					>
+					<button onClick={handleDonate} className=''>
 						Donate Now
 					</button>
 				</div>
 			</main>
-			<Modal
-				open={modal}
-				onClose={() => setModal(false)}
-				className='w-full md:w-100 h-100 shadow-2xl'
-			>
+			{/* <Modal open={modal} onClose={() => setModal(false)} className=''>
 				<Image
 					src={`/static/images/${image ? image : 111}.png`}
 					alt='NFT'
 					height={150}
 					width={1560}
-					className='cursor-pointer'
+					className=''
 				/>
-			</Modal>
+			</Modal> */}
 		</>
 	)
 }

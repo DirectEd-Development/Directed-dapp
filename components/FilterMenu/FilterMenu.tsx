@@ -1,18 +1,14 @@
-import { Fragment, useEffect, useRef, useState } from 'react'
 import { BsFilter } from 'react-icons/bs'
 import { GrClose } from 'react-icons/gr'
 
 const FilterMenu = () => {
 	return (
-		<div>
-			<div>
-				<div>
-					<button>
-						<BsFilter />
-					</button>
-				</div>
+		<div className='filter-menu'>
+			<div className='filter-menu__filter-button'>
+				<BsFilter size={30} />
+			</div>
 
-				<div>
+			{/* <div>
 					<div>
 						<div>
 							<div>
@@ -67,8 +63,7 @@ const FilterMenu = () => {
 							<button>Clear All Filters</button>
 						</div>
 					</div>
-				</div>
-			</div>
+				</div> */}
 		</div>
 	)
 }

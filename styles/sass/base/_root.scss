@@ -1,17 +1,25 @@
 @use '../abstracts' as *;
 
 :root {
-	--section-spacing: 3.5rem;
+	//spacing
 
+	--section-spacing: 3.5rem;
 	@include mq(medium) {
 		--section-spacing: 7rem;
 	}
+
+	//colors
+
+	--clr-black: #000000;
+	--clr-white: #ffffff;
 
 	@each $color, $shade in $colors {
 		@each $prop, $value in $shade {
 			--clr-#{$color}-#{$prop}: #{$value};
 		}
 	}
+
+	//fonts
 
 	@each $screen-size, $property in $type-scale {
 		@if $screen-size == small {

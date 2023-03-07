@@ -24,6 +24,7 @@
 		align-items: center;
 		gap: 1rem;
 		cursor: pointer;
+		color: var(--clr-accent-100);
 	}
 
 	&__list-items {
@@ -42,7 +43,7 @@
 		}
 
 		li.active {
-			border-bottom: 1px solid var(--clr-accent-100);
+			border-bottom: 1.5px solid var(--clr-accent-100);
 		}
 	}
 }

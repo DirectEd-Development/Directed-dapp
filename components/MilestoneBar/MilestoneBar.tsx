@@ -7,36 +7,36 @@ const MilestoneBar = ({ progress }: MilestoneBarProps) => {
 
 	return (
 		<div className='milestone-bar flex-gap'>
-			<div className='milestone-bar__milestones bg-gray-200'>
+			<div className='milestone-bar__milestones'>
 				<div
-					className='milestone-bar__milestones--bar bg-primary'
-					style={{ width: `${progress}%` }}
+					className='milestone-bar__milestones--bar'
+					style={{ width: '80%' }}
 				></div>
-				<div className='milestone-bar__progress-level milestone-bar__progress-level--1 bg-light2'></div>
-				<div className='milestone-bar__progress-level milestone-bar__progress-level--2 bg-light2'></div>
-				<div className='milestone-bar__progress-level milestone-bar__progress-level--3 bg-light2'></div>
-				<div className='milestone-bar__progress-level milestone-bar__progress-level--4 bg-light2'></div>
-				<div className='milestone-bar__progress-level milestone-bar__progress-level--5 bg-light2'></div>
-				<div className='milestone-bar__progress-level milestone-bar__progress-level--6 bg-light2'></div>
+				<div className='milestone-bar__progress-level milestone-bar__progress-level--1'></div>
+				<div className='milestone-bar__progress-level milestone-bar__progress-level--2'></div>
+				<div className='milestone-bar__progress-level milestone-bar__progress-level--3'></div>
+				<div className='milestone-bar__progress-level milestone-bar__progress-level--4'></div>
+				<div className='milestone-bar__progress-level milestone-bar__progress-level--5'></div>
+				<div className='milestone-bar__progress-level milestone-bar__progress-level--6'></div>
 			</div>
-			<div className='milestone-bar__text-content flex-between text-gray-500'>
+			<div className='milestone-bar__text-content'>
 				<div>
-					<p>Minimum</p>
-					<p>Threshold</p>
+					<span>Minimum</span>
+					<span>Threshold</span>
 				</div>
 				<div>
-					<p>Intro</p>
-					<p>Week</p>
+					<span>Intro</span>
+					<span>Week</span>
 				</div>
 				<div>
-					<div className='flex-gap'>
-						<p>1</p>
-						<p>2</p>
-						<p>3</p>
-						<p>4</p>
-						<p>5</p>
+					<div className='flex-gap-two'>
+						<span>1</span>
+						<span>2</span>
+						<span>3</span>
+						<span>4</span>
+						<span>5</span>
 					</div>
-					<p className='text-center'>Sprint</p>
+					<span>Sprint</span>
 				</div>
 			</div>
 		</div>

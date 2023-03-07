@@ -33,17 +33,15 @@ const Confirm: NextPage = () => {
 				<title>Donation Details</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main className='confirm-donation'>
+			<main className='confirm-donation container'>
 				<div className='confirm-donation__container'>
-					<h1 className='text-4xl text-dark2 text-center font-bold'>
-						Donation Details
-					</h1>
+					<h2>Donation Details</h2>
 
-					<ul className='confirm-donation__items bg-light2'>
+					<ul className='confirm-donation__items'>
 						{Object.keys(data).map((dt: string) => (
 							<li className='confirm-donation__list'>
-								<span className=''>{dt}</span>
-								<span className=''>{data[dt]}</span>
+								<span>{dt}</span>
+								<span>{data[dt]}</span>
 							</li>
 						))}
 						<li className='confirm-donation__list'>
@@ -57,7 +55,7 @@ const Confirm: NextPage = () => {
 						onClick={handleConfirm}
 						loading={loading}
 						loadingIndicator='processing...'
-						className='capitalize btn btn-primary w-36'
+						className=''
 					>
 						Done
 					</Button>

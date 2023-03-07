@@ -44,13 +44,15 @@ export default function Home({ assetsData }: { assetsData: Assets[] }) {
 				description='Direced Ed donors portal page'
 			/>
 			<main className='donors-portal'>
-				<div className='donors-portal__assets flex-between'>
+				<div className='donors-portal__asset'>
 					{hasPolicyIdAssetsChecked ? (
 						<>
 							<AssetCard assets={assetsData} />
 						</>
 					) : (
-						<h1>You need to make a donation to access this page</h1>
+						<h3 className='donors-portal__no-donation'>
+							You need to make a donation to access this page
+						</h3>
 					)}
 				</div>
 			</main>

@@ -5,7 +5,7 @@ import ProgressBar from '../ProgressBar/ProgressBar'
 
 const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 	return (
-		<div className='bg-light2 pools-card'>
+		<div className='pools-card'>
 			<div className='pools-card__container'>
 				<Image
 					className='pools-card__image'
@@ -18,22 +18,18 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 				<div className='pools-card__text-content'>
 					<div className='pools-card__details'>
 						<div>
-							<h1 className='font-bold text-[18px] md:text-start text-center'>
-								{title}
-							</h1>
+							<h3>{title}</h3>
 							<Link
 								href='https://www.notion.so/directed/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'
 								passHref
+								className='pools-card__link'
 							>
-								<p className='md:text-start text-[12px] pb-2 underline hover:no-underline text-gray-600 text-center'>
-									Learn more about this school
-								</p>
+								Learn more about this school
 							</Link>
 						</div>
-						<ul className='text-[12px] text-gray-600 pools-card__list-items'>
+						<ul className='pools-card__list-items'>
 							<li className='pools-card__list'>
 								<Image
-									className='inline'
 									src='/static/images/clock.png'
 									alt='Pool Image'
 									width='20'
@@ -43,7 +39,6 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 							</li>
 							<li className='pools-card__list'>
 								<Image
-									className='inline'
 									src='/static/images/Vector.png'
 									alt='Pool Image'
 									width='20'
@@ -53,7 +48,6 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 							</li>
 							<li className='pools-card__list'>
 								<Image
-									className='inline'
 									src='/static/images/dollar.png'
 									alt='Pool Image'
 									width='20'
@@ -63,7 +57,6 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 							</li>
 							<li className='pools-card__list'>
 								<Image
-									className='inline'
 									src='/static/images/nft.png'
 									alt='Pool Image'
 									width='20'
@@ -74,15 +67,16 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 						</ul>
 					</div>
 
-					<div className='text-gray-600 pools-card__funds'>
+					<div className='pools-card__funds'>
 						<div>
-							<h1 className='font-semibold text-xl text-center'>3/40</h1>
-							<p className='text-center text-sm'>Scholarships funded</p>
+							<h3>3/40</h3>
+							<p>Scholarships funded</p>
 						</div>
-						<div className='md:border-2 md:border-transparent md:border-t-white md:w-14 md:h-2 border-2 border-transparent border-l-white w-2 h-14'></div>
-						<div className='py-2'>
-							<h1 className='font-semibold text-xl text-center'>1</h1>
-							<p className='text-center text-sm'>
+						<hr />
+
+						<div>
+							<h3>1</h3>
+							<p>
 								Remaining Scholarship <br /> Naming Right
 							</p>
 						</div>
@@ -90,7 +84,7 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 
 					<div className='pools-card__progress'>
 						<ProgressBar />
-						<div className='flex items-center justify-center p-5'>
+						<div className=''>
 							<Link href='/donate'>
 								<button className='btn btn-primary'>donate now</button>
 							</Link>

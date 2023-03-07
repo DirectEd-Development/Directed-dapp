@@ -1,9 +1,11 @@
 .badge {
 	padding: 1rem 1.5rem;
-	color: white;
-	border-radius: 2rem;
+	color: var(--clr-accent-100);
+	border-radius: 1rem;
+	background: var(--clr-accent-300);
+	font-size: var(--fs-300);
 
 	&__active {
-		// background: var(--clr-primary-100);
+		background: var(--clr-primary-100);
 	}
 }

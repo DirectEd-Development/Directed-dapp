@@ -1,7 +1,7 @@
 .circular-progress {
 	background: conic-gradient(#395240 90deg, #c8c8c8 0deg);
-	width: 12rem;
-	height: 12rem;
+	width: 18rem;
+	height: 18rem;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -20,5 +20,6 @@
 
 	&__caption {
 		position: relative;
+		font-size: var(--fs-300);
 	}
 }

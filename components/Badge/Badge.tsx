@@ -8,8 +8,8 @@ type BadgeType = {
 const Badge = ({ active, children }: BadgeType) => {
 	return (
 		<div
-			className={`badge text-xl
-    ${active ? 'bg-primary badge__active' : 'bg-gray-400'}`}
+			className={`badge
+    ${active ? 'badge__active' : ''}`}
 		>
 			{children}
 		</div>

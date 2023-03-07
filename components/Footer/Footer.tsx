@@ -1,17 +1,5 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
-type LinksType = {
-	title: string
-	link: string
-}
-
-const NavLinks: LinksType[] = [
-	{ title: 'Scholarship Pools', link: '#' },
-	{ title: 'Scholars’ Progress', link: '#' },
-	{ title: 'Transactions', link: '#' },
-]
 
 const Footer = () => {
 	return (
@@ -35,17 +23,17 @@ const Footer = () => {
 						have a suggestion?
 					</button>
 				</a>
-				<div className='flex flex-col'>
-					<a
+				<div>
+					<Link
+						href='https://directed.notion.site/DirectEd-Lions-Terms-Conditions-1f34512058c74546b752a2e549173818'
 						target='_blank'
 						rel='noopener noreferrer'
-						href='https://directed.notion.site/DirectEd-Lions-Terms-Conditions-1f34512058c74546b752a2e549173818'
 					>
-						<span className='text-white'>Terms and Conditions</span>
-					</a>
-					<span className='text-white'>
+						Terms and Conditions
+					</Link>
+					<p className='text-white'>
 						&copy; {new Date().getFullYear()} DirectEd. All rights reserved.
-					</span>
+					</p>
 				</div>
 			</div>
 		</footer>

@@ -1,0 +1,95 @@
+		{/* Donate Modal */}
+			<Modal
+				open={modal === 'donate-done'}
+				onClose={() => setModal('')}
+				className='h-fit rounded-md bg-light w-fit p-5 md:w-2/5 space-y-6 flex flex-col justify-center items-center'
+			>
+				<h1 className='text-3xl font-bold text-dark2 text-center'>
+					Thank you for your donation to DirectEd
+				</h1>
+				<p className='text-center'>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+					debitis eligendi necessitatibus? Nam officiis repudiandae eveniet
+					doloremque, a esse inventore odit similique illo at quod enim labore
+					atque. Ipsa, tempore.
+				</p>
+
+				<Button
+					onClick={handleDonationModal}
+					className='btn-ghost bg-light2 text-primary font-bold text-lg w-fit'
+				>
+					{'View Scholar’s Progress'}
+				</Button>
+			</Modal>
+			{/* How To Modal */}
+			<Modal
+				open={modal === 'how-to-donate'}
+				onClose={() => setModal('')}
+				className='h-fit rounded-md bg-light w-fit p-5 md:w-1/4 space-y-5 flex flex-col justify-center items-center'
+			>
+				<h1 className='text-3xl font-bold text-dark2 text-center'>
+					How To Donate
+				</h1>
+				<p className='text-sm text-center'>
+					To donate, navigate to the scholarship pool of your choice and press
+					donate. There’s no need to connect your wallet for now! After this
+					step, you’ll see two options: Warrior tier (40 ADA) and Hero tier
+					(1000 ADA).
+				</p>
+				<p className='text-sm text-center'>
+					After selecting an option and pressing continue, you’ll be directed to
+					the dedicated NMKR pay gateway for you to complete your donation!
+				</p>
+				<p className='text-dark2 text-center'>
+					I don’t know about crypto. Can I still donate?
+				</p>
+				<p className='text-sm text-center'>
+					If you are not a crypto user and want to donate using credit card,
+					here's a video guide that'll walk you through the process
+				</p>
+
+				<div className='w-full h-40 relative'>
+					<Image
+						onClick={() => setModal('video')}
+						src='/static/images/video.png'
+						width='300'
+						height='200'
+						alt='image'
+					/>
+				</div>
+				<Button
+					onClick={handleDonationModal}
+					className='btn-ghost bg-light2 text-primary font-bold text-lg w-fit'
+				>
+					<Link
+						href={
+							'https://www.notion.so/directed/About-DirectEd-Lions-Collection-0e6003940695493b81c3c1f16841d208'
+						}
+						passHref
+						onClick={() => setModal('video')}
+						// height={200}
+						// alt="image"
+					>
+						Learn more
+					</Link>
+				</Button>
+			</Modal>
+			{/* Video modal */}
+			<Modal
+				open={modal === 'video'}
+				onClose={() => setModal('how-to-donate')}
+				className='h-64 relative rounded-3xl overflow-hidden  w-full p-5 md:w-2/5 flex flex-col justify-center items-center'
+			>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://www.loom.com/share/ad317540b22b4722b71410f15fb84a14'
+				>
+					<Image
+						src='/static/images/video.png'
+						alt='image'
+						width='300'
+						height='200'
+					/>
+				</a>
+			</Modal>

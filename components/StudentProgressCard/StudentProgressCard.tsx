@@ -13,12 +13,12 @@ const StudentProgressCard = ({ progress }: StudentProgressCardProps) => {
 				<input type='checkbox' name='' id='' />
 				<Image
 					src='/static/images/person1.png'
-					alt=''
+					alt='student'
 					width='100'
 					height='100'
 				/>
 				<div>
-					<h3>Scott Johnson</h3>
+					<h4>Scott Johnson</h4>
 					<p>s.johnson@directed.com</p>
 				</div>
 			</div>

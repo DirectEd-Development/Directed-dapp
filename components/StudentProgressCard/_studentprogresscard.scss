@@ -1,5 +1,7 @@
 .student-progresscard {
-	border: 1px solid rgba(255, 255, 255, 0.473);
-	padding-inline: 1rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+	padding: 0.5rem 0 1.5rem;
 	width: 100%;
+	align-items: baseline;
+	flex-wrap: wrap;
 }
