@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Meta, Modal } from '../../components'
+import { Button, Meta, Modal } from '../../components'
 
 const amounts: string[] = ['₳1000', '₳40']
 
@@ -73,9 +73,9 @@ const Donate: NextPage = () => {
 							<p>Click to see a sample NFT</p>
 						</div>
 					)}
-					<button onClick={handleDonate} className=''>
+					<Button onClick={handleDonate} variant='primary'>
 						Donate Now
-					</button>
+					</Button>
 				</div>
 			</main>
 			{/* <Modal open={modal} onClose={() => setModal(false)} className=''>

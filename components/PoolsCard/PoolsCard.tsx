@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
 
 const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
@@ -86,7 +87,7 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 						<ProgressBar />
 						<div className=''>
 							<Link href='/donate'>
-								<button className='btn btn-primary'>donate now</button>
+								<Button variant='primary'>donate now</Button>
 							</Link>
 						</div>
 					</div>

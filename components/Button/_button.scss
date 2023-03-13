@@ -1,48 +1,49 @@
 .btn {
-}
+	display: block;
+	cursor: pointer;
+	outline-color: transparent;
+	border-radius: 1rem;
+	border: 1px solid transparent;
+	background: var(--clr-accent-300);
+	color: rgb(27, 27, 27);
+	padding: 1rem 6rem;
+	font-size: var(--fs-300);
+	font-family: inherit;
+	font-weight: 700;
+	text-transform: capitalize;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+		0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 
-.containerLoading {
-	width: 30px;
-	height: 30px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 0.3rem;
-	transform: rotate(-45deg);
-}
-
-@keyframes load {
-	0% {
-		transform: scale(1);
+	&.small {
+		padding-inline: 2rem;
 	}
-	50% {
-		transform: scale(0);
-		background-color: var(--color);
+
+	&.small-height {
+		padding: 0.5rem 2rem;
 	}
-	100% {
-		transform: scale(1);
+
+	&.primary {
+		background: var(--clr-primary-100);
+		color: var(--clr-accent-200);
 	}
-}
 
-.one {
-	--color: magenta;
-}
+	&.secondary {
+		background: var(--clr-primary-200);
+		color: var(--clr-accent-200);
+		box-shadow: none;
+	}
 
-.two {
-	animation-delay: 0.1s;
-	--color: lime;
-}
+	&.disabled {
+		background: var(--clr-accent-400) !important;
+		color: var(--clr-accent-300) !important;
+		cursor: not-allowed;
+	}
 
-.three {
-	animation-delay: 0.2s;
-	--color: blue;
-}
-
-.four {
-	animation-delay: 0.3s;
-	--color: yellow;
-}
-
-.five {
-	animation-delay: 0.4s;
-	--color: orange;
+	&.link {
+		background: transparent;
+		text-decoration: underline;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+	}
 }

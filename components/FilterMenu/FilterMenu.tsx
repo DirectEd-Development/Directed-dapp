@@ -1,69 +1,75 @@
+import { useState } from 'react'
 import { BsFilter } from 'react-icons/bs'
 import { GrClose } from 'react-icons/gr'
+import Button from '../Button/Button'
+import RadioMultiSelect from '../RadioMultiSelect/RadioMultiSelect'
+import { languages, gender, location } from '../../styles/lib/radioOptions'
 
 const FilterMenu = () => {
+	const [showFilterMenu, setShowFilterMenu] = useState<boolean>(true)
+	const [language, setLanguage] = useState<string>('')
+	const [userGender, setUserGender] = useState<string>('')
+	const [userLocation, setUserLocation] = useState<string>('')
+
+	const getLanguage = (option: string): void => {
+		setLanguage(option)
+	}
+
+	const getGender = (option: string): void => {
+		setUserGender(option)
+	}
+
+	const getLocation = (option: string): void => {
+		setUserLocation(option)
+	}
+
+	const clearFilter = () => {
+		setLanguage('')
+		setUserGender('')
+		setUserLocation('')
+	}
+
+	console.log(language, userGender, userLocation)
+
 	return (
 		<div className='filter-menu'>
 			<div className='filter-menu__filter-button'>
-				<BsFilter size={30} />
+				<BsFilter size={30} onClick={() => setShowFilterMenu(true)} />
 			</div>
 
-			{/* <div>
-					<div>
-						<div>
-							<div>
-								<div>Filter Menu</div>
-								<button>
-									<GrClose />
-								</button>
-							</div>
-							<select>
-								<option>Language</option>
-								<option className=''>Javascript</option>
-								<option className=''>PHP</option>
-							</select>
-						</div>
+			{showFilterMenu && (
+				<div className='filter-menu__content'>
+					<div className='filter-menu__head'>
+						<p>Filter Menu</p>
+						<GrClose size={20} onClick={() => setShowFilterMenu(false)} />
 					</div>
-					<hr />
-					<div>
-						<div>
-							<select>
-								<option>Gender</option>
-								<option className=''>Female</option>
-								<option className=''>Male</option>
-								<option className=''>Co-Ed</option>
-							</select>
-							<div>
-								<i className='fas fa-chevron-down'></i>
-							</div>
-						</div>
+
+					<RadioMultiSelect
+						name='Languages'
+						options={languages}
+						getOption={getLanguage}
+					/>
+					<RadioMultiSelect
+						name='Gender'
+						options={gender}
+						getOption={getGender}
+					/>
+					<RadioMultiSelect
+						name='Location'
+						options={location}
+						getOption={getLocation}
+					/>
+
+					<div className='filter-menu__buttons'>
+						<Button variant='secondary' size='small-height'>
+							Apply Filters
+						</Button>
+						<Button variant='link' onClick={clearFilter}>
+							Clear All Filters
+						</Button>
 					</div>
-					<hr />
-					<div>
-						<div className='relative text-gray-500 outline-0 w-full border-none'>
-							<select className='border-none outline-none cursor-pointer inline-block py-2 pl-3 pl-10 w-full'>
-								<option className='pt-6'>Location</option>
-								<option className=''>Location 1</option>
-								<option className=''>Location 2</option>
-								<option className=''>Location 3</option>
-							</select>
-							<div className='pointer-events-none absolute inset-y-0 right-0 flex items-center px-2'>
-								<i className='fas fa-chevron-down text-gray-400'></i>
-							</div>
-						</div>
-					</div>
-					<hr />
-					<div>
-						<div>
-							<button className='text-white w-3/5 items-center text-gray-100 text-center rounded-md px-2 py-2 text-sm bg-[#385140]'>
-								Apply Filters
-							</button>
-						</div>
-						<div>
-							<button>Clear All Filters</button>
-						</div>
-					</div>
-				</div> */}
+				</div>
+			)}
 		</div>
 	)
 }

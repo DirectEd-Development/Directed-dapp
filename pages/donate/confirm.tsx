@@ -55,7 +55,7 @@ const Confirm: NextPage = () => {
 						onClick={handleConfirm}
 						loading={loading}
 						loadingIndicator='processing...'
-						className=''
+						variant='primary'
 					>
 						Done
 					</Button>

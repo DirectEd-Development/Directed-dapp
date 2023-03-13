@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Button from '../Button/Button'
 
 const Footer = () => {
 	return (
@@ -10,18 +11,14 @@ const Footer = () => {
 					rel='noopener noreferrer'
 					href='https://directed.notion.site/Donation-Portal-Help-78d35a59263647dda6faac4e01cb99e2'
 				>
-					<button className='btn btn-sm bg-primary-light border-none hover:bg-primary-light hover:border-none text-white'>
-						need help?
-					</button>
+					<Button variant='secondary'>need help?</Button>
 				</a>
 				<a
 					target='_blank'
 					rel='noopener noreferrer'
 					href='https://docs.google.com/forms/d/e/1FAIpQLSfx_FCw99hQ7Dg5zviHa1EaeCShy57ftmpf-p2tDAKacptIsA/viewform?usp=sf_link'
 				>
-					<button className='btn btn-sm bg-primary-light border-none hover:bg-primary-light hover:border-none text-white'>
-						have a suggestion?
-					</button>
+					<Button variant='secondary'>have a suggestion?</Button>
 				</a>
 				<div>
 					<Link

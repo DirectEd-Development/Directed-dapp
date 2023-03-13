@@ -1,6 +1,33 @@
 .filter-menu {
+	position: relative;
+	padding-block: 3rem;
+	color: var(--clr-primary-300);
+
 	&__filter-button {
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
+	}
+
+	&__content {
+		width: max-content;
+		background: var(--clr-accent-200);
+		position: absolute;
+		top: 6.5rem;
+		right: 0;
+		z-index: 1;
+		box-shadow: 0 5px 6px 1px rgba(#000000, 0.5);
+		padding: 1.5rem;
+	}
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1.5rem;
+	}
+
+	&__buttons {
+		& > * {
+			margin-inline: auto;
+		}
 	}
 }

@@ -6,38 +6,4 @@
 		font-size: var(--fs-700);
 		text-align: center;
 	}
-
-	&__info {
-		border: 1px solid var(--clr-primary-100);
-		padding: 3rem 2rem 3rem 8rem;
-		margin: 2.5rem 0;
-	}
-
-	&__info-title {
-		text-align: center;
-	}
-
-	&__info-badges {
-		color: var(--clr-black);
-		flex-basis: 70%;
-	}
-
-	&__badges {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	&__info-badge {
-		display: flex;
-		align-items: flex-start;
-		gap: 2rem;
-	}
-
-	&__naming-badge {
-		flex-basis: 35%;
-		border-radius: 1rem;
-		border: 1px solid var(--clr-primary-100);
-		padding: 1rem 0 1rem 1rem;
-	}
 }
