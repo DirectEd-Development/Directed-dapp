@@ -34,4 +34,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 <p> Thank you for your interest in our project. </p>
 
+<h3> Future work: Access specific NFTs in user wallets <h3>
+  
+<p> In the future, users will be able to see their specific NFTs in their wallet, rather than having to navigate through the entire collection of NFTs on the website. This feature is currently under development and will be implemented in a future update. </p>
 
+<p> We appreciate your patience as we work to improve our platform and provide a better user experience. Stay tuned for updates on this and other features. </p>
