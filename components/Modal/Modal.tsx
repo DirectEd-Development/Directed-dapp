@@ -1,50 +1,43 @@
-import React from 'react'
-
+import { useImperativeHandle, useState, ReactNode, forwardRef } from 'react'
+import { createPortal } from 'react-dom'
 import { GrFormClose } from 'react-icons/gr'
 
-type ModalPropsType = {
-	open: boolean
-	onClose?(): void
-	children: React.ReactNode
-	className?: string
+export type ModalHandler = {
+	openModal: () => void
+	closeModal: () => void
 }
 
-const Modal = ({ open, onClose, children, className }: ModalPropsType) => {
-	const handleStopPropagation = (event: React.MouseEvent) => {
-		event.stopPropagation()
-	}
-	const handleClose = (event: React.MouseEvent) => {
-		handleStopPropagation(event)
-		if (onClose) {
-			onClose()
-		}
-	}
-	return (
-		<>
-			<input
-				type='checkbox'
-				checked={open}
-				id='my-modal'
-				className='modal-toggle'
-				readOnly
-			/>
-			<div className='modal p-10' onClick={onClose}>
-				<div
-					onClick={handleStopPropagation}
-					className={`modal-box ${className}`}
-				>
-					<button
-						onClick={handleClose}
-						className='text-primary absolute top-2 right-2 z-50'
-					>
-						<GrFormClose size={20} />
-					</button>
+type ModalProps = {
+	children: ReactNode
+}
 
+const Modal = forwardRef<ModalHandler, ModalProps>(({ children }, ref) => {
+	const [display, setDisplay] = useState<boolean>(false)
+
+	useImperativeHandle(ref, () => {
+		return { openModal: () => open(), closeModal: () => close() }
+	})
+
+	const open = (): void => {
+		setDisplay(true)
+	}
+
+	const close = (): void => {
+		setDisplay(false)
+	}
+
+	if (display) {
+		return createPortal(
+			<div className='modal'>
+				<div className='modal__content'>
+					<GrFormClose size={30} className='modal__icon' onClick={close} />
 					{children}
 				</div>
-			</div>
-		</>
-	)
-}
+			</div>,
+			document.getElementById('modal-root') as Element
+		)
+	}
+	return null
+})
 
 export default Modal

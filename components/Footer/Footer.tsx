@@ -16,6 +16,13 @@ const Footer = () => {
 				<a
 					target='_blank'
 					rel='noopener noreferrer'
+					href='https://www.notion.so/directed/Privacy-Policy-277f03fc6e3645aa8bcae404a21e931d?pvs=4'
+				>
+					<Button variant='secondary'>privacy policy</Button>
+				</a>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
 					href='https://docs.google.com/forms/d/e/1FAIpQLSfx_FCw99hQ7Dg5zviHa1EaeCShy57ftmpf-p2tDAKacptIsA/viewform?usp=sf_link'
 				>
 					<Button variant='secondary'>have a suggestion?</Button>

@@ -9,14 +9,14 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
 	return (
-		<>
+		<div className='layout'>
 			<Head>
 				<link rel='shortcut icon' href='/favicon.png' type='image/x-icon' />
 			</Head>
 			<Navbar />
-			<div className=''>{children}</div>
+			<>{children}</>
 			<Footer />
-		</>
+		</div>
 	)
 }
 

@@ -1,4 +1,4 @@
-import { SchoolDataType } from '../../types/schoolDataType'
+import { SchoolDataType } from '../types/schoolDataType'
 
 export const schoolData: SchoolDataType[] = [
 	{

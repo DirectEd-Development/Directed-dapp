@@ -6,6 +6,7 @@ type ButtonType = {
 	variant?: string
 	size?: string
 	disabled?: boolean
+	noShadow?: boolean
 }
 
 const Button = ({
@@ -16,6 +17,7 @@ const Button = ({
 	variant,
 	size,
 	disabled,
+	noShadow,
 }: ButtonType) => {
 	return (
 		<button
@@ -25,6 +27,7 @@ const Button = ({
 								${variant}
 								${size}
 								${disabled && 'disabled'}
+								${noShadow && 'no-shadow'}
 			`}
 			disabled={disabled}
 		>

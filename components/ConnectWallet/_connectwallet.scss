@@ -1,2 +1,32 @@
-.wallet-button {
+.connect-wallet {
+	padding: 1rem;
+	color: var(--clr-primary-100);
+	position: relative;
+
+	& li {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		padding-block: 1rem;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--clr-accent-300);
+		}
+	}
+
+	& span {
+		font-size: var(--fs-300);
+	}
+
+	&__disconnect {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.connect-button {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
 }

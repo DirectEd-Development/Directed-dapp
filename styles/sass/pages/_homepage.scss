@@ -7,3 +7,21 @@
 		text-align: center;
 	}
 }
+
+.donate-modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	flex-direction: column;
+	padding-block: 3rem;
+	text-align: center;
+
+	& h3 {
+		width: 22.5ch;
+	}
+
+	& p {
+		width: 50ch;
+	}
+}

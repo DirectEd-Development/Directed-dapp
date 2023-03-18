@@ -30,7 +30,11 @@
 	&.secondary {
 		background: var(--clr-primary-200);
 		color: var(--clr-accent-200);
-		box-shadow: none;
+	}
+
+	&.accent {
+		background: var(--clr-accent-100);
+		color: var(--clr-primary-100);
 	}
 
 	&.disabled {
@@ -44,6 +48,17 @@
 		text-decoration: underline;
 		border: none;
 		border-radius: 0;
+		padding: 0;
+	}
+
+	&.outline {
+		background: transparent;
+	}
+
+	&.disabled,
+	&.link,
+	&.outine,
+	&.no-shadow {
 		box-shadow: none;
 	}
 }

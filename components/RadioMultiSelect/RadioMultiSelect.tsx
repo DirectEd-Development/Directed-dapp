@@ -16,7 +16,7 @@ const RadioMultiSelect = ({
 	options,
 	getOption,
 }: RadioMultiSelectProps) => {
-	const [showOption, setShowOption] = useState<boolean>(true)
+	const [showOption, setShowOption] = useState<boolean>(false)
 
 	return (
 		<div className='multi-select__options'>
@@ -30,18 +30,24 @@ const RadioMultiSelect = ({
 			{showOption && (
 				<>
 					{options.map((d: { name: string }) => (
-						<div className='multi-select__radio' key={d.name}>
-							<input
-								type='radio'
-								name={d.name.toLowerCase()}
-								id={d.name.toLowerCase()}
-								onChange={(e: ChangeEvent<HTMLInputElement>) =>
-									getOption(e.target.value)
-								}
-								value={d.name}
-							/>
-							<label htmlFor={d.name.toLowerCase()}>{d.name}</label>
-						</div>
+						<>
+							<div className='multi-select__radio' key={d.name}>
+								<div className='multi-select__input-container'>
+									<input
+										type='checkbox'
+										name={d.name.toLowerCase()}
+										id={d.name.toLowerCase()}
+										onChange={(e: ChangeEvent<HTMLInputElement>) =>
+											getOption(e.target.value)
+										}
+										value={d.name}
+									/>
+									<span className='checkmark'></span>
+								</div>
+								<label htmlFor={d.name.toLowerCase()}>{d.name}</label>
+							</div>
+							<hr className='multi-select__radio-divider' />
+						</>
 					))}
 				</>
 			)}

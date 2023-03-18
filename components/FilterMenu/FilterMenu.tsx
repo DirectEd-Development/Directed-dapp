@@ -3,10 +3,10 @@ import { BsFilter } from 'react-icons/bs'
 import { GrClose } from 'react-icons/gr'
 import Button from '../Button/Button'
 import RadioMultiSelect from '../RadioMultiSelect/RadioMultiSelect'
-import { languages, gender, location } from '../../styles/lib/radioOptions'
+import { languages, gender, location } from '../../lib/radioOptions'
 
 const FilterMenu = () => {
-	const [showFilterMenu, setShowFilterMenu] = useState<boolean>(true)
+	const [showFilterMenu, setShowFilterMenu] = useState<boolean>(false)
 	const [language, setLanguage] = useState<string>('')
 	const [userGender, setUserGender] = useState<string>('')
 	const [userLocation, setUserLocation] = useState<string>('')
@@ -28,8 +28,6 @@ const FilterMenu = () => {
 		setUserGender('')
 		setUserLocation('')
 	}
-
-	console.log(language, userGender, userLocation)
 
 	return (
 		<div className='filter-menu'>

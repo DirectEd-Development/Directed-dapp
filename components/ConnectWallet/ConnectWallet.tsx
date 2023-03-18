@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useWallet, useWalletList } from '@meshsdk/react'
+import Button from '../Button/Button'
+import { BsChevronDown } from 'react-icons/bs'
+import Dropdown from '../Dropdown/Dropdown'
+import Image from 'next/image'
 
 interface Wallet {
 	name: string
@@ -39,47 +43,61 @@ const ConnectWallet = () => {
 	}
 
 	return (
-		<div className='wallet-button'>
-			<button
-				className='bg-red-500'
-				onClick={toggleDropdown}
-				onMouseEnter={toggleDropdown}
-				// onMouseLeave={toggleDropdown}
-			>
-				{selectedWallet ? (
-					<>
-						<span className={`icon-${selectedWallet.icon}`} />
-						<span className='dropdown-button__wallet-name'>
-							{selectedWallet.name}
-						</span>
-					</>
-				) : connecting ? (
-					'Connecting'
-				) : (
-					'Connect'
+		<Dropdown
+			title={
+				<Button variant='accent'>
+					{selectedWallet ? (
+						<div className='flex-gap'>
+							<span>{selectedWallet.name}</span>
+							<Image
+								src={selectedWallet.icon}
+								alt={selectedWallet.name}
+								width='30'
+								height='30'
+							/>
+						</div>
+					) : connecting ? (
+						'Connecting'
+					) : (
+						<div className='connect-button'>
+							<div>Connect</div>
+
+							<BsChevronDown size={25} />
+						</div>
+					)}
+				</Button>
+			}
+		>
+			<div className='connect-wallet'>
+				{!selectedWallet && !connecting && (
+					<ul>
+						{wallets.map((wallet: Wallet) => (
+							<li
+								key={wallet.name}
+								onClick={() => handleWalletSelection(wallet)}
+							>
+								<span className='dropdown-button__wallet-name'>
+									{wallet.name}
+								</span>
+								<Image
+									src={wallet.icon}
+									alt={wallet.name}
+									width='30'
+									height='30'
+								/>
+							</li>
+						))}
+					</ul>
 				)}
-			</button>
-			{isOpen && !connecting && (
-				<ul className='dropdown-button__dropdown'>
-					{wallets.map((wallet: Wallet) => (
-						<li key={wallet.name} onClick={() => handleWalletSelection(wallet)}>
-							<span className={`icon-${wallet.icon}`} />
-							<span className='dropdown-button__wallet-name'>
-								{wallet.name}
-							</span>
-						</li>
-					))}
-				</ul>
-			)}
-			{selectedWallet && (
-				<button
-					className='dropdown-button__disconnect'
-					onClick={handleDisconnect}
-				>
-					Disconnect
-				</button>
-			)}
-		</div>
+				{selectedWallet && (
+					<div className='connect-wallet__disconnect'>
+						<Button variant='outline' onClick={handleDisconnect} noShadow>
+							Disconnect
+						</Button>
+					</div>
+				)}
+			</div>
+		</Dropdown>
 	)
 }
 

@@ -1,96 +1,81 @@
-import { useState } from 'react'
-import { IoLocationSharp } from 'react-icons/io5'
-import { GrLinkedinOption } from 'react-icons/gr'
-import { TbBrandTelegram } from 'react-icons/tb'
 import Image from 'next/image'
-import Button from '../Button/Button'
-import Link from 'next/link'
-import { FaChevronRight, FaChevronDown } from 'react-icons/fa'
-import ProgressBar from '../StudentProgressBar/StudentProgressBar'
+
+import { MdLocationOn, MdOutlineMail } from 'react-icons/md'
+import { RiErrorWarningLine } from 'react-icons/ri'
 
 type SchoolCardProps = {
-	image?: string
-	name?: string
-	progress?: number
-	description?: string
+	image: string
+	schoolname?: string
+	chart: string
+	location?: string
 }
 
 const SchoolCard = ({
-	image = '/static/images/avatar.png',
-	name = 'John Doe',
-	progress = 4,
-	description = 'lorem ipsum',
+	image,
+	schoolname,
+	location,
+	chart,
 }: SchoolCardProps) => {
-	const [open, setOpen] = useState<boolean>(false)
-
 	return (
 		<>
 			<div className='school-card'>
-				<div className='school-card__top-content'>
-					<div className='flex-gap-two'>
-						<div className='school-card__image'>
-							<Image src={image} alt='' width='300' height='300' />
+				<h4>{schoolname}</h4>
+				<div>
+					<Image
+						src={image}
+						alt=''
+						width='350'
+						height='250'
+						className='school-card__image'
+					/>
+					<div>
+						<div className='flex-gap'>
+							<MdLocationOn size={20} />
+							<p>{location}</p>
 						</div>
-
-						<h1 className='md:text-xl font-semibold text-dark2'>{name}</h1>
+						<div className='flex-gap'>
+							<MdOutlineMail size={20} />
+							<p>Thank You Letter</p>
+						</div>
 					</div>
 					<div className='school-card__content'>
-						<ProgressBar progress={progress} />
-					</div>
-					<div className='school-card__content'>
-						<Button
-							onClick={() => setOpen(!open)}
-							className='btn-ghost text-primary font-bold gap-2 hover:bg-transparent'
-						>
-							{open ? (
-								<>
-									<span>Close</span>
-									<FaChevronDown />
-								</>
-							) : (
-								<>
-									<span>More</span>
-
-									<FaChevronRight />
-								</>
-							)}
-						</Button>
-					</div>
-				</div>
-				<div
-					className={`ease-in-out duration-300 ${
-						open ? 'min-h-52 md:px-16' : ' h-0'
-					}`}
-				>
-					<div
-						className={open ? 'flex flex-col p-5 md:px-10 space-y-3' : 'hidden'}
-					>
-						<p className='flex-gap'>
-							<IoLocationSharp />
-							<span>Naivasha, Kenya</span>
-						</p>
-						<p>
-							I'm a web developer with in-depth experience in UI/UX design. In a
-							nutshell, I create websites that help organizations address
-							business challenges and meet their needs. I manage everything from
-							website navigation and layout to a company's web hosting and
-							security architecture.
-						</p>
-						<div className='flex-between'>
-							<Link href='#'>
-								<span className='school-card__student-link'>
-									{'https://{userid}.github.io/{reponame}'}
-								</span>
-							</Link>
-							<div className='flex-gap'>
-								<button className='school-card__icon-button'>
-									<GrLinkedinOption />
-								</button>
-								<button className='school-card__icon-button'>
-									<TbBrandTelegram />
-								</button>
+						<img src={chart} alt='chart' />
+						<div className='school-card__topics'>
+							<div className='school-card__topic flex-gap'>
+								<span></span>
+								<p>Git Interaction</p>
+							</div>
+							<div className='school-card__topic flex-gap'>
+								<span></span>
+								<p>Loops and Data</p>
+							</div>
+							<div className='school-card__topic flex-gap'>
+								<span></span>
+								<p>APIs</p>
+							</div>
+							<div className='school-card__topic flex-gap'>
+								<span></span>
+								<p>ReactJS</p>
+							</div>
+							<div className='school-card__topic flex-gap'>
+								<span></span>
+								<p>NodeJS</p>
 							</div>
 						</div>
+					</div>
+					<div className='school-card__content'>
+						<div className='school-card__tabs'>
+							<span className='school-card__tab active'>Emurgo Scholar</span>
+							<span className='school-card__tab'>Simon Scholar</span>
+							<span className='school-card__tab'>DirectEd Scholar</span>
+						</div>
+						<p className='school-card__text'>
+							Slide to left or right to change the scholars
+						</p>
+					</div>
+					<div className='flex-gap'>
+						<RiErrorWarningLine size={20} />
+						<p>Learn more about the scholars</p>
 					</div>
 				</div>
 			</div>

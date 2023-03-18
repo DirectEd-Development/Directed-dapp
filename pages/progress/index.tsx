@@ -1,28 +1,75 @@
 import { NextPage } from 'next'
-import { Meta, SchoolCard } from '../../components'
+import { Button, SchoolCard } from '../../components'
+import { RiErrorWarningLine } from 'react-icons/ri'
+import { useWallet, useAssets } from '@meshsdk/react'
+import { useEffect, useState } from 'react'
 
 const Progress: NextPage = () => {
+	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
+		useState<boolean>(false)
+
+	const { connected, wallet } = useWallet()
+
+	const assets: any = useAssets()
+	const policyId = assets?.map((asset: any) => asset.policyId)
+
+	const checkPolicyIdAssets = async (policyId: any) => {
+		const assets = await wallet.getPolicyIdAssets(`${policyId}`)
+
+		if (assets.length <= 0) {
+			console.log('zero values')
+		} else {
+			setHasPolicyIdAssetsChecked(true)
+		}
+	}
+
+	if (connected) {
+		checkPolicyIdAssets(policyId)
+	}
+
+	useEffect(() => {
+		if (connected === false) {
+			setHasPolicyIdAssetsChecked(false)
+		}
+		console.log(connected)
+	}, [connected])
+
 	return (
 		<>
-			<Meta title='Scholars’ Progress' description='Scholars progress page' />
 			<main className='progress'>
-				<h1 className='text-5xl text-black font-semibold text-center'>
-					Scholars’ Progress
-				</h1>
-				<h4 className='text-2xl text-black mt-8 mb-4'>
-					Progress Track for St. Peters High School
-				</h4>
-				<div className='bg-light2 progress__content'>
-					<div className=' text-lg text-dark2 p-2'>
-						<h1>Name</h1>
-						<h1 className='md:ml-16'>Milestone Progress</h1>
-						<h1>Contact</h1>
-					</div>
-					<SchoolCard progress={3} />
-					<SchoolCard progress={2} />
-					<SchoolCard progress={1} />
-					<SchoolCard progress={2} />
-				</div>
+				{hasPolicyIdAssetsChecked ? (
+					<>
+						<div className='progress__header'>
+							<h2>Progress Track for Simon Sallstrom Scholars</h2>
+							<div className='flex-gap'>
+								<RiErrorWarningLine size={20} />
+								<Button variant='link'>Read More</Button>
+							</div>
+						</div>
+						<div className='progress__content'>
+							<SchoolCard
+								schoolname='Kagumo High School'
+								chart='/static/images/chart-1.png'
+								location='Naivasha, Kenya'
+								image='/static/images/peters.png'
+							/>
+							<SchoolCard
+								schoolname='St. Peters High School'
+								chart='/static/images/chart-1.png'
+								location='Naivasha, Kenya'
+								image='/static/images/saintpete.png'
+							/>
+							<SchoolCard
+								schoolname='Strathmore High School'
+								chart='/static/images/chart-1.png'
+								location='Naivasha, Kenya'
+								image='/static/images/strats.png'
+							/>
+						</div>
+					</>
+				) : (
+					<h3>You need to make a donation to access this page</h3>
+				)}
 			</main>
 		</>
 	)
