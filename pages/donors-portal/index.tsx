@@ -1,20 +1,23 @@
 import { useState } from 'react'
 import { useWallet, useAssets } from '@meshsdk/react'
 import { AssetCard, Meta } from '../../components'
-import { GetStaticProps } from 'next'
-import { Assets } from '../../types/assets'
+// import { GetStaticProps } from 'next'
+// import { Assets } from '../../types/assets'
+import { data } from '../../data/assets'
 
-const server = 'http://localhost:3000'
+// const server = 'http://localhost:3000'
 
-type Asset = {
-	unit: string
-	policyId: string
-	assetName: string
-	fingerprint: string
-	quantity: string
-}
+// type Asset = {
+// 	unit: string
+// 	policyId: string
+// 	assetName: string
+// 	fingerprint: string
+// 	quantity: string
+// }
 
-export default function Home({ assetsData }: { assetsData: Assets[] }) {
+// { assetsData }: { assetsData: Assets[] }
+
+export default function Home() {
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
 		useState<boolean>(false)
 
@@ -47,7 +50,7 @@ export default function Home({ assetsData }: { assetsData: Assets[] }) {
 				<div className='donors-portal__asset'>
 					{hasPolicyIdAssetsChecked ? (
 						<>
-							<AssetCard assets={assetsData} />
+							<AssetCard assets={data} />
 						</>
 					) : (
 						<h3 className='donors-portal__no-donation'>
@@ -60,13 +63,13 @@ export default function Home({ assetsData }: { assetsData: Assets[] }) {
 	)
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-	const res = await fetch(`${server}/api/getAssets`)
-	const assetsData = await res.json()
+// export const getStaticProps: GetStaticProps = async () => {
+// 	const res = await fetch(`/api/getAssets`)
+// 	const assetsData = await res.json()
 
-	return {
-		props: {
-			assetsData,
-		},
-	}
-}
+// 	return {
+// 		props: {
+// 			assetsData,
+// 		},
+// 	}
+// }
