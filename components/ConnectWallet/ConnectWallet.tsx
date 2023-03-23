@@ -60,9 +60,7 @@ const ConnectWallet = () => {
 						'Connecting'
 					) : (
 						<div className='connect-button'>
-							<div>Connect</div>
-
-							<BsChevronDown size={25} />
+							<div>Connect Wallet</div>
 						</div>
 					)}
 				</Button>

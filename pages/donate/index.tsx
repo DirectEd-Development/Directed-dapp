@@ -1,20 +1,25 @@
-import React from 'react'
+import { useState, useRef } from 'react'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
 import { Button, Meta, Modal } from '../../components'
+import { ModalHandler } from '../../components/Modal/Modal'
+import { amounts } from '../../lib/donorAmounts'
+import { GrFormClose } from 'react-icons/gr'
 
-const amounts: string[] = ['₳1000', '₳40']
+// const amounts: string[] = ['₳2000', '₳1000', '₳40']
 
 const Donate: NextPage = () => {
-	const [amount, setAmount] = React.useState<string>('')
-	const [image, setImage] = React.useState<number | null>(null)
-	const [modal, setModal] = React.useState<boolean>(false)
+	const [amount, setAmount] = useState<string>('')
+	const [image, setImage] = useState<number | null>(null)
+
+	const modalRef = useRef<ModalHandler>(null)
+
 	const router = useRouter()
 
 	const handleDonate = () => {
-		if (amount === '₳1000') {
+		if (amount === '₳1000' || amount === '₳2000') {
 			router.push('https://pay.nmkr.io/?p=fbd4da6ef7b14acda66dff5515877a46&c=1')
 		} else {
 			if (amount === '₳40')
@@ -23,6 +28,10 @@ const Donate: NextPage = () => {
 				)
 		}
 	}
+
+	const openModal = () => modalRef.current?.openModal()
+
+	const closeModal = () => modalRef.current?.closeModal()
 
 	return (
 		<>
@@ -42,34 +51,41 @@ const Donate: NextPage = () => {
 						onClick={() => router.back()}
 						className='go-back'
 						size={35}
+						color={'#374756'}
 					/>
 					<h3>Donate to Kagumo High School</h3>
 				</div>
 				<div className='donate__donations'>
-					<h4>Select Donation Amount</h4>
+					<h4>DirectEd Lions Collection</h4>
+
 					<div className='donate__donations-amounts'>
-						{amounts.map((amt: string, index: number) => (
-							<button
+						{amounts.map((amt, index: number) => (
+							<Button
+								size='small'
+								variant={amt.amount === amount ? 'primary' : ''}
 								onClick={() => {
-									setAmount(amt)
+									setAmount(amt.amount)
 									setImage(index + 111)
 								}}
-								className={`${amount === amt ? '' : ''}`}
+								key={amt.amount}
+								// className={`${amount === amt ? '' : ''}`}
+								noShadow
 							>
-								{amt}
-							</button>
+								{amt.title}
+							</Button>
 						))}
 					</div>
 					{amount && (
 						<div className='donate__nft-content'>
 							<Image
-								onClick={() => setModal(true)}
+								onClick={openModal}
 								src={`/static/images/${image ? image : 111}.png`}
 								alt='NFT'
 								width={100}
 								height={100}
 								className='donate__nft-image'
 							/>
+
 							<p>Click to see a sample NFT</p>
 						</div>
 					)}
@@ -78,15 +94,23 @@ const Donate: NextPage = () => {
 					</Button>
 				</div>
 			</main>
-			{/* <Modal open={modal} onClose={() => setModal(false)} className=''>
-				<Image
-					src={`/static/images/${image ? image : 111}.png`}
-					alt='NFT'
-					height={150}
-					width={1560}
-					className=''
-				/>
-			</Modal> */}
+			<Modal ref={modalRef}>
+				<div className='donate__preview'>
+					<Image
+						src={`/static/images/${image ? image : 111}.png`}
+						alt='NFT'
+						height={350}
+						width={350}
+						className='donate__preview-image'
+					/>
+					<GrFormClose
+						size={25}
+						color='white'
+						onClick={closeModal}
+						className='donate__close-preview'
+					/>
+				</div>
+			</Modal>
 		</>
 	)
 }

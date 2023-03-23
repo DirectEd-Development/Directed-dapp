@@ -2,7 +2,7 @@ import { SchoolDataType } from '../types/schoolDataType'
 
 export const schoolData: SchoolDataType[] = [
 	{
-		title: 'Kagumo-Djed Scholarship Pool',
+		title: 'Djed Scholars Scholarship Pool',
 		image: '/static/images/kagumo.jpg',
 	},
 	// {

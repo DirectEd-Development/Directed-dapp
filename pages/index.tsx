@@ -46,13 +46,16 @@ const Home: NextPage = () => {
 		<>
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 			<main className='scholarship-pool container'>
-				<h1 className='scholarship-pool__title'>Scholarship Pools</h1>
-				<DonorInfoTab />
+				<section>
+					<h1 className='scholarship-pool__title'>Scholarship Pools</h1>
+				</section>
+
+				{/* <DonorInfoTab />
 				<FilterMenu />
 
 				{schoolData.map((school: SchoolDataType) => (
 					<PoolCard key={school.title} {...school} />
-				))}
+				))} */}
 			</main>
 			{/* Donate Modal */}
 			{/* 
