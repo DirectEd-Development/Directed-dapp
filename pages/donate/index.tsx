@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
 import { Button, Meta, Modal } from '../../components'
 import { ModalHandler } from '../../components/Modal/Modal'
-import { amounts } from '../../lib/donorAmounts'
+import { amounts, options } from '../../lib/donorAmounts'
 import { GrFormClose } from 'react-icons/gr'
 
 // const amounts: string[] = ['₳2000', '₳1000', '₳40']
@@ -89,6 +89,14 @@ const Donate: NextPage = () => {
 							<p>Click to see a sample NFT</p>
 						</div>
 					)}
+
+					<div className='donate__donations-amounts'>
+						{options.map((option) => (
+							<Button size='small' noShadow>
+								{option.title}
+							</Button>
+						))}
+					</div>
 					<Button onClick={handleDonate} variant='primary'>
 						Donate Now
 					</Button>

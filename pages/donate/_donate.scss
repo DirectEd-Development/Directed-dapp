@@ -37,6 +37,10 @@
 		gap: 2.5rem;
 		justify-content: center;
 		margin: 2rem 0;
+
+		&:nth-child(2) {
+			margin-top: 3rem;
+		}
 	}
 
 	&__nft-content {

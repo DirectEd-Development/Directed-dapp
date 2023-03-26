@@ -7,6 +7,7 @@ import {
 	FilterMenu,
 	Meta,
 	DonorInfoTab,
+	ScholarsCard,
 } from '../components'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -46,16 +47,81 @@ const Home: NextPage = () => {
 		<>
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 			<main className='scholarship-pool container'>
-				<section>
-					<h1 className='scholarship-pool__title'>Scholarship Pools</h1>
+				<section className='scholarship-pool__text-content'>
+					<h2 className='scholarship-pool__title'>What am I Supporting?</h2>
+
+					<p>
+						Donate directly to a scholarship pool below to enable high-potential
+						students from low-income background to participate in our free
+						coding bootcamps
+					</p>
+					<p>
+						You may choose to make general contribution to DirectEd that is not
+						earmarked
+					</p>
+
+					<div className='scholarship-pool__button-wrapper'>
+						<Button variant='primary'>Donate Now</Button>
+					</div>
+				</section>
+				<section className='scholarship-pool__text-content'>
+					<h2 className='scholarship-pool__title'>
+						How will the scholarship pool money be used?
+					</h2>
+
+					<Image
+						src='/static/images/piechart.png'
+						alt='piechart'
+						width='1000'
+						height='450'
+					/>
+				</section>
+				<section className='scholarship-pool__text-content'>
+					<h2 className='scholarship-pool__title'>
+						How big a difference will this have?
+					</h2>
+
+					<h4>
+						For every $1 donated, more than $30 of economic value created*
+					</h4>
+					<h4>
+						This places us amongst the <strong>most effective charities</strong>{' '}
+						in the world in regard to poverty alleviation and economic
+						development
+					</h4>
+
+					<h4>
+						"The World Bank, United Nations and all development banks should
+						drop the nonsense they are doing and support DirectEd." - Professor
+						John Smith, University of Oxford
+					</h4>
+
+					<div className='scholarship-pool__button-wrapper'>
+						<Button variant='primary'>Donate Now</Button>
+					</div>
 				</section>
 
-				{/* <DonorInfoTab />
+				<section>
+					<h2>Exclusive perks of being a supporter of DirectEd's mission!</h2>
+					<DonorInfoTab />
+				</section>
+
+				<section className='scholarship-pool__potrait-card'>
+					<h2>Scholarship Pools</h2>
+					<div className='flex-between'>
+						<ScholarsCard />
+						<ScholarsCard />
+						<ScholarsCard />
+					</div>
+				</section>
+
 				<FilterMenu />
 
-				{schoolData.map((school: SchoolDataType) => (
-					<PoolCard key={school.title} {...school} />
-				))} */}
+				<section className='scholarship-pool__landscape-card'>
+					{schoolData.map((school: SchoolDataType) => (
+						<PoolCard key={school.title} {...school} />
+					))}
+				</section>
 			</main>
 			{/* Donate Modal */}
 			{/* 

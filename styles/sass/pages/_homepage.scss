@@ -1,10 +1,45 @@
 .scholarship-pool {
 	padding-top: 6rem;
 	padding-bottom: 4rem;
+	display: grid;
+	gap: 5rem;
+
+	&__text-content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		padding-inline: 4rem;
+		text-align: center;
+	}
 
 	&__title {
 		font-size: var(--fs-700);
 		text-align: center;
+	}
+
+	&__potrait-card {
+		text-align: center;
+		padding-inline: 6rem;
+
+		& > * {
+			margin: 3rem 0;
+		}
+
+		& > div {
+			gap: 2rem;
+		}
+	}
+
+	&__landscape-card {
+		display: grid;
+		gap: 2rem;
+	}
+
+	&__button-wrapper {
+		padding: 1rem;
+		background: var(--clr-accent-100);
 	}
 }
 

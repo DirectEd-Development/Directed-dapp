@@ -3,6 +3,7 @@
 		border: 1px solid var(--clr-primary-100);
 		padding: 3rem 2rem 3rem 8rem;
 		margin: 2.5rem 0;
+		background: var(--clr-accent-100);
 	}
 
 	&__info-title {
@@ -43,9 +44,9 @@
 		border: 1px solid var(--clr-primary-100);
 		padding: 1rem;
 		position: absolute;
-		width: 21rem;
+		width: 20rem;
 		right: 0;
-		bottom: 0;
+		top: 0;
 		flex-direction: column;
 	}
 

@@ -4,7 +4,15 @@ import React from 'react'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
 
-const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
+const PoolsCard = ({
+	title,
+	image,
+	desc,
+}: {
+	title?: string
+	image?: string
+	desc?: string
+}) => {
 	return (
 		<div className='pools-card'>
 			<div className='pools-card__container'>
@@ -25,7 +33,7 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 								passHref
 								className='pools-card__link'
 							>
-								Learn more about this school
+								Access Scholarships for students {desc}
 							</Link>
 						</div>
 						<ul className='pools-card__list-items'>
@@ -70,7 +78,7 @@ const PoolsCard = ({ title, image }: { title?: string; image?: string }) => {
 
 					<div className='pools-card__funds'>
 						<div>
-							<h3>3/40</h3>
+							<h3>3</h3>
 							<p>Scholarships funded</p>
 						</div>
 						<hr />

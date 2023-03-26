@@ -14,3 +14,12 @@ export const amounts: Amount[] = [
 		title: 'Warrior',
 	},
 ]
+
+export const options = [
+	{
+		title: '1 Full Access Scholarship',
+	},
+	{
+		title: 'Custom Amount',
+	},
+]
