@@ -44,7 +44,7 @@ const PoolsCard = ({
 									width='20'
 									height='20'
 								/>
-								7 days left
+								X days left
 							</li>
 							<li className='pools-card__list'>
 								<Image
@@ -53,17 +53,9 @@ const PoolsCard = ({
 									width='20'
 									height='20'
 								/>
-								5 person(s) have donated
+								X person(s) have donated
 							</li>
-							<li className='pools-card__list'>
-								<Image
-									src='/static/images/dollar.png'
-									alt='Pool Image'
-									width='20'
-									height='20'
-								/>
-								Each scholarship costs ₳1000
-							</li>
+
 							<li className='pools-card__list'>
 								<Image
 									src='/static/images/nft.png'
@@ -84,9 +76,11 @@ const PoolsCard = ({
 						<hr />
 
 						<div>
-							<h3>1</h3>
+							<h3>X</h3>
 							<p>
-								Remaining Scholarship <br /> Naming Right
+								remaining Hero and Royal tier NFTs
+								{/* Remaining Scholarship <br />
+								Naming Right */}
 							</p>
 						</div>
 					</div>

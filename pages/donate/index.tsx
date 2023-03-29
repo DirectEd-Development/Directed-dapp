@@ -36,7 +36,7 @@ const Donate: NextPage = () => {
 	return (
 		<>
 			<Meta title='Donate' description='Donate to student' />
-			<div className='donate-banner'>
+			{/* <div className='donate-banner'>
 				<Image
 					className='donate-banner__image'
 					src='/static/images/banner.png'
@@ -44,7 +44,7 @@ const Donate: NextPage = () => {
 					height={500}
 					width={1500}
 				/>
-			</div>
+			</div> */}
 			<main className='donate container'>
 				<div className='donate__title-section'>
 					<FaChevronLeft

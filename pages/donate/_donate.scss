@@ -74,8 +74,13 @@
 }
 
 .go-back {
-	// justify-self: flex-start;
-	// margin-right: auto;
+	justify-self: center;
+	padding: 1rem;
+	border-radius: 0.5rem;
+
+	&:hover {
+		background: grey;
+	}
 }
 
 //Confirm page

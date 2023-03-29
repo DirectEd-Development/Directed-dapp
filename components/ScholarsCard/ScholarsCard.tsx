@@ -26,10 +26,9 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 						<p>funded</p>
 					</div>
 					<div>
-						<h3>1</h3>
+						<h3>X</h3>
 
-						<p>Remaining scholarship</p>
-						<p>naming right</p>
+						<p>remaining Hero and Royal tier NFTs</p>
 					</div>
 				</div>
 				<ProgressBar />

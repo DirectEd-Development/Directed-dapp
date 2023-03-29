@@ -55,6 +55,11 @@
 		background: transparent;
 	}
 
+	&.bordered-outline {
+		background: transparent;
+		border: 1px solid var(--clr-primary-100);
+	}
+
 	&.disabled,
 	&.link,
 	&.outine,

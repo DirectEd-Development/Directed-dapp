@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { CardanoWallet } from '@meshsdk/react'
 import ConnectWallet from '../ConnectWallet/ConnectWallet'
 
 type LinksType = {
@@ -11,8 +10,9 @@ type LinksType = {
 }
 
 const NavLinks: LinksType[] = [
-	{ title: 'Scholarship Pools', link: '/' },
-	{ title: "Teacher's Portal", link: '/teacher-portal' },
+	{ title: 'Home', link: '/' },
+	{ title: 'Scholarship Pools', link: '/scholarship-pool' },
+	// { title: "Teacher's Portal", link: '/teacher-portal' },
 	{ title: 'Scholar’s Progress', link: '/progress' },
 	// { title: "Donors' Portal", link: '/donors' },
 ]

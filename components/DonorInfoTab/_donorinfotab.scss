@@ -1,10 +1,9 @@
 .donor-info {
-	&__info {
-		border: 1px solid var(--clr-primary-100);
-		padding: 3rem 2rem 3rem 8rem;
-		margin: 2.5rem 0;
-		background: var(--clr-accent-100);
-	}
+	border: 1px solid var(--clr-primary-100);
+	padding: 3rem 2rem 3rem 8rem;
+	margin: 2.5rem auto;
+	background: var(--clr-accent-100);
+	width: 80%;
 
 	&__info-title {
 		text-align: center;

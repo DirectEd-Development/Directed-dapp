@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const DonorInfoTab = () => {
 	return (
-		<div className='donor-info__info'>
+		<div className='donor-info'>
 			<div className='flex-between donor-info__info-badges'>
 				<div>
 					<h4 className='donor-info__info-title'>
@@ -34,13 +34,14 @@ const DonorInfoTab = () => {
 											height='35'
 										/>
 										<span>
-											All donors will recieve a token to unlock the Scholar’s
-											Progress Page.
+											donors get a transferrable access token to a portal where
+											they can follow the students they supported on their
+											journey
 										</span>
 									</div>
 								</div>
 							</div>
-							<p className=''>Access Token</p>
+							<p className=''>Donors portal</p>
 						</div>
 						<div>
 							<div className='donor-info__info-badge'>
@@ -67,14 +68,14 @@ const DonorInfoTab = () => {
 											height='35'
 										/>
 										<span>
-											All donations over $x will receive an exclusive,
-											ai-generated digital art piece, which will serve as a
-											token to unlock the Scholar’s Progress Page.
+											supporters can get a unique piece of generative art
+											co-created and developed with students at our partner high
+											schools!
 										</span>
 									</div>
 								</div>
 							</div>
-							<p>Digital Art</p>
+							<p>Lions Collection</p>
 						</div>
 						<div>
 							<div className='donor-info__info-badge'>
@@ -100,18 +101,19 @@ const DonorInfoTab = () => {
 											height='35'
 										/>
 										<span>
-											All Donations over $x will be inivted to an Annual Donor’s
-											Dinner in Oxford.
+											super-donors receive an exclusive invitation to attend a
+											donor’s reception hosted at the University of Oxford or at
+											Harvard University.
 										</span>
 									</div>
 								</div>
 							</div>
-							<p>Donors' Dinner</p>
+							<p>Donor's Dinner</p>
 						</div>
 					</div>
 				</div>
 				<div className='donor-info__naming-badge'>
-					<h5>Naming Rights</h5>
+					<h5>Name Plate</h5>
 					<div className='flex-gap'>
 						<Image
 							src='/static/images/rights.png'
@@ -121,8 +123,8 @@ const DonorInfoTab = () => {
 						/>
 						<div className='donor-info__info-badge'>
 							<p>
-								The donor naming rights for a given scholarship cohort can be
-								purchased for $3,000
+								major benefactors will be recognised for their contribution to
+								the Access Scholarship they are providing through name plates.
 							</p>
 
 							<div className='donor-info__info-cta'>
@@ -141,12 +143,11 @@ const DonorInfoTab = () => {
 											width='35'
 											height='35'
 										/>
-										<h5>What is a naming Right?</h5>
+										<h5>Naming Rights</h5>
 									</div>
 									<span>
-										A donor may associate his/her or an organization’s name with
-										a scholarship in perpetuity by contributing at the minimum
-										level established by the Foundation.
+										organisations that make substantial contributions receive
+										the honor of naming an entire scholarship cohort.
 									</span>
 								</div>
 							</div>
