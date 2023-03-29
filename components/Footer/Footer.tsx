@@ -11,21 +11,27 @@ const Footer = () => {
 					rel='noopener noreferrer'
 					href='https://directed.notion.site/Donation-Portal-Help-78d35a59263647dda6faac4e01cb99e2'
 				>
-					<Button variant='secondary'>need help?</Button>
+					<Button variant='secondary' noShadow>
+						need help?
+					</Button>
 				</a>
 				<a
 					target='_blank'
 					rel='noopener noreferrer'
 					href='https://www.notion.so/directed/Privacy-Policy-277f03fc6e3645aa8bcae404a21e931d?pvs=4'
 				>
-					<Button variant='secondary'>privacy policy</Button>
+					<Button variant='secondary' noShadow>
+						privacy policy
+					</Button>
 				</a>
 				<a
 					target='_blank'
 					rel='noopener noreferrer'
 					href='https://docs.google.com/forms/d/e/1FAIpQLSfx_FCw99hQ7Dg5zviHa1EaeCShy57ftmpf-p2tDAKacptIsA/viewform?usp=sf_link'
 				>
-					<Button variant='secondary'>have a suggestion?</Button>
+					<Button variant='secondary' noShadow>
+						have a suggestion?
+					</Button>
 				</a>
 				<div>
 					<Link

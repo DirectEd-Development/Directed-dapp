@@ -1,6 +1,5 @@
 import { useImperativeHandle, useState, ReactNode, forwardRef } from 'react'
 import { createPortal } from 'react-dom'
-import { GrFormClose } from 'react-icons/gr'
 
 export type ModalHandler = {
 	openModal: () => void
@@ -29,10 +28,7 @@ const Modal = forwardRef<ModalHandler, ModalProps>(({ children }, ref) => {
 	if (display) {
 		return createPortal(
 			<div className='modal'>
-				<div className='modal__content'>
-					<GrFormClose size={30} className='modal__icon' onClick={close} />
-					{children}
-				</div>
+				<div className='modal__content'>{children}</div>
 			</div>,
 			document.getElementById('modal-root') as Element
 		)

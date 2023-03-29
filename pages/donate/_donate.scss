@@ -13,13 +13,15 @@
 
 .donate {
 	width: 100%;
-	padding: 1rem 0;
+	padding: 3rem 2.5rem;
 
 	&__title-section {
 		display: grid;
-		grid-template-columns: 2fr 3fr;
-		align-items: center;
-		// justify-content: center;
+		grid-template-columns: 1fr 2fr 1fr;
+
+		& h3 {
+			text-align: center;
+		}
 	}
 
 	&__donations {
@@ -31,12 +33,14 @@
 	}
 
 	&__donations-amounts {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		display: flex;
 		gap: 2.5rem;
-		justify-items: center;
 		justify-content: center;
 		margin: 2rem 0;
+
+		&:nth-child(2) {
+			margin-top: 3rem;
+		}
 	}
 
 	&__nft-content {
@@ -50,11 +54,33 @@
 		border-radius: 1rem;
 		cursor: pointer;
 	}
+
+	&__preview {
+		position: relative;
+		height: fit-content;
+		width: fit-content;
+	}
+
+	&__preview-image {
+		border-radius: 1rem;
+	}
+
+	&__close-preview {
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+	}
 }
 
 .go-back {
-	// justify-self: flex-start;
-	// margin-right: auto;
+	justify-self: center;
+	padding: 1rem;
+	border-radius: 0.5rem;
+
+	&:hover {
+		background: grey;
+	}
 }
 
 //Confirm page

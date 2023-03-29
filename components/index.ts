@@ -24,3 +24,4 @@ export { default as CircularProgressBar } from './CircularProgressBar/CircularPr
 export { default as ProgressBar } from './ProgressBar/ProgressBar'
 export { default as Dropdown } from './Dropdown/Dropdown'
 export { default as DonorInfoTab } from './DonorInfoTab/DonorInfoTab'
+export { default as ScholarsCard } from './ScholarsCard/ScholarsCard'
