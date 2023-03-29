@@ -15,14 +15,11 @@ const AssetCard = ({ assets }: { assets: Assets[] }) => {
 					<div className='flex flex-col px-4 space-y-1'>
 						<div className='flex flex-col -space-y-0.5'>
 							<h5 className='text-center font-bold'>{asset.name}</h5>
-							<p className='text-center text-[#374756] text-sm'>
-								{asset.caption}...
-							</p>
 							<Link
 								href={`/legends/${asset.id}`}
 								className='text-[#374756] text-base text-center cursor-pointer'
 							>
-								View Story
+								Learn More
 							</Link>
 						</div>
 					</div>
