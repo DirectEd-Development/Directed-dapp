@@ -14,7 +14,7 @@
     gap: 5rem;
 
     @include mq(small) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
     &_header {
       grid-column: 1/-1;
