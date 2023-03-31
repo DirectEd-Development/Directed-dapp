@@ -14,7 +14,7 @@ const NavLinks: LinksType[] = [
 	{ title: 'Scholarship Pools', link: '/scholarship-pool' },
 	// { title: "Teacher's Portal", link: '/teacher-portal' },
 	{ title: 'Scholar’s Progress', link: '/progress' },
-	// { title: "Donors' Portal", link: '/donors-portal' },
+	{ title: "Donors' Portal", link: '/donors-portal' },
 ]
 
 const Navbar = () => {
