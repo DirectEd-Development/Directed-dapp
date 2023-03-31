@@ -6,8 +6,8 @@ import { AssetCard, Meta } from "../../components";
 import { data } from "../../data/assets";
 import Image from "next/image";
 
-import galleryIcon2 from "../../icons/Vector (3).png";
-import galleryIcon1 from "../../icons/Vector-1.png";
+// import galleryIcon2 from "../../icons/Vector (3).png";
+// import galleryIcon1 from "../../icons/Vector-1.png";
 
 // const server = 'http://localhost:3000'
 
@@ -56,14 +56,14 @@ export default function Home() {
             <div className="donors-portal__assets">
               <div className="donors-portal__assets_header">
                 <h1>Gallery</h1>
-                <div className="icons">
+                {/* <div className="icons">
                   <button>
                     <Image src={galleryIcon1} alt="galleryIcon" />
                   </button>
                   <button>
                     <Image src={galleryIcon2} alt="galleryIcon" />
                   </button>
-                </div>
+                </div> */}
               </div>
               <AssetCard assets={data} />
             </div>
@@ -88,3 +88,5 @@ export default function Home() {
 // 		},
 // 	}
 // }
+
+
