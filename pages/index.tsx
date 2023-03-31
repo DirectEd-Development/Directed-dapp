@@ -15,9 +15,8 @@ const Home: NextPage = () => {
 					</p>
 
 					<div>
-						<h5>SUPPORT THE NEXT BILL GATES</h5>
 						<Button variant='primary' size='small'>
-							Donate Now
+							SUPPORT THE NEXT BILL GATES
 						</Button>
 					</div>
 				</div>
@@ -67,16 +66,15 @@ const Home: NextPage = () => {
 				</div>
 			</section>
 			<section className='home__solutions'>
-				<h2>Our Solutions</h2>
+				<h1>Our Solutions</h1>
 				<p className='home__solutions--paragraph'>
 					Free coding courses, bootcamps and internships for high-potential
 					under-resourced students in Africa, preparing them for careers as
 					remote software engineers.
 				</p>
 				{/* <div>
-					<h5>FIND THE NEXT STEVE JOBS</h5>
 					<Button variant='accent' size='small'>
-						Donate Now
+						FIND THE NEXT STEVE JOBS
 					</Button>
 				</div> */}
 
@@ -210,9 +208,8 @@ const Home: NextPage = () => {
 					/>
 				</div>
 				<div className='home__steps--cta'>
-					<h5>TEACH A STUDENT HOW TO FISH</h5>
 					<Button variant='primary' size='small'>
-						Donate Now
+						TEACH A STUDENT HOW TO FISH
 					</Button>
 				</div>
 			</section>
@@ -253,8 +250,20 @@ const Home: NextPage = () => {
 					<Image
 						src='/static/images/yali-africa.png'
 						alt='brand'
-						width={150}
+						width={120}
 						height={80}
+					/>
+					<Image
+						src='/static/images/tally.png'
+						alt='brand'
+						width={80}
+						height={80}
+					/>
+					<Image
+						src='/static/images/snapbrillia.png'
+						alt='brand'
+						width={150}
+						height={60}
 					/>
 				</div>
 			</section>

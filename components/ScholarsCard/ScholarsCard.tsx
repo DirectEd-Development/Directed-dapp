@@ -21,15 +21,34 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 				</div>
 				<div className='flex-between scholars-card__stats'>
 					<div>
-						<h3>23</h3>
+						<h4>23</h4>
 						<p>Scholarships</p>
 						<p>funded</p>
 					</div>
 					<div>
-						<h3>X</h3>
-
+						<h4>X</h4>
 						<p>remaining Hero and Royal tier NFTs</p>
 					</div>
+				</div>
+				<div className='flex-between'>
+					<p>
+						<Image
+							src='/static/images/clock.png'
+							alt='Pool Image'
+							width='20'
+							height='20'
+						/>
+						X days left
+					</p>
+					<p>
+						<Image
+							src='/static/images/Vector.png'
+							alt='Pool Image'
+							width='20'
+							height='20'
+						/>
+						X person(s) have donated
+					</p>
 				</div>
 				<ProgressBar />
 				<Button variant='primary'>Donate Now</Button>

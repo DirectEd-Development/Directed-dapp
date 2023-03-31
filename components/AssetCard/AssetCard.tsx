@@ -6,9 +6,8 @@ const AssetCard = ({ assets }: { assets: Assets[] }) => {
 	return (
 		<>
 			{assets.map((asset) => (
-				<div key={asset.id}>
-					{/* image */}
-					<div className='flex justify-center pt-0'>
+				<div key={asset.id} className='assets'>
+					<div>
 						<AssetImage imageSrc={asset.image} imageAlt={asset.name} />
 					</div>
 					{/* title, options and quantity */}

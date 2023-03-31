@@ -28,15 +28,16 @@ const PoolsCard = ({
 					<div className='pools-card__details'>
 						<div>
 							<h3>{title}</h3>
+							<p>Access Scholarships for students {desc}</p>
 							<Link
 								href='https://www.notion.so/directed/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'
 								passHref
 								className='pools-card__link'
 							>
-								Access Scholarships for students {desc}
+								Learn More
 							</Link>
 						</div>
-						<ul className='pools-card__list-items'>
+						{/* <ul className='pools-card__list-items'>
 							<li className='pools-card__list'>
 								<Image
 									src='/static/images/clock.png'
@@ -65,7 +66,7 @@ const PoolsCard = ({
 								/>
 								Remaining Heroes: 20
 							</li>
-						</ul>
+						</ul> */}
 					</div>
 
 					<div className='pools-card__funds'>

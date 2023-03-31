@@ -53,6 +53,10 @@
 		& > * {
 			margin-top: 2rem;
 		}
+
+		* > p {
+			font-style: italic;
+		}
 	}
 
 	&__funds {

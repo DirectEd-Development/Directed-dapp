@@ -1,0 +1,28 @@
+.tier-card {
+	background: var(--clr-accent-100);
+	border-radius: 2rem;
+	padding: 2rem;
+	width: fit-content;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+
+	&__close {
+		justify-self: flex-end;
+		cursor: pointer;
+	}
+
+	&__items {
+		font-size: var(--fs-200);
+		& > * {
+			list-style: disc;
+			text-align: left;
+		}
+	}
+
+	& p:nth-of-type(2) {
+		width: 50ch;
+	}
+}

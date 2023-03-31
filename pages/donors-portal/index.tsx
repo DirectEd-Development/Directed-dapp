@@ -46,17 +46,20 @@ export default function Home() {
 				title="Donor's Portal"
 				description='Direced Ed donors portal page'
 			/>
-			<main className='donors-portal'>
-				<div className='donors-portal__asset'>
-					{hasPolicyIdAssetsChecked ? (
-						<>
-							<AssetCard assets={data} />
-						</>
-					) : (
+			<main className='donors-portal container'>
+				<div>
+					<h4>Gallery</h4>
+				</div>
+				<div>
+					{/* {hasPolicyIdAssetsChecked ? ( */}
+					<div className='donors-portal__assets'>
+						<AssetCard assets={data} />
+					</div>
+					{/* ) : (
 						<h3 className='donors-portal__no-donation'>
 							You need to make a donation to access this page
 						</h3>
-					)}
+					)} */}
 				</div>
 			</main>
 		</>
