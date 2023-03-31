@@ -1,32 +1,15 @@
 import { useState } from "react";
 import { useWallet, useAssets } from "@meshsdk/react";
 import { AssetCard, Meta } from "../../components";
-// import { GetStaticProps } from 'next'
-// import { Assets } from '../../types/assets'
 import { data } from "../../data/assets";
 import Image from "next/image";
-
-// import galleryIcon2 from "../../icons/Vector (3).png";
-// import galleryIcon1 from "../../icons/Vector-1.png";
-
-// const server = 'http://localhost:3000'
-
-// type Asset = {
-// 	unit: string
-// 	policyId: string
-// 	assetName: string
-// 	fingerprint: string
-// 	quantity: string
-// }
-
-// { assetsData }: { assetsData: Assets[] }
 
 export default function Home() {
   const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
     useState<boolean>(false);
 
+  const [filterInput, setFilterInput] = useState<string>(""); // state to hold the user's filter input
   const { connected, wallet } = useWallet();
-
   const assets: any = useAssets();
   const policyId = assets?.map((asset: any) => asset.policyId);
 
@@ -40,9 +23,17 @@ export default function Home() {
     }
   };
 
+  const filteredAssets = data.filter((asset) => {
+    return asset.name.toLowerCase().includes(filterInput.toLowerCase()); // filter the assets based on the user's input
+  });
+
   if (connected) {
     checkPolicyIdAssets(policyId);
   }
+
+  const handleFilterInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFilterInput(event.target.value); // update the state with the user's input
+  };
 
   return (
     <>
@@ -51,21 +42,21 @@ export default function Home() {
         description="Direced Ed donors portal page"
       />
       <main className="donors-portal">
+        <div className="donors-portal__filter">
+        </div>
         {hasPolicyIdAssetsChecked ? (
           <>
             <div className="donors-portal__assets">
               <div className="donors-portal__assets_header">
                 <h1>Gallery</h1>
-                {/* <div className="icons">
-                  <button>
-                    <Image src={galleryIcon1} alt="galleryIcon" />
-                  </button>
-                  <button>
-                    <Image src={galleryIcon2} alt="galleryIcon" />
-                  </button>
-                </div> */}
+				<input
+					type="text"
+					placeholder="Filter assets"
+					value={filterInput}
+					onChange={handleFilterInput} 
+				/>
               </div>
-              <AssetCard assets={data} />
+              <AssetCard assets={filteredAssets} />
             </div>
           </>
         ) : (
@@ -77,16 +68,3 @@ export default function Home() {
     </>
   );
 }
-
-// export const getStaticProps: GetStaticProps = async () => {
-// 	const res = await fetch(`/api/getAssets`)
-// 	const assetsData = await res.json()
-
-// 	return {
-// 		props: {
-// 			assetsData,
-// 		},
-// 	}
-// }
-
-
