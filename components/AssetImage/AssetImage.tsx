@@ -14,6 +14,7 @@ const AssetImage = ({
 			alt={imageAlt || 'Asset Image'}
 			width={150}
 			height={150}
+			unoptimized={true}
 		/>
 	)
 }

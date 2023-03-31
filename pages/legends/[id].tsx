@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { data } from "../../data/assets";
 import Image from "next/image";
 import { Meta } from "../../components";
-import { BackIcon } from "../../icons";
+import { FaChevronLeft } from 'react-icons/fa'
 
 const Legend = () => {
   const router = useRouter();
@@ -20,17 +20,16 @@ const Legend = () => {
           <div className="legend" key={asset.id}>
             <div className="legend__heading">
               <button>
-                <BackIcon height={24} width={24} 
-                  onClick={() => router.back()}
-                  className='go-back'
-                  size={35}
-                  color={'#374756'}
-                
-                />
+			  	<FaChevronLeft height={22} width={22}
+					onClick={() => router.back()}
+					className='go-back'
+					size={35}
+					color={'#374756'}
+				/>
               </button>
               <h1 className="">{asset.name}</h1>
             </div>
-            <Image src={asset.image} alt={asset.name} height={200} width={95} />
+            <Image src={asset.image} alt={asset.name} height={200} width={95}  unoptimized={true}/>
             <div className="legend__description">
               <p>{asset.description}</p>
             </div>
