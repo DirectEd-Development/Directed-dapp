@@ -2,17 +2,17 @@ import { OptionTiers } from '../types/tiers'
 
 export const lionOptions: OptionTiers[] = [
 	{
-		amount: '₳2000 (~$500)',
+		amount: '₳2000',
 		title: 'Royal',
 		image: '/static/images/1.png',
 	},
 	{
-		amount: '₳1000 (~$300-$350)',
+		amount: '₳1000',
 		title: 'Hero',
 		image: '/static/images/2.png',
 	},
 	{
-		amount: '40ADA (~$10)',
+		amount: '40ADA',
 		title: 'Warrior',
 		image: '/static/images/3.png',
 	},
