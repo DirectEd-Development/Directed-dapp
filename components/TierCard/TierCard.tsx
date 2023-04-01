@@ -47,7 +47,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 					<li>Tutorial Vouchers</li>
 				</ul>
 				<div>
-					<p>An Access scholarship will receive the same Lion Hero NFT.</p>
+					<p>Each Access Scholar will receive a corresponding Lion Hero.</p>
 				</div>
 				<h5>In addition, the holder of this NFT receives:</h5>
 				<ul className='tier-card__items'>
