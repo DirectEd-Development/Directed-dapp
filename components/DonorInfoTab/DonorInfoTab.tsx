@@ -41,7 +41,7 @@ const DonorInfoTab = () => {
 									</div>
 								</div>
 							</div>
-							<p className=''>Donors portal</p>
+							<p>Donors portal</p>
 						</div>
 						<div>
 							<div className='donor-info__info-badge'>
