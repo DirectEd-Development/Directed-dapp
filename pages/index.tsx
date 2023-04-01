@@ -23,15 +23,17 @@ const Home: NextPage = () => {
 						</Link>
 					</div>
 				</div>
-				<Image
-					src='/static/images/video-placeholder.png'
-					alt='video placeholder'
-					width='450'
-					height={300}
-					className='home__hero--video-content'
-				/>
-			</section>
 
+				<video
+					controls
+					poster='/static/images/video-placeholder.png'
+					width='500'
+					height='320'
+					className='home__hero--video-content'
+				>
+					<source src='/static/videos/homepage-video.mp4' type='video/mp4' />
+				</video>
+			</section>
 			<section className='home__statement'>
 				<Image
 					src='/static/images/question.png'
@@ -68,20 +70,200 @@ const Home: NextPage = () => {
 					<Button variant='bordered-outline'>Learn More</Button>
 				</div>
 			</section>
-			<section className='home__solutions'>
-				<h1>Our Solutions</h1>
-				<p className='home__solutions--paragraph'>
-					Free coding courses, bootcamps and internships for high-potential
-					under-resourced students in Africa, preparing them for careers as
-					remote software engineers.
-				</p>
-				{/* <div>
+			<section className='home__why-us'>
+				<h2>Solution</h2>
+				<h4>The Rocketship with 3 parts: broad base and pointy nose.</h4>
+				<div>
+					<div>
+						<h5>Introductory Course</h5>
+						<p>
+							This is a 1-week long coding course introducing students to coding
+							using Python. By adapting Harvard’s famous CS50 Introduction to
+							Computer Science to fit a mobile-only environment, we make this
+							accessible to all students, regardless of socio-economic
+							background.
+						</p>
+						<Button variant='link'>Read More</Button>
+					</div>
+					<div>
+						<h5>Coding Bootcamp</h5>
+						<p>
+							Top students proceed to a 12-week Coding Bootcamp covering full
+							stack web development in the popular MERN Javascript framework. In
+							addition, they are trained in a wide range of soft skills through
+							workshops hosted by guest lecturers.
+						</p>
+						<Button variant='link'>Read More</Button>
+					</div>
+					<div>
+						<h5>Internship and Specialisation</h5>
+						<p>
+							Graduates proceed to train with partner tech companies, getting
+							real-world experience whilst simulatenously continue their
+							learning by specialising in one of several in-demand skills as
+							identified by our market research. This includes smart contract
+							development, Power BI or SAP 4/HANA.
+						</p>
+						<Button variant='link'>Read More</Button>
+					</div>
+				</div>
+				<Link href='/directed-donate'>
 					<Button variant='accent' size='small'>
-						FIND THE NEXT STEVE JOBS
+						UNLOCK THE POTENTIAL OF AFRICA’S NEXT STEVE JOBS
 					</Button>
-				</div> */}
+				</Link>
+			</section>
+			<section className='home__steps'>
+				<h2>The Details</h2>
 
-				<h3>Why Us Over Other Charities?</h3>
+				<div className='home__step'>
+					<article>
+						<div className='flex-between'>
+							<h5>Onboarding</h5>
+							<Image
+								src='/static/images/Hover.png'
+								alt='image'
+								width='35'
+								height='35'
+							/>
+						</div>
+						<div className='home__step--content home__step--content-1'>
+							<p>
+								We partner with top-performing high schools in Kenya and
+								Ethiopia, and onboard to infrastructure solutions that allow
+								them to issue Verifiable Credentials.
+							</p>
+						</div>
+					</article>
+					<article>
+						<div className='flex-between'>
+							<h5>Intro Course</h5>
+							<Image
+								src='/static/images/Hover.png'
+								alt='image'
+								width='35'
+								height='35'
+							/>
+						</div>
+						<div className='home__step--content home__step--content-2'>
+							<p>
+								We offer a 1-week long mobile-phone-based Introductory Course in
+								Python based on open-source material from Harvard University.
+							</p>
+						</div>
+					</article>
+					<img
+						src='/static/images/arrow-1.png'
+						alt='arrow one'
+						className='home__arrows home__arrows--1'
+					/>
+					<img
+						src='/static/images/arrow-2.png'
+						alt='arrow two'
+						className='home__arrows home__arrows--2'
+					/>
+				</div>
+				<div className='home__step alternate'>
+					<article>
+						<div className='flex-between'>
+							<h5>Access Stipend Pools</h5>
+							<Image
+								src='/static/images/Hover.png'
+								alt='image'
+								width='35'
+								height='35'
+							/>
+						</div>
+						<div className='home__step--content home__step--content-3'>
+							<p>
+								Top performers of the Introductory Course are given Scholarships
+								to attend the 12-week DirectEd Bootcamp.
+							</p>
+						</div>
+					</article>
+					<article>
+						<div className='flex-between'>
+							<h5>Coding Bootcamp</h5>
+							<Image
+								src='/static/images/Hover.png'
+								alt='image'
+								width='35'
+								height='35'
+							/>
+						</div>
+						<div className='home__step--content home__step--content-4'>
+							<p>
+								For each partner school, we set up one
+								<strong>Access Scholarship</strong> pool in order to raise funds
+								to support students from low-income families through the
+								bootcamp.
+							</p>
+						</div>
+					</article>
+					<img
+						src='/static/images/arrow-3.png'
+						alt='arrow three'
+						className='home__arrows home__arrows--3'
+					/>
+					<img
+						src='/static/images/arrow-4.png'
+						alt='arrow four'
+						className='home__arrows home__arrows--4'
+					/>
+				</div>
+				<div className='home__step'>
+					<article>
+						<div className='flex-between'>
+							<h5>Study-Internship</h5>
+							<Image
+								src='/static/images/Hover.png'
+								alt='image'
+								width='35'
+								height='35'
+							/>
+						</div>
+						<div className='home__step--content home__step--content-5'>
+							<p>
+								Graduates of the DirectEd Bootcamp join the Graduate Programme;
+								either joining our study-internship program, or an external
+								elite coding bootcamp.
+							</p>
+						</div>
+					</article>
+					<article>
+						<div className='flex-between'>
+							<h5>Recontribution!</h5>
+							<Image
+								src='/static/images/Hover.png'
+								alt='image'
+								width='35'
+								height='35'
+							/>
+						</div>
+						<div className='home__step--content home__step--content-6'>
+							<p>
+								As successful scholars find employment, the alumni group of the
+								partner high school will ask them to contribute to the next
+								cohort of students.
+							</p>
+						</div>
+					</article>
+					<img
+						src='/static/images/arrow-5.png'
+						alt='arrow five'
+						className='home__arrows home__arrows--5'
+					/>
+				</div>
+				<div className='home__steps--cta'>
+					<Link href='/directed-donate'>
+						<Button variant='primary' size='small'>
+							TEACH A STUDENT HOW TO FISH
+						</Button>
+					</Link>
+				</div>
+			</section>
+			<section className='home__solutions'>
+				<h2>Why Us Over Other Charities?</h2>
 				<div>
 					<div className='home__solutions--items'>
 						<Image
@@ -140,86 +322,16 @@ const Home: NextPage = () => {
 						</Button>
 					</div>
 				</div>
-
-				{/* <div>
-					<h5>FIND THE NEXT STEVE JOBS</h5>
-					<Button variant='accent' size='small'>
-						Donate Now
-					</Button>
-				</div> */}
-			</section>
-			<section className='home__steps'>
-				<h2>The Details</h2>
-
-				<div className='home__step'>
-					<article>
-						We partner with top-performing high schools in Kenya and Ethiopia,
-						and onboard to infrastructure solutions that allow them to issue
-						Verifiable Credentials.
-					</article>
-					<article>
-						We offer a 1-week long mobile-phone-based Introductory Course in
-						Python based on open-source material from Harvard University.
-					</article>
-					<img
-						src='/static/images/arrow-1.png'
-						alt='arrow one'
-						className='home__arrows home__arrows--1'
-					/>
-					<img
-						src='/static/images/arrow-2.png'
-						alt='arrow two'
-						className='home__arrows home__arrows--2'
-					/>
-				</div>
-				<div className='home__step alternate'>
-					<article>
-						Top performers of the Introductory Course are given Scholarships to
-						attend the 12-week DirectEd Bootcamp.
-					</article>
-					<article>
-						For each partner school, we set up one Access Scholarship pool in
-						order to raise funds to support students from low-income families
-						through the bootcamp.
-					</article>
-					<img
-						src='/static/images/arrow-3.png'
-						alt='arrow three'
-						className='home__arrows home__arrows--3'
-					/>
-					<img
-						src='/static/images/arrow-4.png'
-						alt='arrow four'
-						className='home__arrows home__arrows--4'
-					/>
-				</div>
-				<div className='home__step'>
-					<article>
-						Graduates of the DirectEd Bootcamp join the Graduate Programme;
-						either joining our study-internship program, or an external elite
-						coding bootcamp.
-					</article>
-					<article>
-						As successful scholars find employment, the alumni group of the
-						partner high school will ask them to contribute to the next cohort
-						of students.
-					</article>
-					<img
-						src='/static/images/arrow-5.png'
-						alt='arrow five'
-						className='home__arrows home__arrows--5'
-					/>
-				</div>
-				<div className='home__steps--cta'>
-				<Link href='/directed-donate'>
-					<Button variant='primary' size='small'>
-						TEACH A STUDENT HOW TO FISH
-					</Button>
-				</Link>
+				<div>
+					<Link href='/directed-donate'>
+						<Button variant='accent' size='small'>
+							SPONSOR THE NEXT ELON MUSK
+						</Button>
+					</Link>
 				</div>
 			</section>
 			<section className='home__chart'>
-				<h3>How will the scholarship pool money be used?</h3>
+				<h3>How are Access Stipends Funds used?</h3>
 				<Image
 					src='/static/images/piechart.png'
 					alt='piechart'
@@ -229,17 +341,20 @@ const Home: NextPage = () => {
 				/>
 			</section>
 			<section className='home__impact'>
-				<h3>How big a difference will this have?</h3>
-				<h4>For every $1 donated, more than $30 of economic value created*</h4>
+				<h3>What is the impact?</h3>
 				<h4>
-					This places us amongst the <strong>most effective charities</strong>{' '}
-					in the world in regard to poverty alleviation and economic development
+					$1 donated → $130 generated in economic value* over their lifetime
 				</h4>
 				<h4>
-					"The World Bank, United Nations and all development banks should drop
-					the nonsense they are doing and support DirectEd." - Professor John
-					Smith, University of Oxford
+					making us one of the most effective development projects in the world
 				</h4>
+				<blockquote>
+					“There is not a meeting that I go to today with any CEOs or senior
+					executives of any organisation who’s not looking for more software
+					developer, more digital skills. That’s the currency in every sector of
+					the economy in every economy in the world." - Satya Nadella, CEO and
+					chairman of Microsoft
+				</blockquote>
 
 				<Link href='/directed-donate'>
 					<Button variant='primary'>Donate Now</Button>
@@ -274,6 +389,12 @@ const Home: NextPage = () => {
 					/>
 				</div>
 			</section>
+
+			{/* <Link href='/directed-donate'>
+				<Button variant='primary'>
+					LEVEL THE PLAYING FIELD, A LITTLE BIT AT LEAST
+				</Button>
+			</Link> */}
 		</main>
 	)
 }

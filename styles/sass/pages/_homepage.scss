@@ -25,6 +25,11 @@
 			flex-direction: column;
 			gap: 3rem;
 		}
+
+		&--video-content {
+			border-radius: 1rem;
+			object-fit: cover;
+		}
 	}
 
 	&__brands {
@@ -36,6 +41,37 @@
 
 		& > div {
 			gap: 3rem;
+		}
+	}
+
+	&__why-us {
+		background: var(--clr-primary-400);
+		padding: 5rem 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+		color: var(--clr-accent-200);
+
+		& > div {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 3rem;
+			margin-block: 4rem;
+		}
+
+		& > div > div {
+			padding: 2rem;
+			display: flex;
+			gap: 3rem;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background: var(--clr-accent-100);
+			border-radius: 1rem;
+			width: fit-content;
+			color: var(--clr-primary-100);
 		}
 	}
 
@@ -98,6 +134,11 @@
 			justify-content: center;
 			gap: 2rem;
 		}
+
+		& > div:last-child {
+			display: block;
+			margin-inline: auto;
+		}
 	}
 
 	&__steps {
@@ -109,7 +150,7 @@
 		}
 
 		&--cta {
-			margin-block: 3rem;
+			margin-block: 16rem 3rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -129,24 +170,28 @@
 		&--1,
 		&--3,
 		&--5 {
-			width: 22rem;
-			top: 10rem;
+			width: 17.5rem;
+			top: 3.5rem;
+		}
+		&--2,
+		&--4 {
+			height: 27rem;
+			top: 4rem;
 		}
 
 		&--2 {
-			right: 10.2rem;
-			top: 10rem;
+			right: 9rem;
 		}
 
 		&--4 {
-			left: 11rem;
-			top: 10rem;
+			left: 9.5rem;
 		}
 	}
 
 	&__step {
 		position: relative;
-		margin-top: 8rem;
+		margin-top: 16rem;
+
 		@include mq(small) {
 			display: flex;
 			justify-content: space-evenly;
@@ -170,12 +215,42 @@
 		}
 
 		& article {
-			border-radius: 3rem;
-			padding: 3rem 2rem;
+			border-radius: 1rem;
+			padding: 1rem 2rem;
 			width: 25rem;
 			height: fit-content;
-			font-size: var(--fs-300);
 			margin-block: 2rem;
+			position: relative;
+			cursor: pointer;
+		}
+
+		& article:hover &--content {
+			opacity: 1;
+		}
+
+		&--content {
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			padding: 2rem;
+			transition: all 100ms ease;
+			border-bottom-left-radius: 1rem;
+			border-bottom-right-radius: 1rem;
+
+			&-1,
+			&-4,
+			&-5 {
+				background: var(--clr-primary-400);
+				color: var(--clr-accent-200);
+			}
+
+			&-2,
+			&-3,
+			&-6 {
+				background: var(--clr-accent-100);
+				color: var(--clr-primary-100);
+			}
 		}
 
 		& article:nth-child(1) {
@@ -190,6 +265,7 @@
 	}
 
 	&__chart {
+		padding-block: 3rem;
 		text-align: center;
 	}
 
@@ -211,5 +287,10 @@
 		background: var(--clr-accent-100);
 		border-radius: 1rem;
 		width: 85%;
+
+		& blockquote {
+			font-size: medium;
+			font-weight: bold;
+		}
 	}
 }
