@@ -4,11 +4,14 @@ import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
 import { Button, Meta, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
+import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
+import { icons } from 'react-icons/lib'
+import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
 const Donate: NextPage = () => {
-	const [tier, setTier] = useState<OptionTiers | null>(null)
-
+	const [tier, setTier] = useState<OptionTiers | null>(null);
+	const dispatch = useDispatch();
 	const router = useRouter()
 
 	const donationTier = (option: OptionTiers) => {
@@ -16,7 +19,17 @@ const Donate: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-		})
+		});
+		dispatch(setClose())
+	}
+
+	const fullDonationTier = (option: OptionTiers) => {
+		setTier({
+			title: option.title,
+			amount: option.amount,
+			image: option.image,
+		});
+		dispatch(setOpen())
 	}
 
 	return (
@@ -61,7 +74,7 @@ const Donate: NextPage = () => {
 										size='small'
 										noShadow
 										variant={option.title === tier?.title ? 'primary' : ''}
-										onClick={() => donationTier(option)}
+										onClick={() => fullDonationTier(option)}
 									>
 										{option.title}
 									</Button>

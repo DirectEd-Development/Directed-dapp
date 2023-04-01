@@ -122,7 +122,6 @@ const directeddonate: NextPage = () => {
             <div className="donate__modal">
               <div className="donate__modal-header">
                 <h4>Confirm Donation</h4>
-                <button onClick={() => setConfirm(false)}>X</button>
               </div>
               <div className="donate__modal-body">
                 <h5>Amount:</h5>
@@ -141,7 +140,6 @@ const directeddonate: NextPage = () => {
             <div className="donate__modal">
               <div className="donate__modal-header">
                 <h4>Thank you for your donation!</h4>
-                <button onClick={handleSent}>X</button>
               </div>
               <div className="donate__modal-body">
                 <h5>Amount Sent:</h5>
