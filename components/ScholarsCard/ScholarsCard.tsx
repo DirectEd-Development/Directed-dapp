@@ -30,25 +30,28 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 						<p>remaining Hero and Royal tier NFTs</p>
 					</div>
 				</div>
-				<div className='flex-between'>
-					<p>
+				<div className='flex-between scholars-card__stats'>
+					<div className='scholars-card__donors'>
 						<Image
 							src='/static/images/clock.png'
 							alt='Pool Image'
 							width='20'
 							height='20'
 						/>
-						X days left
-					</p>
-					<p>
+						<span>X days left</span>
+					</div>
+					<div className='scholars-card__donors'>
 						<Image
 							src='/static/images/Vector.png'
 							alt='Pool Image'
 							width='20'
 							height='20'
 						/>
-						X person(s) have donated
-					</p>
+						<span>
+							<span>X person(s) have</span>
+							<span>donated</span>
+						</span>
+					</div>
 				</div>
 				<ProgressBar />
 				<Button variant='primary'>Donate Now</Button>
