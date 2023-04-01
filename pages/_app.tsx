@@ -6,6 +6,10 @@ import { DefaultSeo } from 'next-seo'
 import SEO from '../next-seo.config'
 import '@fontsource/poppins'
 import { hotjar } from 'react-hotjar'
+import {Provider} from "react-redux";
+import {store, persistor} from "../hooks/redux/store"
+import { PersistGate } from 'redux-persist/integration/react';
+
 import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,12 +18,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 	}, [])
 
 	return (
-		<MeshProvider>
-			<DefaultSeo {...SEO} />
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
-		</MeshProvider>
+		<Provider store={store}>
+			<PersistGate loading={null} persistor={persistor}>
+				<MeshProvider>
+					<DefaultSeo {...SEO} />
+					<Layout>
+						<Component {...pageProps} />
+					</Layout>
+				</MeshProvider>
+			</PersistGate>
+		</Provider>
 	)
 }
 

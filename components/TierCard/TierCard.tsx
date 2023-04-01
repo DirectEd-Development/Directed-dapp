@@ -2,18 +2,20 @@ import Image from 'next/image'
 import { GrFormClose } from 'react-icons/gr'
 import Button from '../Button/Button'
 import Modal, { ModalHandler } from '../Modal/Modal'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from './RootState'
 
 type TierCardProps = {
 	onClick?(event?: React.MouseEvent): void
 	title: string
 	amount: string
-	image?: string
+	image?: string,
 }
 
-const TierCard = ({ onClick, title, amount, image }: TierCardProps) => {
-	const modalRef = useRef<ModalHandler>(null)
-
+const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
+	const modalRef = useRef<ModalHandler>(null);
+	const isClose = useSelector((state: RootState) => state.close.isClosed);
 	const openModal = () => modalRef.current?.openModal()
 	const closeModal = () => modalRef.current?.closeModal()
 
@@ -55,7 +57,7 @@ const TierCard = ({ onClick, title, amount, image }: TierCardProps) => {
 					<li>Invitation to exclusive Hero and Royal tier donor events</li>
 					<li>Full access to the DirectEd bootcamp material and workshop</li>
 				</ul>
-				<Button variant='primary'>Confirm Option</Button>
+				<Button variant='primary' disabled={isClose}>Confirm Option</Button>
 			</aside>
 			{image && (
 				<Modal ref={modalRef}>
