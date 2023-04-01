@@ -1,0 +1,31 @@
+@use '../../styles/sass/abstracts/mixins' as *;
+
+.container {
+  padding: 2rem 1rem;
+}
+
+
+.donate-page{
+
+  &__donations{
+    text-align: center;
+
+
+  & input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  }
+
+  & input[type="text"]:focus {
+    outline: none;
+  }
+}
+
+}
+

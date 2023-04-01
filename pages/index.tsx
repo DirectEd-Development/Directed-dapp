@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '../components'
 
 const Home: NextPage = () => {
@@ -15,9 +16,11 @@ const Home: NextPage = () => {
 					</p>
 
 					<div>
-						<Button variant='primary' size='small'>
-							SUPPORT THE NEXT BILL GATES
-						</Button>
+						<Link href='/directed-donate'>
+							<Button variant='primary' size='small'>
+								SUPPORT THE NEXT BILL GATES
+							</Button>
+						</Link>
 					</div>
 				</div>
 				<Image
@@ -208,9 +211,11 @@ const Home: NextPage = () => {
 					/>
 				</div>
 				<div className='home__steps--cta'>
+				<Link href='/directed-donate'>
 					<Button variant='primary' size='small'>
 						TEACH A STUDENT HOW TO FISH
 					</Button>
+				</Link>
 				</div>
 			</section>
 			<section className='home__chart'>
@@ -236,7 +241,9 @@ const Home: NextPage = () => {
 					Smith, University of Oxford
 				</h4>
 
-				<Button variant='primary'>Donate Now</Button>
+				<Link href='/directed-donate'>
+					<Button variant='primary'>Donate Now</Button>
+				</Link>
 			</section>
 			<section className='home__brands'>
 				<p>Sponsored By</p>
