@@ -1,35 +1,23 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { NextPage } from 'next'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, Meta, Modal, TierCard } from '../../components'
-import { ModalHandler } from '../../components/Modal/Modal'
-import { amounts, options } from '../../lib/donorAmounts'
-import { GrFormClose } from 'react-icons/gr'
-
-// const amounts: string[] = ['₳2000', '₳1000', '₳40']
+import { Button, Meta, TierCard } from '../../components'
+import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
+import { OptionTiers } from '../../types/tiers'
 
 const Donate: NextPage = () => {
-	const [amount, setAmount] = useState<string>('')
-	const modalRef = useRef<ModalHandler>(null)
+	const [tier, setTier] = useState<OptionTiers | null>(null)
 
 	const router = useRouter()
 
-	// const handleDonate = () => {
-	// 	if (amount === '₳1000' || amount === '₳2000') {
-	// 		router.push('https://pay.nmkr.io/?p=fbd4da6ef7b14acda66dff5515877a46&c=1')
-	// 	} else {
-	// 		if (amount === '₳40')
-	// 			router.push(
-	// 				'https://pay.nmkr.io/?p=296d3a8e72444590856ccc902b67f9b3&c=1'
-	// 			)
-	// 	}
-	// }
-
-	const openModal = () => modalRef.current?.openModal()
-
-	const closeModal = () => modalRef.current?.closeModal()
+	const donationTier = (option: OptionTiers) => {
+		setTier({
+			title: option.title,
+			amount: option.amount,
+			image: option.image,
+		})
+	}
 
 	return (
 		<>
@@ -51,15 +39,15 @@ const Donate: NextPage = () => {
 							<p>Donate and receive a DirectEd Lions NFT</p>
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
-								{amounts.map((amt, index: number) => (
+								{lionOptions.map((option) => (
 									<Button
 										size='small'
-										variant={amt.title === amount ? 'primary' : ''}
-										onClick={() => setAmount(amt.title)}
-										key={amt.amount}
+										variant={option.title === tier?.title ? 'primary' : ''}
+										onClick={() => donationTier(option)}
+										key={option.amount}
 										noShadow
 									>
-										{amt.title}
+										{option.title}
 									</Button>
 								))}
 							</div>
@@ -68,12 +56,12 @@ const Donate: NextPage = () => {
 							<h4>Direct Donation</h4>
 							<p>No DirectEd Lions Collection NFT</p>
 							<div className='donate__tiers'>
-								{options.map((option) => (
+								{noLionOptions.map((option) => (
 									<Button
 										size='small'
 										noShadow
-										variant={option.title === amount ? 'primary' : ''}
-										onClick={() => setAmount(option.title)}
+										variant={option.title === tier?.title ? 'primary' : ''}
+										onClick={() => donationTier(option)}
 									>
 										{option.title}
 									</Button>
@@ -81,26 +69,16 @@ const Donate: NextPage = () => {
 							</div>
 						</div>
 					</div>
-					{amount && <TierCard onClick={() => setAmount('')} />}
+					{tier && (
+						<TierCard
+							onClick={() => setTier(null)}
+							title={tier?.title}
+							amount={tier?.amount}
+							image={tier?.image}
+						/>
+					)}
 				</div>
 			</main>
-			<Modal ref={modalRef}>
-				<div className='donate__preview'>
-					{/* <Image
-						src={`/static/images/${image ? image : 111}.png`}
-						alt='NFT'
-						height={350}
-						width={350}
-						className='donate__preview-image'
-					/> */}
-					<GrFormClose
-						size={25}
-						color='white'
-						onClick={closeModal}
-						className='donate__close-preview'
-					/>
-				</div>
-			</Modal>
 		</>
 	)
 }

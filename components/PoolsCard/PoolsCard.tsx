@@ -28,7 +28,9 @@ const PoolsCard = ({
 					<div className='pools-card__details'>
 						<div>
 							<h3>{title}</h3>
-							<p>Access Scholarships for students {desc}</p>
+							<p>
+								Access Stipends for {desc} students from low income families.
+							</p>
 							<Link
 								href='https://www.notion.so/directed/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'
 								passHref

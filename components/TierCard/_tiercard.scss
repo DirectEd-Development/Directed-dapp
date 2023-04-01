@@ -25,4 +25,25 @@
 	& p:nth-of-type(2) {
 		width: 50ch;
 	}
+
+	&__preview {
+		position: relative;
+		height: fit-content;
+		width: fit-content;
+	}
+
+	&__preview-image {
+		border-radius: 1rem;
+	}
+
+	&__close-preview {
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+	}
+
+	&__image {
+		cursor: pointer;
+	}
 }
