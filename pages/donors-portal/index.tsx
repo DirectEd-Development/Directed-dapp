@@ -42,19 +42,18 @@ export default function Home() {
         description="Direced Ed donors portal page"
       />
       <main className="donors-portal">
-        <div className="donors-portal__filter">
-        </div>
+        <div className="donors-portal__filter"></div>
         {hasPolicyIdAssetsChecked ? (
           <>
             <div className="donors-portal__assets">
               <div className="donors-portal__assets_header">
                 <h1>Gallery</h1>
-				<input
-					type="text"
-					placeholder="Filter assets"
-					value={filterInput}
-					onChange={handleFilterInput} 
-				/>
+                <input
+                  type="text"
+                  placeholder="Filter assets"
+                  value={filterInput}
+                  onChange={handleFilterInput}
+                />
               </div>
               <AssetCard assets={filteredAssets} />
             </div>

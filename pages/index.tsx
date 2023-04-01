@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '../components'
 
 const Home: NextPage = () => {
@@ -8,23 +9,27 @@ const Home: NextPage = () => {
 			<section className='home__hero'>
 				<div className='home__hero--text-content'>
 					<h2>Direct Donations For Education and Development </h2>
+
 					<p>
 						For a world in which any person can realise their full potential,
 						regardless of their draw in the lottery of life.
 					</p>
+
 					<div>
-						<Button variant='primary'>Support the next Bill Gates</Button>
+						<Link href='/directed-donate'>
+							<Button variant='primary' size='small'>
+								SUPPORT THE NEXT BILL GATES
+							</Button>
+						</Link>
 					</div>
 				</div>
-				<video
-					width={450}
+				<Image
+					src='/static/images/video-placeholder.png'
+					alt='video placeholder'
+					width='450'
 					height={300}
 					className='home__hero--video-content'
-					poster='/static/images/video-placeholder.png'
-					controls
-				>
-					<source src='/static/videos/homepage-video.mp4' type='video/mp4' />
-				</video>
+				/>
 			</section>
 
 			<section className='home__statement'>
@@ -173,8 +178,9 @@ const Home: NextPage = () => {
 						attend the 12-week DirectEd Bootcamp.
 					</article>
 					<article>
-						Scholars from low-income families are supported with Access Stipends
-						from the pools.
+						For each partner school, we set up one Access Scholarship pool in
+						order to raise funds to support students from low-income families
+						through the bootcamp.
 					</article>
 					<img
 						src='/static/images/arrow-3.png'
@@ -205,9 +211,11 @@ const Home: NextPage = () => {
 					/>
 				</div>
 				<div className='home__steps--cta'>
+				<Link href='/directed-donate'>
 					<Button variant='primary' size='small'>
 						TEACH A STUDENT HOW TO FISH
 					</Button>
+				</Link>
 				</div>
 			</section>
 			<section className='home__chart'>
@@ -228,14 +236,14 @@ const Home: NextPage = () => {
 					in the world in regard to poverty alleviation and economic development
 				</h4>
 				<h4>
-					"There is not a meeting that I go to today with any CEOs or senior
-					executives of any organisation who’s not looking for more software
-					developer, more digital skills. That’s the currency in every sector of
-					the economy in every economy in the world." - Satya Nadella, CEO and
-					chairman of Microsoft
+					"The World Bank, United Nations and all development banks should drop
+					the nonsense they are doing and support DirectEd." - Professor John
+					Smith, University of Oxford
 				</h4>
 
-				<Button variant='primary'>Donate Now</Button>
+				<Link href='/directed-donate'>
+					<Button variant='primary'>Donate Now</Button>
+				</Link>
 			</section>
 			<section className='home__brands'>
 				<p>Sponsored By</p>
