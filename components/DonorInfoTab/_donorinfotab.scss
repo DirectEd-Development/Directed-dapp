@@ -29,7 +29,6 @@
 
 	&__info-cta {
 		cursor: pointer;
-		transition: all 2s ease-out;
 	}
 
 	&__info-cta:hover &__pop-up {
@@ -47,6 +46,7 @@
 		right: 0;
 		top: 0;
 		flex-direction: column;
+		transition: all 2s ease-out;
 	}
 
 	&__naming-badge {

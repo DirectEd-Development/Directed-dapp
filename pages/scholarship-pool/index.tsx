@@ -1,14 +1,12 @@
 import type { NextPage } from 'next'
 import {
-	Button,
-	Modal,
 	PoolCard,
 	FilterMenu,
 	Meta,
 	DonorInfoTab,
 	ScholarsCard,
 } from '../../components'
-import Image from 'next/image'
+
 import { schoolData } from '../../lib/schooldata'
 import { SchoolDataType } from '../../types/schoolDataType'
 
