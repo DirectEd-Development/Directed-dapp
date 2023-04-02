@@ -13,6 +13,8 @@ export { default as SchoolCard } from './SchoolCard/SchoolCard'
 
 export { default as Layout } from './Layout/Layout'
 export { default as Meta } from './Meta/Meta'
+export { default as CustomAmountInput } from './CustomAmountInput/CustomAmountInput'
+
 
 export { default as Badge } from './Badge/Badge'
 export { default as FilterOptions } from './FilterOptions/FilterOptions'
@@ -26,3 +28,4 @@ export { default as Dropdown } from './Dropdown/Dropdown'
 export { default as DonorInfoTab } from './DonorInfoTab/DonorInfoTab'
 export { default as ScholarsCard } from './ScholarsCard/ScholarsCard'
 export { default as TierCard } from './TierCard/TierCard'
+
