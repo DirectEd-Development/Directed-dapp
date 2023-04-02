@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, Meta, TierCard } from '../../components'
+import { Button, CustomAmountInput, Meta, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
@@ -11,6 +11,9 @@ import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
 const Donate: NextPage = () => {
 	const [tier, setTier] = useState<OptionTiers | null>(null);
+	const [isCustom, setIsCustom] = useState(false);
+	const [custom, setCustom] = useState("");
+
 	const dispatch = useDispatch();
 	const router = useRouter()
 
@@ -23,13 +26,27 @@ const Donate: NextPage = () => {
 		dispatch(setClose())
 	}
 
-	const fullDonationTier = (option: OptionTiers) => {
+	const handleCustom = () => {
+		setIsCustom(false);
 		setTier({
-			title: option.title,
-			amount: option.amount,
-			image: option.image,
+			title: "Custom",
+			amount: custom,
+			image: "",
 		});
 		dispatch(setOpen())
+	}
+
+	const fullDonationTier = (option: OptionTiers) => {
+		 if(option.amount == "custom"){
+			setIsCustom(true);
+		 } else {
+			setTier({
+				title: option.title,
+				amount: option.amount,
+				image: option.image,
+			});
+			dispatch(setOpen())
+		 }
 	}
 
 	return (
@@ -68,7 +85,23 @@ const Donate: NextPage = () => {
 						<div className='donate__info'>
 							<h4>Direct Donation</h4>
 							<p>No DirectEd Lions Collection NFT</p>
-							<div className='donate__tiers'>
+							{isCustom ? (
+								<div className='donate__tiers'>
+								<input
+									 type="text"
+									 placeholder="Custom Amount"
+									 onChange={(e) => setCustom(e.target.value)}
+								/>
+								<Button
+									size='small'
+									noShadow
+									onClick={handleCustom}
+								>
+									Donate
+								</Button>
+							</div>
+							): (
+								<div className='donate__tiers'>
 								{noLionOptions.map((option) => (
 									<Button
 										size='small'
@@ -80,6 +113,7 @@ const Donate: NextPage = () => {
 									</Button>
 								))}
 							</div>
+							)}
 							<div className='donate__timer'>
 								<h5>Time until minting opens <Timer targetDay={17} targetMonth={4} targetYear={2023} /></h5>
 							</div>

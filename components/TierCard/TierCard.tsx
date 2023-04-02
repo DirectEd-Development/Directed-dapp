@@ -23,7 +23,6 @@ const donationAddress =
 const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 	const [amountSent, setAmountSent] = useState("");
 	const [adaamount, setAmount] = useState("");
-	const [isCustom, setIsCustom] = useState(false);
 	const [confirm, setConfirm] = useState(false); 
 	const { wallet, connect, disconnect, connecting, connected } = useWallet();
 	const [successfulTxHash, setSuccessfulTxHash] = useState<string | null>(null);
@@ -101,28 +100,25 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 					<li>Bus ticket to attend tutorials</li>
 					<li>Tutorial Vouchers</li>
 				</ul>
-				<div>
-					<p>Each Access Scholar will receive a corresponding Lion Hero.</p>
-					{/* <Button onClick={() => setIsCustom(true)} size="small" noShadow>
-						CUSTOM
-					</Button> */}
-				</div>
-				<h5>In addition, the holder of this NFT receives:</h5>
-				<ul className='tier-card__items'>
-					<li>
-						Invitation for 2 DirectEd Donor's Reception at Oxford or Harvard
-					</li>
-					<li>Invitation to exclusive Hero and Royal tier donor events</li>
-					<li>Full access to the DirectEd bootcamp material and workshop</li>
-				</ul>
-					{isCustom && (
-						<input
-						type="text"
-						placeholder="Custom Amount"
-						onChange={(e) => setAmount(e.target.value)}
-						value={amount}
-						/>
-					)}
+				{title != "Custom" && (
+					<>
+						<div>
+							<p>Each Access Scholar will receive a corresponding Lion Hero.</p>
+							{/* <Button onClick={() => setIsCustom(true)} size="small" noShadow>
+								CUSTOM
+							</Button> */}
+						</div>
+						<h5>In addition, the holder of this NFT receives:</h5>
+						<ul className='tier-card__items'>
+							<li>
+								Invitation for 2 DirectEd Donor's Reception at Oxford or Harvard
+							</li>
+							<li>Invitation to exclusive Hero and Royal tier donor events</li>
+							<li>Full access to the DirectEd bootcamp material and workshop</li>
+						</ul>
+					</>
+				)}
+					
 					{successfulTxHash && (
 					<div className="donate__modal-container">
 						<div className="donate__modal">
