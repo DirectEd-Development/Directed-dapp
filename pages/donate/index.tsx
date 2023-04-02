@@ -81,7 +81,7 @@ const Donate: NextPage = () => {
 								))}
 							</div>
 							<div className='donate__timer'>
-								<h5>Countdown to Mint Date <Timer targetDay={17} targetMonth={4} targetYear={2023} /></h5>
+								<h5>Time until minting opens <Timer targetDay={17} targetMonth={4} targetYear={2023} /></h5>
 							</div>
 						</div>
 					</div>
