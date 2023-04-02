@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
 
@@ -54,7 +55,9 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 					</div>
 				</div>
 				<ProgressBar />
-				<Button variant='primary'>Donate Now</Button>
+				<Link href='/donate'>
+					<Button variant='primary'>Donate Now</Button>
+				</Link>
 			</div>
 		</div>
 	)
