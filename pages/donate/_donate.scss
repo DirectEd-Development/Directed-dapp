@@ -34,6 +34,22 @@
 		}
 	}
 
+	&__timer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 60px;
+		font-size: 4rem;
+		font-weight: bold;
+		
+		& p {
+				margin: 0 1rem;
+			}
+		
+		padding: 1rem;
+		
+	}
+
 	&__tiers {
 		display: flex;
 		gap: 2.5rem;
@@ -55,6 +71,7 @@
 		background: grey;
 	}
 }
+
 
 //Confirm page
 

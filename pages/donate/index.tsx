@@ -6,7 +6,7 @@ import { Button, Meta, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
-import { icons } from 'react-icons/lib'
+import Timer from '../../components/Timer/Timer';
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
 const Donate: NextPage = () => {
@@ -65,7 +65,7 @@ const Donate: NextPage = () => {
 								))}
 							</div>
 						</div>
-						<div>
+						<div className='donate__info'>
 							<h4>Direct Donation</h4>
 							<p>No DirectEd Lions Collection NFT</p>
 							<div className='donate__tiers'>
@@ -79,6 +79,9 @@ const Donate: NextPage = () => {
 										{option.title}
 									</Button>
 								))}
+							</div>
+							<div className='donate__timer'>
+								<h5>Countdown to Mint Date <Timer targetDay={17} targetMonth={4} targetYear={2023} /></h5>
 							</div>
 						</div>
 					</div>
