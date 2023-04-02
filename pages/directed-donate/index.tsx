@@ -9,7 +9,7 @@ import { useWallet, useWalletList } from "@meshsdk/react";
 import { Transaction } from "@meshsdk/core";
 
 const donationAddress =
-  "addr_test1qqq899k0hd4npxl8l4l8vtdzwg4frepcurc74dx9265f3rhtpewhzlzckjny2004lzf2ct229ykw9gug30shpl5q0y9s8z57zq";
+  "addr1qx35zqnw3e9x0y9cg0gw5c40e70fzx753tcaquec09qf254x73ej2wfrtpdyzdl402n34cux49k2ratgllkrcdfjpygqvdm6lz";
 
 const amounts = ["1000", "300", "100"];
 

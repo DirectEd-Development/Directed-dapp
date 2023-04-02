@@ -12,7 +12,7 @@ export const lionOptions: OptionTiers[] = [
 		image: '/static/images/2.png',
 	},
 	{
-		amount: '40ADA',
+		amount: '₳40',
 		title: 'Warrior',
 		image: '/static/images/3.png',
 	},
@@ -20,7 +20,7 @@ export const lionOptions: OptionTiers[] = [
 
 export const noLionOptions: OptionTiers[] = [
 	{
-		amount: '₳1000',
+		amount: '1000',
 		title: '1 Full Access Scholarship',
 	},
 	{
