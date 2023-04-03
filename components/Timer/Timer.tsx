@@ -33,8 +33,8 @@ export const Timer: React.FC<Props> = ({ targetDay, targetMonth, targetYear }) =
 
   return (
     <div>
-      <p>{targetDate} 8:00pm UTC</p>
-      <p>{days} days</p>
+      <span>Mint opens {targetDate} 8:00pm UTC</span>
+      {/* <p>{days} days</p> */}
     </div>
   );
 };

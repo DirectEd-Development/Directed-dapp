@@ -2,6 +2,19 @@
 
 .container {
   padding: 2rem 1rem;
+
+}
+
+.donate__modal-container{
+  display: flex;
+  justify-content: center;
+
+}
+.donate__title-section {
+  & h3{
+    text-align: center;
+    margin-left: 10rem;
+  }
 }
 
 .donate-page {
@@ -21,10 +34,18 @@
       width: 100%;
       max-width: 300px;
       margin-bottom: 20px;
+      background: var(--clr-accent-100);
 
       &:focus {
         outline: none;
+        background: var(--clr-accent-100);
       }
+    }
+
+    .donate__donate-btn {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
     }
   }
 
@@ -43,6 +64,7 @@
       font-size: 16px;
     }
   }
-
 }
+
+
 

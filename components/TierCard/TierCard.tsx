@@ -5,9 +5,10 @@ import Modal, { ModalHandler } from '../Modal/Modal'
 import { useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from './RootState'
-import { useWallet, useWalletList } from "@meshsdk/react";
+import { useWallet, useAddress } from "@meshsdk/react";
 import { Transaction } from "@meshsdk/core";
 import React  from "react";
+import axios from 'axios'
 
 type TierCardProps = {
 	onClick?(event?: React.MouseEvent): void
@@ -22,12 +23,11 @@ const donationAddress =
 
 const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 	const [amountSent, setAmountSent] = useState("");
-	const [adaamount, setAmount] = useState("");
 	const [confirm, setConfirm] = useState(false); 
 	const { wallet, connect, disconnect, connecting, connected } = useWallet();
 	const [successfulTxHash, setSuccessfulTxHash] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
-
+	const address = useAddress();
 
 
 	const handleDonate = async (send_amt: string) => {
@@ -47,6 +47,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 			  const unsignedTx = await tx.build();
 			  const signedTx = await wallet.signTx(unsignedTx);
 			  const txHash = await wallet.submitTx(signedTx);
+			  const res = await axios.post("http://localhost:3001/api/transactions", {amount: send_amt, transactionHash: txHash, walletAddress: address})
 			  setSuccessfulTxHash(txHash);
 			  setAmountSent(send_amt);
 			  setConfirm(false); // reset confirm state after donation is sent
@@ -63,10 +64,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 		  alert("Please connect a wallet.");
 		}
 	  };
-	
-	//   const handleSent = () => {
-	// 	router.push("/?from=donation");
-	//   };
+
 
 	const modalRef = useRef<ModalHandler>(null);
 	const isClose = useSelector((state: RootState) => state.close.isClosed);
@@ -88,35 +86,105 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 						className='tier-card__image'
 					/>
 				)}
-				<p>{amount}</p>
-				<p>
-					You enable one highly-talented student from a low-income family
-					background to effectively take part in the DirectEd bootcamp
-					supporting them with:
-				</p>
-				<ul className='tier-card__items'>
-					<li>A rental computer</li>
-					<li>Wifi at home</li>
-					<li>Bus ticket to attend tutorials</li>
-					<li>Tutorial Vouchers</li>
-				</ul>
-				{title != "Custom" && (
+				<p>₳{amount}</p>
+				{title == "Royal" && (
 					<>
-						<div>
-							<p>Each Access Scholar will receive a corresponding Lion Hero.</p>
-							{/* <Button onClick={() => setIsCustom(true)} size="small" noShadow>
-								CUSTOM
-							</Button> */}
-						</div>
-						<h5>In addition, the holder of this NFT receives:</h5>
+						<p>
+						You enable 2 highly-talented students from a low-income family background to
+						effectively take part in the DirectEd bootcamp supporting them with:
+						</p>
 						<ul className='tier-card__items'>
-							<li>
-								Invitation for 2 DirectEd Donor's Reception at Oxford or Harvard
-							</li>
-							<li>Invitation to exclusive Hero and Royal tier donor events</li>
-							<li>Full access to the DirectEd bootcamp material and workshop</li>
+							<li>Rental computer</li>
+							<li>WiFi or mobile data</li>
+							<li>Tutorial vouchers</li>
+							<li>Pocket money for living expenses</li>
+						</ul>
+						<h5>We show our appreciation in the following ways:</h5>
+						<ul className='tier-card__items'>
+							<li>Same access and perks as that of the Lion Warriors and Heroes.</li>
+							<li>Invitation to the exclusive DirectEd Donor's Dinner in Oxford.</li>
+							<li> <b>Nameplate</b> recognition in the school of the pool you supported.</li>
 						</ul>
 					</>
+				)}
+				{title == "Hero" && (
+					<>
+						<p>
+							You enable one highly-talented student from a low-income family
+							background to effectively take part in the DirectEd bootcamp
+							supporting them with:
+						</p>
+						<ul className='tier-card__items'>
+							<li>Rental computer</li>
+							<li>WiFi or mobile data</li>
+							<li>Tutorial vouchers</li>
+							<li>Pocket money for living expenses</li>
+						</ul>
+						<h5>We show our appreciation in the following ways:</h5>
+						<ul className='tier-card__items'>
+							<li>Same access and perks as that of the Lion Warriors.</li>
+							<li>Access to the bootcamp course material and workshops.</li>
+							<li>Access to the student-written lore of your particular Lion Hero through our token-gated Lions Gallery.</li>
+						</ul>
+					</>
+				)}
+				{title == "Warrior" && (
+					<>
+						<p>You contribute to a Access Stipend pool where funds will be 
+							pooled to enable a talented student from a low-income family
+							background to take part in the DirectEd bootcamp by supporting them with:
+						</p>
+						<ul className='tier-card__items'>
+							<li>Rental computer</li>
+							<li>WiFi or mobile data</li>
+							<li>Tutorial vouchers</li>
+							<li>Pocket money for living expenses</li>
+						</ul>
+						<h5>We show our appreciation in the following ways:</h5>
+						<ul className='tier-card__items'>
+							<li>Invitation to exclusive online and in-person DirectEd Lions events</li>
+							<li>Access to the Student's Progress page, enabling you to observe how funds are used and observe students' achievements.</li>
+							<li>Direct access to the open-source code of projects built by students.</li>
+						</ul>
+					</>
+				)}
+				
+				{title == "Custom" && (
+					<>
+						<p>You contribute to a Access Stipend pool where funds will be 
+							pooled to enable a talented student from a low-income family
+							background to take part in the DirectEd bootcamp by supporting them with:
+						</p>
+						<ul className='tier-card__items'>
+							<li>Rental computer</li>
+							<li>WiFi or mobile data</li>
+							<li>Tutorial vouchers</li>
+							<li>Pocket money for living expenses</li>
+						</ul>
+						
+					</>
+				)}
+
+				{(title == "One Access Stipend" && 
+					<>
+					<p>
+						You enable one highly-talented student from a low-income family
+						background to effectively take part in the DirectEd bootcamp
+						supporting them with:
+					</p>
+					<ul className='tier-card__items'>
+						<li>Rental computer</li>
+						<li>WiFi or mobile data</li>
+						<li>Tutorial vouchers</li>
+						<li>Pocket money for living expenses</li>
+					</ul>
+					<h5>We show our appreciation in the following ways:</h5>
+					<ul className='tier-card__items'>
+						<li>Same access and perks as that of the Lion Warriors.</li>
+						<li>Access to the bootcamp course material and workshops.</li>
+						<li>Access to the student-written lore of your particular Lion Hero through our token-gated Lions Gallery.</li>
+					</ul>
+				</>
 				)}
 					
 					{successfulTxHash && (

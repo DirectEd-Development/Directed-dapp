@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
-import Link from 'next/link'
 
 type ScholarsCardProps = {}
 
