@@ -9,17 +9,20 @@
 		text-align: center;
 	}
 
-	&__potrait-card {
+	&__potrait-section {
 		text-align: center;
 		padding-inline: 6rem;
 
 		& > * {
 			margin: 3rem 0;
 		}
+	}
 
-		& > div {
-			gap: 2rem;
-		}
+	&__potrait-cards {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 3rem;
 	}
 
 	&__landscape-card {

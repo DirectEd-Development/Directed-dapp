@@ -4,7 +4,7 @@
 	background: var(--clr-accent-100);
 	// box-shadow: 0 0 1px 1px rgba(#000000, 0.3);
 	height: fit-content;
-	width: fit-content;
+	width: 35rem;
 
 	&__image {
 		object-fit: cover;
@@ -27,18 +27,24 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1rem;
+
+		& > p {
+			font-style: italic;
+		}
 	}
 
 	&__stats {
-		gap: 3rem;
-		align-items: flex-start;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 4rem;
+		align-items: baseline;
+		text-align: center;
 
-		& h3 {
-			text-align: center;
-		}
-		& p {
-			text-align: center;
+		& span {
+			font-size: var(--fs-200);
+			display: block;
 		}
 	}
 
@@ -51,11 +57,7 @@
 		justify-content: flex-start;
 		flex-direction: column;
 		align-items: center;
-		font-size: var(--fs-200);
-		gap: 1rem;
 
-		& span {
-			display: block;
-		}
+		gap: 1rem;
 	}
 }

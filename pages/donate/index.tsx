@@ -53,20 +53,20 @@ const Donate: NextPage = () => {
 		<>
 			<Meta title='Donate' description='Donate to student' />
 			<main className='donate container'>
-				<div className='donate__title-section'>
-					<FaChevronLeft
-						onClick={() => router.back()}
-						className='go-back'
-						size={35}
-						color={'#374756'}
-					/>
-					<h3>Donate to Kagumo High School</h3>
-				</div>
 				<div className='donate__donations'>
 					<div className='donate__tier-options'>
+						<div className="donate__title-section">
+							<FaChevronLeft
+								onClick={() => router.back()}
+								className='go-back'
+								size={35}
+								color={'#374756'}
+							/>
+						</div>
 						<div>
+							<h3>Donate to Kagumo High School</h3>
 							<h4>DirectEd Lions Collection</h4>
-							<p>Donate and receive a DirectEd Lions NFT</p>
+							<p><span> <Timer targetDay={17} targetMonth={4} targetYear={2023} /></span></p>
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
 								{lionOptions.map((option) => (
@@ -83,7 +83,7 @@ const Donate: NextPage = () => {
 							</div>
 						</div>
 						<div className='donate__info'>
-							<h4>Direct Donation</h4>
+							<span> Direct Donation</span>
 							<p>No DirectEd Lions Collection NFT</p>
 							{isCustom ? (
 								<div className='donate__tiers'>
@@ -114,19 +114,19 @@ const Donate: NextPage = () => {
 								))}
 							</div>
 							)}
-							<div className='donate__timer'>
-								<h5>Time until minting opens <Timer targetDay={17} targetMonth={4} targetYear={2023} /></h5>
-							</div>
 						</div>
 					</div>
-					{tier && (
-						<TierCard
-							onClick={() => setTier(null)}
-							title={tier?.title}
-							amount={tier?.amount}
-							image={tier?.image}
-						/>
-					)}
+					<div className='tier'>
+						{tier && (
+							<TierCard
+								onClick={() => setTier(null)}
+								title={tier?.title}
+								amount={tier?.amount}
+								image={tier?.image}
+							/>
+						)}
+					</div>
+					
 				</div>
 			</main>
 		</>

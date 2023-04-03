@@ -31,7 +31,7 @@
 		display: none;
 		cursor: pointer;
 
-		@include mq(small) {
+		@media screen and (min-width: 1280px) {
 			display: flex;
 			gap: 2rem;
 			align-items: center;
@@ -44,6 +44,14 @@
 
 		li.active {
 			border-bottom: 1.5px solid var(--clr-accent-100);
+		}
+	}
+
+	&__wallet {
+		display: none;
+
+		@media screen and (min-width: 1280px) {
+			display: block;
 		}
 	}
 }

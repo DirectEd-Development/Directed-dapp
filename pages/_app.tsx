@@ -6,27 +6,51 @@ import { DefaultSeo } from 'next-seo'
 import SEO from '../next-seo.config'
 import '@fontsource/poppins'
 import { hotjar } from 'react-hotjar'
-import {Provider} from "react-redux";
-import {store, persistor} from "../hooks/redux/store"
-import { PersistGate } from 'redux-persist/integration/react';
+import { useEffect, useState } from 'react'
+import { Provider } from 'react-redux';
+import { store } from '../hooks/redux/store';
 
-import { useEffect } from 'react'
+type Breakpoint = 'lg'
 
 function MyApp({ Component, pageProps }: AppProps) {
+	const [breakpoint, setBreakpoint] = useState<Breakpoint>('lg')
+
+	const getBreakpoint = (width: number) => {
+		if (width > 1280) {
+			return 'lg'
+		}
+	}
+
+	const handleResize = () => {
+		const width = window.innerWidth
+		const newBreakpoint: any = getBreakpoint(width)
+		setBreakpoint(newBreakpoint)
+	}
+
+	useEffect(() => {
+		window.addEventListener('resize', handleResize)
+		return () => window.removeEventListener('resize', handleResize)
+	}, [])
+
 	useEffect(() => {
 		hotjar.initialize(3412386, 6)
 	}, [])
 
 	return (
 		<Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}>
-				<MeshProvider>
-					<DefaultSeo {...SEO} />
-					<Layout>
+			<MeshProvider>
+				<DefaultSeo {...SEO} />
+				<Layout>
+					{breakpoint === 'lg' ? (
 						<Component {...pageProps} />
-					</Layout>
-				</MeshProvider>
-			</PersistGate>
+					) : (
+						<h3 style={{ textAlign: 'center', padding: '10rem' }}>
+							The mobile version of the donation portal is under development,
+							please visit this page on your computer.
+						</h3>
+					)}
+				</Layout>
+			</MeshProvider>
 		</Provider>
 	)
 }

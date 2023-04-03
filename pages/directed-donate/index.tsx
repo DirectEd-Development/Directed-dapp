@@ -112,9 +112,11 @@ const directeddonate: NextPage = () => {
               value={amount}
             />
           )}
-          <Button variant="primary" onClick={handleConfirm} disabled={!amount}>
-            Donate
-          </Button>
+          <div className="donate__donate-btn">
+            <Button variant="primary" onClick={handleConfirm} disabled={!amount}>
+              Donate
+            </Button>
+          </div>
         </div>
 
         {confirm && (

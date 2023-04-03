@@ -17,7 +17,6 @@ const DonorInfoTab = () => {
 									width='90'
 									height='90'
 								/>
-
 								<div className='donor-info__info-cta'>
 									<Image
 										src='/static/images/Hover.png'
@@ -25,7 +24,6 @@ const DonorInfoTab = () => {
 										width='50'
 										height='50'
 									/>
-
 									<div className='donor-info__pop-up'>
 										<Image
 											src='/static/images/Hover.png'
