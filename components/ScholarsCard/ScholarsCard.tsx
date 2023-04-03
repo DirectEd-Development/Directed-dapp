@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
+import Link from 'next/link'
 
 type ScholarsCardProps = {}
 
@@ -17,21 +18,25 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 			/>
 			<div className='scholars-card__content'>
 				<div className='scholars-card__title'>
-					<h3>Kagumo Highschool</h3>
-					<Button variant='link'>Learn More</Button>
+					<h3>Djed Scholars</h3>
+					<p>
+						Access Stipends for Djed Scholar students from low income families.
+					</p>
+					<Link href='https://directed.notion.site/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'>
+						<Button variant='link'>Learn More</Button>
+					</Link>
 				</div>
-				<div className='flex-between scholars-card__stats'>
+				<div className='scholars-card__stats'>
 					<div>
-						<h4>23</h4>
-						<p>Scholarships</p>
-						<p>funded</p>
+						<h5>3</h5>
+						<span>Scholarships</span>
+						<span>funded</span>
 					</div>
 					<div>
-						<h4>X</h4>
-						<p>remaining Hero and Royal tier NFTs</p>
+						<h5>23</h5>
+						<span>remaining Hero </span>
+						<span>and Royals</span>
 					</div>
-				</div>
-				<div className='flex-between scholars-card__stats'>
 					<div className='scholars-card__donors'>
 						<Image
 							src='/static/images/clock.png'
@@ -39,7 +44,8 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 							width='20'
 							height='20'
 						/>
-						<span>X days left</span>
+						<span>Fundraising ends </span>
+						<span>on April 30</span>
 					</div>
 					<div className='scholars-card__donors'>
 						<Image
@@ -49,11 +55,12 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 							height='20'
 						/>
 						<span>
-							<span>X person(s) have</span>
+							<span>3 person(s) have</span>
 							<span>donated</span>
 						</span>
 					</div>
 				</div>
+
 				<ProgressBar />
 				<Link href='/donate'>
 					<Button variant='primary'>Donate Now</Button>
