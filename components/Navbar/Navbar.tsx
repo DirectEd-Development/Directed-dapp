@@ -14,7 +14,7 @@ const NavLinks: LinksType[] = [
 	{ title: 'Scholarship Pools', link: '/scholarship-pool' },
 	// { title: "Teacher's Portal", link: '/teacher-portal' },
 	{ title: 'Scholar’s Progress', link: '/progress' },
-	{ title: "DirectEd Lions", link: '/donors-portal' },
+	{ title: 'DirectEd Lions', link: '/donors-portal' },
 ]
 
 const Navbar = () => {
@@ -30,14 +30,14 @@ const Navbar = () => {
 						<div className='nav__logo-box'>
 							<Image
 								id='logo'
-								src='/static/images/logo.png'
-								width={50}
-								height={50}
+								src='/static/images/logo-F3EAD3.png'
+								width={55}
+								height={55}
 								alt='Direct Ed Logo'
 							/>
-							<div>
+							<div className='nav__logo-text'>
 								<p>DirectEd Development</p>
-								<p>Realising Potential</p>
+								<p>Foundation</p>
 							</div>
 						</div>
 					</Link>
@@ -54,39 +54,8 @@ const Navbar = () => {
 								</li>
 							</Link>
 						))}
-						{/* <div className='dropdown dropdown-hover'>
-							<label tabIndex={0}>
-								<Link
-									href={'/transactions'}
-									style={{ pointerEvents: 'none' }}
-									passHref
-								>
-									<li
-										className={`text-base text-white ${
-											router.pathname === '/transactions'
-												? 'font-semibold border-b-2'
-												: 'font-light'
-										}`}
-									>
-										Transactions
-									</li>
-								</Link>
-							</label>
-							<div
-								tabIndex={0}
-								className='dropdown-content card card-compact w-60 p-2 shadow bg-white mt-1'
-							>
-								<div className='card-body'>
-									<h3 className='text-lg font-semibold'>
-										The transaction page will be available after a donation has
-										been made
-									</h3>
-								</div>
-							</div>
-						</div> */}
 					</ul>
-
-					<div>
+					<div className='nav__wallet'>
 						<ConnectWallet />
 					</div>
 				</div>

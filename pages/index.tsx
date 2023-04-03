@@ -9,16 +9,14 @@ const Home: NextPage = () => {
 			<section className='home__hero'>
 				<div className='home__hero--text-content'>
 					<h2>Direct Donations For Education and Development </h2>
-
 					<p>
 						For a world in which any person can realise their full potential,
 						regardless of their draw in the lottery of life.
 					</p>
-
 					<div>
 						<Link href='/directed-donate'>
 							<Button variant='primary' size='small'>
-								SUPPORT THE NEXT BILL GATES
+								SUPPORT THE NEXT ADA LOVELACE
 							</Button>
 						</Link>
 					</div>
@@ -34,12 +32,21 @@ const Home: NextPage = () => {
 					<source src='/static/videos/homepage-video.mp4' type='video/mp4' />
 				</video>
 			</section>
+			<section className='home__quote'>
+				<blockquote>
+					“There is not a meeting that I go to today with any CEOs or senior
+					executives of any organisation who’s not looking for more software
+					developer, more digital skills. That’s the currency in every sector of
+					the economy in every economy in the world."
+				</blockquote>
+				<span>- Satya Nadella, CEO and chairman of Microsoft</span>
+			</section>
 			<section className='home__statement'>
 				<Image
 					src='/static/images/question.png'
 					alt='question image'
-					width={600}
-					height={600}
+					width={500}
+					height={500}
 				/>
 				<div className='home__statement--text-content'>
 					<h2>Problems</h2>
@@ -50,9 +57,7 @@ const Home: NextPage = () => {
 							height={70}
 							width={70}
 						/>
-						<h4>
-							A shortage of software engineers, globally and within Africa
-						</h4>
+						<p>A shortage of software engineers, globally and within Africa</p>
 					</div>
 					<div className='flex-gap'>
 						<Image
@@ -61,13 +66,15 @@ const Home: NextPage = () => {
 							height={70}
 							width={70}
 						/>
-						<h4>
+						<p>
 							Even the brightest young Africans lack the resources and quality
 							training to seize this opportunity
-						</h4>
+						</p>
 					</div>
 
-					<Button variant='bordered-outline'>Learn More</Button>
+					<Link href='https://www.notion.so/DirectEd-Whitepaper-a1ead202d7964c80ba85bc0f206749cf'>
+						<Button variant='primary'>Learn More</Button>
+					</Link>
 				</div>
 			</section>
 			<section className='home__why-us'>
@@ -75,7 +82,7 @@ const Home: NextPage = () => {
 				<h4>The Rocketship with 3 parts: broad base and pointy nose.</h4>
 				<div>
 					<div>
-						<h5>Introductory Course</h5>
+						<h4>Introductory Course</h4>
 						<p>
 							This is a 1-week long coding course introducing students to coding
 							using Python. By adapting Harvard’s famous CS50 Introduction to
@@ -83,28 +90,35 @@ const Home: NextPage = () => {
 							accessible to all students, regardless of socio-economic
 							background.
 						</p>
-						<Button variant='link'>Read More</Button>
+						<Link href='https://directed.notion.site/Programme-Curriculum-46430b7791354108b5f4c074ca536760'>
+							<Button variant='link'>Read More</Button>
+						</Link>
 					</div>
 					<div>
-						<h5>Coding Bootcamp</h5>
+						<h4>Coding Bootcamp</h4>
 						<p>
-							Top students proceed to a 12-week Coding Bootcamp covering full
-							stack web development in the popular MERN Javascript framework. In
-							addition, they are trained in a wide range of soft skills through
-							workshops hosted by guest lecturers.
+							Top students from the Introductory Course proceed to the Coding
+							Bootcamp. This is an extremely demanding 12-week-long full-time
+							coding bootcamp covering full-stack web development in the MERN
+							framework and a wide range of soft skills through special expert
+							workshops.
 						</p>
-						<Button variant='link'>Read More</Button>
+						<Link href='https://directed.notion.site/Programme-Curriculum-46430b7791354108b5f4c074ca536760'>
+							<Button variant='link'>Read More</Button>
+						</Link>
 					</div>
 					<div>
-						<h5>Internship and Specialisation</h5>
+						<h4>Internship and Specialisation</h4>
 						<p>
-							Graduates proceed to train with partner tech companies, getting
-							real-world experience whilst simulatenously continue their
-							learning by specialising in one of several in-demand skills as
-							identified by our market research. This includes smart contract
-							development, Power BI or SAP 4/HANA.
+							Coding Bootcamp graduates continue their training through a
+							6-month internship with a partner tech firm. They work in teams of
+							four with support from a working professional while specialising
+							in a skill our research has revealed to have the highest
+							employability potential.
 						</p>
-						<Button variant='link'>Read More</Button>
+						<Link href='https://directed.notion.site/Programme-Curriculum-46430b7791354108b5f4c074ca536760'>
+							<Button variant='link'>Read More</Button>
+						</Link>
 					</div>
 				</div>
 				<Link href='/directed-donate'>
@@ -115,7 +129,6 @@ const Home: NextPage = () => {
 			</section>
 			<section className='home__steps'>
 				<h2>The Details</h2>
-
 				<div className='home__step'>
 					<article>
 						<div className='flex-between'>
@@ -194,9 +207,8 @@ const Home: NextPage = () => {
 						<div className='home__step--content home__step--content-4'>
 							<p>
 								For each partner school, we set up one
-								<strong>Access Scholarship</strong> pool in order to raise funds
-								to support students from low-income families through the
-								bootcamp.
+								<strong> Access Stipend</strong> pool in order to raise funds to
+								support students from low-income families through the bootcamp.
 							</p>
 						</div>
 					</article>
@@ -257,7 +269,7 @@ const Home: NextPage = () => {
 				<div className='home__steps--cta'>
 					<Link href='/directed-donate'>
 						<Button variant='primary' size='small'>
-							TEACH A STUDENT HOW TO FISH
+							Support The Vision
 						</Button>
 					</Link>
 				</div>
@@ -272,16 +284,23 @@ const Home: NextPage = () => {
 							width={100}
 							height={100}
 						/>
-						<h5>Economic Sustainability</h5>
-						<p>
-							The vast majority of charities fail to be economically
-							sustainable: they rely fully on donations and grants to sustain
-							their operations. Our programme is designed to create a
-							self-perpetuating cycle of funding for future scholars.
-						</p>
-						<Button variant='accent' noShadow>
-							Read More
-						</Button>
+						<div>
+							<h5>Economic Sustainability</h5>
+							<p>
+								The vast majority of charities fail to be economically
+								self-sustaining, relying on continuous donations and grants. Our
+								<strong> Access Stipend</strong> pools are tied to specific high
+								schools which enables us to leverage social credit to encourage
+								successful alumni to support the next generation of scholars
+								from their alma mater.
+							</p>
+						</div>
+
+						<Link href='https://directed.notion.site/DirectEd-Whitepaper-a1ead202d7964c80ba85bc0f206749cf'>
+							<Button variant='accent' noShadow>
+								Read More
+							</Button>
+						</Link>
 					</div>
 					<div className='home__solutions--items'>
 						<Image
@@ -290,18 +309,23 @@ const Home: NextPage = () => {
 							width={100}
 							height={100}
 						/>
-						<h5>Meaningful Transparency</h5>
-						<p>
-							In legacy charities, stakeholders cannot independently verify
-							where their funds have gone or why, leading to leakages and misuse
-							of funds. We use blockchain-based payments, smart contracts and
-							decentralised identifiers to solve the transparency while giving
-							donors meaningful and continuous feedback on the difference they
-							are making through our “Progress page”.
-						</p>
-						<Button variant='accent' noShadow>
-							Read More
-						</Button>
+						<div>
+							<h5>Transparency & Accountability</h5>
+							<p>
+								Legacy charity donors cannot independently verify where their
+								funds went or how they were used. By using privacy-preserving
+								decentralised identifiers and facilitating stipends using
+								blockchain smart contracts that release funds conditional on
+								reaching milestones, we achieve transparency by design and
+								accountability.
+							</p>
+						</div>
+
+						<Link href='https://directed.notion.site/DirectEd-Whitepaper-a1ead202d7964c80ba85bc0f206749cf'>
+							<Button variant='accent' noShadow>
+								Read More
+							</Button>
+						</Link>
 					</div>
 					<div className='home__solutions--items'>
 						<Image
@@ -310,16 +334,23 @@ const Home: NextPage = () => {
 							width={100}
 							height={100}
 						/>
-						<h5>Cost-effectiveness</h5>
-						<p>
-							Few charities have developed low-cost programmes that successfully
-							bring about transformative impact through economic growth. We have
-							cost efficiency as a number-one priority and have a data-driven
-							approach to ensure continuous improvement.
-						</p>
-						<Button variant='accent' noShadow>
-							Read More
-						</Button>
+						<div>
+							<h5>Cost-Effective Impact</h5>
+							<p>
+								Few charities successfully deliver cost-effectiveness
+								transformative impact. We strive to achieve maximum impact per
+								donated dollar by targeting a highly scalable cause area with
+								extremely high impact potential. We also maintain an ethos of
+								data-driven decision making and cost-effectiveness throughout
+								our operations.
+							</p>
+						</div>
+
+						<Link href='https://directed.notion.site/DirectEd-Whitepaper-a1ead202d7964c80ba85bc0f206749cf'>
+							<Button variant='accent' noShadow>
+								Read More
+							</Button>
+						</Link>
 					</div>
 				</div>
 				<div>
@@ -343,58 +374,54 @@ const Home: NextPage = () => {
 			<section className='home__impact'>
 				<h3>What is the impact?</h3>
 				<h4>
-					$1 donated → $130 generated in economic value* over their lifetime
+					$1 donated → $130 generated in{' '}
+					<Link href='https://directed.notion.site/Cost-Effectiveness-Analysis-c7ac254eba994d198e89d5ddb3edfa39'>
+						<strong>economic value</strong>
+					</Link>
+					over their lifetime
 				</h4>
 				<h4>
 					making us one of the most effective development projects in the world
 				</h4>
-				<blockquote>
-					“There is not a meeting that I go to today with any CEOs or senior
-					executives of any organisation who’s not looking for more software
-					developer, more digital skills. That’s the currency in every sector of
-					the economy in every economy in the world." - Satya Nadella, CEO and
-					chairman of Microsoft
-				</blockquote>
-
 				<Link href='/directed-donate'>
 					<Button variant='primary'>Donate Now</Button>
 				</Link>
 			</section>
 			<section className='home__brands'>
-				<p>Sponsored By</p>
+				<p>Partners</p>
 				<div className='flex-gap-two'>
 					<Image
 						src='/static/images/coti-white.png'
-						alt='brand'
+						alt='coti'
 						width={150}
 						height={50}
 					/>
 					<Image
-						src='/static/images/yali-africa.png'
-						alt='brand'
-						width={120}
+						src='/static/images/yali.png'
+						alt='yali'
+						width={80}
 						height={80}
 					/>
 					<Image
-						src='/static/images/tally.png'
-						alt='brand'
+						src='/static/images/tally.svg'
+						alt='tally'
 						width={80}
 						height={80}
 					/>
 					<Image
 						src='/static/images/snapbrillia.png'
-						alt='brand'
+						alt='snapbrillia'
 						width={150}
 						height={60}
 					/>
+					<Image
+						src='/static/images/web3ug.png'
+						alt='web3ug'
+						width={80}
+						height={80}
+					/>
 				</div>
 			</section>
-
-			{/* <Link href='/directed-donate'>
-				<Button variant='primary'>
-					LEVEL THE PLAYING FIELD, A LITTLE BIT AT LEAST
-				</Button>
-			</Link> */}
 		</main>
 	)
 }

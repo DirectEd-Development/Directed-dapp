@@ -6,9 +6,30 @@ import { DefaultSeo } from 'next-seo'
 import SEO from '../next-seo.config'
 import '@fontsource/poppins'
 import { hotjar } from 'react-hotjar'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+
+type Breakpoint = 'lg'
 
 function MyApp({ Component, pageProps }: AppProps) {
+	const [breakpoint, setBreakpoint] = useState<Breakpoint>('lg')
+
+	const getBreakpoint = (width: number) => {
+		if (width > 1280) {
+			return 'lg'
+		}
+	}
+
+	const handleResize = () => {
+		const width = window.innerWidth
+		const newBreakpoint: any = getBreakpoint(width)
+		setBreakpoint(newBreakpoint)
+	}
+
+	useEffect(() => {
+		window.addEventListener('resize', handleResize)
+		return () => window.removeEventListener('resize', handleResize)
+	}, [])
+
 	useEffect(() => {
 		hotjar.initialize(3412386, 6)
 	}, [])
@@ -17,7 +38,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<MeshProvider>
 			<DefaultSeo {...SEO} />
 			<Layout>
-				<Component {...pageProps} />
+				{breakpoint === 'lg' ? (
+					<Component {...pageProps} />
+				) : (
+					<h3 style={{ textAlign: 'center', padding: '10rem' }}>
+						The mobile version of the donation portal is under development,
+						please visit this page on your computer.
+					</h3>
+				)}
 			</Layout>
 		</MeshProvider>
 	)

@@ -23,7 +23,6 @@ const PoolsCard = ({
 					width='300'
 					height='350'
 				/>
-
 				<div className='pools-card__text-content'>
 					<div className='pools-card__details'>
 						<div>
@@ -39,55 +38,18 @@ const PoolsCard = ({
 								Learn More
 							</Link>
 						</div>
-						{/* <ul className='pools-card__list-items'>
-							<li className='pools-card__list'>
-								<Image
-									src='/static/images/clock.png'
-									alt='Pool Image'
-									width='20'
-									height='20'
-								/>
-								X days left
-							</li>
-							<li className='pools-card__list'>
-								<Image
-									src='/static/images/Vector.png'
-									alt='Pool Image'
-									width='20'
-									height='20'
-								/>
-								X person(s) have donated
-							</li>
-
-							<li className='pools-card__list'>
-								<Image
-									src='/static/images/nft.png'
-									alt='Pool Image'
-									width='20'
-									height='20'
-								/>
-								Remaining Heroes: 20
-							</li>
-						</ul> */}
 					</div>
-
 					<div className='pools-card__funds'>
 						<div>
 							<h3>3</h3>
 							<p>Scholarships funded</p>
 						</div>
 						<hr />
-
 						<div>
-							<h3>X</h3>
-							<p>
-								remaining Hero and Royal tier NFTs
-								{/* Remaining Scholarship <br />
-								Naming Right */}
-							</p>
+							<h3>23</h3>
+							<p>remaining Hero and Royal tier NFTs</p>
 						</div>
 					</div>
-
 					<div className='pools-card__progress'>
 						<ProgressBar />
 						<div className=''>
