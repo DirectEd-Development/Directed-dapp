@@ -124,7 +124,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 						<ul className='tier-card__items'>
 							<li>Same access and perks as that of the Lion Warriors.</li>
 							<li>Access to the bootcamp course material and workshops.</li>
-							<li>Access to the student-written lore of your particular Lion Hero through our token-gated Lions Gallery.</li>
+							<li>Access to the student-written lore of your particular Lion <br /> Hero through our token-gated Lions Gallery.</li>
 						</ul>
 					</>
 				)}
@@ -143,7 +143,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 						<h5>We show our appreciation in the following ways:</h5>
 						<ul className='tier-card__items'>
 							<li>Invitation to exclusive online and in-person DirectEd Lions events</li>
-							<li>Access to the Student's Progress page, enabling you to observe how funds are used and observe students' achievements.</li>
+							<li>Access to the Student's Progress page, enabling you to observe how <br /> funds are used and observe students' achievements.</li>
 							<li>Direct access to the open-source code of projects built by students.</li>
 						</ul>
 					</>
@@ -182,7 +182,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 					<ul className='tier-card__items'>
 						<li>Same access and perks as that of the Lion Warriors.</li>
 						<li>Access to the bootcamp course material and workshops.</li>
-						<li>Access to the student-written lore of your particular Lion Hero through our token-gated Lions Gallery.</li>
+						<li>Access to the student-written lore of your particular <br /> Lion Hero through our token-gated Lions Gallery.</li>
 					</ul>
 				</>
 				)}
