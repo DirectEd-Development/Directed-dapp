@@ -7,6 +7,8 @@ import SEO from '../next-seo.config'
 import '@fontsource/poppins'
 import { hotjar } from 'react-hotjar'
 import { useEffect, useState } from 'react'
+import { Provider } from 'react-redux';
+import { store } from '../hooks/redux/store';
 
 type Breakpoint = 'lg'
 
@@ -35,19 +37,21 @@ function MyApp({ Component, pageProps }: AppProps) {
 	}, [])
 
 	return (
-		<MeshProvider>
-			<DefaultSeo {...SEO} />
-			<Layout>
-				{breakpoint === 'lg' ? (
-					<Component {...pageProps} />
-				) : (
-					<h3 style={{ textAlign: 'center', padding: '10rem' }}>
-						The mobile version of the donation portal is under development,
-						please visit this page on your computer.
-					</h3>
-				)}
-			</Layout>
-		</MeshProvider>
+		<Provider store={store}>
+			<MeshProvider>
+				<DefaultSeo {...SEO} />
+				<Layout>
+					{breakpoint === 'lg' ? (
+						<Component {...pageProps} />
+					) : (
+						<h3 style={{ textAlign: 'center', padding: '10rem' }}>
+							The mobile version of the donation portal is under development,
+							please visit this page on your computer.
+						</h3>
+					)}
+				</Layout>
+			</MeshProvider>
+		</Provider>
 	)
 }
 
