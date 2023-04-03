@@ -7,8 +7,6 @@ import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
 import Timer from '../../components/Timer/Timer';
-import { Provider } from 'react-redux';
-import { store } from '../../hooks/redux/store';
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
 const Donate: NextPage = () => {
