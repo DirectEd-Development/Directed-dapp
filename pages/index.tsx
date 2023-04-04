@@ -385,11 +385,11 @@ const Home: NextPage = () => {
 			<section className='home__impact'>
 				<h3>What is the impact?</h3>
 				<h4>
-					$1 donated → $130 estimated direct
+					$1 donated → $130 estimated direct &nbsp;
 					<Link href='https://directed.notion.site/Cost-Effectiveness-Analysis-c7ac254eba994d198e89d5ddb3edfa39'>
-						&nbsp;<strong>economic value</strong>&nbsp;
+						<strong>economic value</strong>
 					</Link>
-					over their lifetime
+					&nbsp; over their lifetime
 				</h4>
 				<h4>
 					This would makes us one of the most effective development projects in

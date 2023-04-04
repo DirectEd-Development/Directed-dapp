@@ -109,47 +109,70 @@ const DonorInfoTab = () => {
 							</div>
 							<p>Donor's Dinner</p>
 						</div>
-					</div>
-				</div>
-				<div className='donor-info__naming-badge'>
-					<h5>Name Plate</h5>
-					<div className='flex-gap'>
-						<Image
-							src='/static/images/rights.png'
-							alt='image'
-							width='90'
-							height='90'
-						/>
-						<div className='donor-info__info-badge'>
-							<p>
-								major benefactors will be recognised for their contribution to
-								the Access Scholarship they are providing through name plates.
-							</p>
-
-							<div className='donor-info__info-cta'>
+						<div>
+							<div className='donor-info__info-badge'>
 								<Image
-									src='/static/images/Hover.png'
+									src='/static/images/rights.png'
 									alt='image'
-									width='25'
-									height='25'
+									width='90'
+									height='90'
 								/>
+								<div className='donor-info__info-cta'>
+									<Image
+										src='/static/images/Hover.png'
+										alt='image'
+										width='50'
+										height='50'
+									/>
 
-								<div className='donor-info__pop-up'>
-									<div className='flex-gap'>
+									<div className='donor-info__pop-up'>
 										<Image
 											src='/static/images/Hover.png'
 											alt='image'
 											width='35'
 											height='35'
 										/>
-										<h5>Naming Rights</h5>
+										<span>
+											major benefactors will be recognised for their
+											contribution to the Access Scholarship they are providing
+											through name plates.
+										</span>
 									</div>
-									<span>
-										organisations that make substantial contributions receive
-										the honor of naming an entire scholarship cohort.
-									</span>
 								</div>
 							</div>
+							<p>Name Plate</p>
+						</div>
+						<div>
+							<div className='donor-info__info-badge'>
+								<GiAbstract006
+									size={80}
+									style={{
+										color: '#374756',
+									}}
+								/>
+								<div className='donor-info__info-cta'>
+									<Image
+										src='/static/images/Hover.png'
+										alt='image'
+										width='50'
+										height='50'
+									/>
+
+									<div className='donor-info__pop-up'>
+										<Image
+											src='/static/images/Hover.png'
+											alt='image'
+											width='35'
+											height='35'
+										/>
+										<span>
+											organisations that make substantial contributions receive
+											the honor of naming an entire scholarship cohort.
+										</span>
+									</div>
+								</div>
+							</div>
+							<p>Naming Rights</p>
 						</div>
 					</div>
 				</div>
