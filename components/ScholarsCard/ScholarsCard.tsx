@@ -10,8 +10,8 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 	return (
 		<div className='scholars-card'>
 			<Image
-				src='/static/images/kagumo.png'
-				alt='kagumo school'
+				src='/static/images/djed-scholars.png'
+				alt='djed-scholars'
 				width='350'
 				height='200'
 				className='scholars-card__image'
@@ -19,9 +19,9 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 			<div className='scholars-card__content'>
 				<div className='scholars-card__title'>
 					<h3>Djed Scholars</h3>
-					<p>
-						Access Stipends for Djed Scholar students from low income families.
-					</p>
+					<span>
+						Access Stipends for Kagumo High students from low income families
+					</span>
 					<Link href='https://directed.notion.site/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'>
 						<Button variant='link'>Learn More</Button>
 					</Link>
@@ -44,8 +44,10 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 							width='20'
 							height='20'
 						/>
-						<span>Fundraising ends </span>
-						<span>on April 30</span>
+						<span>
+							<span>Fundraising ends</span>
+							<span>on April 30</span>
+						</span>
 					</div>
 					<div className='scholars-card__donors'>
 						<Image

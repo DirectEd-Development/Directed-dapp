@@ -7,8 +7,8 @@ import SEO from '../next-seo.config'
 import '@fontsource/poppins'
 import { hotjar } from 'react-hotjar'
 import { useEffect, useState } from 'react'
-import { Provider } from 'react-redux';
-import { store } from '../hooks/redux/store';
+import { Provider } from 'react-redux'
+import { store } from '../hooks/redux/store'
 
 type Breakpoint = 'lg'
 
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	const [breakpoint, setBreakpoint] = useState<Breakpoint>('lg')
 
 	const getBreakpoint = (width: number) => {
-		if (width > 1280) {
+		if (width > 1200) {
 			return 'lg'
 		}
 	}
