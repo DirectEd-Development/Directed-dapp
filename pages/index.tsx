@@ -22,15 +22,26 @@ const Home: NextPage = () => {
 					</div>
 				</div>
 
-				<video
+				<iframe
+					src='https://www.youtube.com/embed/_dq9z-whX3Y'
+					frameBorder='0'
+					className='home__hero--video-content'
+					width='750'
+					height='320'
+				></iframe>
+
+				{/* <video
 					controls
 					poster='/static/images/video-placeholder.png'
 					width='500'
 					height='320'
 					className='home__hero--video-content'
 				>
-					<source src='/static/videos/homepage-video.mp4' type='video/mp4' />
-				</video>
+					<source
+						src='https://drive.google.com/file/d/1FvXv7z6ry9kh5WTRoqEn-HjgKeyYvDlO/view'
+						type='video/mp4'
+					/>
+				</video> */}
 			</section>
 			<section className='home__quote'>
 				<blockquote>
@@ -49,7 +60,7 @@ const Home: NextPage = () => {
 					height={500}
 				/>
 				<div className='home__statement--text-content'>
-					<h2>Problems</h2>
+					<h2>Problem</h2>
 					<div className='flex-gap'>
 						<Image
 							src='/static/images/employee.png'
@@ -374,14 +385,15 @@ const Home: NextPage = () => {
 			<section className='home__impact'>
 				<h3>What is the impact?</h3>
 				<h4>
-					$1 donated → $130 generated in{' '}
+					$1 donated → $130 estimated direct
 					<Link href='https://directed.notion.site/Cost-Effectiveness-Analysis-c7ac254eba994d198e89d5ddb3edfa39'>
-						<strong>economic value</strong>
+						&nbsp;<strong>economic value</strong>&nbsp;
 					</Link>
 					over their lifetime
 				</h4>
 				<h4>
-					making us one of the most effective development projects in the world
+					This would makes us one of the most effective development projects in
+					the world
 				</h4>
 				<Link href='/directed-donate'>
 					<Button variant='primary'>Donate Now</Button>
@@ -393,32 +405,32 @@ const Home: NextPage = () => {
 					<Image
 						src='/static/images/coti-white.png'
 						alt='coti'
-						width={150}
-						height={50}
+						width={180}
+						height={80}
 					/>
 					<Image
 						src='/static/images/yali.png'
 						alt='yali'
-						width={80}
-						height={80}
+						width={100}
+						height={100}
 					/>
 					<Image
 						src='/static/images/tally.svg'
 						alt='tally'
-						width={80}
-						height={80}
+						width={120}
+						height={120}
 					/>
 					<Image
 						src='/static/images/snapbrillia.png'
 						alt='snapbrillia'
-						width={150}
-						height={60}
+						width={200}
+						height={100}
 					/>
 					<Image
 						src='/static/images/web3ug.png'
 						alt='web3ug'
-						width={80}
-						height={80}
+						width={120}
+						height={120}
 					/>
 				</div>
 			</section>

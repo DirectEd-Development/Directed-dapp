@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { GiAbstract006 } from 'react-icons/gi'
 
 const DonorInfoTab = () => {
 	return (
