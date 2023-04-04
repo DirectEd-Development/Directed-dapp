@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
+import WalletBalance from '../WalletBalance/WalletBalance'
 
 type ScholarsCardProps = {}
 
@@ -29,7 +30,7 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 					<div>
 						<h5>3</h5>
 						<span>Scholarships</span>
-						<span>funded</span>
+						<span>funded</span>p
 					</div>
 					<div>
 						<h5>23</h5>
