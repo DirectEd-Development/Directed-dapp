@@ -32,7 +32,7 @@ const ProgressBar = ({}: ProgressBarProps) => {
   return (
     <div className='progress-bar'>
       <div className='progress-bar__funds'>
-        <WalletBalance balance={balance} />
+        {/* <WalletBalance balance={balance} /> */}
       </div>
       <div className='progress-bar__milestone-bar'>
         <div
