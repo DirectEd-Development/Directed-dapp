@@ -30,4 +30,5 @@ export { default as ScholarsCard } from './ScholarsCard/ScholarsCard'
 export { default as TierCard } from './TierCard/TierCard'
 export { default as Timer } from './Timer/Timer'
 export { default as WalletBalance } from './WalletBalance/WalletBalance'
+export { default as Nextthousand } from './WalletBalance/Nextthousand'
 
