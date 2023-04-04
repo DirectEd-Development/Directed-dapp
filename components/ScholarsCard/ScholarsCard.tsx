@@ -30,7 +30,7 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 					<div>
 						<h5>3</h5>
 						<span>Scholarships</span>
-						<span>funded</span>p
+						<span>funded</span>
 					</div>
 					<div>
 						<h5>23</h5>
