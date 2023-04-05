@@ -1,0 +1,27 @@
+.student-milestone {
+	border-top: 1px solid var(--clr-accent-200);
+
+	padding: 1rem 3rem;
+
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	& p {
+		font-weight: 500;
+	}
+
+	&__details {
+		padding: 4rem 5rem;
+
+		& > p {
+			margin-block: 2rem;
+		}
+	}
+
+	&__toggle {
+		cursor: pointer;
+	}
+}

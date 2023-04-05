@@ -3,6 +3,7 @@ import { Button, SchoolCard } from '../../components'
 import { RiErrorWarningLine } from 'react-icons/ri'
 import { useWallet, useAssets } from '@meshsdk/react'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const Progress: NextPage = () => {
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
@@ -47,24 +48,30 @@ const Progress: NextPage = () => {
 							</div>
 						</div>
 						<div className='progress__content'>
-							<SchoolCard
-								schoolname='Kagumo High School'
-								chart='/static/images/chart-1.png'
-								location='Naivasha, Kenya'
-								image='/static/images/peters.png'
-							/>
-							<SchoolCard
-								schoolname='St. Peters High School'
-								chart='/static/images/chart-1.png'
-								location='Naivasha, Kenya'
-								image='/static/images/saintpete.png'
-							/>
-							<SchoolCard
-								schoolname='Strathmore High School'
-								chart='/static/images/chart-1.png'
-								location='Naivasha, Kenya'
-								image='/static/images/strats.png'
-							/>
+							<Link href='/scholar-progress'>
+								<SchoolCard
+									schoolname='Kagumo High School'
+									chart='/static/images/chart-1.png'
+									location='Naivasha, Kenya'
+									image='/static/images/peters.png'
+								/>
+							</Link>
+							<Link href='/scholar-progress'>
+								<SchoolCard
+									schoolname='St. Peters High School'
+									chart='/static/images/chart-1.png'
+									location='Naivasha, Kenya'
+									image='/static/images/saintpete.png'
+								/>
+							</Link>
+							<Link href='/scholar-progress'>
+								<SchoolCard
+									schoolname='Strathmore High School'
+									chart='/static/images/chart-1.png'
+									location='Naivasha, Kenya'
+									image='/static/images/strats.png'
+								/>
+							</Link>
 						</div>
 					</>
 				) : (
