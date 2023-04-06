@@ -31,8 +31,8 @@ const Navbar = () => {
 							<Image
 								id='logo'
 								src='/static/images/logo-7B9374.png'
-								width={50}
-								height={50}
+								width={45}
+								height={45}
 								alt='Direct Ed Logo'
 							/>
 							<div className='nav__logo-text'>
