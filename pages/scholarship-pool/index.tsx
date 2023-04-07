@@ -9,8 +9,6 @@ import {
 // import { schoolData } from '../../lib/schooldata'
 // import { SchoolDataType } from '../../types/schoolDataType'
 
-import { useState } from 'react'
-
 const ScholarshipPool: NextPage = () => {
 	return (
 		<>
