@@ -31,22 +31,3 @@ async function dbConnect() {
 }
 
 export default dbConnect
-
-// import {MongoCient} from 'mongodb'
-
-// const options = {}
-
-// let client = new MongoCient(MONGO_URL, options)
-// let cleintPromise
- 
-// if (process.env.NODE_ENV !== 'production') {
-//     if(!global._mongoClientPromise) {
-//         global._mongoClientPromise = client.connect()
-//     }
-
-//     cleintPromise = global._mongoClientPromise
-// } else {
-//     cleintPromise = client.connect();
-// }
-
-// export default clientPromise

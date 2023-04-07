@@ -6,9 +6,6 @@ const DonorInfoTab = () => {
 		<div className='donor-info'>
 			<div className='flex-between donor-info__info-badges'>
 				<div>
-					<h4 className='donor-info__info-title'>
-						What Can I Receive as a Donor?
-					</h4>
 					<div className='donor-info__badges'>
 						<div>
 							<div className='donor-info__info-badge'>
