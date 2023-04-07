@@ -48,30 +48,14 @@ const Progress: NextPage = () => {
 							</div>
 						</div>
 						<div className='progress__content'>
-							<Link href='/scholar-progress'>
-								<SchoolCard
-									schoolname='Kagumo High School'
-									chart='/static/images/chart-1.png'
-									location='Naivasha, Kenya'
-									image='/static/images/peters.png'
-								/>
-							</Link>
-							<Link href='/scholar-progress'>
-								<SchoolCard
-									schoolname='St. Peters High School'
-									chart='/static/images/chart-1.png'
-									location='Naivasha, Kenya'
-									image='/static/images/saintpete.png'
-								/>
-							</Link>
-							<Link href='/scholar-progress'>
-								<SchoolCard
-									schoolname='Strathmore High School'
-									chart='/static/images/chart-1.png'
-									location='Naivasha, Kenya'
-									image='/static/images/strats.png'
-								/>
-							</Link>
+							{/* <Link href='/scholar-progress'> */}
+							<SchoolCard
+								schoolname='Kagumo High School'
+								chart='/static/images/chart-1.png'
+								location='Naivasha, Kenya'
+								image='/static/images/peters.png'
+							/>
+							{/* </Link> */}
 						</div>
 					</>
 				) : (

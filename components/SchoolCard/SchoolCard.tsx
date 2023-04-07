@@ -1,7 +1,11 @@
 import Image from 'next/image'
-
 import { MdLocationOn, MdOutlineMail } from 'react-icons/md'
 import { RiErrorWarningLine } from 'react-icons/ri'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import { Doughnut } from 'react-chartjs-2'
+// import 'chart.js-plugin-labels-dv'
+
+ChartJS.register(ArcElement, Tooltip, Legend)
 
 type SchoolCardProps = {
 	image: string
@@ -16,6 +20,24 @@ const SchoolCard = ({
 	location,
 	chart,
 }: SchoolCardProps) => {
+	const data = {
+		datasets: [
+			{
+				data: [12, 5, 32, 21, 16],
+				backgroundColor: [
+					'#395241',
+					'#6b8065',
+					'#374756',
+					'#020202',
+					'#797979',
+				],
+				borderColor: ['#395241', '#6b8065', '#374756', '#020202', '#797979'],
+			},
+		],
+	}
+
+	const options = {}
+
 	return (
 		<>
 			<div className='school-card'>
@@ -24,7 +46,7 @@ const SchoolCard = ({
 					<Image
 						src={image}
 						alt=''
-						width='350'
+						width='400'
 						height='250'
 						className='school-card__image'
 					/>
@@ -39,7 +61,13 @@ const SchoolCard = ({
 						</div>
 					</div>
 					<div className='school-card__content'>
-						<img src={chart} alt='chart' />
+						<div className='school-card__chart'>
+							<Doughnut
+								data={data}
+								options={options}
+								// plugins={[textCenter]}
+							></Doughnut>
+						</div>
 						<div className='school-card__topics'>
 							<div className='school-card__topic flex-gap'>
 								<span></span>

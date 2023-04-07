@@ -1,12 +1,10 @@
 import Image from 'next/image'
 import MilestoneProgressBar from '../MilestoneProgressBar/MilestoneProgressBar'
-import {
-	BiChevronDown,
-	CiTwitter,
-	CiLinkedin,
-	MdLocationOn,
-	BiChevronUp,
-} from 'react-icons/all'
+import { CiTwitter, CiLinkedin } from 'react-icons/ci'
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
+
+import { MdLocationOn } from 'react-icons/md'
+
 import Link from 'next/link'
 import { useState } from 'react'
 
