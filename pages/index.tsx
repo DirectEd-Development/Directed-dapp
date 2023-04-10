@@ -8,8 +8,7 @@ const Home: NextPage = () => {
 		<>
 			<Meta
 				title='DirectEd Homepage'
-				description='For a world in which any person can realise their full potential,
-							regardless of their draw in the lottery of life.'
+				description='For a world in which any person can realise their full potential,regardless of their draw in the lottery of life.'
 			/>
 			<main className='home'>
 				<section className='home__hero'>
@@ -307,11 +306,10 @@ const Home: NextPage = () => {
 								<p>
 									The vast majority of charities fail to be economically
 									self-sustaining, relying on continuous donations and grants.
-									Our
-									<strong> Access Stipend</strong> pools are tied to specific
-									high schools which enables us to leverage social credit to
-									encourage successful alumni to support the next generation of
-									scholars from their alma mater.
+									Our <strong> Access Stipend</strong> pools are tied to
+									specific high schools. This way, successful alumni are more
+									likely to support the next generation of students as they
+									would have a shared background.
 								</p>
 							</div>
 							<Link href='https://directed.notion.site/DirectEd-Whitepaper-a1ead202d7964c80ba85bc0f206749cf'>
