@@ -30,7 +30,7 @@ const Navbar = () => {
 						<div className='nav__logo-box'>
 							<Image
 								id='logo'
-								src='/static/images/logo-7B9374.png'
+								src='/static/images/logo.jpg'
 								width={60}
 								height={60}
 								alt='Direct Ed Logo'
