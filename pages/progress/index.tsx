@@ -3,6 +3,7 @@ import { Button, SchoolCard } from '../../components'
 import { RiErrorWarningLine } from 'react-icons/ri'
 import { useWallet, useAssets } from '@meshsdk/react'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const POLICY_ID = "921fce888dc477101ff8ec3a6c2eb8d5e6947b9cfff640079314246c";
 
@@ -45,24 +46,14 @@ const Progress: NextPage = () => {
 							</div>
 						</div>
 						<div className='progress__content'>
+							{/* <Link href='/scholar-progress'> */}
 							<SchoolCard
 								schoolname='Kagumo High School'
 								chart='/static/images/chart-1.png'
 								location='Naivasha, Kenya'
 								image='/static/images/peters.png'
 							/>
-							<SchoolCard
-								schoolname='St. Peters High School'
-								chart='/static/images/chart-1.png'
-								location='Naivasha, Kenya'
-								image='/static/images/saintpete.png'
-							/>
-							<SchoolCard
-								schoolname='Strathmore High School'
-								chart='/static/images/chart-1.png'
-								location='Naivasha, Kenya'
-								image='/static/images/strats.png'
-							/>
+							{/* </Link> */}
 						</div>
 					</>
 				) : (
