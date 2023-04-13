@@ -18,6 +18,15 @@ const Footer = () => {
 				<a
 					target='_blank'
 					rel='noopener noreferrer'
+					href='https://directed.notion.site/DirectEd-FAQ-1724d908f29f4b1eb1ee4b98e64cff7e'
+				>
+					<Button variant='secondary' noShadow>
+						FAQ
+					</Button>
+				</a>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
 					href='https://www.notion.so/directed/Privacy-Policy-277f03fc6e3645aa8bcae404a21e931d?pvs=4'
 				>
 					<Button variant='secondary' noShadow>
@@ -33,6 +42,7 @@ const Footer = () => {
 						have a suggestion?
 					</Button>
 				</a>
+
 				<div>
 					<Link
 						href='https://directed.notion.site/DirectEd-Lions-Terms-Conditions-1f34512058c74546b752a2e549173818'
