@@ -30,7 +30,7 @@ const DonorInfoTab = () => {
 											height='35'
 										/>
 										<span>
-											donors get a transferrable access token to a portal where
+											Donors get a transferrable access token to a portal where
 											they can follow the students they supported on their
 											journey
 										</span>
@@ -64,7 +64,7 @@ const DonorInfoTab = () => {
 											height='35'
 										/>
 										<span>
-											supporters can get a unique piece of generative art
+											Supporters can get a unique piece of generative art
 											co-created and developed with students at our partner high
 											schools!
 										</span>
@@ -97,7 +97,7 @@ const DonorInfoTab = () => {
 											height='35'
 										/>
 										<span>
-											super-donors receive an exclusive invitation to attend a
+											Super-donors receive an exclusive invitation to attend a
 											donor’s reception hosted at the University of Oxford or at
 											Harvard University.
 										</span>
@@ -130,7 +130,7 @@ const DonorInfoTab = () => {
 											height='35'
 										/>
 										<span>
-											major benefactors will be recognised for their
+											Major benefactors will be recognised for their
 											contribution to the Access Scholarship they are providing
 											through name plates.
 										</span>
@@ -163,7 +163,7 @@ const DonorInfoTab = () => {
 											height='35'
 										/>
 										<span>
-											organisations that make substantial contributions receive
+											Organisations that make substantial contributions receive
 											the honor of naming an entire scholarship cohort.
 										</span>
 									</div>
