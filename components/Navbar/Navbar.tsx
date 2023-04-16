@@ -30,15 +30,15 @@ const Navbar = () => {
 						<div className='nav__logo-box'>
 							<Image
 								id='logo'
-								src='/static/images/logo-F3EAD3.png'
-								width={55}
-								height={55}
+								src='/static/images/logoside.png'
+								width={190}
+								height={50}
 								alt='Direct Ed Logo'
 							/>
-							<div className='nav__logo-text'>
+							{/* <div className='nav__logo-text'>
 								<p>DirectEd Development</p>
 								<p>Foundation</p>
-							</div>
+							</div> */}
 						</div>
 					</Link>
 

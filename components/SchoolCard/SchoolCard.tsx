@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { MdLocationOn, MdOutlineMail } from 'react-icons/md'
 import { RiErrorWarningLine } from 'react-icons/ri'
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js/auto'
 import { Doughnut } from 'react-chartjs-2'
 // import 'chart.js-plugin-labels-dv'
 
