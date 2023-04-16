@@ -1,0 +1,36 @@
+.milestone-progressbar {
+	height: 1rem;
+	background: var(--clr-accent-400);
+	width: 55%;
+	position: relative;
+
+	&__milestone {
+		width: 2%;
+		height: 1rem;
+		background: var(--clr-accent-100);
+		top: 0;
+		position: absolute;
+
+		&:nth-of-type(1) {
+			left: 20%;
+		}
+
+		&:nth-of-type(2) {
+			left: 40%;
+		}
+
+		&:nth-of-type(3) {
+			left: 60%;
+		}
+
+		&:nth-of-type(4) {
+			left: 80%;
+		}
+	}
+
+	&__progress {
+		background: var(--clr-primary-400);
+		height: 1rem;
+		width: 35%;
+	}
+}

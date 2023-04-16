@@ -1,6 +1,7 @@
 .school-card {
 	height: fit-content;
-	width: 33%;
+	width: 40rem;
+	cursor: pointer;
 
 	& h4 {
 		text-decoration: underline;
@@ -24,7 +25,11 @@
 		border-top: 1px solid var(--clr-accent-200);
 		display: flex;
 		gap: 1rem;
-		width: 95%;
+	}
+
+	&__chart {
+		width: 20rem;
+		height: 20rem;
 	}
 
 	&__topic {

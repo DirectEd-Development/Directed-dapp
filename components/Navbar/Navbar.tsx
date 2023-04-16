@@ -11,7 +11,7 @@ type LinksType = {
 
 const NavLinks: LinksType[] = [
 	{ title: 'Home', link: '/' },
-	{ title: 'Scholarship Pools', link: '/scholarship-pool' },
+	{ title: 'Access Stipend', link: '/scholarship-pool' },
 	// { title: "Teacher's Portal", link: '/teacher-portal' },
 	{ title: 'Scholar’s Progress', link: '/progress' },
 	{ title: 'DirectEd Lions', link: '/donors-portal' },
