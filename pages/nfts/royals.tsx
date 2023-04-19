@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useWallet, useAssets } from "@meshsdk/react";
 import { AssetCard, Meta } from "../../components";
-import { data } from "../../data/hero";
+import { data } from "../../data/royal";
 import Image from "next/image";
 
 const POLICY_ID = "07f40263969617defb3d50aaf54c822e95f814af8ea75ae89aa133b5";
@@ -32,14 +32,14 @@ export default function Home() {
   return (
     <>
       <Meta
-        title="Donor's Portal"
-        description="Direced Ed donors portal page"
+        title="Royal NFTS"
+        description="DirectEd Royal NFTs"
       />
-      <main className="donors-portal">
-        <div className="donors-portal__filter"></div>
+      <main className="nft-assets">
+        <div className="nft-assets"></div>
         {hasPolicyIdAssetsChecked ? (
           <>
-            <div className="donors-portal__assets">
+            <div className="nft-assets__singlenfts">
               {data.map((item, index) => {
                 return (
                   <a key={index} href={item.url}>

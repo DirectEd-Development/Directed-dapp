@@ -32,8 +32,8 @@ export default function Home() {
   return (
     <>
       <Meta
-        title="Donor's Portal"
-        description="Direced Ed donors portal page"
+        title="Hero NFTs"
+        description="Directed Hero NFTs"
       />
       <main className="donors-portal">
         <div className="donors-portal__filter"></div>
@@ -43,7 +43,8 @@ export default function Home() {
               {data.map((item, index) => {
                 return (
                   <a key={index} href={item.url}>
-                    <img src={item.image} alt={item.title} />
+                    <img src={item.image} alt={item.title} width={150}
+			              height={150} />
                   </a>
                 );
               })}

@@ -106,8 +106,9 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Invitation to the exclusive DirectEd Donor's Dinner in Oxford.</li>
 							<li> <b>Nameplate</b> recognition in the school of the pool you supported.</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary' >Confirm Option</Button>
-
+						<Link href="/nfts/royals">
+							<Button variant='primary'>Confirm Option</Button>
+						</Link>
 					</>
 				)}
 				{title == "Hero" && (
@@ -129,7 +130,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Access to the bootcamp course material and workshops.</li>
 							<li>Access to the student-written lore of your particular Lion <br /> Hero through our token-gated Lions Gallery.</li>
 						</ul>
-						<Link href="/nfts/royals">
+						<Link href="/nfts/hero">
 							<Button variant='primary'>Confirm Option</Button>
 						</Link>
 
@@ -215,7 +216,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 					</div>
 					)}				
 				{/* 
-					*** This button was commented to reactive the state for all tier options, all functionalities are still kept for future purpose. ***
+					*** This button was commented to reactivate the state for all tier options, all functionalities are still kept for future purpose. ***
 				<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button> */}
 			</aside>
 			{image && (
