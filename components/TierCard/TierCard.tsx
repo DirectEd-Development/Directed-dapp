@@ -6,6 +6,7 @@ import { useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from './RootState'
 import { useWallet, useAddress } from "@meshsdk/react";
+import Link from 'next/link';
 import { Transaction } from "@meshsdk/core";
 import React  from "react";
 import axios from 'axios'
@@ -105,6 +106,8 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Invitation to the exclusive DirectEd Donor's Dinner in Oxford.</li>
 							<li> <b>Nameplate</b> recognition in the school of the pool you supported.</li>
 						</ul>
+						<Button onClick={() => handleDonate(amount)} variant='primary' >Confirm Option</Button>
+
 					</>
 				)}
 				{title == "Hero" && (
@@ -126,6 +129,10 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Access to the bootcamp course material and workshops.</li>
 							<li>Access to the student-written lore of your particular Lion <br /> Hero through our token-gated Lions Gallery.</li>
 						</ul>
+						<Link href="/nfts/royals">
+							<Button variant='primary'>Confirm Option</Button>
+						</Link>
+
 					</>
 				)}
 				{title == "Warrior" && (
@@ -146,6 +153,8 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Access to the Student's Progress page, enabling you to observe how <br /> funds are used and observe students' achievements.</li>
 							<li>Direct access to the open-source code of projects built by students.</li>
 						</ul>
+						<Button onClick={() => handleDonate(amount)} variant='primary' >Confirm Option</Button>
+
 					</>
 				)}
 				
@@ -161,7 +170,8 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Tutorial vouchers</li>
 							<li>Pocket money for living expenses</li>
 						</ul>
-						
+						<Button onClick={() => handleDonate(amount)} variant='primary' >Confirm Option</Button>
+
 					</>
 				)}
 
@@ -184,6 +194,8 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 						<li>Access to the bootcamp course material and workshops.</li>
 						<li>Access to the student-written lore of your particular <br /> Lion Hero through our token-gated Lions Gallery.</li>
 					</ul>
+					<Button onClick={() => handleDonate(amount)} variant='primary' >Confirm Option</Button>
+
 				</>
 				)}
 					
@@ -201,8 +213,10 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							</div>
 						</div>
 					</div>
-					)}
-				<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
+					)}				
+				{/* 
+					*** This button was commented to reactive the state for all tier options, all functionalities are still kept for future purpose. ***
+				<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button> */}
 			</aside>
 			{image && (
 				<Modal ref={modalRef}>
