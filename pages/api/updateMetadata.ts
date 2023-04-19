@@ -1,4 +1,4 @@
-import { nftUpdate } from "../../pages/nftUpdate";
+import { nftUpdate } from "../../lib/api/nftUpdate";
 
 export default async function handler(req:any, res:any) {
     try{
