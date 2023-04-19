@@ -2,7 +2,7 @@ export const data = [
     {
       title: "Image 1",
       image: "/static/images/royals/1.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
+      url: "/update-metadata"
     },
     {
       title: "Image 2",
