@@ -39,6 +39,7 @@ export default function Home() {
         <div className="nft-assets"></div>
         {hasPolicyIdAssetsChecked ? (
           <>
+            <h3>Pick which Hero you’d like</h3>
             <div className="nft-assets__singlenfts">
               {data.map((item, index) => {
                 return (

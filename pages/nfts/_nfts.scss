@@ -3,6 +3,10 @@
 .nft-assets {
   padding: 2rem 1rem;
 
+  & h3 {
+    text-align: center;
+  }
+
   &__singlenfts {
     
     max-width: fit-content;
