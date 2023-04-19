@@ -4,7 +4,7 @@ import { AssetCard, Meta } from "../../components";
 import { data } from "../../data/royal";
 import Image from "next/image";
 
-const POLICY_ID = "07f40263969617defb3d50aaf54c822e95f814af8ea75ae89aa133b5";
+const POLICY_ID = "0041a2fd8c4cbe28323a874baf3683c500f8bd173f6192ded1ef1804";
 
 export default function Home() {
   const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
@@ -42,9 +42,9 @@ export default function Home() {
             <div className="nft-assets__singlenfts">
               {data.map((item, index) => {
                 return (
-                  <a key={index} href={item.url}>
-                    <img src={item.image} alt={item.title} width={150}
-			              height={150} />
+                  <a target="_blank" key={index} href={item.url}>
+                    <img src={item.image} alt={item.title} width={200}
+			              height={200} />
                   </a>
                 );
               })}
