@@ -1,4 +1,4 @@
-import { NextPage } from 'next'
+import { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 
 import {
@@ -8,11 +8,19 @@ import {
 	StudentProgressCard,
 } from '../../components'
 
-const TeacherPortal: NextPage = () => {
+import { GetStudents, Student } from '../../types/student'
+
+const TeacherPortal: NextPage<{ studentData: Student[] }> = ({
+	studentData,
+}) => {
+	if (!Array.isArray(studentData)) {
+		return <div>Error: studentData is not an array.</div>
+	}
+
 	return (
 		<>
 			<Head>
-				<title>Teacher's Portal</title>
+				a<title>Teacher's Portal</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main className='teachers-portal container'>
@@ -24,14 +32,26 @@ const TeacherPortal: NextPage = () => {
 					/>
 					<CircularProgressBar />
 				</div>
-				<div className='flex-between teachers-portal__filter'>
+				<div className='teachers-portal__filter'>
 					<h4>Active Student List: </h4>
 					<div>
-						<FilterOptions />
+						<FilterOptions data={studentData} initialSortKey='name'>
+							{(sortedData) => (
+								<div className='teachers-portal__student-info'>
+									{sortedData
+										.filter(
+											(student) => student.school === 'Boy School Example 1'
+										)
+										.map((student) => (
+											<StudentProgressCard
+												key={student.personal_id}
+												{...student}
+											/>
+										))}
+								</div>
+							)}
+						</FilterOptions>
 					</div>
-				</div>
-				<div className='teachers-portal__student-info'>
-					<StudentProgressCard progress={20} />
 				</div>
 			</main>
 		</>
@@ -39,3 +59,15 @@ const TeacherPortal: NextPage = () => {
 }
 
 export default TeacherPortal
+
+export const getStaticProps: GetStaticProps = async (context) => {
+	const res = await fetch(
+		'http://directed-dev.us-east-1.elasticbeanstalk.com/students'
+	)
+
+	const studentData: GetStudents = await res.json()
+
+	return {
+		props: { studentData },
+	}
+}

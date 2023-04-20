@@ -4,4 +4,16 @@
 	width: 100%;
 	align-items: baseline;
 	flex-wrap: wrap;
+
+	&__image-placeholder {
+		background: var(--clr-primary-400);
+		color: var(--clr-accent-200);
+		width: 8rem;
+		height: 8rem;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: var(--fs-600);
+	}
 }
