@@ -29,6 +29,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolAlias='Kagumo High'
 							infoLink='https://directed.notion.site/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'
 							image='/static/images/djed-scholars.jpg'
+							donateLink='/kagumo'
 						/>
 						<ScholarsCard
 							donated='0'
@@ -38,6 +39,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolAlias="Mang'u High"
 							infoLink='https://directed.notion.site/Mang-u-High-30fe2b6847864743b579dfd38f0d4f46'
 							image='/static/images/mangu.jpg'
+							donateLink='/mangu'
 						/>
 						<ScholarsCard
 							donated='0'
@@ -47,6 +49,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolAlias="MaryHill Girl's High"
 							infoLink=''
 							image='/static/images/mary-hill.jpg'
+							donateLink='/maryhill'
 						/>
 						<ScholarsCard
 							donated='0'
@@ -56,6 +59,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolAlias="Ngong Road Children's Foundation"
 							infoLink=''
 							image='/static/images/ngong.jpg'
+							donateLink='/nrc'
 						/>
 					</div>
 				</section>

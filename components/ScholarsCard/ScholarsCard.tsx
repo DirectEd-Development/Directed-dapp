@@ -11,6 +11,7 @@ type ScholarsCardProps = {
 	donated: string
 	infoLink: string
 	image: string
+	donateLink: string
 }
 
 const ScholarsCard = ({
@@ -21,6 +22,7 @@ const ScholarsCard = ({
 	donated,
 	infoLink,
 	image,
+	donateLink,
 }: ScholarsCardProps) => {
 	return (
 		<div className='scholars-card'>
@@ -81,7 +83,7 @@ const ScholarsCard = ({
 				</div>
 
 				<ProgressBar />
-				<Link href='/donate'>
+				<Link href={donateLink}>
 					<Button variant='primary'>Donate Now</Button>
 				</Link>
 			</div>

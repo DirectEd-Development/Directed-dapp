@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, CustomAmountInput, Meta, TierCard } from '../../components'
+import { Button, CustomAmountInput, Meta, MaryHills } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
 import Timer from '../../components/Timer/Timer';
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
-const Donate: NextPage = () => {
+const MaryHill: NextPage = () => {
 	const [tier, setTier] = useState<OptionTiers | null>(null);
 	const [isCustom, setIsCustom] = useState(false);
 	const [custom, setCustom] = useState("");
@@ -64,7 +64,7 @@ const Donate: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to Kagumo High School</h3>
+							<h3>Donate to MaryHill Girl's High School</h3>
 							<h4>DirectEd Lions Collection</h4>
 							<p><span> <Timer targetDay={21} targetMonth={4} targetYear={2023} /></span></p>
 							<p>Click tiers to learn more</p>
@@ -118,7 +118,7 @@ const Donate: NextPage = () => {
 					</div>
 					<div className='tier'>
 						{tier && (
-							<TierCard
+							<MaryHills
 								onClick={() => setTier(null)}
 								title={tier?.title}
 								amount={tier?.amount}
@@ -133,4 +133,4 @@ const Donate: NextPage = () => {
 	)
 }
 
-export default Donate
+export default MaryHill
