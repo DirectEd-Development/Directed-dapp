@@ -153,9 +153,7 @@ const MaryHills = ({ onClick, title, amount, image}: MaryHillsProps) => {
 							<li>Access to the Student's Progress page, enabling you to observe how <br /> funds are used and observe students' achievements.</li>
 							<li>Direct access to the open-source code of projects built by students.</li>
 						</ul>
-						<Link target='_blank' href="https://pay.nmkr.io/?p=a151e45d5b5b4ac1a7fc7a8983338992&c=1">
-							<Button variant='primary'>Confirm Option</Button>
-						</Link>
+						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
 					</>
 				)}
 				

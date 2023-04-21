@@ -150,9 +150,7 @@ const ManguCard = ({ onClick, title, amount, image}: ManguCardProps) => {
 							<li>Access to the Student's Progress page, enabling you to observe how <br /> funds are used and observe students' achievements.</li>
 							<li>Direct access to the open-source code of projects built by students.</li>
 						</ul>
-						<Link target='_blank' href="https://pay.nmkr.io/?p=c24e598390e047219937c246e91913e6&c=1">
-							<Button variant='primary'>Confirm Option</Button>
-						</Link>
+						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
 					</>
 				)}
 				
