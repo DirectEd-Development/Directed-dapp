@@ -6,7 +6,6 @@ import Image from "next/image";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-const POLICY_ID = "0041a2fd8c4cbe28323a874baf3683c500f8bd173f6192ded1ef1804";
 
 export default function Home() {
   const [nfts, setNfts] = useState<{[key: string]: any}>({});
@@ -18,21 +17,21 @@ export default function Home() {
     const router = useRouter();
     const params = router.pathname.split("/")[2];
 
-  const checkPolicyIdAssets = async () => {
-    if (connected && wallet) {
-      const assets = await wallet.getPolicyIdAssets(POLICY_ID);
+  // const checkPolicyIdAssets = async () => {
+  //   if (connected && wallet) {
+  //     const assets = await wallet.getPolicyIdAssets(POLICY_ID);
 
-      if (assets.length <= 0) {
-        setHasPolicyIdAssetsChecked(false); // No assets found with the given policy ID
-      } else {
-        setHasPolicyIdAssetsChecked(true); // Assets found with the given policy ID
-      }
-    }
-  };
+  //     if (assets.length <= 0) {
+  //       setHasPolicyIdAssetsChecked(false); // No assets found with the given policy ID
+  //     } else {
+  //       setHasPolicyIdAssetsChecked(true); // Assets found with the given policy ID
+  //     }
+  //   }
+  // };
 
-  useEffect(() => {
-    checkPolicyIdAssets();
-  }, [connected, assets]);
+  // useEffect(() => {
+  //   checkPolicyIdAssets();
+  // }, [connected, assets]);
 
   useEffect(() => {
     const getNfts = async() => {
@@ -56,7 +55,7 @@ export default function Home() {
 
       <main className="nft-assets">
         <div className="nft-assets"></div>
-        {hasPolicyIdAssetsChecked ? (
+        {/* {hasPolicyIdAssetsChecked ? ( */}
           <>
             <h3>Pick which Royal you’d like</h3>
             <div className="nft-assets__singlenfts">
@@ -71,11 +70,11 @@ export default function Home() {
             </div>
 
           </>
-        ) : (
+        {/* ) : (
           <h3 className="donors-portal__no-donation">
             You need to make a donation to access this page
           </h3>
-        )}
+        )} */}
       </main>
     </>
   );
