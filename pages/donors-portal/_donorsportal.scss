@@ -2,11 +2,8 @@
 
 .donors-portal {
   padding: 2rem 1rem;
-  // commented the line below to avoid the overflow on the footer section
-  //   height: 100vh;
 
   &__assets {
-    // flex-wrap: wrap;
     max-width: fit-content;
     display: grid;
     margin: 3rem auto;
