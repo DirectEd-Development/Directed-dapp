@@ -106,9 +106,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Invitation to the exclusive DirectEd Donor's Dinner in Oxford.</li>
 							<li> <b>Nameplate</b> recognition in the school of the pool you supported.</li>
 						</ul>
-						<Link href="/nfts/royals">
-							<Button variant='primary'>Confirm Option</Button>
-						</Link>
+						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
 					</>
 				)}
 				{title == "Hero" && (
@@ -130,9 +128,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Access to the bootcamp course material and workshops.</li>
 							<li>Access to the student-written lore of your particular Lion <br /> Hero through our token-gated Lions Gallery.</li>
 						</ul>
-						<Link href="/nfts/hero">
-							<Button variant='primary'>Confirm Option</Button>
-						</Link>
+						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
 
 					</>
 				)}
@@ -154,7 +150,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Access to the Student's Progress page, enabling you to observe how <br /> funds are used and observe students' achievements.</li>
 							<li>Direct access to the open-source code of projects built by students.</li>
 						</ul>
-						<Link href="">
+						<Link target='_blank' href="https://pay.nmkr.io/?p=c24e598390e047219937c246e91913e6&c=1">
 							<Button variant='primary'>Confirm Option</Button>
 						</Link>
 					</>
