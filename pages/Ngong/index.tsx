@@ -9,7 +9,7 @@ import { OptionTiers } from '../../types/tiers'
 import Timer from '../../components/Timer/Timer';
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
-const Nrc: NextPage = () => {
+const Ngong: NextPage = () => {
 	const [tier, setTier] = useState<OptionTiers | null>(null);
 	const [isCustom, setIsCustom] = useState(false);
 	const [custom, setCustom] = useState("");
@@ -133,4 +133,4 @@ const Nrc: NextPage = () => {
 	)
 }
 
-export default Nrc
+export default Ngong

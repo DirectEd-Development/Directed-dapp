@@ -59,7 +59,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolAlias="Ngong Road Children's Foundation"
 							infoLink=''
 							image='/static/images/ngong.jpg'
-							donateLink='/nrc'
+							donateLink='/Ngong'
 						/>
 					</div>
 				</section>
