@@ -3,7 +3,6 @@ type MilestoneBarProps = {
 }
 
 const MilestoneBar = ({ progress }: MilestoneBarProps) => {
-	console.log(progress)
 
 	return (
 		<div className='milestone-bar flex-gap'>

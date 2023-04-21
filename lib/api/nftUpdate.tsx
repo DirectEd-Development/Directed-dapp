@@ -1,9 +1,9 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const BASE_URL = "https://studio-api.preprod.nmkr.io";
+const BASE_URL = "https://studio-api.nmkr.io";
 // const BASE_URL = "https://api.quotable.io";
-
-const TOKEN = "7a64bf92ab8245e88d57a22819c00ac8";
+// 5a8b2ec313ec4a07a979540d05e32f65
+const TOKEN = "a499c5007f104a73836d73be34648a1a";
 
 export const publicRequest = axios.create({
     baseURL: BASE_URL,
