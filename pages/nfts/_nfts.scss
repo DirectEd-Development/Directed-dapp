@@ -1,0 +1,29 @@
+@use "../../styles/sass/abstracts/mixins" as *;
+
+.nft-assets {
+  padding: 2rem 1rem;
+
+  & h3 {
+    text-align: center;
+  }
+
+  &__singlenfts {
+    
+    max-width: fit-content;
+    display: grid;
+    margin: 3rem auto;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+
+    @include mq(small) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    &_header {
+      grid-column: 1/-1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+ 
+}
+}
