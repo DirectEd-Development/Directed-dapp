@@ -37,7 +37,7 @@ export default function Home() {
   useEffect(() => {
     const getNfts = async() => {
       try{
-        const res = await axios.post("http://localhost:3000/api/transactions", {params: params});
+        const res = await axios.post("https://api/transactions", {params: params});
         const mergeRes = [].concat(...res.data);
         setNfts(mergeRes);
       }catch(err) {
