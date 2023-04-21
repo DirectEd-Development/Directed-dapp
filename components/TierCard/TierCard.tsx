@@ -154,8 +154,9 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Access to the Student's Progress page, enabling you to observe how <br /> funds are used and observe students' achievements.</li>
 							<li>Direct access to the open-source code of projects built by students.</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary' >Confirm Option</Button>
-
+						<Link href="">
+							<Button variant='primary'>Confirm Option</Button>
+						</Link>
 					</>
 				)}
 				
