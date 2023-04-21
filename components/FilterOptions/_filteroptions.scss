@@ -1,6 +1,11 @@
 .filter-options {
 	color: var(--clr-primary-100);
 
+	&__buttons {
+		justify-content: end;
+		margin-block: 2rem;
+	}
+
 	&__toggle {
 		padding: 0.5rem 1rem;
 		border: 1px solid var(--clr-primary-100);

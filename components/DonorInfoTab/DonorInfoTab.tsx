@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { GiAbstract006 } from 'react-icons/gi'
+import Link from 'next/link'
+import Button from '../Button/Button'
 
 const DonorInfoTab = () => {
 	return (
@@ -174,6 +176,14 @@ const DonorInfoTab = () => {
 					</div>
 				</div>
 			</div>
+			<Link
+				href='https://directeddev.gitbook.io/lions-lite-paper/'
+				className='donor-info__link'
+			>
+				<Button variant='link'>
+					Read about the DirectEd Lions Art Collection
+				</Button>
+			</Link>
 		</div>
 	)
 }

@@ -3,7 +3,14 @@
 	padding: 3rem;
 	margin: 2.5rem auto;
 	background: var(--clr-accent-100);
-	width: 80%;
+	width: 85%;
+
+	&__link {
+		> * {
+			margin-top: 3rem;
+			margin-inline: auto;
+		}
+	}
 
 	&__info-title {
 		text-align: center;

@@ -1,70 +1,65 @@
 @use '../../styles/sass/abstracts/mixins' as *;
 
-.container {
-  padding: 2rem 1rem;
-
+.donate-container {
+	padding: 2rem 1rem;
 }
 
-.donate__modal-container{
-  display: flex;
-  justify-content: center;
-
+.donate__modal-container {
+	display: flex;
+	justify-content: center;
 }
 .donate__title-section {
-  & h3{
-    text-align: center;
-    margin-left: 10rem;
-  }
+	& h3 {
+		text-align: center;
+		margin-left: 10rem;
+	}
 }
 
 .donate-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-  &__donations {
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-    & input[type="text"] {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      width: 100%;
-      max-width: 300px;
-      margin-bottom: 20px;
-      background: var(--clr-accent-100);
+	&__donations {
+		text-align: center;
 
-      &:focus {
-        outline: none;
-        background: var(--clr-accent-100);
-      }
-    }
+		& input[type='text'] {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			width: 100%;
+			max-width: 300px;
+			margin-bottom: 20px;
+			background: var(--clr-accent-100);
 
-    .donate__donate-btn {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-  }
+			&:focus {
+				outline: none;
+				background: var(--clr-accent-100);
+			}
+		}
 
-  &__button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+		.donate__donate-btn {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 1rem;
+		}
+	}
 
-    & button {
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      margin-top: 20px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-  }
+	&__button-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		& button {
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin-top: 20px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+	}
 }
-
-
-

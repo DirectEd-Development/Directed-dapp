@@ -2,15 +2,30 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
-import WalletBalance from '../WalletBalance/WalletBalance'
 
-type ScholarsCardProps = {}
+type ScholarsCardProps = {
+	schoolName: string
+	schoolAlias: string
+	funded: string
+	fundsLeft: string
+	donated: string
+	infoLink: string
+	image: string
+}
 
-const ScholarsCard = ({}: ScholarsCardProps) => {
+const ScholarsCard = ({
+	funded,
+	fundsLeft,
+	schoolName,
+	schoolAlias,
+	donated,
+	infoLink,
+	image,
+}: ScholarsCardProps) => {
 	return (
 		<div className='scholars-card'>
 			<Image
-				src='/static/images/djed-scholars.png'
+				src={image}
 				alt='djed-scholars'
 				width='350'
 				height='200'
@@ -18,17 +33,19 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 			/>
 			<div className='scholars-card__content'>
 				<div className='scholars-card__title'>
-					<h3>Djed Scholars</h3>
+					<h3>{schoolName}</h3>
 					<span>
-						Access Stipends for Kagumo High students from low income families
+						Access Stipends for {schoolAlias} students from low income families
 					</span>
-					<Link href='https://directed.notion.site/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'>
+					<Link href={infoLink}>
 						<Button variant='link'>Learn More</Button>
 					</Link>
 				</div>
 				<div className='scholars-card__stats'>
 					<div>
-						<h5>3</h5>
+						<h5>
+							{funded}/{fundsLeft}
+						</h5>
 						<span>Scholarships</span>
 						<span>funded</span>
 					</div>
@@ -57,7 +74,7 @@ const ScholarsCard = ({}: ScholarsCardProps) => {
 							height='20'
 						/>
 						<span>
-							<span>3 person(s) have</span>
+							<span>{donated} person(s) have</span>
 							<span>donated</span>
 						</span>
 					</div>

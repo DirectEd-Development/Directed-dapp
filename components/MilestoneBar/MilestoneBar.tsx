@@ -3,13 +3,12 @@ type MilestoneBarProps = {
 }
 
 const MilestoneBar = ({ progress }: MilestoneBarProps) => {
-
 	return (
 		<div className='milestone-bar flex-gap'>
 			<div className='milestone-bar__milestones'>
 				<div
 					className='milestone-bar__milestones--bar'
-					style={{ width: '80%' }}
+					style={{ width: `${progress}%` }}
 				></div>
 				<div className='milestone-bar__progress-level milestone-bar__progress-level--1'></div>
 				<div className='milestone-bar__progress-level milestone-bar__progress-level--2'></div>

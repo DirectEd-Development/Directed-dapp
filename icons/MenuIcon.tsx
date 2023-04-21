@@ -11,7 +11,7 @@ function MenuIcon() {
 			<path
 				d='M6 18.3333V20H22V18.3333H6ZM6 14.1667V15.8333H22V14.1667H6ZM6 10V11.6667H22V10H6Z'
 				fill='#374756'
-				fill-opacity='0.87'
+				fillOpacity='0.87'
 			/>
 		</svg>
 	)

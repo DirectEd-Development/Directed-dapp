@@ -5,7 +5,7 @@ import Button from '../Button/Button'
 const Footer = () => {
 	return (
 		<footer className='bg-primary footer'>
-			<div className='footer__content container'>
+			<div className='footer__content'>
 				<a
 					target='_blank'
 					rel='noopener noreferrer'
