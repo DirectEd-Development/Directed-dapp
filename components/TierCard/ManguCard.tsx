@@ -111,7 +111,7 @@ const ManguCard = ({ onClick, title, amount, image, school }: ManguCardProps) =>
 							pathname: '/nfts/royal',
 							query: school
 						}}>
-							<Button variant='primary'>Confirm Option</Button>
+							<Button variant='primary' disabled={isClose}>Confirm Option</Button>
 						</Link>
 						
 
@@ -140,7 +140,7 @@ const ManguCard = ({ onClick, title, amount, image, school }: ManguCardProps) =>
 							pathname: '/nfts/hero',
 							query: school
 						}}>
-							<Button variant='primary'>Confirm Option</Button>
+							<Button variant='primary' disabled={isClose}>Confirm Option</Button>
 						</Link>
 					</>
 				)}
