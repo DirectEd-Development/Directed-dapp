@@ -1,33 +1,57 @@
 export const data = [
-    {
-      title: "Image 1",
-      image: "/static/images/royals/1.png",
-      url: "/update-metadata"
-    },
-    {
-      title: "Image 2",
-      image: "/static/images/royals/2.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 3",
-      image: "/static/images/royals/3.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 4",
-      image: "/static/images/royals/4.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 5",
-      image: "/static/images/royals/5.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 6",
-      image: "/static/images/royals/6.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-  ];
+  // Data for Kagumo High
+  {
+    title: "Jonako Kariala",
+    image: "/static/images/Directed Royals/Kagumo Royals/Jonako Kariala.png",
+    url: "",
+    school: "kagumo",
+  },
+  {
+    title: "Mirca Teluji",
+    image: "/static/images/Directed Royals/Kagumo Royals/Mirca Teluji.png",
+    url: "",
+    school: "kagumo",
+  },
+
+  // Data for Mang'u High
+  {
+    title: "Bahati Yoxa",
+    image: "/static/images/Directed Royals/Mangu Royals/Bahati Yoxa.png",
+    url: "",
+    school: "Mangu",
+  },
+  {
+    title: "Yander Yoxa",
+    image: "/static/images/Directed Royals/Mangu Royals/Yander Yoxa.png",
+    url: "",
+    school: "Mangu",
+  },
   
+  // Data for Maryhill
+  {
+    title: "Izbebraj Airode",
+    image: "/static/images/Directed Royals/Maryhill Royals/Izbebraj Airode.png",
+    url: "",
+    school: "Maryhill",
+  },
+  {
+    title: "Yander Yoxa",
+    image: "/static/images/Directed Royals/Maryhill Royals/Mandar Kariala.png",
+    url: "",
+    school: "Maryhill",
+  },
+
+  // Data for NRCF
+  {
+    title: "Cehua Epkal",
+    image: "/static/images/Directed Royals/NRCF Royals/Cehua Epkal.png",
+    url: "",
+    school: "Ngong",
+  },
+  {
+    title: "Wada Teluji",
+    image: "/static/images/Directed Royals/NRCF Royals/Wada Teluji.png",
+    url: "",
+    school: "Ngong",
+  },
+];

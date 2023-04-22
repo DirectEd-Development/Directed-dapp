@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, CustomAmountInput, Meta, ManguCard } from '../../components'
+import { Button, CustomAmountInput, Meta, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
@@ -22,6 +22,7 @@ const Mangu: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
+			school: "Mangu",
 		});
 		dispatch(setClose())
 	}
@@ -32,6 +33,7 @@ const Mangu: NextPage = () => {
 			title: "Custom",
 			amount: custom,
 			image: "",
+			school: "Mangu"
 		});
 		dispatch(setOpen())
 	}
@@ -44,10 +46,12 @@ const Mangu: NextPage = () => {
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
+				school: "Mangu",
 			});
 			dispatch(setOpen())
 		 }
 	}
+
 
 	return (
 		<>
@@ -118,11 +122,12 @@ const Mangu: NextPage = () => {
 					</div>
 					<div className='tier'>
 						{tier && (
-							<ManguCard
+							<TierCard
 								onClick={() => setTier(null)}
 								title={tier?.title}
 								amount={tier?.amount}
 								image={tier?.image}
+								school={tier?.school}
 							/>
 						)}
 					</div>

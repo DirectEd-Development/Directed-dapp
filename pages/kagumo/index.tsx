@@ -22,6 +22,7 @@ const Kagumo: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
+			school: "kagumo",
 		});
 		dispatch(setClose())
 	}
@@ -32,6 +33,7 @@ const Kagumo: NextPage = () => {
 			title: "Custom",
 			amount: custom,
 			image: "",
+			school: "kagumo"
 		});
 		dispatch(setOpen())
 	}
@@ -44,10 +46,12 @@ const Kagumo: NextPage = () => {
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
+				school: "kagumo",
 			});
 			dispatch(setOpen())
 		 }
 	}
+
 
 	return (
 		<>
@@ -123,6 +127,7 @@ const Kagumo: NextPage = () => {
 								title={tier?.title}
 								amount={tier?.amount}
 								image={tier?.image}
+								school={tier?.school}
 							/>
 						)}
 					</div>

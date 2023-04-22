@@ -16,13 +16,14 @@ type MaryHillsProps = {
 	title: string
 	amount: string
 	image?: string,
+	school: string,
 }
 
 const donationAddress =
   "addr1x8c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5lu8sl0pkrzfm5t6qexkm8mxz5mrspm9rdhlh9shm7u0dflcqjcd9va";
 
 
-const MaryHills = ({ onClick, title, amount, image}: MaryHillsProps) => {
+const MaryHills = ({ onClick, title, amount, image, school }: MaryHillsProps) => {
 	const [amountSent, setAmountSent] = useState("");
 	const [confirm, setConfirm] = useState(false); 
 	const { wallet, connect, disconnect, connecting, connected } = useWallet();
@@ -106,10 +107,14 @@ const MaryHills = ({ onClick, title, amount, image}: MaryHillsProps) => {
 							<li>Invitation to the exclusive DirectEd Donor's Dinner in Oxford.</li>
 							<li> <b>Nameplate</b> recognition in the school of the pool you supported.</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
-						{/* <Link href="/nfts/royals">
+						<Link href={{
+							pathname: '/nfts/royal',
+							query: school
+						}}>
 							<Button variant='primary'>Confirm Option</Button>
-						</Link> */}
+						</Link>
+						
+
 					</>
 				)}
 				{title == "Hero" && (
@@ -131,7 +136,7 @@ const MaryHills = ({ onClick, title, amount, image}: MaryHillsProps) => {
 							<li>Access to the bootcamp course material and workshops.</li>
 							<li>Access to the student-written lore of your particular Lion <br /> Hero through our token-gated Lions Gallery.</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
+						<Button onClick={() => handleDonate(amount)} variant='primary'>Confirm Option</Button>
 
 					</>
 				)}
@@ -153,7 +158,9 @@ const MaryHills = ({ onClick, title, amount, image}: MaryHillsProps) => {
 							<li>Access to the Student's Progress page, enabling you to observe how <br /> funds are used and observe students' achievements.</li>
 							<li>Direct access to the open-source code of projects built by students.</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
+						<Link target='_blank' href="https://pay.nmkr.io/?p=a151e45d5b5b4ac1a7fc7a8983338992&c=1">
+							<Button variant='primary'>Confirm Option</Button>
+						</Link>
 					</>
 				)}
 				

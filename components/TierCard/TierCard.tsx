@@ -16,13 +16,14 @@ type TierCardProps = {
 	title: string
 	amount: string
 	image?: string,
+	school: string,
 }
 
 const donationAddress =
   "addr1x8c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5lu8sl0pkrzfm5t6qexkm8mxz5mrspm9rdhlh9shm7u0dflcqjcd9va";
 
 
-const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
+const TierCard = ({ onClick, title, amount, image, school }: TierCardProps) => {
 	const [amountSent, setAmountSent] = useState("");
 	const [confirm, setConfirm] = useState(false); 
 	const { wallet, connect, disconnect, connecting, connected } = useWallet();
@@ -106,7 +107,14 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Invitation to the exclusive DirectEd Donor's Dinner in Oxford.</li>
 							<li> <b>Nameplate</b> recognition in the school of the pool you supported.</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
+						<Link href={{
+							pathname: '/nfts/royal',
+							query: school
+						}}>
+							<Button variant='primary'>Confirm Option</Button>
+						</Link>
+						
+
 					</>
 				)}
 				{title == "Hero" && (
@@ -128,7 +136,7 @@ const TierCard = ({ onClick, title, amount, image}: TierCardProps) => {
 							<li>Access to the bootcamp course material and workshops.</li>
 							<li>Access to the student-written lore of your particular Lion <br /> Hero through our token-gated Lions Gallery.</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary' disabled={isClose}>Confirm Option</Button>
+						<Button onClick={() => handleDonate(amount)} variant='primary'>Confirm Option</Button>
 
 					</>
 				)}
