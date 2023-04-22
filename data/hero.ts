@@ -1,14 +1,14 @@
 export const data = [
   // Data for Kagumo High
   {
-    title: "Jonako Kariala",
-    image: "/static/images/Directed Royals/Kagumo Royals/Jonako Kariala.png",
+    title: "Jumbo Darlido",
+    image: "/static/images/Directed Heros/Kagumo/Jumbo Darlido.png",
     url: "",
     school: "kagumo",
   },
   {
-    title: "Mirca Teluji",
-    image: "/static/images/Directed Royals/Kagumo Royals/Mirca Teluji.png",
+    title: "Sahara Mathi",
+    image: "/static/images/Directed Royals/Kagumo/Sahara Mathi.png",
     url: "",
     school: "kagumo",
   },

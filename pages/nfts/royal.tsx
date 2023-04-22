@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useWallet, useAssets } from "@meshsdk/react";
 import { AssetCard, Meta } from "../../components";
+import Button from '../../components/Button/Button'
 import { data } from "../../data/royal"
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -24,6 +26,9 @@ export default function Home() {
             <div className="nft-portal__assets">
               <div className="nft-portal__assets_header">
               <h3>Pick which Royal you’d like</h3>
+              <Link href="/update-metadata">
+                <Button variant='primary'>Edit Metadata</Button>
+              </Link>
               </div>
               {data.filter(item => item.school === query).map((image: { title: string, image: string, url: string,  }, index: number) => (
                 <div key={index}>
