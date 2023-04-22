@@ -5,7 +5,7 @@ import { nftUpdate } from "../../lib/api/nftUpdate";
 import axios from "axios";
 
 export default function NftUpdate() {
-    const [metadata, setMetadata] = useState("");
+    const [metadata, setMetadata] = useState({});
     const [nft, setNft] = useState({});
     const router = useRouter();
     const uid = router.asPath.split("?")[1];
@@ -14,6 +14,7 @@ export default function NftUpdate() {
       const getNftDetails = async() => {
         try {
           const res = await axios.get(`http://localhost:3000/api/transactions/${uid}`);
+          console.log(res.data);
           setNft(res.data)
         }catch(err) {
           console.log(err);
@@ -22,12 +23,12 @@ export default function NftUpdate() {
       getNftDetails();
     },[]);
 
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        const updateMetadata = {nft, "minted for": metadata}
-        console.log(updateMetadata)
+        const updateMetadata = {}
         try {
-          // const res = await axios.put(`http://localhost:3000/api/transactions`, updateMetadata)
+          const res = await axios.put(`http://localhost:3000/api/transactions`, updateMetadata)
          
         } catch (error) {
           console.error(error);
@@ -36,8 +37,10 @@ export default function NftUpdate() {
       
 
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setMetadata(event.target.value);
+    const handleChange = (event) => {
+        setNft((prev) => {
+            return {...nft, [event.target.name]: event.target.value}
+        });
     };
 
     return (
