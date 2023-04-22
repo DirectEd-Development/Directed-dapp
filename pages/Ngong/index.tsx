@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, CustomAmountInput, MaryHills, Meta, TierCard } from '../../components'
+import { Button, CustomAmountInput, MaryHills, Meta, NgongCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
@@ -122,7 +122,7 @@ const Ngong: NextPage = () => {
 					</div>
 					<div className='tier'>
 						{tier && (
-							<TierCard
+							<NgongCard
 								onClick={() => setTier(null)}
 								title={tier?.title}
 								amount={tier?.amount}

@@ -1,33 +1,129 @@
 export const data = [
-    {
-      title: "Image 1",
-      image: "/static/images/heros/1.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 2",
-      image: "/static/images/heros/2.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 3",
-      image: "/static/images/heros/3.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 4",
-      image: "/static/images/heros/4.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 5",
-      image: "/static/images/heros/5.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-    {
-      title: "Image 6",
-      image: "/static/images/heros/6.png",
-      url: "https://pay.preprod.nmkr.io/?p=5edcc5ea394c4dea9ee0f91429534281&n=917403ccd8ca488583274cd670d8d162"
-    },
-  ];
+  // Data for Kagumo High
+  {
+    title: "Jumbo Darlido",
+    image: "/static/images/Directed Heros/Kagumo/Jumbo Darlido.png",
+    url: "",
+    school: "kagumo",
+  },
+  {
+    title: "Sahara Mathi",
+    image: "/static/images/Directed Heros/Kagumo/Sahara Mathi.png",
+    url: "",
+    school: "kagumo",
+  },
+  {
+    title: "Shishu Kylwo",
+    image: "/static/images/Directed Heros/Kagumo/Shishu Kylwo.png",
+    url: "",
+    school: "kagumo",
+  },
+  {
+    title: "Tanya Naigu",
+    image: "/static/images/Directed Heros/Kagumo/Tanya Naigu.png",
+    url: "",
+    school: "kagumo",
+  },
+  {
+    title: "Zimba Laured",
+    image: "/static/images/Directed Heros/Kagumo/Zimba Laured.png",
+    url: "",
+    school: "kagumo",
+  },
+
+  // Data for Mang'u High
+  {
+    title: "Atilla Crimey",
+    image: "/static/images/Directed Heros/Mangu/Atilla Crimey.jpg",
+    url: "",
+    school: "Mangu",
+  },
+  {
+    title: "Kasandra Ribur",
+    image: "/static/images/Directed Heros/Mangu/Kasandra Ribur.png",
+    url: "",
+    school: "Mangu",
+  },
+  {
+    title: "Ligaro Gacaha",
+    image: "/static/images/Directed Heros/Mangu/Ligaro Gacaha.png",
+    url: "",
+    school: "Mangu",
+  },
+  {
+    title: "Mareo Razsam",
+    image: "/static/images/Directed Heros/Mangu/Mareo Razsam.png",
+    url: "",
+    school: "Mangu",
+  },
+  {
+    title: "Saritavak Chrupst",
+    image: "/static/images/Directed Heros/Mangu/Saritavak Chrupst.png",
+    url: "",
+    school: "Mangu",
+  },
   
+  // Data for Maryhill
+  {
+    title: "Kaleen Adrus",
+    image: "/static/images/Directed Heros/Maryhill/Kaleen Adrus.jpg",
+    url: "",
+    school: "Maryhill",
+  },
+  {
+    title: "Kola Alfmoe",
+    image: "/static/images/Directed Heros/Maryhill/Kola Alfmoe.jpg",
+    url: "",
+    school: "Maryhill",
+  },
+  {
+    title: "Locan Fabela",
+    image: "/static/images/Directed Heros/Maryhill/Locan Fabela.png",
+    url: "",
+    school: "Maryhill",
+  },
+  {
+    title: "Nemea Colecha",
+    image: "/static/images/Directed Heros/Maryhill/Nemea Colecha.png",
+    url: "",
+    school: "Maryhill",
+  },
+  {
+    title: "Theolas Rokele",
+    image: "/static/images/Directed Heros/Maryhill/Theolas Rokele.png",
+    url: "",
+    school: "Maryhill",
+  },
+
+  // Data for NRCF
+  {
+    title: "Ciara Yobezi",
+    image: "/static/images/Directed Heros/NRCF/Ciara Yobezi.png",
+    url: "",
+    school: "Ngong",
+  },
+  {
+    title: "Eqoso Muri",
+    image: "/static/images/Directed Heros/NRCF/Eqoso Muri.png",
+    url: "",
+    school: "Ngong",
+  },
+  {
+    title: "Kazu Stekin",
+    image: "/static/images/Directed Heros/NRCF/Kazu Stekin.png",
+    url: "",
+    school: "Ngong",
+  },
+  {
+    title: "Moja Nadka",
+    image: "/static/images/Directed Heros/NRCF/Moja Nadka.png",
+    url: "",
+    school: "Ngong",
+  },
+  {
+    title: "Moja Nadka",
+    image: "/static/images/Directed Heros/NRCF/Moja Nadka.png",
+    url: "",
+    school: "Ngong",
+  },
+];

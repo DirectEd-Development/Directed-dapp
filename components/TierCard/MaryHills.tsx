@@ -136,8 +136,12 @@ const MaryHills = ({ onClick, title, amount, image, school }: MaryHillsProps) =>
 							<li>Access to the bootcamp course material and workshops.</li>
 							<li>Access to the student-written lore of your particular Lion <br /> Hero through our token-gated Lions Gallery.</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary'>Confirm Option</Button>
-
+						<Link href={{
+							pathname: '/nfts/hero',
+							query: school
+						}}>
+							<Button variant='primary'>Confirm Option</Button>
+						</Link>
 					</>
 				)}
 				{title == "Warrior" && (

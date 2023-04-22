@@ -1,81 +1,39 @@
 import { useState, useEffect } from "react";
 import { useWallet, useAssets } from "@meshsdk/react";
 import { AssetCard, Meta } from "../../components";
-import { data } from "../../data/royal";
+import { data } from "../../data/hero"
 import Image from "next/image";
-import axios from "axios";
 import { useRouter } from "next/router";
 
-// const POLICY_ID = "0041a2fd8c4cbe28323a874baf3683c500f8bd173f6192ded1ef1804";
-
 export default function Home() {
-  const [nfts, setNfts] = useState<{[key: string]: any}>({});
-  const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
-    useState<boolean>(false);
+  const [selectedSchool, setSelectedSchool] = useState(null);
+  const router = useRouter();
 
-    const { connected, wallet } = useWallet();
-    const assets: any = useAssets();
-    const router = useRouter();
-    const params = router.pathname.split("/")[2];
-
-  // const checkPolicyIdAssets = async () => {
-  //   if (connected && wallet) {
-  //     const assets = await wallet.getPolicyIdAssets(POLICY_ID);
-
-  //     if (assets.length <= 0) {
-  //       setHasPolicyIdAssetsChecked(false); // No assets found with the given policy ID
-  //     } else {
-  //       setHasPolicyIdAssetsChecked(true); // Assets found with the given policy ID
-  //     }
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   checkPolicyIdAssets();
-  // }, [connected, assets]);
-
-  useEffect(() => {
-    const getNfts = async() => {
-      try{
-        const res = await axios.post("https://app.directed.dev/api/transactions", {params: params});
-        const mergeRes = [].concat(...res.data);
-        setNfts(mergeRes);
-      }catch(err) {
-        console.log(err);
-      }
-    }
-    getNfts();
-  },[]);
+  const query = router.asPath.split("?")[1];
+ 
 
   return (
     <>
       <Meta
-        title="Heroes NFTS"
-        description="DirectEd Royal NFTs"
+        title="NFT's Portal"
+        description="Directed Ed NFT's portal page"
       />
-
-      <main className="nft-assets">
-        <div className="nft-assets"></div>
-        {/* {hasPolicyIdAssetsChecked ? ( */}
+      <main className="nft-portal">
+        <div className="nft-portal__filter"></div>
           <>
-            <h3>Pick which Hero you’d like</h3>
-            <div className="nft-assets__singlenfts">
-              {nfts.length > 0 && nfts.map((item:any) => {
-                return (
-                  <a target="_blank" key={item.id} href={item.paymentGatewayLinkForSpecificSale}>
-                    <img src={`https://ipfs.io/ipfs/${item.ipfsLink.split("/")[2]}`} alt={item.title} width={200}
-			              height={200} />
+            <div className="nft-portal__assets">
+              <div className="nft-portal__assets_header">
+              <h3>Pick which Hero you’d like</h3>
+              </div>
+              {data.filter(item => item.school === query).map((image: { title: string, image: string, url: string,  }, index: number) => (
+                <div key={index}>
+                  <a target="_blank" href={image.url}>
+                    <Image src={image.image} alt={image.title} width={200} height={200} />
                   </a>
-                );
-              })}
+                </div>
+              ))}
             </div>
-
           </>
-        {/* ) : (
-          <h3 className="donors-portal__no-donation">
-            You need to make a donation to access this page
-          </h3>
-        )} */}
       </main>
     </>
   );
