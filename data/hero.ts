@@ -2,31 +2,31 @@ export const data = [
   // Data for Kagumo High
   {
     title: "Jumbo Darlido",
-    image: "/static/images/Directed-Heros/Kagumo-Heros/Jumbo-Darlido.png",
+    image: "/static/images/Directed Heros/Kagumo-Heros/Jumbo Darlido.png",
     url: "",
     school: "kagumo",
   },
   {
     title: "Sahara Mathi",
-    image: "/static/images/Directed Heros/Kagumo Heros/Sahara-Mathi.png",
+    image: "/static/images/Directed Heros/Kagumo Heros/Sahara Mathi.png",
     url: "",
     school: "kagumo",
   },
   {
     title: "Shishu Kylwo",
-    image: "/static/images/Directed Heros/Kagumo Heros/Shishu-Kylwo.png",
+    image: "/static/images/Directed Heros/Kagumo Heros/Shishu Kylwo.png",
     url: "",
     school: "kagumo",
   },
   {
     title: "Tanya Naigu",
-    image: "/static/images/Directed Heros/Kagumo Heros/Tanya-Naigu.png",
+    image: "/static/images/Directed Heros/Kagumo Heros/Tanya Naigu.png",
     url: "",
     school: "kagumo",
   },
   {
     title: "Zimba Laured",
-    image: "/static/images/Directed Heros/Kagumo Heros/Zimba-Laured.png",
+    image: "/static/images/Directed Heros/Kagumo Heros/Zimba Laured.png",
     url: "",
     school: "kagumo",
   },
