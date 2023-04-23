@@ -11,18 +11,17 @@ export default async function handler (req, res) {
     await dbConnect();
 
     if(method === "POST") {
-      
     }
-
+    
     if(method === "GET") {
-       try{
+      try{
         const result = await getNftDetailsById(id);
         res.status(200).json(result);
        }catch(err) {
         res.status(500).json(err);
        } 
-    }
-    if(method === "PUT") {
-      
+      }
+      if(method === "PUT") {
+        console.log(id)      
     }
 }

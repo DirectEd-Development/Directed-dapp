@@ -45,8 +45,8 @@ const ScholarshipPool: NextPage = () => {
 							donated='0'
 							funded='0'
 							fundsLeft='10'
-							schoolName="MaryHill Girl's"
-							schoolAlias="MaryHill Girl's High"
+							schoolName="Maryhill Girl's"
+							schoolAlias="Maryhill Girl's High"
 							infoLink=''
 							image='/static/images/mary-hill.jpg'
 							donateLink='/maryhill'
