@@ -12,9 +12,17 @@ export async function updateNftMetadata(req, res) {
         console.error(error)
     }
 }
+export async function getNftDetailsById(uid) {
+    try{
+        // get nft details by id
+        const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNftDetailsById/${uid}`);
+        return res.data.metadata;
+    } catch (error) {
+        console.error(error)
+    }
+}
 
 export async function getAllNfts(params) {
-    console.log(params)
     let nfts = [];
     if(params.params == "royals"){
         await Promise.all(

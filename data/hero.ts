@@ -1,4 +1,5 @@
 export const data = [
+
 	// Data for Kagumo High
 	{
 		title: 'Jumbo Darlido',
@@ -30,7 +31,7 @@ export const data = [
 		url: '',
 		school: 'kagumo',
 	},
-
+  
 	// Data for Mang'u High
 	{
 		title: 'Atilla Crimey',
