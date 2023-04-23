@@ -1,5 +1,5 @@
 import axios from "axios";
-const BLOCKFROST_PROJECT_ID = 'mainnetoXoZLK6M2RZsaDXyPrrL6DCYcNtlUSb2';
+const BLOCKFROST_PROJECT_ID = 'mainnetDmoF1dWjxVsomHBGoDEtqILefsKyDGPx';
 const apiUrl = `https://cardano-mainnet.blockfrost.io/api/v0`;
 
 export async function getWalletBalance(address: string) {
@@ -8,7 +8,8 @@ export async function getWalletBalance(address: string) {
         headers: { 'project_id': BLOCKFROST_PROJECT_ID }
       });
       const data = response.data;
-  
+      console.log(data)
+
       return data;
     } catch (error) {
       console.error(error);
