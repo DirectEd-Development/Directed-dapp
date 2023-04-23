@@ -3,6 +3,7 @@ import { useWallet, useAssets } from "@meshsdk/react";
 import { AssetCard, Meta } from "../../components";
 import { data } from "../../data/royal";
 import Image from "next/image";
+import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
 
@@ -16,7 +17,7 @@ export default function Home() {
     const { connected, wallet } = useWallet();
     const assets: any = useAssets();
     const router = useRouter();
-    const params = router.pathname.split("/")[2];
+    const params = router.asPath.split("?")[1];
 
   // const checkPolicyIdAssets = async () => {
   //   if (connected && wallet) {
@@ -37,7 +38,7 @@ export default function Home() {
   useEffect(() => {
     const getNfts = async() => {
       try{
-        const res = await axios.post("https://app.directed.dev/api/transactions", {params: params});
+        const res = await axios.post("http://localhost:3000/api/transactions", {params: params});
         const mergeRes = [].concat(...res.data);
         setNfts(mergeRes);
       }catch(err) {
@@ -50,7 +51,7 @@ export default function Home() {
   return (
     <>
       <Meta
-        title="Heroes NFTS"
+        title="NFTS"
         description="DirectEd Royal NFTs"
       />
 
@@ -62,10 +63,13 @@ export default function Home() {
             <div className="nft-assets__singlenfts">
               {nfts.length > 0 && nfts.map((item:any) => {
                 return (
-                  <a target="_blank" key={item.id} href={item.paymentGatewayLinkForSpecificSale}>
+                  <Link key={item.id} href={{
+                    pathname: '/update-metadata',
+                    query: item.uid
+                  }}>
                     <img src={`https://ipfs.io/ipfs/${item.ipfsLink.split("/")[2]}`} alt={item.title} width={200}
 			              height={200} />
-                  </a>
+                  </Link>
                 );
               })}
             </div>

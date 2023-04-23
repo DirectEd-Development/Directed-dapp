@@ -33,7 +33,7 @@ export const Timer: React.FC<Props> = ({ targetDay, targetMonth, targetYear }) =
 
   return (
     <div>
-      <span>Mint opens {targetDate} 8:00pm UTC</span>
+      <span>Mint for Warriors opens {targetDate} and 24th for Royals and Heros 8:00pm UTC</span>
       {/* <p>{days} days</p> */}
     </div>
   );

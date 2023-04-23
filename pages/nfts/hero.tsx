@@ -26,7 +26,10 @@ export default function Home() {
             <div className="nft-portal__assets">
               <div className="nft-portal__assets_header">
               <h3>Pick which Hero you’d like</h3>
-              <Link href="/update-metadata">
+              <Link href={{
+                pathname: "/nfts/nft",
+                query: "hero"
+              }}>
                 <Button variant='primary'>Edit Metadata</Button>
               </Link>
               </div>
