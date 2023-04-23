@@ -6,15 +6,15 @@ import { Button, Meta, ManguCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
-import Timer from '../../components/Timer/Timer';
+import Timer from '../../components/Timer/Timer'
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
 const Mangu: NextPage = () => {
-	const [tier, setTier] = useState<OptionTiers | null>(null);
-	const [isCustom, setIsCustom] = useState(false);
-	const [custom, setCustom] = useState("");
+	const [tier, setTier] = useState<OptionTiers | null>(null)
+	const [isCustom, setIsCustom] = useState(false)
+	const [custom, setCustom] = useState('')
 
-	const dispatch = useDispatch();
+	const dispatch = useDispatch()
 	const router = useRouter()
 
 	const donationTier = (option: OptionTiers) => {
@@ -22,36 +22,37 @@ const Mangu: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: "Mangu",
-		});
+			school: 'Mangu',
+		})
 		dispatch(setClose())
 	}
 
 	const handleCustom = () => {
-		setIsCustom(false);
+		setIsCustom(false)
 		setTier({
-			title: "Custom",
+			title: 'Custom',
 			amount: custom,
-			image: "",
-			school: "Mangu"
-		});
+			image: '',
+			school: 'Mangu',
+		})
 		dispatch(setOpen())
 	}
 
 	const fullDonationTier = (option: OptionTiers) => {
-		 if(option.amount == "custom"){
-			setIsCustom(true);
-		 } else {
+		console.log(option.image)
+
+		if (option.amount == 'custom') {
+			setIsCustom(true)
+		} else {
 			setTier({
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: "Mangu",
-			});
+				school: 'Mangu',
+			})
 			dispatch(setOpen())
-		 }
+		}
 	}
-
 
 	return (
 		<>
@@ -59,7 +60,7 @@ const Mangu: NextPage = () => {
 			<main className='donate container'>
 				<div className='donate__donations'>
 					<div className='donate__tier-options'>
-						<div className="donate__title-section">
+						<div className='donate__title-section'>
 							<FaChevronLeft
 								onClick={() => router.back()}
 								className='go-back'
@@ -70,7 +71,12 @@ const Mangu: NextPage = () => {
 						<div>
 							<h3>Donate to Mang'u High School</h3>
 							<h4>DirectEd Lions Collection</h4>
-							<p><span> <Timer targetDay={22} targetMonth={4} targetYear={2023} /></span></p>
+							<p>
+								<span>
+									{' '}
+									<Timer targetDay={22} targetMonth={4} targetYear={2023} />
+								</span>
+							</p>
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
 								{lionOptions.map((option) => (
@@ -91,32 +97,28 @@ const Mangu: NextPage = () => {
 							<p>No DirectEd Lions Collection NFT</p>
 							{isCustom ? (
 								<div className='donate__tiers'>
-								<input
-									 type="text"
-									 placeholder="Custom Amount"
-									 onChange={(e) => setCustom(e.target.value)}
-								/>
-								<Button
-									size='small'
-									noShadow
-									onClick={handleCustom}
-								>
-									Donate
-								</Button>
-							</div>
-							): (
-								<div className='donate__tiers'>
-								{noLionOptions.map((option) => (
-									<Button
-										size='small'
-										noShadow
-										variant={option.title === tier?.title ? 'primary' : ''}
-										onClick={() => fullDonationTier(option)}
-									>
-										{option.title}
+									<input
+										type='text'
+										placeholder='Custom Amount'
+										onChange={(e) => setCustom(e.target.value)}
+									/>
+									<Button size='small' noShadow onClick={handleCustom}>
+										Donate
 									</Button>
-								))}
-							</div>
+								</div>
+							) : (
+								<div className='donate__tiers'>
+									{noLionOptions.map((option) => (
+										<Button
+											size='small'
+											noShadow
+											variant={option.title === tier?.title ? 'primary' : ''}
+											onClick={() => fullDonationTier(option)}
+										>
+											{option.title}
+										</Button>
+									))}
+								</div>
 							)}
 						</div>
 					</div>
@@ -131,7 +133,6 @@ const Mangu: NextPage = () => {
 							/>
 						)}
 					</div>
-					
 				</div>
 			</main>
 		</>

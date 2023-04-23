@@ -6,15 +6,15 @@ import { Button, CustomAmountInput, Meta, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
-import Timer from '../../components/Timer/Timer';
+import Timer from '../../components/Timer/Timer'
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
 const Kagumo: NextPage = () => {
-	const [tier, setTier] = useState<OptionTiers | null>(null);
-	const [isCustom, setIsCustom] = useState(false);
-	const [custom, setCustom] = useState("");
+	const [tier, setTier] = useState<OptionTiers | null>(null)
+	const [isCustom, setIsCustom] = useState(false)
+	const [custom, setCustom] = useState('')
 
-	const dispatch = useDispatch();
+	const dispatch = useDispatch()
 	const router = useRouter()
 
 	const donationTier = (option: OptionTiers) => {
@@ -22,36 +22,35 @@ const Kagumo: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: "kagumo",
-		});
+			school: 'kagumo',
+		})
 		dispatch(setClose())
 	}
 
 	const handleCustom = () => {
-		setIsCustom(false);
+		setIsCustom(false)
 		setTier({
-			title: "Custom",
+			title: 'Custom',
 			amount: custom,
-			image: "",
-			school: "kagumo"
-		});
+			image: '',
+			school: 'kagumo',
+		})
 		dispatch(setOpen())
 	}
 
 	const fullDonationTier = (option: OptionTiers) => {
-		 if(option.amount == "custom"){
-			setIsCustom(true);
-		 } else {
+		if (option.amount == 'custom') {
+			setIsCustom(true)
+		} else {
 			setTier({
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: "kagumo",
-			});
+				school: 'kagumo',
+			})
 			dispatch(setOpen())
-		 }
+		}
 	}
-
 
 	return (
 		<>
@@ -59,7 +58,7 @@ const Kagumo: NextPage = () => {
 			<main className='donate container'>
 				<div className='donate__donations'>
 					<div className='donate__tier-options'>
-						<div className="donate__title-section">
+						<div className='donate__title-section'>
 							<FaChevronLeft
 								onClick={() => router.back()}
 								className='go-back'
@@ -70,15 +69,19 @@ const Kagumo: NextPage = () => {
 						<div>
 							<h3>Donate to Kagumo High School</h3>
 							<h4>DirectEd Lions Collection</h4>
-							<p><span> <Timer targetDay={22} targetMonth={4} targetYear={2023} /></span></p>
+							<p>
+								<span>
+									<Timer targetDay={22} targetMonth={4} targetYear={2023} />
+								</span>
+							</p>
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
-								{lionOptions.map((option) => (
+								{lionOptions.map((option, index) => (
 									<Button
 										size='small'
 										variant={option.title === tier?.title ? 'primary' : ''}
 										onClick={() => donationTier(option)}
-										key={option.amount}
+										key={index}
 										noShadow
 									>
 										{option.title}
@@ -91,32 +94,28 @@ const Kagumo: NextPage = () => {
 							<p>No DirectEd Lions Collection NFT</p>
 							{isCustom ? (
 								<div className='donate__tiers'>
-								<input
-									 type="text"
-									 placeholder="Custom Amount"
-									 onChange={(e) => setCustom(e.target.value)}
-								/>
-								<Button
-									size='small'
-									noShadow
-									onClick={handleCustom}
-								>
-									Donate
-								</Button>
-							</div>
-							): (
-								<div className='donate__tiers'>
-								{noLionOptions.map((option) => (
-									<Button
-										size='small'
-										noShadow
-										variant={option.title === tier?.title ? 'primary' : ''}
-										onClick={() => fullDonationTier(option)}
-									>
-										{option.title}
+									<input
+										type='text'
+										placeholder='Custom Amount'
+										onChange={(e) => setCustom(e.target.value)}
+									/>
+									<Button size='small' noShadow onClick={handleCustom}>
+										Donate
 									</Button>
-								))}
-							</div>
+								</div>
+							) : (
+								<div className='donate__tiers'>
+									{noLionOptions.map((option) => (
+										<Button
+											size='small'
+											noShadow
+											variant={option.title === tier?.title ? 'primary' : ''}
+											onClick={() => fullDonationTier(option)}
+										>
+											{option.title}
+										</Button>
+									))}
+								</div>
 							)}
 						</div>
 					</div>
@@ -131,7 +130,6 @@ const Kagumo: NextPage = () => {
 							/>
 						)}
 					</div>
-					
 				</div>
 			</main>
 		</>
