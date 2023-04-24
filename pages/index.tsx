@@ -372,6 +372,7 @@ const Home: NextPage = () => {
 							<Button variant='accent' size='small'>
 								SPONSOR THE NEXT ELON MUSK
 							</Button>
+							
 						</Link>
 					</div>
 				</section>
@@ -385,7 +386,7 @@ const Home: NextPage = () => {
 						className='home__piechart'
 					/>
 					<h4>Learn more about the handling of donated funds 
-						<a href="https://docs.google.com/document/d/1hNUkd_nRpgZhilxuazm7BSH85XCm18NTmzlKYWTGGlA/edit">here</a>
+						<a href="https://docs.google.com/document/d/1hNUkd_nRpgZhilxuazm7BSH85XCm18NTmzlKYWTGGlA/edit"> here</a>
 					</h4>
 				</section>
 				<section className='home__impact'>
