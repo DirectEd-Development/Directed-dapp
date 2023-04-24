@@ -14,7 +14,7 @@ const NavLinks: LinksType[] = [
 	{ title: 'Access Stipend', link: '/scholarship-pool' },
 	// { title: "Teacher's Portal", link: '/teacher-portal' },
 	{ title: 'Scholar’s Progress', link: '/progress' },
-	{ title: 'DirectEd Lions', link: '/donors-portal' },
+	{ title: 'Donors Page', link: '/donors-portal' },
 ]
 
 const Navbar = () => {
