@@ -28,4 +28,11 @@
 		padding: 2rem 4rem;
 		gap: 2rem;
 	}
+	& h4 {
+		margin-top: auto;
+		text-align: center;
+		& a {
+		  color:rgb(38, 38, 116);
+		}
+	  }
 }
