@@ -100,8 +100,7 @@ const DonorInfoTab = () => {
 										/>
 										<span>
 											Super-donors receive an exclusive invitation to attend a
-											donor’s reception hosted at the University of Oxford or at
-											Harvard University.
+											donor’s reception hosted at the University of Oxford.
 										</span>
 									</div>
 								</div>

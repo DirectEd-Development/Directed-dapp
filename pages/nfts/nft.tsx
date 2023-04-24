@@ -85,7 +85,7 @@ export default function Home() {
 				</>
 				{/* ) : (
           <h3 className="donors-portal__no-donation">
-            You need to make a donation to access this page
+            Donate to a pool here to receive the token that unlocks this page!
           </h3>
         )} */}
 			</main>
