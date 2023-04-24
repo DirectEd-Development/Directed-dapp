@@ -163,6 +163,13 @@ const directeddonate: NextPage = () => {
 						</div>
 					</div>
 				)}
+
+				<div>
+				<h6>Looking for the DirectEd Lions? Head over
+					<a href="https://app.directed.dev/scholarship-pool">[here]</a>
+					and press "Donate Now" on one Access Stipend pools.
+				</h6>
+				</div>
 			</main>
 		</>
 	)
