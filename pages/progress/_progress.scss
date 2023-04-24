@@ -28,4 +28,15 @@
 		padding: 2rem 4rem;
 		gap: 2rem;
 	}
+	& h4 {
+		margin-top: auto;
+		text-align: center;
+
+		& a {
+		  display: inline-block;
+		  color:rgb(38, 38, 116);
+		  text-decoration: underline;
+		  text-underline-offset: 0.1em;
+		}
+	}
 }
