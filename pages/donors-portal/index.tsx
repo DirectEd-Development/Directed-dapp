@@ -67,7 +67,7 @@ export default function Home() {
               You need to make a donation to access this page
             </h3>
             <h4> Donate to a pool
-              <a href="https://app.directed.dev/scholarship-pool">[here]</a>
+              <a href="https://app.directed.dev/scholarship-pool"> here</a>
 					    to recieve te token that unlocks this page.
             </h4>
           </>
