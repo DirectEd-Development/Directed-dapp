@@ -62,9 +62,15 @@ export default function Home() {
             </div>
           </>
         ) : (
-          <h3 className="donors-portal__no-donation">
-            You need to make a donation to access this page
-          </h3>
+          <>
+            <h3 className="donors-portal__no-donation">
+              You need to make a donation to access this page
+            </h3>
+            <h4> Donate to a pool
+              <a href="https://app.directed.dev/scholarship-pool"> here</a>
+					    to recieve te token that unlocks this page.
+            </h4>
+          </>
         )}
       </main>
     </>
