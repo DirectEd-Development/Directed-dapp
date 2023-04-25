@@ -19,7 +19,7 @@ const ScholarshipPool: NextPage = () => {
 					<DonorInfoTab />
 				</section>
 				<section className='scholarship-pool__potrait-section'>
-					<h3>Lions Crowdfunding</h3>
+					<h3>Access Stipend Pools</h3>
 					<div className='scholarship-pool__potrait-cards'>
 						<ScholarsCard
 							donated='3'

@@ -56,9 +56,19 @@ const Progress: NextPage = () => {
 						</div>
 					</>
 				) : (
+<<<<<<< HEAD
 					<h3>
 						Donate to a pool here to receive the token that unlocks this page!
 					</h3>
+=======
+					<>
+						<h3>You need to make a donation to access this page</h3>
+						<h4> Donate to a pool 
+							<a href="https://app.directed.dev/scholarship-pool"> here </a> 
+							to recieve te token that unlocks this page.
+						</h4>
+					</>
+>>>>>>> f19976b5167693fd644cdde53ea185a97ca0b5fb
 				)}
 			</main>
 		</>

@@ -2,6 +2,19 @@
 
 .donate-container {
 	padding: 2rem 1rem;
+	& h6 {
+		margin-top: 3rem;
+		text-align: center;
+		font-size: large;
+
+		& a {
+			padding: 0.5rem;
+			display: inline-block;
+			color:rgb(38, 38, 116);
+			text-decoration: underline;
+			text-underline-offset: 0.1em;
+		  }
+	}
 }
 
 .donate__modal-container {

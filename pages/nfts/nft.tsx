@@ -55,7 +55,6 @@ export default function Home() {
 	return (
 		<>
 			<Meta title='Heroes NFTS' description='DirectEd Royal NFTs' />
-
 			<main className='nft-assets'>
 				<div className='nft-assets'></div>
 				{/* {hasPolicyIdAssetsChecked ? ( */}
