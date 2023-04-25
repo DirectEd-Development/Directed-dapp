@@ -372,7 +372,6 @@ const Home: NextPage = () => {
 							<Button variant='accent' size='small'>
 								SPONSOR THE NEXT ELON MUSK
 							</Button>
-							
 						</Link>
 					</div>
 				</section>
@@ -385,8 +384,12 @@ const Home: NextPage = () => {
 						height='450'
 						className='home__piechart'
 					/>
-					<h4>Learn more about the handling of donated funds 
-						<a href="https://docs.google.com/document/d/1hNUkd_nRpgZhilxuazm7BSH85XCm18NTmzlKYWTGGlA/edit"> here</a>
+					<h4>
+						Learn more about the handling of donated funds
+						<a href='https://docs.google.com/document/d/1hNUkd_nRpgZhilxuazm7BSH85XCm18NTmzlKYWTGGlA/edit'>
+							{' '}
+							here
+						</a>
 					</h4>
 				</section>
 				<section className='home__impact'>
@@ -412,32 +415,38 @@ const Home: NextPage = () => {
 						<Image
 							src='/static/images/coti-white.png'
 							alt='coti'
-							width={180}
-							height={80}
+							width={150}
+							height={50}
 						/>
 						<Image
 							src='/static/images/yali.png'
 							alt='yali'
-							width={100}
-							height={100}
+							width={65}
+							height={65}
 						/>
 						<Image
 							src='/static/images/tally.svg'
 							alt='tally'
-							width={120}
-							height={120}
+							width={100}
+							height={100}
 						/>
 						<Image
 							src='/static/images/snapbrillia.png'
 							alt='snapbrillia'
-							width={200}
-							height={100}
+							width={150}
+							height={65}
 						/>
 						<Image
 							src='/static/images/web3ug.png'
 							alt='web3ug'
-							width={120}
-							height={120}
+							width={80}
+							height={80}
+						/>
+						<Image
+							src='/static/images/cardano-warriors.png'
+							alt='web3ug'
+							width={100}
+							height={80}
 						/>
 					</div>
 				</section>

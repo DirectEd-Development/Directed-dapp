@@ -6,6 +6,7 @@ import {
 	DonorInfoTab,
 	ScholarsCard,
 } from '../../components'
+import Image from 'next/image'
 // import { schoolData } from '../../lib/schooldata'
 // import { SchoolDataType } from '../../types/schoolDataType'
 
@@ -20,6 +21,10 @@ const ScholarshipPool: NextPage = () => {
 				</section>
 				<section className='scholarship-pool__potrait-section'>
 					<h3>Access Stipend Pools</h3>
+					<h5>
+						Press the ‘Donate now’ button of the stipend pool you want to
+						contribute to and see the DirectEd Lions minting tier options
+					</h5>
 					<div className='scholarship-pool__potrait-cards'>
 						<ScholarsCard
 							donated='3'
@@ -30,6 +35,7 @@ const ScholarshipPool: NextPage = () => {
 							infoLink='https://directed.notion.site/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'
 							image='/static/images/djed-scholars.jpg'
 							donateLink='/kagumo'
+							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 						/>
 						<ScholarsCard
 							donated='0'
@@ -40,6 +46,7 @@ const ScholarshipPool: NextPage = () => {
 							infoLink='https://directed.notion.site/Mang-u-High-30fe2b6847864743b579dfd38f0d4f46'
 							image='/static/images/mangu.jpg'
 							donateLink='/mangu'
+							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 						/>
 						<ScholarsCard
 							donated='0'
@@ -50,6 +57,7 @@ const ScholarshipPool: NextPage = () => {
 							infoLink=''
 							image='/static/images/mary-hill.jpg'
 							donateLink='/maryhill'
+							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
 						/>
 						<ScholarsCard
 							donated='0'
@@ -60,6 +68,48 @@ const ScholarshipPool: NextPage = () => {
 							infoLink=''
 							image='/static/images/ngong.jpg'
 							donateLink='/Ngong'
+							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
+						/>
+					</div>
+				</section>
+				<section className='home__brands'>
+					<p>Partners</p>
+					<div className='flex-gap-two'>
+						<Image
+							src='/static/images/coti-white.png'
+							alt='coti'
+							width={150}
+							height={50}
+						/>
+						<Image
+							src='/static/images/yali.png'
+							alt='yali'
+							width={65}
+							height={65}
+						/>
+						<Image
+							src='/static/images/tally.svg'
+							alt='tally'
+							width={100}
+							height={100}
+						/>
+						<Image
+							src='/static/images/snapbrillia.png'
+							alt='snapbrillia'
+							width={150}
+							height={65}
+						/>
+						<Image
+							src='/static/images/web3ug.png'
+							alt='web3ug'
+							width={80}
+							height={80}
+						/>
+						<Image
+							src='/static/images/cardano-warriors.png'
+							alt='web3ug'
+							width={100}
+							height={80}
 						/>
 					</div>
 				</section>

@@ -38,7 +38,7 @@ const Progress: NextPage = () => {
 				{hasPolicyIdAssetsChecked ? (
 					<>
 						<div className='progress__header'>
-							<h2>Progress Track for Simon Sallstrom Scholars</h2>
+							<h2>Progress of the DirectEd Bootcamp Scholars 2023</h2>
 							<div className='flex-gap'>
 								<RiErrorWarningLine size={20} />
 								<Button variant='link'>Read More</Button>
@@ -56,19 +56,14 @@ const Progress: NextPage = () => {
 						</div>
 					</>
 				) : (
-<<<<<<< HEAD
-					<h3>
-						Donate to a pool here to receive the token that unlocks this page!
-					</h3>
-=======
 					<>
 						<h3>You need to make a donation to access this page</h3>
-						<h4> Donate to a pool 
-							<a href="https://app.directed.dev/scholarship-pool"> here </a> 
-							to recieve te token that unlocks this page.
+						<h4>
+							Donate to a pool
+							<a href='https://app.directed.dev/scholarship-pool'> here </a>
+							to recieve the token that unlocks this page.
 						</h4>
 					</>
->>>>>>> f19976b5167693fd644cdde53ea185a97ca0b5fb
 				)}
 			</main>
 		</>
