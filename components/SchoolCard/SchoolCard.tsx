@@ -91,16 +91,7 @@ const SchoolCard = ({
 							</div>
 						</div>
 					</div>
-					<div className='school-card__content'>
-						<div className='school-card__tabs'>
-							<span className='school-card__tab active'>Emurgo Scholar</span>
-							<span className='school-card__tab'>Simon Scholar</span>
-							<span className='school-card__tab'>DirectEd Scholar</span>
-						</div>
-						<p className='school-card__text'>
-							Slide to left or right to change the scholars
-						</p>
-					</div>
+
 					<div className='flex-gap'>
 						<RiErrorWarningLine size={20} />
 						<p>Learn more about the scholars</p>

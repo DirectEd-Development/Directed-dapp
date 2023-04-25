@@ -61,30 +61,4 @@
 			background: #797979;
 		}
 	}
-
-	&__tabs {
-		background: var(--clr-accent-300);
-		display: flex;
-		border-radius: 1rem;
-		color: var(--clr-accent-200);
-		gap: 1rem;
-		border-radius: 5rem;
-	}
-
-	&__tab {
-		display: block;
-		width: 28%;
-		border-radius: 5rem;
-		font-size: var(--fs-200);
-		text-align: center;
-	}
-
-	.active {
-		background: #81171b;
-	}
-
-	&__text {
-		width: 25ch;
-		font-size: var(--fs-200);
-	}
 }

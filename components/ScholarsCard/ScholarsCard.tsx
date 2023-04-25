@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
+import { getWalletBalance } from '../Blockfrost/Blockfrost'
 
 type ScholarsCardProps = {
 	schoolName: string
@@ -12,6 +13,7 @@ type ScholarsCardProps = {
 	infoLink: string
 	image: string
 	donateLink: string
+	stakeAdd: string
 }
 
 const ScholarsCard = ({
@@ -23,6 +25,7 @@ const ScholarsCard = ({
 	infoLink,
 	image,
 	donateLink,
+	stakeAdd,
 }: ScholarsCardProps) => {
 	return (
 		<div className='scholars-card'>
@@ -65,7 +68,7 @@ const ScholarsCard = ({
 						/>
 						<span>
 							<span>Fundraising ends</span>
-							<span>on April 30</span>
+							<span>on May 7th</span>
 						</span>
 					</div>
 					<div className='scholars-card__donors'>
@@ -82,7 +85,7 @@ const ScholarsCard = ({
 					</div>
 				</div>
 
-				<ProgressBar />
+				<ProgressBar stakeAddress={stakeAdd} />
 				<Link href={donateLink}>
 					<Button variant='primary'>Donate Now</Button>
 				</Link>

@@ -5,7 +5,7 @@ import { useWallet, useAssets } from '@meshsdk/react'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-const POLICY_ID = "921fce888dc477101ff8ec3a6c2eb8d5e6947b9cfff640079314246c";
+const POLICY_ID = '921fce888dc477101ff8ec3a6c2eb8d5e6947b9cfff640079314246c'
 
 const Progress: NextPage = () => {
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
@@ -18,20 +18,19 @@ const Progress: NextPage = () => {
 
 	const checkPolicyIdAssets = async () => {
 		if (connected && wallet) {
-		  const assets = await wallet.getPolicyIdAssets(POLICY_ID);
-	
-		  if (assets.length <= 0) {
-			setHasPolicyIdAssetsChecked(false); // No assets found with the given policy ID
-		  } else {
-			setHasPolicyIdAssetsChecked(true); // Assets found with the given policy ID
-		  }
-		}
-	};
+			const assets = await wallet.getPolicyIdAssets(POLICY_ID)
 
+			if (assets.length <= 0) {
+				setHasPolicyIdAssetsChecked(false) // No assets found with the given policy ID
+			} else {
+				setHasPolicyIdAssetsChecked(true) // Assets found with the given policy ID
+			}
+		}
+	}
 
 	useEffect(() => {
-		checkPolicyIdAssets();
-	}, [connected, assets]);
+		checkPolicyIdAssets()
+	}, [connected, assets])
 
 	return (
 		<>
@@ -39,7 +38,7 @@ const Progress: NextPage = () => {
 				{hasPolicyIdAssetsChecked ? (
 					<>
 						<div className='progress__header'>
-							<h2>Progress Track for Simon Sallstrom Scholars</h2>
+							<h2>Progress of the DirectEd Bootcamp Scholars 2023</h2>
 							<div className='flex-gap'>
 								<RiErrorWarningLine size={20} />
 								<Button variant='link'>Read More</Button>
@@ -59,9 +58,10 @@ const Progress: NextPage = () => {
 				) : (
 					<>
 						<h3>You need to make a donation to access this page</h3>
-						<h4> Donate to a pool 
-							<a href="https://app.directed.dev/scholarship-pool"> here </a> 
-							to recieve te token that unlocks this page.
+						<h4>
+							Donate to a pool
+							<a href='https://app.directed.dev/scholarship-pool'> here </a>
+							to recieve the token that unlocks this page.
 						</h4>
 					</>
 				)}
