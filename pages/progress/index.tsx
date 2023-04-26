@@ -5,7 +5,7 @@ import { useWallet, useAssets } from '@meshsdk/react'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-const POLICY_ID = '921fce888dc477101ff8ec3a6c2eb8d5e6947b9cfff640079314246c'
+const POLICY_ID = 'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0'
 
 const Progress: NextPage = () => {
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
