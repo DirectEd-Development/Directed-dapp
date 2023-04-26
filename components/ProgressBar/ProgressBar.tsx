@@ -7,11 +7,11 @@ type WalletBalanceProps = {
 
 function WalletBalance({ balance }: WalletBalanceProps) {
 	return (
-		<div>
+		<>
 			<p>
 				<b>₳{balance}</b>
 			</p>
-		</div>
+		</>
 	)
 }
 

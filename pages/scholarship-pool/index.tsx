@@ -7,10 +7,40 @@ import {
 	ScholarsCard,
 } from '../../components'
 import Image from 'next/image'
-// import { schoolData } from '../../lib/schooldata'
-// import { SchoolDataType } from '../../types/schoolDataType'
+
+import { useEffect, useState } from 'react';
+
+interface TransactionCount {
+  tx_hash: string;
+}
+
 
 const ScholarshipPool: NextPage = () => {
+  const [wallet1, setWallet1] = useState<TransactionCount[]>([]);
+  const [wallet2, setWallet2] = useState<TransactionCount[]>([]);
+
+  useEffect(() => {
+    fetch('https://cardano-mainnet.blockfrost.io/api/v0/addresses/addr1xyvc346z883y6x5a07f602kywnalnnpvljqfearrrgxjl4jmj6um7hskwglsnmdgdftmnh69n6f47vnp3njwpnj8anqqzvx2fl/transactions?count=100&order=desc', {
+      headers: {
+        'project_id': 'mainnetDmoF1dWjxVsomHBGoDEtqILefsKyDGPx'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      setWallet1(data);
+    });
+
+    fetch('https://cardano-mainnet.blockfrost.io/api/v0/addresses/addr1x8c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5lu8sl0pkrzfm5t6qexkm8mxz5mrspm9rdhlh9shm7u0dflcqjcd9va/transactions?count=100&order=desc', {
+      headers: {
+        'project_id': 'mainnetDmoF1dWjxVsomHBGoDEtqILefsKyDGPx'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      setWallet2(data);
+    });
+  }, []);
+
 	return (
 		<>
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
@@ -27,7 +57,7 @@ const ScholarshipPool: NextPage = () => {
 					</h5>
 					<div className='scholarship-pool__potrait-cards'>
 						<ScholarsCard
-							donated='3'
+							donated= {wallet2.length}
 							funded='3'
 							fundsLeft='10'
 							schoolName='Djed Scholars'
@@ -38,7 +68,7 @@ const ScholarshipPool: NextPage = () => {
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 						/>
 						<ScholarsCard
-							donated='0'
+							donated= {wallet2.length}
 							funded='0'
 							fundsLeft='10'
 							schoolName="Mang'u High"
@@ -49,7 +79,7 @@ const ScholarshipPool: NextPage = () => {
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 						/>
 						<ScholarsCard
-							donated='0'
+							donated= {wallet1.length}
 							funded='0'
 							fundsLeft='10'
 							schoolName="MaryHill Girl's"
@@ -60,7 +90,7 @@ const ScholarshipPool: NextPage = () => {
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
 						/>
 						<ScholarsCard
-							donated='0'
+							donated={wallet1.length}
 							funded='0'
 							fundsLeft='5'
 							schoolName="Ngong Road Children's Foundation"

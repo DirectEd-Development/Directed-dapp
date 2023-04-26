@@ -9,7 +9,7 @@ type ScholarsCardProps = {
 	schoolAlias: string
 	funded: string
 	fundsLeft: string
-	donated: string
+	donated: number
 	infoLink: string
 	image: string
 	donateLink: string
