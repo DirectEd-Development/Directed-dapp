@@ -12,6 +12,7 @@ type SchoolCardProps = {
 	schoolname?: string
 	chart: string
 	location?: string
+	desc: string
 }
 
 const SchoolCard = ({
@@ -19,6 +20,7 @@ const SchoolCard = ({
 	schoolname,
 	location,
 	chart,
+	desc,
 }: SchoolCardProps) => {
 	const data = {
 		datasets: [
@@ -42,11 +44,12 @@ const SchoolCard = ({
 		<>
 			<div className='school-card'>
 				<h4>{schoolname}</h4>
+				<p>{desc}</p>
 				<div>
 					<Image
 						src={image}
 						alt=''
-						width='400'
+						width='450'
 						height='250'
 						className='school-card__image'
 					/>
@@ -71,23 +74,23 @@ const SchoolCard = ({
 						<div className='school-card__topics'>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>Git Interaction</p>
+								<p>1: Personal Website Project</p>
 							</div>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>Loops and Data</p>
+								<p>2: Group Project part I</p>
 							</div>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>APIs</p>
+								<p>3: Group Project Part II</p>
 							</div>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>ReactJS</p>
+								<p>4: Group Project Part III</p>
 							</div>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>NodeJS</p>
+								<p>5: Individual Capstone Project</p>
 							</div>
 						</div>
 					</div>
