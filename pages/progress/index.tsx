@@ -21,9 +21,9 @@ const Progress: NextPage = () => {
 			const assets = await wallet.getPolicyIdAssets(POLICY_ID)
 
 			if (assets.length <= 0) {
-				setHasPolicyIdAssetsChecked(false) // No assets found with the given policy ID
+				setHasPolicyIdAssetsChecked(false) //No assets found with the given policy ID
 			} else {
-				setHasPolicyIdAssetsChecked(true) // Assets found with the given policy ID
+				setHasPolicyIdAssetsChecked(true) //Assets found with the given policy ID
 			}
 		}
 	}
@@ -47,9 +47,10 @@ const Progress: NextPage = () => {
 						<div className='progress__content'>
 							{/* <Link href='/scholar-progress'> */}
 							<SchoolCard
-								schoolname='Kagumo High School'
+								schoolname='Djed Scholars'
+								desc='See how the Kagumo High School graduates are progressing'
 								chart='/static/images/chart-1.png'
-								location='Naivasha, Kenya'
+								location='Nyeri county, Kenya'
 								image='/static/images/peters.png'
 							/>
 							{/* </Link> */}
