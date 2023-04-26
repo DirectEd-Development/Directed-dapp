@@ -49,7 +49,7 @@ const TierCard = ({ onClick, title, amount, image, school }: TierCardProps) => {
 			  const unsignedTx = await tx.build();
 			  const signedTx = await wallet.signTx(unsignedTx);
 			  const txHash = await wallet.submitTx(signedTx);
-			  const res = await axios.post("http://localhost:3001/api/transactions", {amount: send_amt, transactionHash: txHash, walletAddress: address})
+			  const res = await axios.post("https://app.directed.dev/api/transactions", {amount: send_amt, transactionHash: txHash, walletAddress: address})
 			  setSuccessfulTxHash(txHash);
 			  setAmountSent(send_amt);
 			  setConfirm(false); // reset confirm state after donation is sent
