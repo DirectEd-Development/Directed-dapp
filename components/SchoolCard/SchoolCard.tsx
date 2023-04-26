@@ -4,6 +4,7 @@ import { RiErrorWarningLine } from 'react-icons/ri'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js/auto'
 import { Doughnut } from 'react-chartjs-2'
 // import 'chart.js-plugin-labels-dv'
+import Link from 'next/link'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -91,11 +92,12 @@ const SchoolCard = ({
 							</div>
 						</div>
 					</div>
-
-					<div className='flex-gap'>
-						<RiErrorWarningLine size={20} />
-						<p>Learn more about the scholars</p>
-					</div>
+					<Link href='/scholar-progress'>
+						<div className='flex-gap'>
+							<RiErrorWarningLine size={20} />
+							<p>Learn more about the scholars</p>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</>
