@@ -1,13 +1,8 @@
 import type { NextPage } from 'next'
-import {
-	// PoolCard,
-	// FilterMenu,
-	Meta,
-	DonorInfoTab,
-	ScholarsCard,
-} from '../../components'
+import { Meta, DonorInfoTab, ScholarsCard,} from '../../components'
 import Image from 'next/image'
-
+import { nftUpdate } from "../../lib/api/nftUpdate";
+import axios from 'axios'
 import { useEffect, useState } from 'react';
 
 interface TransactionCount {
@@ -16,9 +11,12 @@ interface TransactionCount {
 
 
 const ScholarshipPool: NextPage = () => {
+  const [free, setFree] = useState();
+  const [loading, setLoading] = useState(false);
   const [wallet1, setWallet1] = useState<TransactionCount[]>([]);
   const [wallet2, setWallet2] = useState<TransactionCount[]>([]);
 
+  // Fetch number of transactions in a wallet address
   useEffect(() => {
     fetch('https://cardano-mainnet.blockfrost.io/api/v0/addresses/addr1xyvc346z883y6x5a07f602kywnalnnpvljqfearrrgxjl4jmj6um7hskwglsnmdgdftmnh69n6f47vnp3njwpnj8anqqzvx2fl/transactions?count=100&order=desc', {
       headers: {
@@ -41,6 +39,20 @@ const ScholarshipPool: NextPage = () => {
     });
   }, []);
 
+  // Get number of free nfts on nmkr
+  useEffect(() => {
+    const loadFree = async () => {
+       try{
+      setLoading(true);
+      const response = await axios.get("/api/getUserRequest");
+      setFree(response.data);
+      setLoading(false);
+    }catch{}
+  }
+     loadFree();
+  }, [])
+
+  console.log(free);
 	return (
 		<>
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
