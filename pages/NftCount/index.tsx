@@ -1,4 +1,3 @@
-import { nftUpdate } from "../../lib/api/nftUpdate";
 import axios from 'axios'
 import { useEffect, useState } from 'react';
 
