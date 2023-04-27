@@ -51,7 +51,7 @@ export default function Home() {
 					<>
 						<div className='donors-portal__assets'>
 							<div className='donors-portal__assets_header'>
-								<h1>Gallery</h1>
+								<h2>DirectEd Legacy Collection Gallery</h2>
 								<input
 									type='text'
 									placeholder='Filter assets'
