@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react'
 import { useWallet, useAssets } from '@meshsdk/react'
 import { AssetCard, Meta } from '../../components'
 import { data } from '../../data/assets'
-import Image from 'next/image'
 
-const POLICY_ID = '921fce888dc477101ff8ec3a6c2eb8d5e6947b9cfff640079314246c'
+const POLICY_ID = 'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0'
 
 export default function Home() {
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
