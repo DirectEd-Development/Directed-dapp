@@ -5,7 +5,7 @@ import { useWallet, useAssets } from '@meshsdk/react'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-const POLICY_ID = 'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0'
+const POLICY_IDS = ['ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0', '2df82849a30577cbe3734f103d6d91f721c3508a45ca37955b768270'];
 
 const Progress: NextPage = () => {
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
@@ -18,13 +18,15 @@ const Progress: NextPage = () => {
 
 	const checkPolicyIdAssets = async () => {
 		if (connected && wallet) {
-			const assets = await wallet.getPolicyIdAssets(POLICY_ID)
-
-			if (assets.length <= 0) {
-				setHasPolicyIdAssetsChecked(false) // No assets found with the given policy ID
-			} else {
-				setHasPolicyIdAssetsChecked(true) // Assets found with the given policy ID
+		  let hasPolicyIdAssets = false; // No assets found with the given policy ID
+		  for (const policyId of POLICY_IDS) {
+			const assets = await wallet.getPolicyIdAssets(policyId);
+			if (assets.length > 0) {
+			  hasPolicyIdAssets = true; // Assets found with the given policy ID
+			  break;
 			}
+		  }
+		  setHasPolicyIdAssetsChecked(hasPolicyIdAssets);
 		}
 	}
 
@@ -57,11 +59,10 @@ const Progress: NextPage = () => {
 					</>
 				) : (
 					<>
-						<h3>You need to make a donation to access this page</h3>
+						<h3>You need to hold a DirectEd Lions NFT to access this page</h3>
 						<h4>
-							Donate to a pool
-							<a href='https://app.directed.dev/scholarship-pool'> here </a>
-							to recieve the token that unlocks this page.
+							You get a DirectEd Lions NFT when you donate to a pool 
+							<a href='https://app.directed.dev/scholarship-pool'> here. </a>
 						</h4>
 					</>
 				)}

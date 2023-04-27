@@ -63,9 +63,13 @@ export default function Home() {
 						</div>
 					</>
 				) : (
-					<h3 className='donors-portal__no-donation'>
-						You need to make a donation to access this page
-					</h3>
+					<>
+						<h3>You need to hold a DirectEd Lions NFT to access this page</h3>
+						<h4>
+							You get a DirectEd Lions NFT when you donate to a pool 
+							<a href='https://app.directed.dev/scholarship-pool'> here. </a>
+						</h4>
+					</>
 				)}
 			</main>
 		</>
