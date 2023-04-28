@@ -3,7 +3,6 @@ import { Button, SchoolCard } from '../../components'
 import { RiErrorWarningLine } from 'react-icons/ri'
 import { useWallet, useAssets } from '@meshsdk/react'
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
 
 const POLICY_IDS = ['ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0', '2df82849a30577cbe3734f103d6d91f721c3508a45ca37955b768270'];
 
@@ -47,7 +46,6 @@ const Progress: NextPage = () => {
 							</div>
 						</div>
 						<div className='progress__content'>
-							{/* <Link href='/scholar-progress'> */}
 							<SchoolCard
 								schoolname='Djed Scholars'
 								desc='See how the Kagumo High School graduates are progressing'
@@ -55,7 +53,6 @@ const Progress: NextPage = () => {
 								location='Nyeri county, Kenya'
 								image='/static/images/peters.png'
 							/>
-							{/* </Link> */}
 						</div>
 					</>
 				) : (

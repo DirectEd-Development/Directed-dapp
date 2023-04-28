@@ -72,7 +72,7 @@ const Kagumo: NextPage = () => {
 
 							<p>
 								<span>
-									<Timer targetDay={23} targetMonth={4} targetYear={2023} />
+									<Timer targetDay={29} targetMonth={4} targetYear={2023} />
 								</span>
 							</p>
               
