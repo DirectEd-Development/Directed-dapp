@@ -14,6 +14,7 @@ type ScholarsCardProps = {
 	image: string
 	donateLink: string
 	stakeAdd: string
+	remaining: string
 }
 
 const ScholarsCard = ({
@@ -26,6 +27,7 @@ const ScholarsCard = ({
 	image,
 	donateLink,
 	stakeAdd,
+	remaining,
 }: ScholarsCardProps) => {
 	return (
 		<div className='scholars-card'>
@@ -40,7 +42,8 @@ const ScholarsCard = ({
 				<div className='scholars-card__title'>
 					<h3>{schoolName}</h3>
 					<span>
-						Access Stipends for {schoolAlias} students from low income families
+						Access Scholarship Pools for {schoolAlias} students from low income
+						families
 					</span>
 					<Link href={infoLink}>
 						<Button variant='link'>Learn More</Button>
@@ -55,7 +58,7 @@ const ScholarsCard = ({
 						<span>funded</span>
 					</div>
 					<div>
-						<h5>23</h5>
+						<h5>{remaining}</h5>
 						<span>remaining Hero </span>
 						<span>and Royals</span>
 					</div>
