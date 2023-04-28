@@ -14,6 +14,7 @@ type ScholarsCardProps = {
 	image: string
 	donateLink: string
 	stakeAdd: string
+	nftsleft?: number | null
 }
 
 const ScholarsCard = ({
@@ -26,6 +27,7 @@ const ScholarsCard = ({
 	image,
 	donateLink,
 	stakeAdd,
+	nftsleft,
 }: ScholarsCardProps) => {
 	return (
 		<div className='scholars-card'>
@@ -55,7 +57,7 @@ const ScholarsCard = ({
 						<span>funded</span>
 					</div>
 					<div>
-						<h5>23</h5>
+						<h5>{nftsleft?.toString() ?? 'No NFTs left'}</h5>
 						<span>remaining Hero </span>
 						<span>and Royals</span>
 					</div>
