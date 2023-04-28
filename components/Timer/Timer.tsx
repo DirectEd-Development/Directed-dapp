@@ -41,7 +41,7 @@ export const Timer: React.FC<Props> = ({
 
 	return (
 		<>
-			<span>Mint opens {targetDate} 8:00pm UTC</span>
+			<span>Mint opens {targetDate} for Royals and Heroes 8:00pm UTC</span>
 			{/* <p>{days} days</p> */}
 		</>
 	)
