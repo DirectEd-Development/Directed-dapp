@@ -11,9 +11,9 @@ interface TransactionCount {
 }
 
 const ScholarshipPool: NextPage = () => {
-  const [kagumo, setFree] = useState();
-  const [maryhill, setMaryhill] = useState(null);
-  const [loading, setLoading] = useState(false);
+//   const [kagumo, setFree] = useState();
+//   const [maryhill, setMaryhill] = useState(null);
+//   const [loading, setLoading] = useState(false);
   const [wallet1, setWallet1] = useState<TransactionCount[]>([]);
   const [wallet2, setWallet2] = useState<TransactionCount[]>([]);
 
@@ -46,33 +46,18 @@ const ScholarshipPool: NextPage = () => {
 			})
 	}, [])
 
-	// Get number of free nfts on nmkr for Maryhill x Ngong
-	useEffect(() => {
-	  const loadFree = async () => {
-		try {
-		  setLoading(true);
-		  const response = await axios.get("/api/getUserRequest");
-		  setFree(response.data);
-		  setLoading(false);
-		} catch { }
-	  }
-	  loadFree();
-	}, [])
-	
-	// Get number of free nfts on nmkr for Maryhill x Ngong
-	useEffect(() => {
-		const loadFree = async () => {
-		  try {
-			setLoading(true);
-			const response = await axios.get('/api/getCount');
-			setMaryhill(response.data); // Set response.data to maryhill state
-			setLoading(false);
-		  } catch (error) {
-			console.error(error);
-		  }
-		};
-		loadFree();
-	  }, []);
+	// // Get number of free nfts on nmkr for Maryhill x Ngong
+	// useEffect(() => {
+	//   const loadFree = async () => {
+	// 	try {
+	// 	  setLoading(true);
+	// 	  const response = await axios.get("/api/getUserRequest");
+	// 	  setFree(response.data);
+	// 	  setLoading(false);
+	// 	} catch { }
+	//   }
+	//   loadFree();
+	// }, [])
 	return (
 		<>
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
@@ -98,7 +83,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/djed-scholars.jpg'
 							donateLink='/kagumo'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
-							nftsleft={kagumo}
+							nftsleft='4'
 						/>
 						<ScholarsCard
 							donated={wallet2.length}
@@ -110,7 +95,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/mangu.jpg'
 							donateLink='/mangu'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
-							nftsleft={kagumo}
+							nftsleft='7'
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
@@ -122,7 +107,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/mary-hill.jpg'
 							donateLink='/maryhill'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft={maryhill}
+							nftsleft='7'
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
@@ -134,7 +119,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/ngong.jpg'
 							donateLink='/Ngong'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft= {maryhill}
+							nftsleft= '7'
 						/>
 					</div>
 				</section>
