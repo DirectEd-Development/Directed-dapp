@@ -1,15 +1,14 @@
 import type { NextPage } from 'next'
-import { Meta, DonorInfoTab, ScholarsCard,} from '../../components'
+import { Meta, DonorInfoTab, ScholarsCard } from '../../components'
 import Image from 'next/image'
-import { nftUpdate } from "../../lib/api/nftUpdate";
+import { nftUpdate } from '../../lib/api/nftUpdate'
 import axios from 'axios'
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
 
 interface TransactionCount {
-  tx_hash: string;
+	tx_hash: string
 }
-
 
 const ScholarshipPool: NextPage = () => {
   const [kagumo, setFree] = useState();
@@ -18,28 +17,34 @@ const ScholarshipPool: NextPage = () => {
   const [wallet1, setWallet1] = useState<TransactionCount[]>([]);
   const [wallet2, setWallet2] = useState<TransactionCount[]>([]);
 
-  // Fetch number of transactions in a wallet address
-  useEffect(() => {
-    fetch('https://cardano-mainnet.blockfrost.io/api/v0/addresses/addr1xyvc346z883y6x5a07f602kywnalnnpvljqfearrrgxjl4jmj6um7hskwglsnmdgdftmnh69n6f47vnp3njwpnj8anqqzvx2fl/transactions?count=100&order=desc', {
-      headers: {
-        'project_id': 'mainnetDmoF1dWjxVsomHBGoDEtqILefsKyDGPx'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      setWallet1(data);
-    });
+	// Fetch number of transactions in a wallet address
+	useEffect(() => {
+		fetch(
+			'https://cardano-mainnet.blockfrost.io/api/v0/addresses/addr1xyvc346z883y6x5a07f602kywnalnnpvljqfearrrgxjl4jmj6um7hskwglsnmdgdftmnh69n6f47vnp3njwpnj8anqqzvx2fl/transactions?count=100&order=desc',
+			{
+				headers: {
+					project_id: 'mainnetDmoF1dWjxVsomHBGoDEtqILefsKyDGPx',
+				},
+			}
+		)
+			.then((response) => response.json())
+			.then((data) => {
+				setWallet1(data)
+			})
 
-    fetch('https://cardano-mainnet.blockfrost.io/api/v0/addresses/addr1x8c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5lu8sl0pkrzfm5t6qexkm8mxz5mrspm9rdhlh9shm7u0dflcqjcd9va/transactions?count=100&order=desc', {
-      headers: {
-        'project_id': 'mainnetDmoF1dWjxVsomHBGoDEtqILefsKyDGPx'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      setWallet2(data);
-    });
-  }, []);
+		fetch(
+			'https://cardano-mainnet.blockfrost.io/api/v0/addresses/addr1x8c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5lu8sl0pkrzfm5t6qexkm8mxz5mrspm9rdhlh9shm7u0dflcqjcd9va/transactions?count=100&order=desc',
+			{
+				headers: {
+					project_id: 'mainnetDmoF1dWjxVsomHBGoDEtqILefsKyDGPx',
+				},
+			}
+		)
+			.then((response) => response.json())
+			.then((data) => {
+				setWallet2(data)
+			})
+	}, [])
 
 	// Get number of free nfts on nmkr for Maryhill x Ngong
 	useEffect(() => {
@@ -77,14 +82,14 @@ const ScholarshipPool: NextPage = () => {
 					<DonorInfoTab />
 				</section>
 				<section className='scholarship-pool__potrait-section'>
-					<h3>Access Stipend Pools</h3>
+					<h3>Access Stipend Scholarship Crowdfunding Pools</h3>
 					<h5>
 						Press the ‘Donate now’ button of the stipend pool you want to
 						contribute to and see the DirectEd Lions minting tier options
 					</h5>
 					<div className='scholarship-pool__potrait-cards'>
 						<ScholarsCard
-							donated= {wallet2.length}
+							donated={wallet2.length}
 							funded='3'
 							fundsLeft='10'
 							schoolName='Djed Scholars'
@@ -96,7 +101,7 @@ const ScholarshipPool: NextPage = () => {
 							nftsleft={kagumo}
 						/>
 						<ScholarsCard
-							donated= {wallet2.length}
+							donated={wallet2.length}
 							funded='0'
 							fundsLeft='10'
 							schoolName="Mang'u High"
@@ -108,12 +113,12 @@ const ScholarshipPool: NextPage = () => {
 							nftsleft={kagumo}
 						/>
 						<ScholarsCard
-							donated= {wallet1.length}
+							donated={wallet1.length}
 							funded='0'
 							fundsLeft='10'
-							schoolName="MaryHill Girl's"
+							schoolName="MaryHill Girl's High"
 							schoolAlias="MaryHill Girl's High"
-							infoLink=''
+							infoLink='https://directed.notion.site/Maryhill-Girl-s-High-School-ef8ca3c4c9d94935bb882a18799b2485'
 							image='/static/images/mary-hill.jpg'
 							donateLink='/maryhill'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
@@ -125,7 +130,7 @@ const ScholarshipPool: NextPage = () => {
 							fundsLeft='5'
 							schoolName="Ngong Road Children's Foundation"
 							schoolAlias="Ngong Road Children's Foundation"
-							infoLink=''
+							infoLink='https://directed.notion.site/Ngong-Road-Children-s-Foundation-d206b373d6f146e5b7ed841ee8b5232f'
 							image='/static/images/ngong.jpg'
 							donateLink='/Ngong'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'

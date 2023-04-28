@@ -1,9 +1,8 @@
 export const data = [
-
 	// Data for Kagumo High
 	{
-		title: 'Jumbo Darlido',
-		image: '/static/images/Directed-Heros/Kagumo-Heros/Jumbo-Darlido.png',
+		title: 'Jumbo Kylwo',
+		image: '/static/images/Directed-Heros/Kagumo-Heros/Jumbo-Kylwo.png',
 		url: '',
 		school: 'kagumo',
 	},
@@ -14,8 +13,8 @@ export const data = [
 		school: 'kagumo',
 	},
 	{
-		title: 'Shishu Kylwo',
-		image: '/static/images/Directed-Heros/Kagumo-Heros/Shishu-Kylwo.png',
+		title: 'Shishu Darlido',
+		image: '/static/images/Directed-Heros/Kagumo-Heros/Shishu-Darlido.png',
 		url: '',
 		school: 'kagumo',
 	},
@@ -26,16 +25,16 @@ export const data = [
 		school: 'kagumo',
 	},
 	{
-		title: 'Zimba Laured',
-		image: '/static/images/Directed-Heros/Kagumo-Heros/Zimba-Laured.png',
+		title: 'Zimba Kalrak',
+		image: '/static/images/Directed-Heros/Kagumo-Heros/Zimba-Kalrak.png',
 		url: '',
 		school: 'kagumo',
 	},
-  
+
 	// Data for Mang'u High
 	{
-		title: 'Atilla Crimey',
-		image: '/static/images/Directed-Heros/Mangu-Heros/Atilla-Crimey.jpg',
+		title: 'Atilla Kajhel',
+		image: '/static/images/Directed-Heros/Mangu-Heros/Atilla-Kajhel.jpg',
 		url: '',
 		school: 'Mangu',
 	},
@@ -46,8 +45,8 @@ export const data = [
 		school: 'Mangu',
 	},
 	{
-		title: 'Ligaro Gacaha',
-		image: '/static/images/Directed-Heros/Mangu-Heros/Ligaro-Gacaha.png',
+		title: 'Ligaro Yanyali',
+		image: '/static/images/Directed-Heros/Mangu-Heros/Ligaro-Yanyali.png',
 		url: '',
 		school: 'Mangu',
 	},
@@ -118,6 +117,12 @@ export const data = [
 	{
 		title: 'Moja Nadka',
 		image: '/static/images/Directed-Heros/Ngong-Heros/Moja-Nadka.png',
+		url: '',
+		school: 'Ngong',
+	},
+	{
+		title: 'Tefra Kribair',
+		image: '/static/images/Directed-Heros/Ngong-Heros/Tefra-Kribair.png',
 		url: '',
 		school: 'Ngong',
 	},

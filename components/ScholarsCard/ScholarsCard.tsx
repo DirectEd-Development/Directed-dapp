@@ -42,7 +42,8 @@ const ScholarsCard = ({
 				<div className='scholars-card__title'>
 					<h3>{schoolName}</h3>
 					<span>
-						Access Stipends for {schoolAlias} students from low income families
+						Access Scholarship Pools for {schoolAlias} students from low income
+						families
 					</span>
 					<Link href={infoLink}>
 						<Button variant='link'>Learn More</Button>
