@@ -2,7 +2,7 @@ export const data = [
 	// Data for Kagumo High
 	{
 		title: 'Jumbo Kylwo',
-		image: '/static/images/Directed Heros/Kagumo-Heros/Jumbo-Kylwo.png',
+		image: '/static/images/Directed Royals/Kagumo-Royals/Jonako-Kariala.png',
 		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=6fffa74359984d2da882e256c453edd2',
 		school: 'kagumo',
 	},
