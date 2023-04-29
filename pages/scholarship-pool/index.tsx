@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
 import { Meta, DonorInfoTab, ScholarsCard } from '../../components'
 import Image from 'next/image'
-import { nftUpdate } from '../../lib/api/nftUpdate'
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 
@@ -99,7 +97,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='0'
+							funded='2'
 							fundsLeft='10'
 							schoolName="MaryHill Girl's High"
 							schoolAlias="MaryHill Girl's High"
@@ -107,7 +105,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/mary-hill.jpg'
 							donateLink='/maryhill'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft='7'
+							nftsleft='6'
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
