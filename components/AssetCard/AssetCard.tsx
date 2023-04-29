@@ -15,7 +15,7 @@ const AssetCard = ({ assets }: { assets: Assets[] }) => {
 						<div className='flex flex-col -space-y-0.5'>
 							<h5 className='text-center font-bold'>{asset.name}</h5>
 							<Link
-								href={`/legends/${asset.id}`}
+								href='/notAvailable'
 								className='text-[#374756] text-base text-center cursor-pointer'
 							>
 								Learn More

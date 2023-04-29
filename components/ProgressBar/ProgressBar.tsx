@@ -35,7 +35,10 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 			)
 		}
 		fetchBalance()
-		getPercentage()
+
+		setTimeout(() => {
+			getPercentage()
+		}, 1000)
 	}, [])
 
 	const getPercentage = () => {

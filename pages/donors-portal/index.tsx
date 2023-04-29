@@ -3,7 +3,10 @@ import { useWallet, useAssets } from '@meshsdk/react'
 import { AssetCard, Meta } from '../../components'
 import { data } from '../../data/assets'
 
-const POLICY_IDS = ['ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0', '2df82849a30577cbe3734f103d6d91f721c3508a45ca37955b768270'];
+const POLICY_IDS = [
+	'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0',
+	'2df82849a30577cbe3734f103d6d91f721c3508a45ca37955b768270',
+]
 
 export default function Home() {
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
@@ -15,17 +18,17 @@ export default function Home() {
 
 	const checkPolicyIdAssets = async () => {
 		if (connected && wallet) {
-		  let hasPolicyIdAssets = false; // No assets found with the given policy ID
-		  for (const policyId of POLICY_IDS) {
-			const assets = await wallet.getPolicyIdAssets(policyId);
-			if (assets.length > 0) {
-			  hasPolicyIdAssets = true; // Assets found with the given policy ID
-			  break;
+			let hasPolicyIdAssets = false // No assets found with the given policy ID
+			for (const policyId of POLICY_IDS) {
+				const assets = await wallet.getPolicyIdAssets(policyId)
+				if (assets.length > 0) {
+					hasPolicyIdAssets = true // Assets found with the given policy ID
+					break
+				}
 			}
-		  }
-		  setHasPolicyIdAssetsChecked(hasPolicyIdAssets);
+			setHasPolicyIdAssetsChecked(hasPolicyIdAssets)
 		}
-	}	  
+	}
 
 	const filteredAssets = data.filter((asset) => {
 		return asset.name.toLowerCase().includes(filterInput.toLowerCase()) // filter the assets based on the user's input
@@ -66,7 +69,7 @@ export default function Home() {
 					<>
 						<h3>You need to hold a DirectEd Lions NFT to access this page</h3>
 						<h4>
-							You get a DirectEd Lions NFT when you donate to a pool 
+							You get a DirectEd Lions NFT when you donate to a pool
 							<a href='https://app.directed.dev/scholarship-pool'> here. </a>
 						</h4>
 					</>

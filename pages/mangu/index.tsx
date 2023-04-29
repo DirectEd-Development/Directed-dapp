@@ -74,7 +74,6 @@ const Mangu: NextPage = () => {
 
 							<p>
 								<span>
-									{' '}
 									<Timer targetDay={29} targetMonth={4} targetYear={2023} />
 								</span>
 							</p>

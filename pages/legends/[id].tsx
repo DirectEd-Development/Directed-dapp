@@ -66,9 +66,14 @@ const Legend = () => {
 			))}
 		</>
 	) : (
-		<h3 className='donors-portal__no-donation'>
+		<div className='donors-portal__no-donation'>
+			<h3>You need to hold a DirectEd Lions NFT to access this page</h3>
+			<h4>
+				You get a DirectEd Lions NFT when you donate to a pool
+				<a href='https://app.directed.dev/scholarship-pool'> here. </a>
+			</h4>
 			Donate to a pool here to receive the token that unlocks this page!
-		</h3>
+		</div>
 	)
 }
 

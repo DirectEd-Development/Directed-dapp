@@ -11,6 +11,7 @@
 	&__milestone-progress {
 		height: 2.5rem;
 		background: var(--clr-primary-400);
+		transition: all 1s ease-in;
 	}
 
 	&__funds {
