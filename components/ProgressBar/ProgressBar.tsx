@@ -9,7 +9,7 @@ function WalletBalance({ balance }: WalletBalanceProps) {
 	return (
 		<div>
 			<p>
-				<b>₳{balance}</b>
+				<b>Multi-sig Balance: ₳{balance}</b>
 			</p>
 		</div>
 	)
