@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Meta, DonorInfoTab, ScholarsCard } from '../../components'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react' 
 
 
 interface TransactionCount {
@@ -9,9 +9,6 @@ interface TransactionCount {
 }
 
 const ScholarshipPool: NextPage = () => {
-//   const [kagumo, setFree] = useState();
-//   const [maryhill, setMaryhill] = useState(null);
-//   const [loading, setLoading] = useState(false);
   const [wallet1, setWallet1] = useState<TransactionCount[]>([]);
   const [wallet2, setWallet2] = useState<TransactionCount[]>([]);
 
@@ -97,7 +94,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='2'
+							funded='4'
 							fundsLeft='10'
 							schoolName="MaryHill Girl's High"
 							schoolAlias="MaryHill Girl's High"
@@ -105,7 +102,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/mary-hill.jpg'
 							donateLink='/maryhill'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft='6'
+							nftsleft='4'
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
@@ -117,7 +114,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/ngong.jpg'
 							donateLink='/Ngong'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft= '7'
+							nftsleft= '5'
 						/>
 					</div>
 				</section>

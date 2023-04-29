@@ -46,9 +46,6 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 
 		const percentage = (balance / totalAmount) * 100
 		setProgressCount(percentage)
-
-		// console.log(totalAmount)
-		// console.log(percentage)
 	}
 
 	return (
