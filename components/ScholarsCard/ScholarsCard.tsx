@@ -14,7 +14,7 @@ type ScholarsCardProps = {
 	image: string
 	donateLink: string
 	stakeAdd: string
-	nftsleft?: number | null
+	nftsleft?: string
 }
 
 const ScholarsCard = ({
