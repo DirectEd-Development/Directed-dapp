@@ -41,18 +41,6 @@ const ScholarshipPool: NextPage = () => {
 			})
 	}, [])
 
-	// // Get number of free nfts on nmkr for Maryhill x Ngong
-	// useEffect(() => {
-	//   const loadFree = async () => {
-	// 	try {
-	// 	  setLoading(true);
-	// 	  const response = await axios.get("/api/getUserRequest");
-	// 	  setFree(response.data);
-	// 	  setLoading(false);
-	// 	} catch { }
-	//   }
-	//   loadFree();
-	// }, [])
 	return (
 		<>
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
