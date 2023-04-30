@@ -191,24 +191,28 @@ export const data = [
 			"Yander was born into power. From a young age, he had power. His father was the king of Yoxa, and as his only son, Yander was destined to inherit the throne. Growing up, he was spoiled and indulged, given everything he desired, and taught that he was entitled to everything he wanted. However, his childhood was not entirely happy. Yander's mother died when he was young, and his father, who was consumed by grief, became increasingly distant and neglectful. Yander was left to the care of the palace staff, who indulged him but also feared his temper and tantrums. As he grew older, Yander became more and more ruthless. He had a cruel streak that he directed towards anyone who crossed him, and he was quick to anger and violence. He enjoyed watching others suffer and often ordered executions for minor offenses. Despite his father's attempts to rein him in, Yander continued to indulge in his worst impulses. He surrounded himself with sycophants and flatterers who encouraged his worst behavior, and he began to see himself as invincible, unbeatable, and all-powerful. When Yander finally ascended to the throne, he ruled with an iron fist. He imposed harsh laws and taxes on the people of Yoxa, and anyone who dared to speak out against him was quickly silenced. He became increasingly paranoid and mistrustful, even of his closest advisors, and relied on his own magical abilities to protect himself. It was during this time that Sahara's rebellion began to gain momentum. Yander saw Sahara as a threat to his power, but he also saw him as a personal enemy. He resented Sahara's popularity and the fact that he had been able to defy the Yoxan army and get away with it. When Sahara returned to Yoxa and challenged him, Yander was furious. He saw it as a personal insult and was determined to crush Sahara once and for all. He poured all of his magical power into the fight, but it was not enough. Sahara was too skilled, too determined, and too powerful. In the end, Yander was defeated, and his reign of terror came to an end. But even in death, his legacy lived on. Yoxa was forever changed by his rule, and the scars he left behind would take years to heal.",
 	},
 	{
+		id: 25,
 		name: 'Izbebraj Airode',
 		image: '/static/images/Directed Royals/Maryhill-Royals/Izbebraj-Airode.png',
 		caption: '',
 		description: '',
 	},
 	{
+		id: 26,
 		name: 'Mandar Kariala',
 		image: '/static/images/Directed Royals/Maryhill-Royals/Mandar-Kariala.png',
 		caption: '',
 		description: '',
 	},
 	{
+		id: 27,
 		name: 'Cehua Epkal',
 		image: '/static/images/Directed Royals/NRCF-Royals/Cehua-Epkal.png',
 		caption: '',
 		description: '',
 	},
 	{
+		id: 28,
 		name: 'Wada Teluji',
 		image: '/static/images/Directed Royals/NRCF-Royals/Wada-Teluji.png',
 		caption: '',
