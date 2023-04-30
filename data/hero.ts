@@ -62,6 +62,12 @@ export const data = [
 		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=e0bdbe3a98f0470f804035d6adc1f5a1',
 		school: 'Mangu',
 	},
+	{
+		title: 'Tefra Kribair',
+		image: '/static/images/Directed Heros/Mangu-Heros/Tefra-Kribair.png',
+		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=793d68a281214f6dac08b6454e40972e',
+		school: 'Mangu',
+	},
 
 	// Data for Maryhill
 	{
@@ -118,12 +124,6 @@ export const data = [
 		title: 'Moja Nadka',
 		image: '/static/images/Directed Heros/Ngong-Heros/Moja-Nadka.png',
 		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=92c94c93c92d45a7b80faedf4f61f339',
-		school: 'Ngong',
-	},
-	{
-		title: 'Tefra Kribair',
-		image: '/static/images/Directed Heros/Ngong-Heros/Tefra-Kribair.png',
-		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=793d68a281214f6dac08b6454e40972e',
 		school: 'Ngong',
 	},
 ]
