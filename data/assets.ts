@@ -131,7 +131,7 @@ export const data = [
 	{
 		id: 17,
 		name: 'Tefra Kribair',
-		image: '/static/images/Directed Heros/Ngong-Heros/Tefra-Kribair.png',
+		image: '/static/images/Directed Heros/Mangu-Heros/Tefra-Kribair.png',
 		caption: 'The Wrath of Tefra',
 		description:
 			"Tefra, born of a royal family but grew in solitude. This came to pass after the death of the king and queen due to human invasion. In the eleventh of the year when the celebrations of Tefra`s  birthday were at their peak, and everyone had lowered their guard, forgetting how valuable they were to the human kind, they were ambushed and a large number of them, including the king and queen were killed. Tefra was left to grow up all alone after the kingdom fell after that. Two hundred years later, Tefra is now at the peak of her strength and has two younger cubs. Having trained all her life due to the hardships she faced in the jungle she swore to protect both of her cubs and her kingdom would rise back to its former glory. However there were rumors that humans were quickly encroaching their land and planned to attack them, thus destroying them all and taking their land. Due to the rumors, Tefra became more Virgil and tried urging the others to join forces in order to fight the humans. Tefra was mocked by her friends who felt that she couldn’t let them leave alone to help save their kingdom. One as they were on their hunting expeditions, humans made their first strike. Tefra and her pride came back to a rude shock as most of their cubs had been killed and among them her two cubs were dead. Tefra was filled with wrath once she saw the bodies of her lifeless cubs. This drove Tefra to decide to face the humans on her own and stop her from doing any more to her kingdom. Tefra charged to the human village filled with courage and her roar announcing danger. When the pride saw her bravery they too followed her. Tefra organized her pride and through team work and determination, they managed to ward off the humans and save the jungle from the humans evil plan of destroying them. Tefras' story was known through the jungle and was later promoted to queen by the animals.",
@@ -159,5 +159,59 @@ export const data = [
 		caption: 'Kazu The Great',
 		description:
 			'Kazu. A name bestowed all glory for her heroic deeds. Abandoned and victimized during the great war, and still bears the scars of that war. Her nature encouraged her to be what she was, the greatest among her pride. After the great war, Kazu found herself among the orphaned cubs, and the elderly lions who were left to probe in pain of losing their loved ones. Through combined efforts, Kazu and the other lions worked towards building a new pride, a new empire that would command their share of respect. The pain of losing her husband and her children still made her feel the agony of not being able to help them. Peace prevailed in the society for a long time and they all enjoyed and cherished the harmony. Summer season was coming and the flowers bloomed. Marina the dreaded pride that rained terror on other small empires was advancing to other territories. Kazu knew well that despite the great war that rendered her kingdom powerless, Marina would still attack them. Kazu decided to avoid such a massacre that rendered their village a blood pool. Kazu set out to meet Lufi, Marinas leader, to have peace talks. She knew deep in her heart that she was putting her life on the death row but decided to look at the bigger picture Upon arriving at Marina, Kazu requested to speak to Lufi. Fear crippled but she decided to be brave. She spoke to Lufi and explained the importance of peaceful coexistence. Lufi called off the war and retrieved his troops from their territories. Returning back home, the villagers were proud of her for her heroic deed. She was indeed a heroine. She had brought an end to the great war.',
+	},
+	{
+		id: 21,
+		name: 'Jonako Kariala',
+		image: '/static/images/Directed Royals/Kagumo-Royals/Jonako-Kariala.png',
+		caption: '',
+		description: '',
+	},
+	{
+		id: 22,
+		name: 'Mirca Teluji',
+		image: '/static/images/Directed Royals/Kagumo-Royals/Mirca-Teluji.png',
+		caption: 'The Endeavors of King Mirca',
+		description:
+			"As he sat on his throne with a majestic posture and released an aura of authority, Mirca darted his eyes on the holy sceptre that bore a dragon's head and symbolized authority over the three realms, and could not believe that he had made it there. ‘’All hail king Mirca, all hail your Majesty;” roared the angels and deities and of the heavenly realm. It had not been a smooth journey for him to receive all that glory but he had to walk through fire to reach there. Before he was born, during the eleventh century, the Epkal state had been ruled by the vicious Faizal - a leader with ambition and hunger for power. The three major kingdoms at the time, Teluji, Kariala and Yoxa, had co-existed peacefully for decades when Faizal began his rebellion against his three masters. Faizal was successful. With his new technology and strategic mastermind, he defeated the major kingdomes one by one. Soon, the Epkal Kingdom had subjugated all of the other kingdoms. Faizal ruled barbarously for the next three decades, detaining the Gods of the other three kingdoms. But in prison, the goddess of Teluji, Queen Mother of the Snow, Metisa, conceived and bore a son, Mirca. In fear of the ruthlessness of King Faizal, she had to send her one and only son away. She named him Mirca and drained him through the heavenly gallows. Some slaves picked him up and decided to nurture him in his growth. He was very unique of course, from the others and he noticed the oppressive rule of Faizal’s soldiers. Slowly, he began advocating against them and began convincing the heroes of the realm that they needed to fight back. At the same time, Faizal’s thirst for power took him to go beyond the technologies he had mastered, and into the realm of dark magic. Faizal was preparing a spell that would sacrifice the Teluji Queen mother of the Snow in order to grant him more power. This was madness, and even the most loyal heroes of the realm could not stand this. Mirca was only a teenager but he bravely led the rebellion, and within a fortnight, the realm was filled with pools of blood and strewn bodies of soldiers. However, they had done it; they had slain Faizal who had wreaked havoc in their realm. It was time to rebuild their home again and that is when all heroes and bowed to the ground and worshipped Mirca as their new King. ‘’I swear on my name to protect this realm with my life.’’ He uttered. ‘’All hail Mirca;’’ they coated.",
+	},
+	{
+		id: 23,
+		name: 'Bahati Yoxa',
+		image: '/static/images/Directed Royals/Mangu-Royals/Bahati-Yoxa.png',
+		caption: '',
+		description: '',
+	},
+	{
+		id: 24,
+		name: 'Yander Yoxa',
+		image: '/static/images/Directed Royals/Mangu-Royals/Yander-Yoxa.png',
+		caption: '',
+		description:
+			"Yander was born into power. From a young age, he had power. His father was the king of Yoxa, and as his only son, Yander was destined to inherit the throne. Growing up, he was spoiled and indulged, given everything he desired, and taught that he was entitled to everything he wanted. However, his childhood was not entirely happy. Yander's mother died when he was young, and his father, who was consumed by grief, became increasingly distant and neglectful. Yander was left to the care of the palace staff, who indulged him but also feared his temper and tantrums. As he grew older, Yander became more and more ruthless. He had a cruel streak that he directed towards anyone who crossed him, and he was quick to anger and violence. He enjoyed watching others suffer and often ordered executions for minor offenses. Despite his father's attempts to rein him in, Yander continued to indulge in his worst impulses. He surrounded himself with sycophants and flatterers who encouraged his worst behavior, and he began to see himself as invincible, unbeatable, and all-powerful. When Yander finally ascended to the throne, he ruled with an iron fist. He imposed harsh laws and taxes on the people of Yoxa, and anyone who dared to speak out against him was quickly silenced. He became increasingly paranoid and mistrustful, even of his closest advisors, and relied on his own magical abilities to protect himself. It was during this time that Sahara's rebellion began to gain momentum. Yander saw Sahara as a threat to his power, but he also saw him as a personal enemy. He resented Sahara's popularity and the fact that he had been able to defy the Yoxan army and get away with it. When Sahara returned to Yoxa and challenged him, Yander was furious. He saw it as a personal insult and was determined to crush Sahara once and for all. He poured all of his magical power into the fight, but it was not enough. Sahara was too skilled, too determined, and too powerful. In the end, Yander was defeated, and his reign of terror came to an end. But even in death, his legacy lived on. Yoxa was forever changed by his rule, and the scars he left behind would take years to heal.",
+	},
+	{
+		name: 'Izbebraj Airode',
+		image: '/static/images/Directed Royals/Maryhill-Royals/Izbebraj-Airode.png',
+		caption: '',
+		description: '',
+	},
+	{
+		name: 'Mandar Kariala',
+		image: '/static/images/Directed Royals/Maryhill-Royals/Mandar-Kariala.png',
+		caption: '',
+		description: '',
+	},
+	{
+		name: 'Cehua Epkal',
+		image: '/static/images/Directed Royals/NRCF-Royals/Cehua-Epkal.png',
+		caption: '',
+		description: '',
+	},
+	{
+		name: 'Wada Teluji',
+		image: '/static/images/Directed Royals/NRCF-Royals/Wada-Teluji.png',
+		caption: '',
+		description: '',
 	},
 ]
