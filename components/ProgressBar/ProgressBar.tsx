@@ -7,7 +7,7 @@ type WalletBalanceProps = {
 }
 
 
-function WalletBalance({ balance }: WalletBalanceProps) {
+function WalletBalance({ balance, stakeAddress }: WalletBalanceProps) {
 	const text =
 		stakeAddress === "stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv"
 			? "Mang’u & Kagumo Total:"
@@ -39,14 +39,14 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 			const amountInAda = Math.floor(parseInt(res.controlled_amount) / 1000000)
 			const additionalAmount =
 				stakeAddress ===
-				'stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
+					'stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 					? 3100
 					: 0
 			setBalance(amountInAda + additionalAmount)
 			setAmountNeeded(
 				Math.max(
 					(Math.floor((amountInAda + additionalAmount) / 1000) + 1) * 1000 -
-						(amountInAda + additionalAmount),
+					(amountInAda + additionalAmount),
 					0
 				)
 			)
