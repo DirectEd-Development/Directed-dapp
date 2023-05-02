@@ -3,13 +3,21 @@ import { getWalletBalance } from '../Blockfrost/Blockfrost'
 
 type WalletBalanceProps = {
 	balance: number
+	stakeAddress: string
 }
 
+
 function WalletBalance({ balance }: WalletBalanceProps) {
+	const text =
+		stakeAddress === "stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv"
+			? "Mang’u & Kagumo Total:"
+			: stakeAddress === "stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9"
+				? "Maryhill x NRCF Total:"
+				: "";
 	return (
 		<div>
 			<p>
-				<b>Multi-sig Balance: ₳{balance}</b>
+				<b>{text} ₳{balance}</b>
 			</p>
 		</div>
 	)
@@ -62,7 +70,7 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 	return (
 		<div className='progress-bar'>
 			<div className='progress-bar__funds'>
-				<WalletBalance balance={balance} />
+				<WalletBalance balance={balance} stakeAddress={stakeAddress} />
 			</div>
 			<div className='progress-bar__milestone-bar'>
 				<div
