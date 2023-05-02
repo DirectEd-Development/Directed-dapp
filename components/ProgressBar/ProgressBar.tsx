@@ -3,13 +3,20 @@ import { getWalletBalance } from '../Blockfrost/Blockfrost'
 
 type WalletBalanceProps = {
 	balance: number
+	stakeAddress: string
 }
 
-function WalletBalance({ balance }: WalletBalanceProps) {
+function WalletBalance({ balance, stakeAddress }: WalletBalanceProps) {
+	const text =
+		stakeAddress === "stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv"
+			? "Mang’u & Kagumo Total:"
+			: stakeAddress === "stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9"
+				? "Maryhill x NRCF Total:"
+				: "";
 	return (
 		<div>
 			<p>
-				<b>Multi-sig Balance: ₳{balance}</b>
+				<b>{text} ₳{balance}</b>
 			</p>
 		</div>
 	)
@@ -27,7 +34,7 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 	useEffect(() => {
 		const fetchBalance = async () => {
 			const res = await getWalletBalance(stakeAddress)
-			
+
 			const amountInAda = Math.floor(parseInt(res.controlled_amount) / 1000000)
 			const additionalAmount = stakeAddress === 'stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv' ? 3100 : 0
 			setBalance(amountInAda + additionalAmount)
@@ -35,8 +42,8 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 				Math.max((Math.floor((amountInAda + additionalAmount) / 1000) + 1) * 1000 - (amountInAda + additionalAmount), 0)
 			)
 		}
-		
-		
+
+
 		fetchBalance()
 
 		setTimeout(() => {
@@ -54,7 +61,7 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 	return (
 		<div className='progress-bar'>
 			<div className='progress-bar__funds'>
-				<WalletBalance balance={balance} />
+				<WalletBalance balance={balance} stakeAddress={stakeAddress} />
 			</div>
 			<div className='progress-bar__milestone-bar'>
 				<div
