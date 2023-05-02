@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useWallet, useWalletList } from '@meshsdk/react'
 import Button from '../Button/Button'
-import { BsChevronDown } from 'react-icons/bs'
 import Dropdown from '../Dropdown/Dropdown'
 import Image from 'next/image'
 
@@ -11,10 +10,9 @@ interface Wallet {
 }
 
 const ConnectWallet = () => {
-	const { wallet, connect, disconnect, connecting } = useWallet()
+	const { connect, disconnect, connecting } = useWallet()
 	const wallets = useWalletList()
 
-	const [isOpen, setIsOpen] = useState(false)
 	const [selectedWallet, setSelectedWallet] = useState<Wallet | null>(null)
 
 	useEffect(() => {
@@ -25,15 +23,10 @@ const ConnectWallet = () => {
 		}
 	}, [])
 
-	const toggleDropdown = () => {
-		setIsOpen(!isOpen)
-	}
-
 	const handleWalletSelection = (wallet: Wallet) => {
 		localStorage.setItem('selectedWallet', JSON.stringify(wallet))
 		setSelectedWallet(wallet)
 		connect(wallet.name)
-		setIsOpen(false)
 	}
 
 	const handleDisconnect = () => {
