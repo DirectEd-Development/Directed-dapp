@@ -12,7 +12,7 @@ export default function Home() {
   const router = useRouter();
 
   const query = router.asPath.split("?")[1];
- 
+
 
   return (
     <>
@@ -22,23 +22,23 @@ export default function Home() {
       />
       <main className="nft-portal">
         <div className="nft-portal__filter"></div>
-          <>
-            <div className="nft-portal__assets">
-              <div className="nft-portal__assets_header">
+        <>
+          <div className="nft-portal__assets">
+            <div className="nft-portal__assets_header">
               <h3>Pick which Royal you’d like</h3>
               <Link href="/update-metadata">
-                <Button variant='primary'>Edit Metadata</Button>
+                <Button disabled variant='primary'>Edit Metadata</Button>
               </Link>
-              </div>
-              {data.filter(item => item.school === query).map((image: { title: string, image: string, url: string,  }, index: number) => (
-                <div key={index}>
-                  <a target="_blank" href={image.url}>
-                    <Image src={image.image} alt={image.title} width={200} height={200} />
-                  </a>
-                </div>
-              ))}
             </div>
-          </>
+            {data.filter(item => item.school === query).map((image: { title: string, image: string, url: string, }, index: number) => (
+              <div key={index}>
+                <a target="_blank" href={image.url}>
+                  <Image src={image.image} alt={image.title} width={200} height={200} />
+                </a>
+              </div>
+            ))}
+          </div>
+        </>
       </main>
     </>
   );
