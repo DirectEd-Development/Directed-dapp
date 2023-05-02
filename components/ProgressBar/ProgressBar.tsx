@@ -27,23 +27,31 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 	useEffect(() => {
 		const fetchBalance = async () => {
 			const res = await getWalletBalance(stakeAddress)
-			
+
 			const amountInAda = Math.floor(parseInt(res.controlled_amount) / 1000000)
-			const additionalAmount = stakeAddress === 'stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv' ? 3100 : 0
+			const additionalAmount =
+				stakeAddress ===
+				'stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
+					? 3100
+					: 0
 			setBalance(amountInAda + additionalAmount)
 			setAmountNeeded(
-				Math.max((Math.floor((amountInAda + additionalAmount) / 1000) + 1) * 1000 - (amountInAda + additionalAmount), 0)
+				Math.max(
+					(Math.floor((amountInAda + additionalAmount) / 1000) + 1) * 1000 -
+						(amountInAda + additionalAmount),
+					0
+				)
 			)
 		}
-		
-		
-		fetchBalance()
 
-		setTimeout(() => {
-			getPercentage()
-		}, 1000)
+		fetchBalance()
 	}, [])
 
+	console.log(balance)
+
+	setTimeout(() => {
+		getPercentage()
+	}, 1000)
 	const getPercentage = () => {
 		const totalAmount = balance + (amountNeeded !== null ? amountNeeded : 0)
 
