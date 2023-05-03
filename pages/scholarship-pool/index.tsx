@@ -16,6 +16,19 @@ const ScholarshipPool: NextPage = () => {
 	const closeModal = () => {
 		setIsOpen(false);
 	};
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleOpenModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
+	};
+
+	const handleReopenModal = () => {
+		setIsModalOpen(true);
+	};
 	const [wallet1, setWallet1] = useState<TransactionCount[]>([]);
 	const [wallet2, setWallet2] = useState<TransactionCount[]>([]);
 
@@ -50,10 +63,15 @@ const ScholarshipPool: NextPage = () => {
 
 	return (
 		<>
-			<PopupModal isOpen={isOpen} closeModal={closeModal} />
+			
+			<PopupModal isOpen={isModalOpen} closeModal={handleCloseModal} handleReopenModal={handleReopenModal} />
+			{isModalOpen && (
+				<button onClick={handleReopenModal}></button>
+			)}
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 			<main className='scholarship-pool container'>
 				<section className='scholarship-pool__title'>
+				<button onClick={handleOpenModal}><img src="/static/images/question_mark.png" alt="open modal icon" width="30px" height="30px" /></button>
 					<h3>How We Show Appreciation To Our Supporters</h3>
 					<DonorInfoTab />
 				</section>
