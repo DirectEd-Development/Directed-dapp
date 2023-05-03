@@ -70,7 +70,7 @@ const ScholarsCard = ({
 						/>
 						<span>
 							<span>Fundraising ends</span>
-							<span>on May 7th</span>
+							<span>on May 12th</span>
 						</span>
 					</div>
 					<div className='scholars-card__donors'>
