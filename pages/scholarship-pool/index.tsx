@@ -70,8 +70,8 @@ const ScholarshipPool: NextPage = () => {
 			)}
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 			<main className='scholarship-pool container'>
+				<button className='OpenButton' onClick={handleOpenModal}><img src="/static/images/question_mark.png" alt="open modal icon" width="30px" height="30px" /></button>
 				<section className='scholarship-pool__title'>
-				<button onClick={handleOpenModal}><img src="/static/images/question_mark.png" alt="open modal icon" width="30px" height="30px" /></button>
 					<h3>How We Show Appreciation To Our Supporters</h3>
 					<DonorInfoTab />
 				</section>

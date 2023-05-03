@@ -1,13 +1,16 @@
-.OpenButton {
-	background-color: transparent;
-}
-
-
 .scholarship-pool {
 	padding-top: 6rem;
 	padding-bottom: 4rem;
 	display: grid;
 	gap: 5rem;
+
+	.OpenButton {
+		background-color: transparent;
+		max-width: fit-content;
+		display: grid;
+		cursor: pointer;
+		justify-self: end;
+	}
 
 	&__title {
 		// font-size: var(--fs-700);
@@ -18,7 +21,7 @@
 		text-align: center;
 		padding-inline: 6rem;
 
-		& > * {
+		&>* {
 			margin: 3rem 0;
 		}
 	}
