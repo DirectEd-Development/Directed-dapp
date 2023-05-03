@@ -31,13 +31,13 @@ export const data = [
 	{
 		title: 'Izbebraj Airode',
 		image: '/static/images/Directed Royals/Maryhill-Royals/Izbebraj-Airode.png',
-		url: 'https://pay.nmkr.io/?p=1c73676dd6d04e8bb5e08d1eedd404ad&n=876f08619ee945e39ac7168a3cbb30f3',
+		url: '',
 		school: 'Maryhill',
 	},
 	{
 		title: 'Mandar Kariala',
 		image: '/static/images/Directed Royals/Maryhill-Royals/Mandar-Kariala.png',
-		url: 'https://pay.nmkr.io/?p=1c73676dd6d04e8bb5e08d1eedd404ad&n=0dfb40d884d549c3816f9e3098644eab',
+		url: '',
 		school: 'Maryhill',
 	},
 
@@ -51,7 +51,7 @@ export const data = [
 	{
 		title: 'Wada Teluji',
 		image: '/static/images/Directed Royals/NRCF-Royals/Wada-Teluji.png',
-		url: 'https://pay.nmkr.io/?p=1c73676dd6d04e8bb5e08d1eedd404ad&n=0482880594b74aa2afc81d157da1540c',
+		url: '',
 		school: 'Ngong',
 	},
 ]

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
 import { Button, Meta } from '../../components'
 import { useWallet, useWalletList } from '@meshsdk/react'
+import Survey from '../../components/Survey/Survey'
 // import useWallet from "../../contexts/wallet";
 // import { Transaction } from "@martifylabs/mesh";
 import { Transaction } from '@meshsdk/core'
@@ -170,6 +171,7 @@ const directeddonate: NextPage = () => {
 					and press "Donate Now" on one Access Stipend pools.
 				</h6>
 				</div>
+				<Survey />
 			</main>
 		</>
 	)

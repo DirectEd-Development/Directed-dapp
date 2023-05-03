@@ -3,19 +3,19 @@ export const data = [
 	{
 		title: 'Jumbo Kylwo',
 		image: '/static/images/Directed Heros/Kagumo-Heros/Jumbo-Kylwo.png',
-		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=6fffa74359984d2da882e256c453edd2',
+		url: '',
 		school: 'kagumo',
 	},
 	{
 		title: 'Sahara Mathi',
 		image: '/static/images/Directed Heros/Kagumo-Heros/Sahara-Mathi.png',
-		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=4ca32ffb50484ac19a3084b30dc7a4c1',
+		url: '',
 		school: 'kagumo',
 	},
 	{
 		title: 'Shishu Darlido',
 		image: '/static/images/Directed Heros/Kagumo-Heros/Shishu-Darlido.png',
-		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=99cd7206743942379aa82a8be9ada134',
+		url: '',
 		school: 'kagumo',
 	},
 	{
@@ -27,7 +27,7 @@ export const data = [
 	{
 		title: 'Zimba Kalrak',
 		image: '/static/images/Directed Heros/Kagumo-Heros/Zimba-Kalrak.png',
-		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=7e49624584eb46c489f37cfc1fc4971b',
+		url: '',
 		school: 'kagumo',
 	},
 
@@ -47,7 +47,7 @@ export const data = [
 	{
 		title: 'Ligaro Yanyali',
 		image: '/static/images/Directed Heros/Mangu-Heros/Ligaro-Yanyali.png',
-		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=bfd4618643fe46b19d6d94f4ad08e1c9',
+		url: '',
 		school: 'Mangu',
 	},
 	{
@@ -117,7 +117,7 @@ export const data = [
 	{
 		title: 'Kazu Stekin',
 		image: '/static/images/Directed Heros/Ngong-Heros/Kazu-Stekin.png',
-		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=ea9722c8d748408bae1c96e2bdfad811',
+		url: '',
 		school: 'Ngong',
 	},
 	{
