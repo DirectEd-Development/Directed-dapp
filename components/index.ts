@@ -29,4 +29,5 @@ export { default as Timer } from './Timer/Timer'
 export { default as MilestoneProgressBar } from './MilestoneProgressBar/MilestoneProgressBar'
 export { default as StudentMilestone } from './StudentMilestone/StudentMilestone'
 export { default as WalletBalance } from './WalletBalance/WalletBalance'
+export { default as Survey } from './Survey/Survey'
 

@@ -33,7 +33,7 @@ export default function Home() {
 									image: { title: string; image: string; url: string },
 									index: number
 								) => (
-									<div key={index}>
+									<div key={index} className={image.url ? 'nft-portal__asset' : 'nft-portal__asset disabled'}>
 										<a target='_blank' href={image.url}>
 											<Image
 												src={image.image}
