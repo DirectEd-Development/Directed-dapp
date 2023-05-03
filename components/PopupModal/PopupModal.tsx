@@ -4,6 +4,7 @@ import Modal from "react-modal";
 interface Props {
     isOpen: boolean;
     closeModal: () => void;
+    handleReopenModal: () => void;
 }
 
 const PopupModal: React.FC<Props> = ({ isOpen, closeModal }) => {
@@ -17,7 +18,7 @@ const PopupModal: React.FC<Props> = ({ isOpen, closeModal }) => {
             <button className="CloseButton" onClick={closeModal}>
                 Close
             </button>
-            <h4>How to donate and then unlock access to the donor's progress page</h4>
+            <h4>Never bought digital art collectible before?</h4>
             <div className="VideoWrapper">
                 <iframe
                     width="560"
