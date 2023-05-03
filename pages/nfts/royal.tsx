@@ -31,7 +31,7 @@ export default function Home() {
               </Link>
             </div>
             {data.filter(item => item.school === query).map((image: { title: string, image: string, url: string, }, index: number) => (
-              <div key={index}>
+              <div key={index} className={image.url ? 'nft-portal__asset' : 'nft-portal__asset disabled'}>
                 <a target="_blank" href={image.url}>
                   <Image src={image.image} alt={image.title} width={200} height={200} />
                 </a>
