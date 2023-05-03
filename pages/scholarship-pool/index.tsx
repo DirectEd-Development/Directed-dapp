@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import { Meta, DonorInfoTab, ScholarsCard } from '../../components'
 import Image from 'next/image'
-import { useEffect, useState } from 'react' 
+import { useEffect, useState } from 'react'
+import PopupModal from '../../components/PopupModal/PopupModal'
 
 
 interface TransactionCount {
@@ -9,8 +10,14 @@ interface TransactionCount {
 }
 
 const ScholarshipPool: NextPage = () => {
-  const [wallet1, setWallet1] = useState<TransactionCount[]>([]);
-  const [wallet2, setWallet2] = useState<TransactionCount[]>([]);
+
+	const [isOpen, setIsOpen] = useState<boolean>(true);
+
+	const closeModal = () => {
+		setIsOpen(false);
+	};
+	const [wallet1, setWallet1] = useState<TransactionCount[]>([]);
+	const [wallet2, setWallet2] = useState<TransactionCount[]>([]);
 
 	// Fetch number of transactions in a wallet address
 	useEffect(() => {
@@ -43,6 +50,7 @@ const ScholarshipPool: NextPage = () => {
 
 	return (
 		<>
+			<PopupModal isOpen={isOpen} closeModal={closeModal} />
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 			<main className='scholarship-pool container'>
 				<section className='scholarship-pool__title'>
@@ -102,7 +110,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/ngong.jpg'
 							donateLink='/Ngong'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft= '3'
+							nftsleft='3'
 						/>
 					</div>
 				</section>
