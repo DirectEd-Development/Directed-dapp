@@ -22,7 +22,7 @@ const Modal = forwardRef<ModalHandler, ModalProps>(({ children }, ref) => {
 	}
 
 	const close = (): void => {
-		setDisplay(true)
+		setDisplay(false)
 	}
 
 	if (display) {
