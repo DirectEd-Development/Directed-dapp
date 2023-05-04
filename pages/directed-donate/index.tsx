@@ -24,6 +24,7 @@ const directeddonate: NextPage = () => {
 	const [amount, setAmount] = useState('')
 	const [isCustom, setIsCustom] = useState(false)
 	const [confirm, setConfirm] = useState(false) // add confirm state
+	const [processing, setProcessing] = useState(false)
 
 
 	//modal refs
@@ -48,6 +49,7 @@ const directeddonate: NextPage = () => {
 	}
 
 	const handleDonate = async (send_amt: string) => {
+		setProcessing(true)
 		const convertLovelence = parseInt(send_amt) * 1000000
 		const sendLovelace = convertLovelence.toString()
 		if (connected) {
@@ -69,10 +71,14 @@ const directeddonate: NextPage = () => {
 					setConfirm(false) // reset confirm state after donation is sent
 				} catch (error: any) {
 					if (error.info) {
+						console.log(error.info)
 						alert(error.info)
 					} else {
 						console.log(error)
+						alert('Transaction failed')
 					}
+					setProcessing(false)
+
 				}
 			}
 			setLoading(false)
@@ -95,6 +101,7 @@ const directeddonate: NextPage = () => {
 			}
 	}, [successfulTxHash])
 
+	confirmRef.current?.openModal()
 
 
 	return (
@@ -158,19 +165,22 @@ const directeddonate: NextPage = () => {
 								<h4>Confirm Donation</h4>
 							</div>
 							<div className='donate__modal-body'>
-								<h5>Amount:</h5>
-								<p>₳{amount}</p>
+								<span className='amount'>
+								Amount: 
+								</span>
+								<span className="ada">
+								₳{amount}
+								</span>
 							</div>
 							<div className='donate__modal-footer'>
-								<Button variant='primary' onClick={() => handleDonate(amount)}>
-									Confirm
+								<Button
+								disabled={processing}
+								variant='primary' onClick={() => handleDonate(amount)}>
+									{processing ? 'Processing...' : 'Confirm'}
 								</Button>
-								<br />
 								<Button variant='primary' onClick={() =>{
 									setConfirm(false);
 									confirmRef.current?.closeModal();
-									alert('Donation Cancelled')
-
 								} }>
 									Cancel
 								</Button>

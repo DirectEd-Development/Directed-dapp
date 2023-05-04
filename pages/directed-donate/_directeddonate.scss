@@ -30,13 +30,7 @@
 	overflow-y: scroll;
 }
 
-.donate__modal-header{
-	text-align: center;
-}
 
-.donate__modal-footer{
-	margin-left: auto;
-}
 
 .donate__title-section {
 	& h3 {
@@ -108,6 +102,28 @@
 	transform: translate(-50%, -50%);
 	position: absolute;
 	width: 50rem;
-	height: 50rem;
-	
+	height: 30rem;
+	.donate__modal-header{
+		margin-top:2rem ;
+		display: flex;
+
+
+	}
+	.donate__modal-body{
+		font-size: 1.4rem;
+		.ada{
+			font-size: 1.8rem;
+			font-weight: bold;
+			margin-left: 1rem;
+		}
+
+		
+	}
+	.donate__modal-footer{
+		margin-top: 5rem;
+		display: flex;
+		gap: 1rem;
+
+		
+	}
 }
