@@ -1,28 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, Meta } from '../../components'
+import { Button, Meta, Modal } from '../../components'
 import { useWallet, useWalletList } from '@meshsdk/react'
 import Survey from '../../components/Survey/Survey'
 // import useWallet from "../../contexts/wallet";
 // import { Transaction } from "@martifylabs/mesh";
 import { Transaction } from '@meshsdk/core'
+import { ModalHandler} from '../../components/Modal/Modal'
 
+
+//modal
+// import { Modal} from 'reactstrap'
 const donationAddress =
-	'addr1qx35zqnw3e9x0y9cg0gw5c40e70fzx753tcaquec09qf254x73ej2wfrtpdyzdl402n34cux49k2ratgllkrcdfjpygqvdm6lz'
+		'addr_test1qrrft7n0pcscsqf3gfp3teh6c53uv3kq3wd6cwr8xhnthfyvkenauseet2g7ql02zwgl632a9p3uzd0k5skfyzsjk6gsg383v3'
 
 const amounts = ['1000', '300', '100']
 
 const directeddonate: NextPage = () => {
 	const [amountSent, setAmountSent] = useState('')
 	const [image, setImage] = useState<number | null>(null)
-	const [modal, setModal] = useState(false)
 	const [amount, setAmount] = useState('')
 	const [isCustom, setIsCustom] = useState(false)
 	const [confirm, setConfirm] = useState(false) // add confirm state
+
+
+	//modal refs
+	const feedbackRef = useRef<ModalHandler>(null)
+	const confirmRef = useRef<ModalHandler>(null)
+
+
+
 	const router = useRouter()
 	const { wallet, connect, disconnect, connecting, connected } = useWallet()
+
+
 
 	//   const { walletConnected, wallet } = useWallet();
 	const [successfulTxHash, setSuccessfulTxHash] = useState<string | null>(null)
@@ -30,6 +43,7 @@ const directeddonate: NextPage = () => {
 
 	const handleConfirm = () => {
 		setConfirm(true)
+		confirmRef.current?.openModal()
 		setIsCustom(false)
 	}
 
@@ -39,7 +53,7 @@ const directeddonate: NextPage = () => {
 		if (connected) {
 			setLoading(true)
 			const network = await wallet.getNetworkId()
-			if (network == 0) {
+			if (network == 1) {
 				alert('This dapp only works on Cardano Mainnet.')
 			} else {
 				const tx = new Transaction({ initiator: wallet }).sendLovelace(
@@ -69,7 +83,19 @@ const directeddonate: NextPage = () => {
 
 	const handleSent = () => {
 		router.push('/?from=donation')
+		feedbackRef.current?.closeModal
 	}
+	/*Listen for successful transaction hash and open modal*/
+
+	useEffect(
+		()=>{
+			if(successfulTxHash){
+				feedbackRef.current?.openModal()
+	
+			}
+	}, [successfulTxHash])
+
+
 
 	return (
 		<>
@@ -124,9 +150,10 @@ const directeddonate: NextPage = () => {
 					</div>
 				</div>
 
-				{confirm && (
+				<Modal 
+				ref={confirmRef}
+				>
 					<div className='donate__modal-container'>
-						<div className='donate__modal'>
 							<div className='donate__modal-header'>
 								<h4>Confirm Donation</h4>
 							</div>
@@ -139,16 +166,24 @@ const directeddonate: NextPage = () => {
 									Confirm
 								</Button>
 								<br />
-								<Button variant='primary' onClick={() => setConfirm(false)}>
+								<Button variant='primary' onClick={() =>{
+									setConfirm(false);
+									confirmRef.current?.closeModal();
+									alert('Donation Cancelled')
+
+								} }>
 									Cancel
 								</Button>
 							</div>
 						</div>
-					</div>
-				)}
-				{successfulTxHash && (
-					<div className='donate__modal-container'>
-						<div className='donate__modal'>
+				</Modal>
+	
+
+				<Modal 
+				ref={feedbackRef}
+				>
+				<div className='donate__modal-content'>
+			
 							<div className='donate__modal-header'>
 								<h4>Thank you for your donation!</h4>
 							</div>
@@ -159,11 +194,12 @@ const directeddonate: NextPage = () => {
 								<p>{successfulTxHash}</p>
 							</div>
 							<div className='donate__modal-footer'>
-								<Button onClick={handleSent}>Close</Button>
+								<Button onClick={handleSent} variant='outline' size='small' noShadow>X</Button>
 							</div>
+							<Survey/>
+
 						</div>
-					</div>
-				)}
+					</Modal>
 
 				<div>
 				<h6>Looking for the DirectEd Lions? Head over
@@ -171,7 +207,8 @@ const directeddonate: NextPage = () => {
 					and press "Donate Now" on one Access Stipend pools.
 				</h6>
 				</div>
-				<Survey />
+		
+
 			</main>
 		</>
 	)
