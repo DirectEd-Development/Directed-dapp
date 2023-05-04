@@ -17,20 +17,6 @@
 	}
 }
 
-.donate__modal {
-	display: flex;
-	justify-content: center;
-
-}
-
-.donate__modal-content{
-	background-color: var(--clr-accent-100);
-	height: fit-content;
-	width: 50rem;
-	overflow-y: scroll;
-}
-
-
 
 .donate__title-section {
 	& h3 {
@@ -89,8 +75,8 @@
 }
 
 
-//
-.donate__modal-container{
+
+.confirm__modal-content{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -103,13 +89,13 @@
 	position: absolute;
 	width: 50rem;
 	height: 30rem;
-	.donate__modal-header{
+	.confirm__modal-header{
 		margin-top:2rem ;
 		display: flex;
 
 
 	}
-	.donate__modal-body{
+	.confirm__modal-body{
 		font-size: 1.4rem;
 		.ada{
 			font-size: 1.8rem;
@@ -119,11 +105,102 @@
 
 		
 	}
-	.donate__modal-footer{
+	.confirm__modal-footer{
 		margin-top: 5rem;
 		display: flex;
 		gap: 1rem;
 
 		
+	}
+}
+
+.feedback__modal-content{
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 2rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 60rem;
+	height: 90vh;
+	overflow-y: scroll;
+	font-size: 1.4rem;
+	
+	.bold-text{
+		font-weight: bold;
+	}
+	
+	.close-modal-button{
+		position:absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 2rem;
+		cursor: pointer;
+		font-weight: bold;
+		
+
+	}
+
+
+	.feedback__modal-header{
+		margin-top:2rem ;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+		p{
+			word-wrap: normal;
+			.hash{
+				word-wrap:break-word ;
+			}
+		}
+		
+	}
+
+	.feedback__modal-body{
+		margin-top:2rem ;
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+
+		
+	}
+	.feedback__modal-footer{
+		margin-top: 5rem;
+		display: flex;
+		gap: 1rem;
+	}
+}
+
+
+
+.error__modal-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 2rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 50rem;
+	height: 30rem;
+	.error__modal-body{
+		font-size: 1.4rem;
+		text-align: center;
+	
+	}
+	.error__modal-footer{
+		margin-top: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
