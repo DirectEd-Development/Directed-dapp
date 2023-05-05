@@ -121,7 +121,6 @@ const ManguCard = ({
 								Invitation to the exclusive DirectEd Donor's Dinner in Oxford.
 							</li>
 							<li>
-								{' '}
 								<b>Nameplate</b> recognition in the school of the pool you
 								supported.
 							</li>
