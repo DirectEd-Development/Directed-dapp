@@ -32,6 +32,8 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 	const [amountNeeded, setAmountNeeded] = useState<number | null>(null)
 	const [progressCount, setProgressCount] = useState<number>(0)
 
+	const TOTAL_NEEDED = 10000
+
 	useEffect(() => {
 		const fetchBalance = async () => {
 			const res = await getWalletBalance(stakeAddress)
@@ -55,15 +57,14 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 		fetchBalance()
 	}, [])
 
-	console.log(balance)
-
 	setTimeout(() => {
 		getPercentage()
 	}, 1000)
-	const getPercentage = () => {
-		const totalAmount = balance + (amountNeeded !== null ? amountNeeded : 0)
 
-		const percentage = (balance / totalAmount) * 100
+	const getPercentage = () => {
+		// const totalAmount = balance + (amountNeeded !== null ? amountNeeded : 0)
+
+		const percentage = (balance / TOTAL_NEEDED) * 100
 		setProgressCount(percentage)
 	}
 
@@ -79,7 +80,7 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 				></div>
 			</div>
 			{amountNeeded !== null && (
-				<p>{`₳${amountNeeded} to the next scholarship`}</p>
+				<p>{`₳${TOTAL_NEEDED} to get to pool total`}</p>
 			)}
 		</div>
 	)
