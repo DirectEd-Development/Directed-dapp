@@ -1,0 +1,17 @@
+.asset-image {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
