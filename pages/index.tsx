@@ -49,8 +49,8 @@ const Home: NextPage = () => {
 				<section className='home__quote'>
 					<blockquote>
 						“There is not a meeting that I go to today with any CEOs or senior
-						executives of any organisation who’s not looking for more software
-						developer, more digital skills. That’s the currency in every sector
+						executives of any organisation who's not looking for more software
+						developers, more digital skills. That's the currency in every sector
 						of the economy in every economy in the world."
 					</blockquote>
 					<span>- Satya Nadella, CEO and chairman of Microsoft</span>
