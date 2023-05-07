@@ -56,8 +56,12 @@ const directeddonate: NextPage = () => {
 		if (connected) {
 			setLoading(true)
 			const network = await wallet.getNetworkId()
-			if (network == 1) {
-				alert('This dapp only works on Cardano Mainnet.')
+			if (network == 0) {
+				setErrorMessage('This dapp only works on Cardano Mainnet.')
+				errorRef.current?.openModal()
+				setConfirm(false) // reset confirm state after donation is sent
+				setProcessing(false)
+
 			} else {
 				const tx = new Transaction({ initiator: wallet }).sendLovelace(
 					donationAddress,
@@ -96,7 +100,10 @@ const directeddonate: NextPage = () => {
 			}
 			setLoading(false)
 		} else {
-			alert('Please connect a wallet.')
+			setErrorMessage('Please connect a wallet.')
+			errorRef.current?.openModal()
+			setProcessing(false)
+			setConfirm(false) // reset confirm state after donation is sent
 		}
 	}
 
