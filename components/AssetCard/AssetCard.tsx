@@ -11,16 +11,13 @@ const AssetCard = ({ assets }: { assets: Assets[] }) => {
 						<AssetImage imageSrc={asset.image} imageAlt={asset.name} />
 					</div>
 					{/* title, options and quantity */}
-					<div className='flex flex-col px-4 space-y-1'>
-						<div className='flex flex-col -space-y-0.5'>
-							<h5 className='text-center font-bold'>{asset.name}</h5>
+					<div className='assets-content'>
+							<h5 className='name'>{asset.name}</h5>
 							<Link
 								href='/notAvailable'
-								className='text-[#374756] text-base text-center cursor-pointer'
 							>
 								Learn More
 							</Link>
-						</div>
 					</div>
 				</div>
 			))}

@@ -60,9 +60,8 @@ export default function Home() {
 			/>
 			<main className='donors-portal'>
 				<div className='donors-portal__filter'></div>
-				{hasPolicyIdAssetsChecked ?
-			
-				 (
+			{hasPolicyIdAssetsChecked?
+				(
 					<>
 						<div className='donors-portal__assets'>
 							<div className='donors-portal__assets_header'>
