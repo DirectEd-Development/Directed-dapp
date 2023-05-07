@@ -22,12 +22,14 @@ const directeddonate: NextPage = () => {
 	const [isCustom, setIsCustom] = useState(false)
 	const [confirm, setConfirm] = useState(false)
 	const [processing, setProcessing] = useState(false)
+	
 
 
 	//modal refs
-	const feedbackRef = useRef<ModalHandler>(null)
+	const successRef = useRef<ModalHandler>(null)
 	const confirmRef = useRef<ModalHandler>(null)
 	const errorRef = useRef<ModalHandler>(null)
+	const feedbackRef = useRef<ModalHandler>(null)
 
 	//error message
 	const [errorMessage, setErrorMessage] = useState<string | null>(null)
@@ -72,7 +74,7 @@ const directeddonate: NextPage = () => {
 					const signedTx = await wallet.signTx(unsignedTx)
 					const txHash = await wallet.submitTx(signedTx)
 					setSuccessfulTxHash(txHash)
-					feedbackRef.current?.openModal()
+					successRef.current?.openModal()
 					setAmountSent(send_amt)
 					setConfirm(false) // reset confirm state after donation is sent
 					setProcessing(false)
@@ -106,6 +108,9 @@ const directeddonate: NextPage = () => {
 			setConfirm(false) // reset confirm state after donation is sent
 		}
 	}
+	// successRef.current?.openModal()
+	
+
 
 
 	return (
@@ -149,6 +154,7 @@ const directeddonate: NextPage = () => {
 							onChange={(e) => setAmount(e.target.value)}
 							value={amount}
 						/>
+
 					)}
 					<div className='donate__donate-btn'>
 						<Button
@@ -170,6 +176,11 @@ const directeddonate: NextPage = () => {
 					<a href="https://app.directed.dev/scholarship-pool"> here</a>
 					and press "Donate Now" on one Access Stipend pools.
 				</h6>
+				<h6>Help us improve the donation process!
+					<a onClick={() => feedbackRef.current?.openModal()}> Click here</a> to take a short survey.
+
+				</h6>
+
 				</div>
 
 
@@ -210,37 +221,20 @@ const directeddonate: NextPage = () => {
 						</div>
 				</Modal>
 				<Modal 
-				ref={feedbackRef}
+				ref={successRef}
 				>
-				<div className='feedback__modal-content'>
-					<button
-							className='close-modal-button'
-							onClick={() => {
-								setConfirm(false)
-								feedbackRef.current?.closeModal()
-								confirmRef.current?.closeModal();
-
-							}}
-						>
-							X
-						</button>
-			
+				<div className='success__modal-content'>
+		
 				
-							<div className='feedback__modal-header'>
-								<p>Thank you for your support! Your <span className='bold-text hash'> ₳{amountSent}</span> donation was well received. Trasaction Hash:<span className='bold-text'> {successfulTxHash}</span> . This will go far in supporting many dreams.</p>
+							<div className='success__modal-header'>
+								Thank you for your support! Your <span className='bold-text hash'> ₳{amountSent}</span> donation was well received. Trasaction Hash:<span className='bold-text'> {successfulTxHash}</span> . This will go far in supporting many dreams.
 							</div>
-							<div className='feedback__modal-body'>
-							<p>
-								We'd love to hear your experience on our platform.
-								Please fill out this survey to help us improve our donation process.
-								</p>
-								<Survey/>
-							</div>
-							<div className='feedback__modal-footer'>
+						
+							<div className='success__modal-footer'>
 								<Button
 								variant='primary' onClick={() => {
 									setConfirm(false)
-									feedbackRef.current?.closeModal()
+									successRef.current?.closeModal()
 									confirmRef.current?.closeModal();
 
 								}}>
@@ -270,6 +264,43 @@ const directeddonate: NextPage = () => {
 									}}
 								>
 									OK
+								</Button>
+							</div>
+						</div>
+					</Modal>
+					<Modal
+						ref={feedbackRef}
+						>
+		
+			
+						<div className='feedback__modal-content'>
+						<button
+							className='close-modal-button'
+							onClick={() => {
+								setConfirm(false)
+								feedbackRef.current?.closeModal()
+
+							}}
+						>
+							X
+						</button>
+							<div className="feedback__modal-header">
+								<h4>Help us improve the donation process!</h4>
+							</div>
+							<div className="feedback__modal-body">
+							<Survey/>
+
+							</div>
+
+							<div className="feedback__modal-footer">
+								<Button
+									variant='primary'
+									onClick={() => {
+										feedbackRef.current?.closeModal()
+										
+									}}
+								>
+									CLOSE
 								</Button>
 							</div>
 						</div>
