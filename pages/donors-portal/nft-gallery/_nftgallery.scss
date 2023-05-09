@@ -1,0 +1,136 @@
+@use "../../../styles/sass/abstracts/mixins" as *;
+
+.donors-portal {
+  padding: 2rem 1rem;
+
+  &__assets {
+    max-width: fit-content;
+    display: grid;
+    margin: 3rem auto;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+
+    @include mq(small) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    &_header {
+      grid-column: 1/-1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      input[type="text"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        width: 100%;
+        max-width: 150px;
+        margin-bottom: 20px;
+      }
+      input[type="text"]:focus {
+        outline: none;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+      div.filter {
+        display: flex;
+        align-items: right;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        button {
+          padding: 0.6rem 0.8rem;
+          background: rgb(167, 161, 161);
+          display: flex;
+          align-items: center;
+          border: 0;
+        }
+      }
+      @include mq(small) {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &__no-donation {
+    text-align: center;
+
+  }
+  & h4, h3 {
+    margin-top: auto;
+    text-align: center;
+    & a {
+		  padding: 0.5rem;
+		  display: inline-block;
+		  color:rgb(38, 38, 116);
+		  text-decoration: underline;
+		  text-underline-offset: 0.1em;
+		}
+  }
+  h2{
+    margin-right: 5rem;
+  }
+  .search-feedback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    button{
+      padding: 9px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      width: 100%;
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.feedback__modal-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 1rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 50rem;
+	height: 85vh;
+	overflow-y: scroll;
+	.close-modal-button{
+		position:absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 2rem;
+		cursor: pointer;
+		font-weight: bold;
+		
+
+	}
+	.feedback__modal-header{
+		margin-top:2rem ;
+		display: flex;
+	
+		
+		
+	}
+	.feedback__modal-body{
+		width: 100%;
+	
+	}
+	.feedback__modal-footer{
+		margin-top: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

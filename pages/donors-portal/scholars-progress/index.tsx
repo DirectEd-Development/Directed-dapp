@@ -1,9 +1,11 @@
-import { StudentMilestone } from '../../../components'
+import { DonorLayout, StudentMilestone } from '../../../components'
 
 type Props = {}
 
 const ScholarProgress = (props: Props) => {
 	return (
+		<DonorLayout>
+
 		<main className='scholar-progress'>
 			<h2>Scholars' Progress</h2>
 			<section>
@@ -18,6 +20,8 @@ const ScholarProgress = (props: Props) => {
 				</div>
 			</section>
 		</main>
+		</DonorLayout>
+
 	)
 }
 
