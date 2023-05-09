@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Layout from '../Layout/Layout'
 type LayoutProps = {
 	children: React.ReactNode
@@ -12,10 +13,10 @@ const DonorLayout = ({ children }: LayoutProps) => {
             <div className="donors__nav">
                 <div className="donors__nav-elements">
                     <div className="donors__nav-element">
-                    <a href="/donors-portal/nft-gallery">NFT Gallery</a>
+                    <Link href="/donors-portal/nft-gallery">NFT Gallery</Link>
                     </div>
                     <div className="donors__nav-element">
-                    <a href="/donors-portal/scholars-progress">Scholars' Progress</a>
+                    <Link href="/donors-portal/scholars-progress">Scholars' Progress</Link>
                     </div>
                 </div>
             </div>
