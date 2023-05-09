@@ -84,7 +84,7 @@ const ScholarshipPool: NextPage = () => {
 					<div className='scholarship-pool__potrait-cards'>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='5'
+							funded='7'
 							fundsLeft='10'
 							schoolName='Djed Scholars'
 							schoolAlias='Kagumo High'
@@ -96,7 +96,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='1'
+							funded='4'
 							fundsLeft='10'
 							schoolName="Mang'u High"
 							schoolAlias="Mang'u High"
@@ -104,11 +104,11 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/mangu.jpg'
 							donateLink='/mangu'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
-							nftsleft='6'
+							nftsleft='3'
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='4'
+							funded='9'
 							fundsLeft='10'
 							schoolName="MaryHill Girl's High"
 							schoolAlias="MaryHill Girl's High"
@@ -116,11 +116,11 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/mary-hill.jpg'
 							donateLink='/maryhill'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft='4'
+							nftsleft='1'
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='2'
+							funded='3'
 							fundsLeft='5'
 							schoolName="Ngong Road Children's Foundation"
 							schoolAlias="Ngong Road Children's Foundation"
@@ -128,7 +128,7 @@ const ScholarshipPool: NextPage = () => {
 							image='/static/images/ngong.jpg'
 							donateLink='/Ngong'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft='3'
+							nftsleft='6'
 						/>
 					</div>
 				</section>
