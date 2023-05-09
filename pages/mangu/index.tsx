@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
 import Timer from '../../components/Timer/Timer'
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
+import { Layout } from '../../components'
 
 const Mangu: NextPage = () => {
 	const [tier, setTier] = useState<OptionTiers | null>(null)
@@ -55,7 +56,7 @@ const Mangu: NextPage = () => {
 	}
 
 	return (
-		<>
+		<Layout>
 			<Meta title='Donate' description='Donate to student' />
 			<main className='donate container'>
 				<div className='donate__donations'>
@@ -136,7 +137,7 @@ const Mangu: NextPage = () => {
 					</div>
 				</div>
 			</main>
-		</>
+		</Layout>
 	)
 }
 

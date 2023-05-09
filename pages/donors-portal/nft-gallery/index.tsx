@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { useWallet, useAssets } from '@meshsdk/react'
-import { AssetCard, Meta,  Modal , Button } from '../../components'
-import { data } from '../../data/assets'
+import { AssetCard, Meta,  Modal , Button } from '../../../components'
+import { data } from '../../../data/assets'
 import {VscFeedback} from 'react-icons/vsc'
-import Survey from '../../components/Survey/Survey'
+import Survey from '../../../components/Survey/Survey'
+import {DonorLayout} from '../../../components'
 
-import { ModalHandler} from '../../components/Modal/Modal'
+import { ModalHandler} from '../../../components/Modal/Modal'
 
 const POLICY_IDS = [
 	'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0',
@@ -53,7 +54,7 @@ export default function Home() {
 
 
 	return (
-		<>
+		<DonorLayout>
 			<Meta
 				title="Donor's Portal"
 				description='Direced Ed donors portal page'
@@ -61,7 +62,8 @@ export default function Home() {
 			<main className='donors-portal'>
 				<div className='donors-portal__filter'></div>
 			{hasPolicyIdAssetsChecked?
-				(
+
+          (
 					<>
 						<div className='donors-portal__assets'>
 							<div className='donors-portal__assets_header'>
@@ -137,6 +139,6 @@ export default function Home() {
 						</div>
 					</Modal>
 
-		</>
+		</DonorLayout>
 	)
 }
