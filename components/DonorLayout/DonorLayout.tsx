@@ -7,14 +7,26 @@ type LayoutProps = {
 const DonorLayout = ({ children }: LayoutProps) => {
 	return (
         <Layout>
-            <div className="donor-nav">
-                <h2>Donor Nav</h2>
-                <ul>
-                    <li><a href="/donors-portal/nft-gallery">NFT Gallery</a></li>
-                    <li><a href="/donors-portal/scholars-progress">Progress</a></li>
-                </ul>
+            <div className="donors__content">
+
+            <div className="donors__nav">
+                <div className="donors__nav-elements">
+                    <div className="donors__nav-element">
+                    <a href="/donors-portal/nft-gallery">NFT Gallery</a>
+                    </div>
+                    <div className="donors__nav-element">
+                    <a href="/donors-portal/scholars-progress">Scholars' Progress</a>
+                    </div>
+                </div>
             </div>
-            <>{children}</>
+            <div className="donors__children">
+                {
+                    children
+                }
+
+            </div>
+            </div>
+
         </Layout>
 		
 	)
