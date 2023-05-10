@@ -23,7 +23,7 @@ export const data = [
 	{
 		title: 'Yander Yoxa',
 		image: '/static/images/Directed Royals/Mangu-Royals/Yander-Yoxa.png',
-		url: 'https://pay.nmkr.io/?p=ed7a0468943242918de5cfba4fe8766d&n=35f0f92b85b145209eef074f2e8271f1',
+		url: '',
 		school: 'Mangu',
 	},
 
