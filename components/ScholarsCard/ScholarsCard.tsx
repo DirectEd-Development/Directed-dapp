@@ -87,7 +87,7 @@ const ScholarsCard = ({
 					</div>
 				</div>
 
-				<ProgressBar stakeAddress={stakeAdd} />
+				{/* <ProgressBar stakeAddress={stakeAdd} /> */}
 				<Link href={donateLink}>
 					<Button variant='primary'>Donate Now</Button>
 				</Link>
