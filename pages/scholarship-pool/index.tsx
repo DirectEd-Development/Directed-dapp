@@ -84,7 +84,7 @@ const ScholarshipPool: NextPage = () => {
 					<div className='scholarship-pool__potrait-cards'>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='4'
+							funded='3'
 							fundsLeft='3'
 							schoolName='Djed Scholars'
 							schoolAlias='Kagumo High'
@@ -96,7 +96,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='3'
+							funded='1'
 							fundsLeft='4'
 							schoolName="Mang'u High"
 							schoolAlias="Mang'u High"
@@ -108,7 +108,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='4'
+							funded='2'
 							fundsLeft='2'
 							schoolName="MaryHill Girl's High"
 							schoolAlias="MaryHill Girl's High"
@@ -120,8 +120,8 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='3'
-							fundsLeft='9'
+							funded='2'
+							fundsLeft='12'
 							schoolName="Ngong Road Children's Foundation"
 							schoolAlias="Ngong Road Children's Foundation"
 							infoLink='https://directed.notion.site/Ngong-Road-Children-s-Foundation-d206b373d6f146e5b7ed841ee8b5232f'
