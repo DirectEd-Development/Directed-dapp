@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button, Meta } from '../components'
+import { Button, Meta , Layout} from '../components'
 
 const Home: NextPage = () => {
 	return (
-		<>
+		<Layout>
 			<Meta
 				title='DirectEd Homepage'
 				description='For a world in which any person can realise their full potential,regardless of their draw in the lottery of life.'
@@ -451,7 +451,7 @@ const Home: NextPage = () => {
 					</div>
 				</section>
 			</main>
-		</>
+		</Layout>
 	)
 }
 

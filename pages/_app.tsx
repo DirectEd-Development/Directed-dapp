@@ -40,16 +40,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<Provider store={store}>
 			<MeshProvider>
 				<DefaultSeo {...SEO} />
-				<Layout>
 					{breakpoint === 'lg' ? (
 						<Component {...pageProps} />
 					) : (
+						<Layout>
 						<h3 style={{ textAlign: 'center', padding: '10rem' }}>
 							The mobile version of the donation portal is under development,
 							please visit this page on your computer.
 						</h3>
+						</Layout>
 					)}
-				</Layout>
 			</MeshProvider>
 		</Provider>
 	)

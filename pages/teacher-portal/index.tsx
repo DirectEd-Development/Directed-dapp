@@ -1,5 +1,6 @@
 import { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
+import { Layout } from '../../components'
 
 import {
 	CircularProgressBar,
@@ -18,7 +19,7 @@ const TeacherPortal: NextPage<{ studentData: Student[] }> = ({
 	}
 
 	return (
-		<>
+		<Layout>
 			<Head>
 				a<title>Teacher's Portal</title>
 				<link rel='icon' href='/favicon.ico' />
@@ -54,7 +55,7 @@ const TeacherPortal: NextPage<{ studentData: Student[] }> = ({
 					</div>
 				</div>
 			</main>
-		</>
+		</Layout>
 	)
 }
 

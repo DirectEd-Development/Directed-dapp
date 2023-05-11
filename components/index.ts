@@ -30,4 +30,5 @@ export { default as MilestoneProgressBar } from './MilestoneProgressBar/Mileston
 export { default as StudentMilestone } from './StudentMilestone/StudentMilestone'
 export { default as WalletBalance } from './WalletBalance/WalletBalance'
 export { default as Survey } from './Survey/Survey'
+export {default as  DonorLayout} from './DonorLayout/DonorLayout'
 

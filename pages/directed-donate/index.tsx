@@ -9,6 +9,7 @@ import Survey from '../../components/Survey/Survey'
 
 import { Transaction } from '@meshsdk/core'
 import { ModalHandler} from '../../components/Modal/Modal'
+import {Layout} from '../../components'
 
 const donationAddress =
 		'addr_test1qrrft7n0pcscsqf3gfp3teh6c53uv3kq3wd6cwr8xhnthfyvkenauseet2g7ql02zwgl632a9p3uzd0k5skfyzsjk6gsg383v3'
@@ -114,7 +115,7 @@ const directeddonate: NextPage = () => {
 
 
 	return (
-		<>
+		<Layout>
 			<Meta title='Donate' description='Donate to student.' />
 			<main className='donate-container text-center'>
 				<div className='donate__title-section'>
@@ -306,7 +307,7 @@ const directeddonate: NextPage = () => {
 						</div>
 					</Modal>
 
-		</>
+		</Layout>
 	)
 }
 
