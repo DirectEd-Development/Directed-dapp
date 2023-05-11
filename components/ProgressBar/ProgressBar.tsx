@@ -42,7 +42,7 @@ const ProgressBar = ({ stakeAddress }: ProgressBarProps) => {
 			const additionalAmount =
 				stakeAddress ===
 					'stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
-					? 3100
+					? 7100
 					: 0
 			setBalance(amountInAda + additionalAmount)
 			setAmountNeeded(

@@ -96,8 +96,8 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='4'
-							fundsLeft='10'
+							funded='3'
+							fundsLeft='4'
 							schoolName="Mang'u High"
 							schoolAlias="Mang'u High"
 							infoLink='https://directed.notion.site/Mang-u-High-30fe2b6847864743b579dfd38f0d4f46'
