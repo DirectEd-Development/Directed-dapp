@@ -3,7 +3,7 @@ import { useWallet, useAssets } from '@meshsdk/react'
 import { useRouter } from 'next/router'
 import { data } from '../../data/assets'
 import Image from 'next/image'
-import { Meta } from '../../components'
+import { Meta, Layout } from '../../components'
 import { FaChevronLeft } from 'react-icons/fa'
 
 const Legend = () => {
@@ -34,7 +34,7 @@ const Legend = () => {
 	}
 
 	return hasPolicyIdAssetsChecked ? (
-		<>
+		<Layout>
 			{singleAsset.map((asset) => (
 				<div className='legend' key={asset.id}>
 					<Meta title={asset.name} description={asset.caption} />
@@ -64,8 +64,10 @@ const Legend = () => {
 					</div>
 				</div>
 			))}
-		</>
+		</Layout>
 	) : (
+		<Layout>
+
 		<div className='donors-portal__no-donation'>
 			<h3>You need to hold a DirectEd Lions NFT to access this page</h3>
 			<h4>
@@ -74,6 +76,7 @@ const Legend = () => {
 			</h4>
 			Donate to a pool here to receive the token that unlocks this page!
 		</div>
+		</Layout>
 	)
 }
 

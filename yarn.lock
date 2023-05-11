@@ -1333,7 +1333,7 @@
   "resolved" "https://registry.npmjs.org/react-hotjar/-/react-hotjar-5.5.0.tgz"
   "version" "5.5.0"
 
-"react-icons@^4.4.0":
+"react-icons@^4.8.0":
   "integrity" "sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.8.0.tgz"
   "version" "4.8.0"

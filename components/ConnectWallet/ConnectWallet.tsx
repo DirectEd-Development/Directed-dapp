@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useWallet, useWalletList } from '@meshsdk/react'
 import Button from '../Button/Button'
 import Dropdown from '../Dropdown/Dropdown'
 import Image from 'next/image'
+import {ModalHandler} from '../Modal/Modal'
+import Modal from '../Modal/Modal'
 
 interface Wallet {
 	name: string
@@ -14,6 +16,11 @@ const ConnectWallet = () => {
 	const wallets = useWalletList()
 
 	const [selectedWallet, setSelectedWallet] = useState<Wallet | null>(null)
+	const [connectionError, setConnectionError] = useState<string | null>(null)
+
+	//error ref
+	const errorRef = useRef<ModalHandler>(null)
+
 
 	useEffect(() => {
 		const storedWallet = localStorage.getItem('selectedWallet')
@@ -23,10 +30,16 @@ const ConnectWallet = () => {
 		}
 	}, [])
 
-	const handleWalletSelection = (wallet: Wallet) => {
-		localStorage.setItem('selectedWallet', JSON.stringify(wallet))
-		setSelectedWallet(wallet)
-		connect(wallet.name)
+	const handleWalletSelection = async (wallet: Wallet) => {
+		try {
+			localStorage.setItem('selectedWallet', JSON.stringify(wallet))
+			setSelectedWallet(wallet)
+			await connect(wallet.name)
+			setConnectionError(null)
+		} catch (error: any) {
+			setConnectionError(error.message)
+			errorRef.current?.openModal()
+		}
 	}
 
 	const handleDisconnect = () => {
@@ -88,6 +101,28 @@ const ConnectWallet = () => {
 					</div>
 				)}
 			</div>
+			<Modal
+						ref={errorRef}
+						>
+							<div className="error__modal-content">
+
+						
+							<div className='modal__title'>
+								<h4>Wallet connection error</h4>
+							</div>
+							<div className='modal__content'>
+								<p>{connectionError}</p>
+							</div>
+
+							<div className='modal__button'>
+								<Button variant='primary' onClick={() => errorRef.current?.closeModal()}>
+									Okay
+								</Button>
+							</div>
+							</div>
+
+
+						</Modal>
 		</Dropdown>
 	)
 }

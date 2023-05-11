@@ -1,7 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useWallet, useAssets } from '@meshsdk/react'
-import { AssetCard, Meta } from '../../components'
-import { data } from '../../data/assets'
+import { AssetCard, Meta,  Modal , Button } from '../../../components'
+import { data } from '../../../data/assets'
+import {VscFeedback} from 'react-icons/vsc'
+import Survey from '../../../components/Survey/Survey'
+import {DonorLayout} from '../../../components'
+
+import { ModalHandler} from '../../../components/Modal/Modal'
 
 const POLICY_IDS = [
 	'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0',
@@ -15,6 +20,10 @@ export default function Home() {
 	const [filterInput, setFilterInput] = useState<string>('') // state to hold the user's filter input
 	const { connected, wallet } = useWallet()
 	const assets: any = useAssets()
+
+	//modal refs
+	const feedbackRef = useRef<ModalHandler>(null)
+
 
 	const checkPolicyIdAssets = async () => {
 		if (connected && wallet) {
@@ -42,25 +51,43 @@ export default function Home() {
 		setFilterInput(event.target.value) // update the state with the user's input
 	}
 
+
+
 	return (
-		<>
+		<DonorLayout>
 			<Meta
 				title="Donor's Portal"
 				description='Direced Ed donors portal page'
 			/>
 			<main className='donors-portal'>
 				<div className='donors-portal__filter'></div>
-				{hasPolicyIdAssetsChecked ? (
+			{hasPolicyIdAssetsChecked?
+
+          (
 					<>
 						<div className='donors-portal__assets'>
 							<div className='donors-portal__assets_header'>
 								<h2>DirectEd Legacy Collection Gallery</h2>
+								<div
+								className='search-feedback'
+								>
 								<input
 									type='text'
 									placeholder='Filter assets'
 									value={filterInput}
 									onChange={handleFilterInput}
 								/>
+								<button
+									className='feedback-button'
+									onClick={() => {
+										feedbackRef.current?.openModal()
+									}}
+								>
+									Feedback <VscFeedback />
+								</button>
+
+								</div>
+
 							</div>
 							<AssetCard assets={filteredAssets} />
 						</div>
@@ -75,6 +102,43 @@ export default function Home() {
 					</>
 				)}
 			</main>
-		</>
+			<Modal
+						ref={feedbackRef}
+						>
+		
+			
+						<div className='feedback__modal-content'>
+						<button
+							className='close-modal-button'
+							onClick={() => {
+								feedbackRef.current?.closeModal()
+
+							}}
+						>
+							X
+						</button>
+							<div className="feedback__modal-header">
+								<h4>Help us improve the donation process!</h4>
+							</div>
+							<div className="feedback__modal-body">
+							<Survey/>
+
+							</div>
+
+							<div className="feedback__modal-footer">
+								<Button
+									variant='primary'
+									onClick={() => {
+										feedbackRef.current?.closeModal()
+										
+									}}
+								>
+									CLOSE
+								</Button>
+							</div>
+						</div>
+					</Modal>
+
+		</DonorLayout>
 	)
 }

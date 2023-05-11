@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Layout } from '../../components';
 
 interface Transaction {
   tx_hash: string;
@@ -31,6 +32,8 @@ const blockfrost = () => {
   }, []);
 
   return (
+    <Layout>
+
     <div>
       <h1>Last 10 Transactions</h1>
       <p>Maryhill x Ngong Transactions: {transactions1.length}</p>
@@ -46,6 +49,8 @@ const blockfrost = () => {
         </div>
       ))} */}
     </div>
+    </Layout>
+
   );
 };
 

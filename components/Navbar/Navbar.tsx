@@ -12,9 +12,7 @@ type LinksType = {
 const NavLinks: LinksType[] = [
 	{ title: 'Home', link: '/' },
 	{ title: 'Scholarship Crowdfunding', link: '/scholarship-pool' },
-	// { title: "Teacher's Portal", link: '/teacher-portal' },
-	{ title: 'Scholar’s Progress', link: '/progress' },
-	{ title: 'Donors Page', link: '/donors-portal' },
+	{ title: "Donor's Portal", link: '/donors-portal/nft-gallery' },
 ]
 
 const Navbar = () => {

@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button, Meta } from '../components'
+import { Button, Meta , Layout} from '../components'
 
 const Home: NextPage = () => {
 	return (
-		<>
+		<Layout>
 			<Meta
 				title='DirectEd Homepage'
 				description='For a world in which any person can realise their full potential,regardless of their draw in the lottery of life.'
@@ -49,8 +49,8 @@ const Home: NextPage = () => {
 				<section className='home__quote'>
 					<blockquote>
 						“There is not a meeting that I go to today with any CEOs or senior
-						executives of any organisation who’s not looking for more software
-						developer, more digital skills. That’s the currency in every sector
+						executives of any organisation who's not looking for more software
+						developers, more digital skills. That's the currency in every sector
 						of the economy in every economy in the world."
 					</blockquote>
 					<span>- Satya Nadella, CEO and chairman of Microsoft</span>
@@ -451,7 +451,7 @@ const Home: NextPage = () => {
 					</div>
 				</section>
 			</main>
-		</>
+		</Layout>
 	)
 }
 

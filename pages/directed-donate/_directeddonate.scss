@@ -3,7 +3,7 @@
 .donate-container {
 	padding: 2rem 1rem;
 	& h6 {
-		margin-top: 3rem;
+		margin-top: 1rem;
 		text-align: center;
 		font-size: large;
 
@@ -13,6 +13,7 @@
 			color:rgb(38, 38, 116);
 			text-decoration: underline;
 			text-underline-offset: 0.1em;
+			cursor: pointer;
 		  }
 	}
 }
@@ -114,7 +115,7 @@
 	}
 }
 
-.feedback__modal-content{
+.success__modal-content{
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
@@ -126,52 +127,39 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	position: absolute;
-	width: 60rem;
-	height: 90vh;
-	overflow-y: scroll;
-	font-size: 1.4rem;
+	flex-wrap: wrap;
+	width: 80rem;
+	height:50vh;
+	font-size: 1.6rem;
 	
 	.bold-text{
 		font-weight: bold;
 	}
 	
-	.close-modal-button{
-		position:absolute;
-		top: 1rem;
-		right: 1rem;
-		font-size: 2rem;
-		cursor: pointer;
-		font-weight: bold;
-		
-
-	}
 
 
-	.feedback__modal-header{
+
+	.success__modal-header{
 		margin-top:2rem ;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 1rem;
-		p{
+		display: inline-block;
+
 			word-wrap: normal;
+			overflow-wrap: normal;
+			font-size: 1.8rem;
 			.hash{
 				word-wrap:break-word ;
 			}
-		}
+		
 		
 	}
 
-	.feedback__modal-body{
-		margin-top:2rem ;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
 
-		
-	}
-	.feedback__modal-footer{
-		margin-top: 5rem;
+	.success__modal-footer{
+		margin-top: 2rem;
 		display: flex;
 		gap: 1rem;
 	}
@@ -199,6 +187,50 @@
 	}
 	.error__modal-footer{
 		margin-top: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+
+.feedback__modal-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 1rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 50rem;
+	height: 85vh;
+	overflow-y: scroll;
+	.close-modal-button{
+		position:absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 2rem;
+		cursor: pointer;
+		font-weight: bold;
+		
+
+	}
+	.feedback__modal-header{
+		margin-top:2rem ;
+		display: flex;
+	
+		
+		
+	}
+	.feedback__modal-body{
+		width: 100%;
+	
+	}
+	.feedback__modal-footer{
+		margin-top: 1rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
