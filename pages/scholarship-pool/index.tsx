@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Meta, DonorInfoTab, ScholarsCard } from '../../components'
+import { Meta, DonorInfoTab, ScholarsCard, Layout } from '../../components'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
@@ -62,7 +62,7 @@ const ScholarshipPool: NextPage = () => {
 	}, [])
 
 	return (
-		<>
+		<Layout>
 			
 			<PopupModal isOpen={isModalOpen} closeModal={handleCloseModal} handleReopenModal={handleReopenModal} />
 			{isModalOpen && (
@@ -180,7 +180,7 @@ const ScholarshipPool: NextPage = () => {
 					))}
 				</section> */}
 			</main>
-		</>
+		</Layout>
 	)
 }
 
