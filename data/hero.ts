@@ -21,7 +21,7 @@ export const data = [
 	{
 		title: 'Tanya Naigu',
 		image: '/static/images/Directed Heros/Kagumo-Heros/Tanya-Naigu.png',
-		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=fac7c0827bb1413ab31413f1e9c22617',
+		url: '',
 		school: 'kagumo',
 	},
 	{
