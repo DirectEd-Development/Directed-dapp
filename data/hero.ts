@@ -21,7 +21,7 @@ export const data = [
 	{
 		title: 'Tanya Naigu',
 		image: '/static/images/Directed Heros/Kagumo-Heros/Tanya-Naigu.png',
-		url: 'https://pay.nmkr.io/?p=528af4d0868a4442b5e2caedd3979813&n=fac7c0827bb1413ab31413f1e9c22617',
+		url: '',
 		school: 'kagumo',
 	},
 	{
@@ -70,12 +70,7 @@ export const data = [
 	},
 
 	// Data for Maryhill
-	{
-		title: 'Kaleen Adrus',
-		image: '/static/images/Directed Heros/Maryhill-Heros/Kaleen-Adrus.jpg',
-		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=36597c50379f4d0d8a01975224dc4f6f',
-		school: 'Maryhill',
-	},
+	
 	{
 		title: 'Kola Alfmoe',
 		image: '/static/images/Directed Heros/Maryhill-Heros/Kola-Alfmoe.jpg',
@@ -86,12 +81,6 @@ export const data = [
 		title: 'Locan Fabela',
 		image: '/static/images/Directed Heros/Maryhill-Heros/Locan-Fabela.png',
 		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=91952ec08b0940b2b56b14e6a6411105',
-		school: 'Maryhill',
-	},
-	{
-		title: 'Nemea Colecha',
-		image: '/static/images/Directed Heros/Maryhill-Heros/Nemea-Colecha.png',
-		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=00ccfb9675294e148ff94f75b2dc8422',
 		school: 'Maryhill',
 	},
 	{
@@ -125,5 +114,17 @@ export const data = [
 		image: '/static/images/Directed Heros/Ngong-Heros/Moja-Nadka.png',
 		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=92c94c93c92d45a7b80faedf4f61f339',
 		school: 'Ngong',
+	},
+	{
+		title: 'Kaleen Adrus',
+		image: '/static/images/Directed Heros/Maryhill-Heros/Kaleen-Adrus.jpg',
+		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=36597c50379f4d0d8a01975224dc4f6f',
+		school: 'Maryhill',
+	},
+	{
+		title: 'Nemea Colecha',
+		image: '/static/images/Directed Heros/Maryhill-Heros/Nemea-Colecha.png',
+		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=00ccfb9675294e148ff94f75b2dc8422',
+		school: 'Maryhill',
 	},
 ]
