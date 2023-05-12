@@ -3,13 +3,13 @@ export const data = [
 	{
 		title: 'Jonako Kariala',
 		image: '/static/images/Directed Royals/Kagumo-Royals/Jonako-Kariala.png',
-		url: 'https://pay.nmkr.io/?p=ed7a0468943242918de5cfba4fe8766d&n=494bc66095c9465d88b288c71fd42913',
+		url: '',
 		school: 'kagumo',
 	},
 	{
 		title: 'Mirca Teluji',
 		image: '/static/images/Directed Royals/Kagumo-Royals/Mirca-Teluji.png',
-		url: 'https://pay.nmkr.io/?p=ed7a0468943242918de5cfba4fe8766d&n=064b9926332b493585391e174d2bafd4',
+		url: '',
 		school: 'kagumo',
 	},
 
@@ -17,7 +17,7 @@ export const data = [
 	{
 		title: 'Bahati Yoxa',
 		image: '/static/images/Directed Royals/Mangu-Royals/Bahati-Yoxa.png',
-		url: 'https://pay.nmkr.io/?p=ed7a0468943242918de5cfba4fe8766d&n=75a469cf3a8f4a29a7f546b638ebe15b',
+		url: '',
 		school: 'Mangu',
 	},
 	{
