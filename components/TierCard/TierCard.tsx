@@ -10,6 +10,9 @@ import Link from 'next/link'
 import { Transaction } from '@meshsdk/core'
 import React from 'react'
 import axios from 'axios'
+import Royal from './Royal/Royal'
+import Hero from './Hero/Hero'
+import Warrior from './Warrior/Warrior'
 
 type TierCardProps = {
 	onClick?(event?: React.MouseEvent): void
@@ -77,6 +80,10 @@ const TierCard = ({ onClick, title, amount, image, school }: TierCardProps) => {
 	const openModal = () => modalRef.current?.openModal()
 	const closeModal = () => modalRef.current?.closeModal()
 
+
+	
+
+
 	return (
 		<>
 			<aside className='tier-card'>
@@ -93,109 +100,20 @@ const TierCard = ({ onClick, title, amount, image, school }: TierCardProps) => {
 					/>
 				)}
 				<p>₳{amount}</p>
+
 				{title == 'Royal' && (
-					<>
-						<p>
-							You enable 2 highly-talented students from a low-income family
-							background to effectively take part in the DirectEd bootcamp
-							supporting them with:
-						</p>
-						<ul className='tier-card__items'>
-							<li>Rental computer</li>
-							<li>WiFi or mobile data</li>
-							<li>Tutorial vouchers</li>
-							<li>Pocket money for living expenses</li>
-						</ul>
-						<h5>We show our appreciation in the following ways:</h5>
-						<ul className='tier-card__items'>
-							<li>
-								Same access and perks as that of the Lion Warriors and Heroes.
-							</li>
-							<li>
-								Invitation to the exclusive DirectEd Donor's Dinner in Oxford.
-							</li>
-							<li>
-								<b>Nameplate</b> recognition in the school of the pool you
-								supported.
-							</li>
-						</ul>
-						<Link
-							href={{
-								pathname: '/nfts/royal',
-								query: school,
-							}}
-						>
-							<Button variant='primary'>Confirm Option</Button>
-						</Link>
-					</>
+					<Royal
+					school={school}
+					/>
 				)}
 				{title == 'Hero' && (
-					<>
-						<p>
-							You enable one highly-talented student from a low-income family
-							background to effectively take part in the DirectEd bootcamp
-							supporting them with:
-						</p>
-						<ul className='tier-card__items'>
-							<li>Rental computer</li>
-							<li>WiFi or mobile data</li>
-							<li>Tutorial vouchers</li>
-							<li>Pocket money for living expenses</li>
-						</ul>
-						<h5>We show our appreciation in the following ways:</h5>
-						<ul className='tier-card__items'>
-							<li>Same access and perks as that of the Lion Warriors.</li>
-							<li>Access to the bootcamp course material and workshops.</li>
-							<li>
-								Access to the student-written lore of your partic
-								<br /> Hero through our token-gated Lions Gallery.
-							</li>
-						</ul>
-						<Link
-							href={{
-								pathname: '/nfts/hero',
-								query: school,
-							}}
-						>
-							<Button variant='primary'>Confirm Option</Button>
-						</Link>
-					</>
+					<Hero
+					school={school}
+					/>
 				)}
-				{title == 'Warrior' && (
-					<>
-						<p>
-							You contribute to a Access Stipend pool where funds will be pooled
-							to enable a talented student from a low-income family background
-							to take part in the DirectEd bootcamp by supporting them with:
-						</p>
-						<ul className='tier-card__items'>
-							<li>Rental computer</li>
-							<li>WiFi or mobile data</li>
-							<li>Tutorial vouchers</li>
-							<li>Pocket money for living expenses</li>
-						</ul>
-						<h5>We show our appreciation in the following ways:</h5>
-						<ul className='tier-card__items'>
-							<li>
-								Invitation to exclusive online and in-person DirectEd Lions
-								events
-							</li>
-							<li>
-								Access to the Student's Progress page, enabling you to observe
-								how <br /> funds are used and observe students' achievements.
-							</li>
-							<li>
-								Direct access to the open-source code of projects built by
-								students.
-							</li>
-						</ul>
-						<Link
-							target='_blank'
-							href='https://pay.nmkr.io/?p=6853ce853381406a8c56ba80fca6ff25&c=1'
-						>
-							<Button variant='primary'>Confirm Option</Button>
-						</Link>
-					</>
+					{title == 'Warrior' && (
+					<Warrior
+					/>
 				)}
 
 				{title == 'Custom' && (

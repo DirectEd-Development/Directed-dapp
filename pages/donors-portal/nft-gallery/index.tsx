@@ -93,13 +93,15 @@ export default function Home() {
 						</div>
 					</>
 				) : (
-					<>
+					<div className="notify">
+						
 						<h3>You need to hold a DirectEd Lions NFT to access this page</h3>
 						<h4>
 							You get a DirectEd Lions NFT when you donate to a pool
 							<a href='https://app.directed.dev/scholarship-pool'> here. </a>
 						</h4>
-					</>
+					</div>
+
 				)}
 			</main>
 			<Modal
