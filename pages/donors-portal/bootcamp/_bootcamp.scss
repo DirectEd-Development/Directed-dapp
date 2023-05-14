@@ -1,0 +1,43 @@
+.bootcamp-section {
+    text-align: center;
+    margin-top: 20px;
+  
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  
+    h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    .bootcamp-section__info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+  
+      .bootcamp-section__details {
+        width: 80%;
+        max-width: 600px;
+        text-align: left;
+  
+        p {
+          font-size: 18px;
+          line-height: 1.5;
+          margin-bottom: 0;
+
+          a {
+            color: #007bff;
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  

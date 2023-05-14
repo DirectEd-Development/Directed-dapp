@@ -21,6 +21,7 @@
     "daisyui": "^2.50.1",
     "fs": "^0.0.1-security",
     "git": "^0.1.5",
+    "moment-timezone": "^0.5.43",
     "mongoose": "^7.0.3",
     "next": "^13.0.0",
     "next-redux-wrapper": "^8.1.0",
