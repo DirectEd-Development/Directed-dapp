@@ -7,12 +7,11 @@ const Bootcamp = (props: Props) => {
 		<DonorLayout>
 
 		<main className='bootcamp-section'>
-			<h2>DirectEd Access Bootcamp</h2>
 			<section>
 				<h3>Access the DirectEd Bootcamp Course</h3>
 				<div className='bootcamp-section__info'>
 					<div className='bootcamp-section__details'>
-						<p>To learn or access our complete bootcamp material and courses along side our students follow the link <a href="https://lu-se.zoom.us/j/66085258419">Here</a></p>
+						<p>To access the DirectEd Bootcamp content, send an email to <a href="mailto:edu@directed.dev">edu@directed.dev</a> to be added to all study materials, then follow the link <a href="mailto:edu@directed.dev">Here</a></p>
 					</div>
 				</div>
 			</section>
