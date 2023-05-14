@@ -12,17 +12,7 @@ const POLICY_IDS = [
 	'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0',
 	'2df82849a30577cbe3734f103d6d91f721c3508a45ca37955b768270',
 ]
-{/* <section>
-				<h3>Progress Track for St. Peters High School</h3>
-				<div className='scholar-progress__student-list'>
-					<div className='scholar-progress__student-list--head'>
-						<p>Name</p>
-						<p>Milestone Progress</p>
-						<p>Contact</p>
-					</div>
-					<StudentMilestone />
-				</div>
-			</section> */}
+
 export default function Home() {
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] =
 		useState<boolean>(false)
