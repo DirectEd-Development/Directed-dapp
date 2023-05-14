@@ -70,7 +70,11 @@ const Ngong: NextPage = () => {
 						<div>
 							<h3>Donate to Ngong Road Children's Foundation High School</h3>
 							<h4>DirectEd Lions Collection</h4>
-							<p><span> <Timer targetDay={29} targetMonth={4} targetYear={2023} /></span></p>
+							<p>
+								<span>
+									Donate using using credit card, $ADA, $SOL, $ETH
+								</span>
+							</p>
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
 								{lionOptions.map((option) => (

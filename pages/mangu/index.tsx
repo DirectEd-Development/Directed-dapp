@@ -75,7 +75,7 @@ const Mangu: NextPage = () => {
 
 							<p>
 								<span>
-									<Timer targetDay={29} targetMonth={4} targetYear={2023} />
+									Donate using using credit card, $ADA, $SOL, $ETH
 								</span>
 							</p>
 
