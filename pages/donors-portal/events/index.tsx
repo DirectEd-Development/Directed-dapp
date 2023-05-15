@@ -21,6 +21,8 @@ const Events = (props: Props) => {
               <p>You can join the opening ceremony via this link: <a href="https://lu-se.zoom.us/j/66085258419">Zoom</a></p>
               <p>Date: {formatDate(eventDate)} | Sun May 14, 2023 11:00 PM PST</p>
             </div>
+            <h3>Recording</h3>
+            <p>Here's the recording for the opening ceremony: <a href=" https://bit.ly/DirectEdOpening">Link</a></p>
           </div>
         </section>
       </main>
