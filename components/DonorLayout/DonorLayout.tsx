@@ -22,7 +22,7 @@ const DonorLayout = ({ children }: LayoutProps) => {
                     <Link href="/donors-portal/events">Events</Link>
                     </div>
                     <div className="donors__nav-element">
-                    <Link href="/donors-portal/bootcamp">Bootcamp</Link>
+                    <Link href="/donors-portal/bootcamp">DirectEd Bootcamp</Link>
                     </div>
                 </div>
             </div>
