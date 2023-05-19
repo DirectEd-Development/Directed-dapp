@@ -96,8 +96,8 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='1'
-							fundsLeft='4'
+							funded='3'
+							fundsLeft='6'
 							schoolName="Mang'u High"
 							schoolAlias="Mang'u High"
 							infoLink='https://directed.notion.site/Mang-u-High-30fe2b6847864743b579dfd38f0d4f46'
@@ -120,7 +120,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='2'
+							funded='6'
 							fundsLeft='12'
 							schoolName="Ngong Road Children's Foundation"
 							schoolAlias="Ngong Road Children's Foundation"
