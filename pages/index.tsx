@@ -2,8 +2,28 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button, Meta , Layout} from '../components'
+import YouTube, { YouTubeProps } from 'react-youtube';
 
+
+  
 const Home: NextPage = () => {
+	const onPlayerReady: YouTubeProps['onReady'] = (event) => {
+		// access to player in all event handlers via event.target
+		event.target.pauseVideo();
+	  };
+
+	  const opts: YouTubeProps['opts'] = {
+		height: '320',
+		width: '500',
+		playerVars: {
+		  // https://developers.google.com/youtube/player_parameters
+		  autoplay: 1,
+		  rel: 0, // Set rel parameter to 0 to disable recommended videos
+		},
+	  };
+	
+
+
 	return (
 		<Layout>
 			<Meta
@@ -26,25 +46,8 @@ const Home: NextPage = () => {
 							</Link>
 						</div>
 					</div>
-					<iframe
-						src='https://www.youtube.com/embed/_dq9z-whX3Y'
-						frameBorder='0'
-						className='home__hero--video-content'
-						width='750'
-						height='320'
-					></iframe>
-					{/* <video
-						controls
-						poster='/static/images/video-placeholder.png'
-						width='500'
-						height='320'
-						className='home__hero--video-content'
-					>
-						<source
-							src='https://drive.google.com/file/d/1FvXv7z6ry9kh5WTRoqEn-HjgKeyYvDlO/view'
-							type='video/mp4'
-						/>
-					</video> */}
+					<YouTube videoId="_dq9z-whX3Y" opts={opts} onReady={onPlayerReady} />
+				
 				</section>
 				<section className='home__quote'>
 					<blockquote>
@@ -451,6 +454,8 @@ const Home: NextPage = () => {
 					</div>
 				</section>
 			</main>
+
+	
 		</Layout>
 	)
 }
