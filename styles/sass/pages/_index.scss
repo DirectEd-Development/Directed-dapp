@@ -6,7 +6,7 @@
 @forward '../../../pages/directed-donate/directeddonate';
 @forward '../../../pages/nfts/nfts';
 @forward '../../../pages/update-metadata/updatemetadata';
-@forward '../../../pages/donors-portal/scholars-progress/scholarsprogress';
+@forward '../../../pages/donors-portal/[id]/scholarsprogress';
 @forward '../../../pages/donors-portal/nft-gallery/nftgallery';
 @forward '../../../pages/donors-portal/events/events';
 @forward '../../../pages/donors-portal/bootcamp/bootcamp';
