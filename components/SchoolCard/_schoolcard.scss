@@ -1,15 +1,21 @@
 .school-card {
 	height: fit-content;
-	width: 47rem;
+	width: 46rem;
 	cursor: pointer;
+	margin-bottom: 3rem;
 
 	& h4 {
 		text-decoration: underline;
 	}
 
-	& > p {
-		text-align: center;
-		margin-block: 1rem;
+	&__desc {
+		padding-block: 1rem;
+		height: 6rem;
+
+		& > p {
+			text-align: center;
+			margin-block: 1rem;
+		}
 	}
 
 	&__top-content {

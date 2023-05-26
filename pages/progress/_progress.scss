@@ -22,21 +22,24 @@
 
 	&__content {
 		width: 100%;
-		display: flex;
 		background: var(--clr-accent-100);
 		padding: 2rem 4rem;
 		gap: 2rem;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		flex-wrap: wrap;
 	}
 	& h4 {
 		margin-top: auto;
 		text-align: center;
 
 		& a {
-		  padding: 0.5rem;
-		  display: inline-block;
-		  color:rgb(38, 38, 116);
-		  text-decoration: underline;
-		  text-underline-offset: 0.1em;
+			padding: 0.5rem;
+			display: inline-block;
+			color: rgb(38, 38, 116);
+			text-decoration: underline;
+			text-underline-offset: 0.1em;
 		}
 	}
 }
