@@ -7,11 +7,15 @@ const StudentProgess: NextPage = ({ students }: any) => {
 	const router = useRouter()
 	const schoolSlug = router.query.id
 
+	const schoolName = students.filter(
+		(student: any) => getLink(student.school) === schoolSlug
+	)
+
 	return (
 		<DonorLayout>
 			<main className='scholar-progress'>
 				<section>
-					<h3>Progress Track for St. Peters High School</h3>
+					<h3>Progress Track for {schoolName[0].school}</h3>
 					<div className='scholar-progress__student-list'>
 						<div className='scholar-progress__student-list--head'>
 							<p>Name</p>
