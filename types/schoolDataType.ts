@@ -8,3 +8,9 @@ export type School = {
 	city: string
 	gender_school: string
 }
+
+export type SchoolDataType = {
+	title: string
+	image: string
+	desc: string
+}
