@@ -39,26 +39,26 @@ const Progress: NextPage = ({ schools }: any) => {
 	return (
 		<>
 			<main className='progress'>
-				{/* {hasPolicyIdAssetsChecked ? ( */}
-				<DonorLayout>
-					<div className='progress__header'>
-						<h2>Progress of the DirectEd Bootcamp Scholars 2023</h2>
-						<div className='flex-gap'>
-							<RiErrorWarningLine size={20} />
-							<Button variant='link'>Read More</Button>
+				{hasPolicyIdAssetsChecked ? (
+					<DonorLayout>
+						<div className='progress__header'>
+							<h2>Progress of the DirectEd Bootcamp Scholars 2023</h2>
+							<div className='flex-gap'>
+								<RiErrorWarningLine size={20} />
+								<Button variant='link'>Read More</Button>
+							</div>
 						</div>
-					</div>
-					<div className='progress__content'>
-						{schools.map((school: any) => (
-							<SchoolCard
-								schoolname={school.name}
-								desc={`See how the ${school.name} graduates are progressing`}
-								location={`${school.city}, ${school.country}`}
-							/>
-						))}
-					</div>
-				</DonorLayout>
-				{/* ) : (
+						<div className='progress__content'>
+							{schools.map((school: any) => (
+								<SchoolCard
+									schoolname={school.name}
+									desc={`See how the ${school.name} graduates are progressing`}
+									location={`${school.city}, ${school.country}`}
+								/>
+							))}
+						</div>
+					</DonorLayout>
+				) : (
 					<>
 						<h3>You need to hold a DirectEd Lions NFT to access this page</h3>
 						<h4>
@@ -66,7 +66,7 @@ const Progress: NextPage = ({ schools }: any) => {
 							<a href='https://app.directed.dev/scholarship-pool'> here. </a>
 						</h4>
 					</>
-				)} */}
+				)}
 			</main>
 		</>
 	)

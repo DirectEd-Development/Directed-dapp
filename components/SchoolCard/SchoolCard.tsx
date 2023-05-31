@@ -40,8 +40,6 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 		.split("'")
 		.join('')
 
-	console.log(pageLink)
-
 	const addImage = (name: string) => {
 		if (schoolname === "Ngong Road Children's Foundation") {
 			return '/static/images/ngong.jpg'
