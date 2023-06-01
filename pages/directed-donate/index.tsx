@@ -158,13 +158,16 @@ const directeddonate: NextPage = () => {
 
 					)}
 					<div className='donate__donate-btn'>
-						<Button
+					<h3>
+						Donate to our ADAhandle $directeddev
+					</h3>
+						{/* <Button
 							variant='primary'
 							onClick={handleConfirm}
 							disabled={!amount}
 						>
 							Donate
-						</Button>
+						</Button> */}
 					</div>
 				</div>
 
