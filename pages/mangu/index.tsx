@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, Meta, ManguCard } from '../../components'
+import { Button, Meta, ManguCard, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
@@ -75,7 +75,7 @@ const Mangu: NextPage = () => {
 
 							<p>
 								<span>
-									<Timer targetDay={29} targetMonth={4} targetYear={2023} />
+									Donate using using credit card, $ADA, $SOL, $ETH
 								</span>
 							</p>
 
@@ -126,7 +126,7 @@ const Mangu: NextPage = () => {
 					</div>
 					<div className='tier'>
 						{tier && (
-							<ManguCard
+							<TierCard
 								onClick={() => setTier(null)}
 								title={tier?.title}
 								amount={tier?.amount}

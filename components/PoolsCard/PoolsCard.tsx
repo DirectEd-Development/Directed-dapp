@@ -55,7 +55,7 @@ const PoolsCard = ({
             </div>
           </div>
           <div className='pools-card__progress'>
-            <ProgressBar stakeAddress={stakeAddress} />
+            {/* <ProgressBar stakeAddress={stakeAddress} /> */}
             <div className=''>
               <Link href='/donate'>
                 <Button variant='primary'>donate now</Button>

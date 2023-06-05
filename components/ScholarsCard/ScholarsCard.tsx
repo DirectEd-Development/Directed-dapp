@@ -69,8 +69,8 @@ const ScholarsCard = ({
 							height='20'
 						/>
 						<span>
-							<span>Fundraising ends</span>
-							<span>on May 12th</span>
+							<span>Fundraiser has Ended</span>
+							<span>Thank you for your donations</span>
 						</span>
 					</div>
 					<div className='scholars-card__donors'>
@@ -88,7 +88,10 @@ const ScholarsCard = ({
 				</div>
 
 				{/* <ProgressBar stakeAddress={stakeAdd} /> */}
-				<Link href={donateLink}>
+				{/* <Link href={donateLink}>
+					<Button variant='primary'>Donate Now</Button>
+				</Link> */}
+				<Link href=''>
 					<Button variant='primary'>Donate Now</Button>
 				</Link>
 			</div>

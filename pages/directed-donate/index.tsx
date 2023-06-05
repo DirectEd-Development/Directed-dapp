@@ -158,6 +158,7 @@ const directeddonate: NextPage = () => {
 
 					)}
 					<div className='donate__donate-btn'>
+			
 						<Button
 							variant='primary'
 							onClick={handleConfirm}
@@ -214,6 +215,7 @@ const directeddonate: NextPage = () => {
 								</Button>
 								<Button variant='primary' onClick={() =>{
 									setConfirm(false);
+									setLoading(false);
 									confirmRef.current?.closeModal();
 								} }>
 									Cancel

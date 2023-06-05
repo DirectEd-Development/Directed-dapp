@@ -1,0 +1,57 @@
+.scholar-progress {
+	  padding: 2rem 1rem;
+
+	& > h2 {
+		text-align: center;
+	}
+
+	& > section {
+		width: 85%;
+		padding: 4rem;
+		margin-inline: auto;
+	}
+
+	&__student-list {
+		background: var(--clr-accent-100);
+		padding-block: 2rem;
+		margin-block: 2rem;
+		border-radius: 2rem;
+
+		&--head {
+			padding-inline: 8rem 2rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-block: 0 2rem;
+		}
+	}
+}
+
+
+// styles for page under development (to be removed them when page development is complete)
+.scholar-progress {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	
+	.work-in-progress {
+	  max-width: 600px;
+	  padding: 20px;
+	  text-align: center;
+	  background-color: #fff;
+	  border-radius: 5px;
+	  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	  
+	  h2 {
+		font-size: 32px;
+		margin-bottom: 10px;
+	  }
+	  
+	  p {
+		font-size: 20px;
+		margin-bottom: 20px;
+	  }
+	}
+  }
+  

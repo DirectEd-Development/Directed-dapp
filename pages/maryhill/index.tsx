@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, CustomAmountInput, MaryHills, Meta, Layout } from '../../components'
+import { Button, CustomAmountInput, MaryHills, Meta, Layout, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
@@ -70,7 +70,11 @@ const MaryHill: NextPage = () => {
 						<div>
 							<h3>Donate to MaryHill Girl's High School</h3>
 							<h4>DirectEd Lions Collection</h4>
-							<p><span> <Timer targetDay={29} targetMonth={4} targetYear={2023} /></span></p>
+							<p>
+								<span>
+									Donate using using credit card, $ADA, $SOL, $ETH
+								</span>
+							</p>
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
 								{lionOptions.map((option) => (
@@ -122,7 +126,7 @@ const MaryHill: NextPage = () => {
 					</div>
 					<div className='tier'>
 						{tier && (
-							<MaryHills
+							<TierCard
 								onClick={() => setTier(null)}
 								title={tier?.title}
 								amount={tier?.amount}

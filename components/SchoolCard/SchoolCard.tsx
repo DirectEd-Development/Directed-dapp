@@ -9,20 +9,12 @@ import Link from 'next/link'
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 type SchoolCardProps = {
-	image: string
-	schoolname?: string
-	chart: string
+	schoolname: string
 	location?: string
 	desc: string
 }
 
-const SchoolCard = ({
-	image,
-	schoolname,
-	location,
-	chart,
-	desc,
-}: SchoolCardProps) => {
+const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 	const data = {
 		datasets: [
 			{
@@ -41,15 +33,36 @@ const SchoolCard = ({
 
 	const options = {}
 
+	const pageLink = schoolname
+		.split(' ')
+		.join('-')
+		.toLowerCase()
+		.split("'")
+		.join('')
+
+	const addImage = (name: string) => {
+		if (schoolname === "Ngong Road Children's Foundation") {
+			return '/static/images/ngong.jpg'
+		} else if (schoolname === 'Kagumo High School') {
+			return '/static/images/djed-scholars.jpg'
+		} else if (schoolname === "Mang'u High School") {
+			return '/static/images/mangu.jpg'
+		} else if (schoolname === 'Maryhill Girls High School') {
+			return '/static/images/mary-hill.jpg'
+		}
+	}
+
 	return (
 		<>
 			<div className='school-card'>
 				<h4>{schoolname}</h4>
-				<p>{desc}</p>
+				<div className='school-card__desc'>
+					<p>{desc}</p>
+				</div>
 				<div>
 					<Image
-						src={image}
-						alt=''
+						src={addImage(schoolname) || '/static/images/peters.png'}
+						alt={schoolname}
 						width='450'
 						height='250'
 						className='school-card__image'
@@ -95,7 +108,7 @@ const SchoolCard = ({
 							</div>
 						</div>
 					</div>
-					<Link href='/scholar-progress'>
+					<Link href={`/donors-portal/${pageLink}`}>
 						<div className='flex-gap'>
 							<RiErrorWarningLine size={20} />
 							<p>Learn more about the scholars</p>
