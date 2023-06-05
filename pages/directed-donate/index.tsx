@@ -158,16 +158,14 @@ const directeddonate: NextPage = () => {
 
 					)}
 					<div className='donate__donate-btn'>
-					<h3>
-						Donate to our ADAhandle $directeddev
-					</h3>
-						{/* <Button
+			
+						<Button
 							variant='primary'
 							onClick={handleConfirm}
 							disabled={!amount}
 						>
 							Donate
-						</Button> */}
+						</Button>
 					</div>
 				</div>
 
@@ -217,6 +215,7 @@ const directeddonate: NextPage = () => {
 								</Button>
 								<Button variant='primary' onClick={() =>{
 									setConfirm(false);
+									setLoading(false);
 									confirmRef.current?.closeModal();
 								} }>
 									Cancel
