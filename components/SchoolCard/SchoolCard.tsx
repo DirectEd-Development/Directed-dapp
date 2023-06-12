@@ -71,8 +71,8 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 	}
 
 	return (
-		<>
-			<div className='school-card'>
+		<Link href={`/donors-portal/${pageLink}`}>
+		<div className='school-card'>
 				<h4>{schoolname}</h4>
 				<div className='school-card__desc'>
 					<p>{desc}</p>
@@ -126,15 +126,13 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 							</div>
 						</div>
 					</div>
-					<Link href={`/donors-portal/${pageLink}`}>
 						<div className='flex-gap'>
 							<RiErrorWarningLine size={20} />
 							<p>Learn more about the scholars</p>
 						</div>
-					</Link>
 				</div>
 			</div>
-		</>
+			</Link>
 	)
 }
 
