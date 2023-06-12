@@ -3,8 +3,10 @@ import { MdLocationOn, MdOutlineMail } from 'react-icons/md'
 import { RiErrorWarningLine } from 'react-icons/ri'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js/auto'
 import { Doughnut } from 'react-chartjs-2'
+import {fetchAndCountStudents} from '../../pages/api/students'
 // import 'chart.js-plugin-labels-dv'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -15,10 +17,26 @@ type SchoolCardProps = {
 }
 
 const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
+	const [milestones, setMilestones] = useState<number[] | null>([]);
+	
+	  //  usage
+	  const url = 'http://directed.us-east-1.elasticbeanstalk.com/students/'; // Replace with the actual URL of the student data
+	 
+	useEffect(()=>{
+		fetchAndCountStudents(url, schoolname)
+		.then((milestoneCounts) =>{
+			setMilestones(milestoneCounts)
+			console.log('Milestone counts:', milestoneCounts)
+		})
+		.catch((error) => console.error('Error:', error));
+
+	}, [])
+
+
 	const data = {
 		datasets: [
 			{
-				data: [12, 5, 32, 21, 16],
+				data: milestones,
 				backgroundColor: [
 					'#395241',
 					'#6b8065',
