@@ -1,6 +1,8 @@
 export async function fetchAndCountStudents(url: string, name:string): Promise<number[] | null> {
+  console.log("Fetching...")
     try {
       const response = await fetch(url);
+      console.log("response", response)
       const unfiltereData = await response.json();
       const data = unfiltereData.filter((school:any)=>{
         school.school =name
@@ -20,7 +22,7 @@ export async function fetchAndCountStudents(url: string, name:string): Promise<n
   
       return milestoneCounts;
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error here:', error);
       return null;
     }
   }

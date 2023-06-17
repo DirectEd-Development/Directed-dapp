@@ -7,6 +7,7 @@ import {fetchAndCountStudents} from '../../pages/api/students'
 // import 'chart.js-plugin-labels-dv'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -17,18 +18,24 @@ type SchoolCardProps = {
 }
 
 const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
-	const [milestones, setMilestones] = useState<number[] | null>([]);
+	const [milestones, setMilestones] = useState<number[]>([100,0,0,0,0,0]);
 	
 	  //  usage
 	  const url = 'http://directed.us-east-1.elasticbeanstalk.com/students/'; // Replace with the actual URL of the student data
 	 
 	useEffect(()=>{
-		fetchAndCountStudents(url, schoolname)
-		.then((milestoneCounts) =>{
-			setMilestones(milestoneCounts)
-			console.log('Milestone counts:', milestoneCounts)
+		axios.post('/api/milestones', {
+			school: schoolname
 		})
-		.catch((error) => console.error('Error:', error));
+		.then((res)=>{
+			console.log("milestones", res.data.milestones)
+			setMilestones(res.data.milestones)
+		}
+		)
+		.catch((err)=>{
+			console.log(err)
+		}
+		)
 
 	}, [])
 
@@ -38,13 +45,10 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 			{
 				data: milestones,
 				backgroundColor: [
-					'#395241',
-					'#6b8065',
-					'#374756',
-					'#020202',
-					'#797979',
+					'#FFFFFF','#797979', '#6b8065', '#395241', '#374756', '#003300'
 				],
-				borderColor: ['#395241', '#6b8065', '#374756', '#020202', '#797979'],
+				borderColor: ['#FFFFFF', '#797979', '#6b8065', '#395241', '#374756', '#003300'],
+				
 			},
 		],
 	}
@@ -104,25 +108,29 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 							></Doughnut>
 						</div>
 						<div className='school-card__topics'>
-							<div className='school-card__topic flex-gap'>
+						<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>1: Personal Website Project</p>
+								<p> No milestone achieved</p>
 							</div>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>2: Group Project part I</p>
+								<p> Personal Website Project</p>
 							</div>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>3: Group Project Part II</p>
+								<p> Group Project part I</p>
 							</div>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>4: Group Project Part III</p>
+								<p> Group Project Part II</p>
 							</div>
 							<div className='school-card__topic flex-gap'>
 								<span></span>
-								<p>5: Individual Capstone Project</p>
+								<p> Group Project Part III</p>
+							</div>
+							<div className='school-card__topic flex-gap'>
+								<span></span>
+								<p>Individual Capstone Project</p>
 							</div>
 						</div>
 					</div>

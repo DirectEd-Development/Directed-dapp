@@ -43,12 +43,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 					{breakpoint === 'lg' ? (
 						<Component {...pageProps} />
 					) : (
-						<Layout>
-						<h3 style={{ textAlign: 'center', padding: '10rem' }}>
-							The mobile version of the donation portal is under development,
-							please visit this page on your computer.
-						</h3>
-						</Layout>
+						<Component {...pageProps} />
+
+						// <Layout>
+						// <h3 style={{ textAlign: 'center', padding: '10rem' }}>
+						// 	The mobile version of the donation portal is under development,
+						// 	please visit this page on your computer.
+						// </h3>
+						// </Layout>
 					)}
 			</MeshProvider>
 		</Provider>

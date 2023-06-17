@@ -52,24 +52,27 @@
 			display: block;
 
 			&:nth-child(1) {
-				background: #395241;
+				background:#ffffff;
 			}
 		}
-
 		&:nth-child(2) > span {
-			background: #6b8065;
+			background: #797979;
 		}
 
 		&:nth-child(3) > span {
-			background: #374756;
+			background: #6b8065;
 		}
 
 		&:nth-child(4) > span {
-			background: #020202;
+			background: #395241;
 		}
 
 		&:nth-child(5) > span {
-			background: #797979;
+			background: #374756;
+		}
+
+		&:nth-child(6) > span {
+			background: #003300;
 		}
 	}
 }
