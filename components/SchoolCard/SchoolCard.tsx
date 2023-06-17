@@ -45,9 +45,9 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 			{
 				data: milestones,
 				backgroundColor: [
-					'#FFFFFF','#797979', '#6b8065', '#395241', '#374756', '#003300'
+					'#808080','#717171', '#6b8065', '#395241', '#374756', '#003300'
 				],
-				borderColor: ['#FFFFFF', '#797979', '#6b8065', '#395241', '#374756', '#003300'],
+				borderColor: ['#808080', '#717171', '#6b8065', '#395241', '#374756', '#003300'],
 				
 			},
 		],
