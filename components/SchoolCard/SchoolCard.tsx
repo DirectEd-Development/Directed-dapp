@@ -3,8 +3,10 @@ import { MdLocationOn, MdOutlineMail } from 'react-icons/md'
 import { RiErrorWarningLine } from 'react-icons/ri'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js/auto'
 import { Doughnut } from 'react-chartjs-2'
+import {fetchAndCountStudents} from '../../pages/api/students'
 // import 'chart.js-plugin-labels-dv'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -15,10 +17,26 @@ type SchoolCardProps = {
 }
 
 const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
+	const [milestones, setMilestones] = useState<number[] | null>([]);
+	
+	  //  usage
+	  const url = 'http://directed.us-east-1.elasticbeanstalk.com/students/'; // Replace with the actual URL of the student data
+	 
+	useEffect(()=>{
+		fetchAndCountStudents(url, schoolname)
+		.then((milestoneCounts) =>{
+			setMilestones(milestoneCounts)
+			console.log('Milestone counts:', milestoneCounts)
+		})
+		.catch((error) => console.error('Error:', error));
+
+	}, [])
+
+
 	const data = {
 		datasets: [
 			{
-				data: [12, 5, 32, 21, 16],
+				data: milestones,
 				backgroundColor: [
 					'#395241',
 					'#6b8065',
@@ -53,8 +71,8 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 	}
 
 	return (
-		<>
-			<div className='school-card'>
+		<Link href={`/donors-portal/${pageLink}`}>
+		<div className='school-card'>
 				<h4>{schoolname}</h4>
 				<div className='school-card__desc'>
 					<p>{desc}</p>
@@ -108,15 +126,13 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 							</div>
 						</div>
 					</div>
-					<Link href={`/donors-portal/${pageLink}`}>
 						<div className='flex-gap'>
 							<RiErrorWarningLine size={20} />
 							<p>Learn more about the scholars</p>
 						</div>
-					</Link>
 				</div>
 			</div>
-		</>
+			</Link>
 	)
 }
 

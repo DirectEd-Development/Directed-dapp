@@ -39,7 +39,10 @@ const Progress: NextPage = ({ schools }: any) => {
 	return (
 		<>
 			<main className='progress'>
-				{hasPolicyIdAssetsChecked ? (
+				{
+				// hasPolicyIdAssetsChecked 
+				true
+				? (
 					<DonorLayout>
 						<div className='progress__header'>
 							<h2>Progress of the DirectEd Bootcamp Scholars 2023</h2>
