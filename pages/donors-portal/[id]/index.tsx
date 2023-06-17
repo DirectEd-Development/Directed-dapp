@@ -10,6 +10,7 @@ const StudentProgess: NextPage = ({ students }: any) => {
 	const schoolName = students.filter(
 		(student: any) => getLink(student.school) === schoolSlug
 	)
+	// console.log("STUDENTS FROM" ,schoolName,"HERE:", students)
 
 	return (
 		<DonorLayout>
@@ -30,6 +31,7 @@ const StudentProgess: NextPage = ({ students }: any) => {
 									last_name={student.last_name}
 									pseudonym={student.pseudonym}
 									key={student.pseudonym}
+									milestone={student.milestones_achieved}
 								/>
 							))}
 					</div>

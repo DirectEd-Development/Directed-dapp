@@ -5,12 +5,14 @@ type StudentMilestoneProps = {
 	first_name: string
 	last_name: string
 	pseudonym: string
+	milestone: number
 }
 
 const StudentMilestone = ({
 	first_name,
 	last_name,
 	pseudonym,
+	milestone,
 }: StudentMilestoneProps) => {
 	return (
 		<div className='student-milestone'>
@@ -21,7 +23,11 @@ const StudentMilestone = ({
 					</div>
 					<p>{pseudonym}</p>
 				</div>
-				<MilestoneProgressBar />
+				<MilestoneProgressBar
+					milestoneNumber={
+							milestone
+					}
+				 />
 			</div>
 		</div>
 	)
