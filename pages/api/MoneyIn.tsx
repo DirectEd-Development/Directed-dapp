@@ -2,8 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { Client } from '@notionhq/client'
 
 
+//database id type
 const notionSecret = process.env.NOTION_SECRET
-const databaseId = process.env.NOTION_DATABASE_ID
+const databaseId = process.env.MONEY_IN_ID
 
 const notion = new Client({ auth: notionSecret })
 
@@ -26,3 +27,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
+

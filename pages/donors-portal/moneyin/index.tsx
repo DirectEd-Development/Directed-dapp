@@ -2,7 +2,7 @@ import React from 'react'
 import { DonorLayout } from '../../../components'
 
 const fetchFronNotion = async () => {
-    const res = await fetch('/api/Notion')
+    const res = await fetch('/api/MoneyIn')
     const data = await res.json()
 
     console.log("data", data)
@@ -11,7 +11,7 @@ const fetchFronNotion = async () => {
     }
 
 function index() {
-    const [data, setData] = React.useState(null)
+    const [data, setData] = React.useState([])
 
     React.useEffect(() => {
         const fetchData = async () => {
@@ -24,7 +24,13 @@ function index() {
 
   return (
     <DonorLayout>
-    <div>index</div>
+    <h1>
+        Money In
+    </h1>
+    <p>
+        {JSON.stringify(data)}
+    </p>
+
     </DonorLayout>
   )
 }
