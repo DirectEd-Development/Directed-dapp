@@ -23,6 +23,13 @@ const DonorLayout = ({ children }: LayoutProps) => {
 						<div className='donors__nav-element'>
 							<Link href='/donors-portal/bootcamp'>DirectEd Bootcamp</Link>
 						</div>
+						<div className='donors__nav-element'>
+							<Link href='/donors-portal/moneyin'>Money In</Link>
+						</div>
+						<div className='donors__nav-element'>
+							<Link href='/donors-portal/moneyout'>Money Out</Link>
+						</div>
+
 					</div>
 				</div>
 				<div className='donors__children'>{children}</div>
