@@ -12,7 +12,7 @@ export async function fetchAndCountStudents(url: string, name:string): Promise<n
   
       const milestoneCounts: number[] = [0, 0, 0, 0, 0];
   
-      // Count the number of students at each milestone level
+      // Count the number of students at each milestone levels
       data.forEach((student: { milestones_achieved: number }) => {
         const milestone = student.milestones_achieved;
         if (milestone >= 0 && milestone <= 4) {
