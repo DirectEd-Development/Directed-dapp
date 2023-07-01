@@ -12,7 +12,7 @@ import { ModalHandler} from '../../components/Modal/Modal'
 import {Layout} from '../../components'
 
 const donationAddress =
-		'addr1x8kmhudzykxz3d87tr7jn27n34uulzed2asqvdpauhvrl78dh0c6yfvv9z60uk8a9x4a8rtee79j64mqqc6rmewc8luq4hm7e2'
+	'addr1x8kmhudzykxz3d87tr7jn27n34uulzed2asqvdpauhvrl78dh0c6yfvv9z60uk8a9x4a8rtee79j64mqqc6rmewc8luq4hm7e2'
 
 const amounts = ['1000', '300', '100']
 
