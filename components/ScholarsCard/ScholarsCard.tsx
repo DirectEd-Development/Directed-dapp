@@ -104,13 +104,30 @@ const ScholarsCard = ({
 					}}
 					 variant='primary'>Donate Now</Button>
 			</div>
-			<Modal 
-				ref={errorRef}
+			<Modal
+						ref={errorRef}
+						>
+						<div className='error__modal-content'>
+							<div className="error__modal-body">
+								<p>
+									We are sorry :&#40; <br />
+									Donations are closed for this pool. <br />
 
-				>
-
-					<h1>Error here</h1>
-			</Modal>
+								</p>
+							</div>
+							<div className="error__modal-footer">
+								<Button
+									variant='primary'
+									onClick={() => {
+										errorRef.current?.closeModal()
+										
+									}}
+								>
+									OK
+								</Button>
+							</div>
+						</div>
+					</Modal>
 				
 		</div>
 	)
