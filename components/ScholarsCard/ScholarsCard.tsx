@@ -2,6 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
+import React, { useState, useRef } from 'react'
+
+import Modal, {  ModalHandler} from '../Modal/Modal'
+
+
 
 type ScholarsCardProps = {
 	schoolName: string
@@ -28,6 +33,8 @@ const ScholarsCard = ({
 	stakeAdd,
 	nftsleft,
 }: ScholarsCardProps) => {
+	const errorRef = useRef<ModalHandler>(null)
+
 	return (
 		<div className='scholars-card'>
 			<Image
@@ -91,8 +98,20 @@ const ScholarsCard = ({
 				{/* <Link href={donateLink}>
 					<Button variant='primary'>Donate Now</Button>
 				</Link> */}
-					<Button variant='primary'>Donate Now</Button>
+					<Button
+					onClick={()=>{
+						errorRef.current?.openModal()
+					}}
+					 variant='primary'>Donate Now</Button>
 			</div>
+			<Modal 
+				ref={errorRef}
+
+				>
+
+					<h1>Error here</h1>
+			</Modal>
+				
 		</div>
 	)
 }
