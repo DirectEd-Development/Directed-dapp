@@ -91,9 +91,7 @@ const ScholarsCard = ({
 				{/* <Link href={donateLink}>
 					<Button variant='primary'>Donate Now</Button>
 				</Link> */}
-				<Link href=''>
 					<Button variant='primary'>Donate Now</Button>
-				</Link>
 			</div>
 		</div>
 	)
