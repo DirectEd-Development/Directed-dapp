@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
 import React, { useState, useRef } from 'react'
+import {BiError} from 'react-icons/bi'
 
 import Modal, {  ModalHandler} from '../Modal/Modal'
 
@@ -109,6 +110,7 @@ const ScholarsCard = ({
 						>
 						<div className='error__modal-content'>
 							<div className="error__modal-body">
+								<BiError size={50} color="#000" />
 								<p>
 									We are sorry :&#40; <br />
 									Donations are closed for this pool. <br />
