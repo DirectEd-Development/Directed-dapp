@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { DonorLayout } from '../../../components'
+import { Table } from '@nextui-org/react';
+
 
 interface UTXO {
     amount: string;

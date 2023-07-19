@@ -12,6 +12,7 @@
     "@martifylabs/mesh-react": "^1.0.1-beta.2",
     "@meshsdk/core": "1.4.0",
     "@meshsdk/react": "^1.1.3",
+    "@nextui-org/react": "^1.0.0-beta.13",
     "@notionhq/client": "^2.2.6",
     "@reduxjs/toolkit": "^1.9.3",
     "axios": "^1.3.4",
