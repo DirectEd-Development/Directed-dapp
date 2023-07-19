@@ -5,7 +5,7 @@ import { Table } from '@nextui-org/react';
 
 
 const fetchFronNotion = async () => {
-    const res = await fetch('/api/MoneyIn')
+    const res = await fetch('/api/MoneyOut')
     const data = await res.json()
 
     console.log("data", data)
