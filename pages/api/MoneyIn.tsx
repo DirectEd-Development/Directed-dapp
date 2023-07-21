@@ -1,6 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Client } from '@notionhq/client'
 
+type ItemType={
+    date:string,
+    fromWallet:string,
+    toWallet:string,
+    txHash:string,
+    amount:string,
+    description:string,
+}
 
 //database id type
 const notionSecret = process.env.NOTION_SECRET
@@ -19,9 +27,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         database_id: databaseId,
     })
 
-    console.log(query.results)
+    const newData:Array<ItemType> = []
 
-    res.status(200).json(query.results)
+    query.results.forEach(
+        (item, index)=>{
+            console.log(`ITEM ${index}`, item)
+            let newItem:ItemType={
+                date:"",
+                fromWallet:"",
+                toWallet:"",
+                txHash:"",
+                amount:"",
+                description:"",
+            }
+            newItem.date=item.properties.date.date.start
+            newItem.fromWallet=item.properties.From_Wallet.rich_text[0].text.content.toString()
+            newItem.amount=item.properties.Amount.rich_text[0].text.content.toString()
+            newItem.description=item.properties.Description.title[0].text.content.toString()
+            newItem.toWallet=item.properties.To_Wallet.rich_text[0].text.content.toString()
+            newItem.txHash=item.properties.Tx_Hash.rich_text[0].text.content.toString()
+    
+            newData.push(newItem)
+    
+    
+    
+    
+    
+        }
+    )
+
+
+    console.log(newData)
+
+    res.status(200).json(newData)
 
      
 
