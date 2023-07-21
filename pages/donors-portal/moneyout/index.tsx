@@ -70,6 +70,7 @@ function index() {
 
   return (
     <DonorLayout>
+      
    
 
    
@@ -110,8 +111,20 @@ function index() {
       data.map((item:any, index:any)=>{
         return(
         <Table.Row key={index}>
-          <Table.Cell><a>{item.date}</a></Table.Cell>
-          <Table.Cell><a>{item.date}</a></Table.Cell>
+          <Table.Cell><p
+          style={{
+            color: '#2b2b2b',
+            fontWeight: 'bold',
+            fontSize: '0.9rem',
+          }}
+          >{item.date}</p></Table.Cell>
+          <Table.Cell><p
+          style={{
+            color: '#2b2b2b',
+            fontWeight: 'bold',
+            fontSize: '0.9rem',
+          }}
+          >{item.category}</p></Table.Cell>
           <Table.Cell>
                 <Tooltip
                 color="success"
@@ -189,6 +202,7 @@ function index() {
         
           :
         <Table.Row>
+        <Table.Cell>...</Table.Cell>
         <Table.Cell>...</Table.Cell>
         <Table.Cell>...</Table.Cell>
         <Table.Cell>...</Table.Cell>
