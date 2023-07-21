@@ -71,16 +71,25 @@ function index() {
   return (
     <DonorLayout>
    
-        {/* {JSON.stringify(data)} */}
+
+   
         <Table
       lined
       headerLined
-      shadow={false}
+      shadow={true}
       aria-label="Example static collection table"
+      bordered={true}
       css={{
         height: "auto",
-        minWidth: "100%",
+        minWidth: "80%",
+      
+        
       }}
+
+  style={{
+    marginTop: "20px",
+  }}
+     
     >
       <Table.Header>
         <Table.Column>DATE</Table.Column>
@@ -104,6 +113,11 @@ function index() {
           <Table.Cell>{formatCardanoWalletAddress(item.fromWallet)}</Table.Cell>
           <Table.Cell>{getFirstWalletAddressAndCount(item.toWallet).firstAddress}</Table.Cell>
           <Table.Cell>{<a
+          style={{
+            color: '#2b2b2b',
+            textDecoration: 'underline',
+          }}
+          target="_blank"
           href={`https://explorer.cardano.org/en/transaction?id=${item.txHash}`}
           >
             {formatTransactionHash(item.txHash)}
@@ -151,6 +165,7 @@ function index() {
     
    
     </Table>
+
 
     </DonorLayout>
   )
