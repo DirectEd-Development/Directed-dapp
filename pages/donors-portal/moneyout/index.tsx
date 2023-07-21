@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { DonorLayout } from '../../../components'
-import { Table } from '@nextui-org/react';
+import { Table, Tooltip } from '@nextui-org/react';
 
 
 
@@ -93,6 +93,7 @@ function index() {
     >
       <Table.Header>
         <Table.Column>DATE</Table.Column>
+        <Table.Column>CATEGORY</Table.Column>
         <Table.Column>FROM WALLET</Table.Column>
         <Table.Column>TO WALLET</Table.Column>
         <Table.Column>TX HASH</Table.Column>
@@ -110,9 +111,35 @@ function index() {
         return(
         <Table.Row key={index}>
           <Table.Cell><a>{item.date}</a></Table.Cell>
-          <Table.Cell>{formatCardanoWalletAddress(item.fromWallet)}</Table.Cell>
-          <Table.Cell>{getFirstWalletAddressAndCount(item.toWallet).firstAddress}</Table.Cell>
-          <Table.Cell>{<a
+          <Table.Cell><a>{item.date}</a></Table.Cell>
+          <Table.Cell>
+                <Tooltip
+                color="success"
+                content={item.fromWallet}
+                placement="top"
+                 >
+                  {formatCardanoWalletAddress(item.fromWallet)}
+              </Tooltip>
+            
+            </Table.Cell>
+          
+
+          <Table.Cell>
+            <Tooltip
+                color="success"
+                content={item.toWallet}
+                placement="top"
+                  >
+            {getFirstWalletAddressAndCount(item.toWallet).firstAddress}
+            </Tooltip>
+            </Table.Cell>
+          <Table.Cell>
+            <Tooltip
+                color="success"
+                content={item.txHash}
+                placement="top"
+                  >
+            {<a
           style={{
             color: '#2b2b2b',
             textDecoration: 'underline',
@@ -121,7 +148,9 @@ function index() {
           href={`https://explorer.cardano.org/en/transaction?id=${item.txHash}`}
           >
             {formatTransactionHash(item.txHash)}
-            </a>}</Table.Cell>
+            </a>}
+            </Tooltip>
+            </Table.Cell>
           <Table.Cell>{
             <div
             style={{
@@ -139,7 +168,16 @@ function index() {
               }
             </div>
             }</Table.Cell>
-          <Table.Cell>{truncateDescription(item.description)}</Table.Cell>
+          <Table.Cell>
+          <Tooltip
+                color="success"
+                content={item.description}
+                placement="top"
+                 >
+
+          {truncateDescription(item.description)}
+          </Tooltip>
+           </Table.Cell>
         </Table.Row>
         )
       })
