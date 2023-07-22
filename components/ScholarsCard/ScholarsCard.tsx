@@ -2,6 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import ProgressBar from '../ProgressBar/ProgressBar'
+import React, { useState, useRef } from 'react'
+import {BiError} from 'react-icons/bi'
+
+import Modal, {  ModalHandler} from '../Modal/Modal'
+
+
 
 type ScholarsCardProps = {
 	schoolName: string
@@ -28,6 +34,8 @@ const ScholarsCard = ({
 	stakeAdd,
 	nftsleft,
 }: ScholarsCardProps) => {
+	const errorRef = useRef<ModalHandler>(null)
+
 	return (
 		<div className='scholars-card'>
 			<Image
@@ -91,10 +99,38 @@ const ScholarsCard = ({
 				{/* <Link href={donateLink}>
 					<Button variant='primary'>Donate Now</Button>
 				</Link> */}
-				<Link href=''>
-					<Button variant='primary'>Donate Now</Button>
-				</Link>
+					<Button
+					onClick={()=>{
+						errorRef.current?.openModal()
+					}}
+					 variant='primary'>Donate Now</Button>
 			</div>
+			<Modal
+						ref={errorRef}
+						>
+						<div className='error__modal-content'>
+							<div className="error__modal-body">
+								<BiError size={50} color="#000" />
+								<p>
+									We are sorry :&#40; <br />
+									Donations are closed for this pool. <br />
+
+								</p>
+							</div>
+							<div className="error__modal-footer">
+								<Button
+									variant='primary'
+									onClick={() => {
+										errorRef.current?.closeModal()
+										
+									}}
+								>
+									OK
+								</Button>
+							</div>
+						</div>
+					</Modal>
+				
 		</div>
 	)
 }

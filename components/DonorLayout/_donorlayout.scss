@@ -6,28 +6,25 @@
     .donors__nav{
         background: #F7F7F4;
         min-height: 100vh;
-        .donors__nav-elements{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        a{
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            .donors__nav-element{
-                width: 80%;
-                padding: 1rem 0;
-                display: flex;
-                align-items: flex-start;
-                
-                a{
-                    text-decoration: none;
-                    color: var(--clr-primary-100);
-                    font-size: var(--fs-400);
-                    font-weight: 600;
-                    padding: 1rem 0;
-                    display: block;
-                    text-align: center;
-                    &:hover{
-                        color: var(--clr-accent-100);
-                    }
-                }
+            margin-bottom: 2rem;
+            color: black;
+            width: 80%;
+            padding: 0.5rem;
+            border-radius: 0.7rem;
+            font-size: 0.1rem;
+            &:hover{
+                color:white;
+                background-color: #6B8065;
             }
         }
     }
