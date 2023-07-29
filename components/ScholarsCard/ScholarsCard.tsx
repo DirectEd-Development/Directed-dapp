@@ -56,7 +56,7 @@ const ScholarsCard = ({
 						<Button variant='link'>Learn More</Button>
 					</Link>
 				</div>
-				<div className='scholars-card__stats'>
+				{/* <div className='scholars-card__stats'>
 					<div>
 						<h5>
 							{funded}/{fundsLeft}
@@ -93,7 +93,7 @@ const ScholarsCard = ({
 							<span>donated</span>
 						</span>
 					</div>
-				</div>
+				</div> */}
 
 				{/* <ProgressBar stakeAddress={stakeAdd} /> */}
 				{/* <Link href={donateLink}>
