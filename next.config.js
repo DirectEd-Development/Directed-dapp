@@ -18,7 +18,10 @@ module.exports = {
 
 		return config
 	},
-	reactStrictMode: true
+	reactStrictMode: true,
+	images: {
+		domains: ['drive.google.com'], // Add any other domains you may use with next/image
+	  },
 }
 
 class WasmChunksFixPlugin {

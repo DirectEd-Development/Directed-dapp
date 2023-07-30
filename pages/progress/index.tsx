@@ -41,7 +41,8 @@ const Progress: NextPage = ({ schools }: any) => {
 		<>
 			<main className='progress'>
 				{
-				hasPolicyIdAssetsChecked 
+				// hasPolicyIdAssetsChecked 
+				true
 				? (
 					<DonorLayout>
 						<div className='progress__header'>
