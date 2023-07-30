@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import MilestoneProgressBar from '../MilestoneProgressBar/MilestoneProgressBar'
-import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
-
+import {AiOutlineDown, AiOutlineUp, AiFillGithub, AiOutlineWhatsApp, AiFillLinkedin} from 'react-icons/ai'
+import {BsTelegram} from 'react-icons/bs'
+import {BiSun} from 'react-icons/bi'
 type StudentMilestoneProps = {
 	first_name: string
 	last_name: string
@@ -62,7 +63,12 @@ const StudentMilestone = ({
 				</div>
 				<div className="student-milestone__contents">
 					<div className="student-milestone__icons">
-						{/*Icons to be displayed inline*/}
+						{/*Icons to be displayed inline: github, cardano, whatsapp, telegram, linkedIn*/}
+						<a href=""><AiFillGithub size={10}/></a>
+						<a href=""><BiSun size={10}/></a>
+						<a href=""><AiOutlineWhatsApp size={10}/></a>
+						<a href=""><BsTelegram size={10}/></a>
+						<a href=""><AiFillLinkedin size={10}/></a>
 
 					</div>
 					<div className="student-milestone-description">
