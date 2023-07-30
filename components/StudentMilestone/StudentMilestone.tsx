@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import Image from 'next/image'
 import MilestoneProgressBar from '../MilestoneProgressBar/MilestoneProgressBar'
 import {AiOutlineDown, AiOutlineUp, AiFillGithub, AiOutlineWhatsApp, AiFillLinkedin} from 'react-icons/ai'
@@ -20,11 +21,21 @@ const StudentMilestone = ({
 		borderRadius: '50%',
 		border: '1px solid #fff',
 	  }
+
+const [isAccordionOpen, setIsAccordionOpen] = useState(false);
+
+  const toggleAccordion = () => {
+    setIsAccordionOpen((prev) => !prev);
+  };
 	return (
 	
 		<div className='student-milestone'>
 			{/*HEAD, all items in the gead to be siplayed inline. */}
-			<div className="student_milestone__head">
+			<div className="student_milestone__head"
+			onClick={
+				toggleAccordion
+			}
+			>
 				
 				<div className="student-milestone__image">
 				<Image
@@ -46,15 +57,14 @@ const StudentMilestone = ({
 
 				 <div className="student-milestone__view">
 					<p>view more</p>
-					{
-						//To be displayed conditionaly on whether accordion is displayed or not
-						//<AiOutlineDown size={20} />
-						//<AiOutlineUp size={20} />
-					}
+					{isAccordionOpen ? <AiOutlineUp size={20} /> : <AiOutlineDown size={20} />}
+
 				 </div>
 			
 			</div>
 			{/*BODY, should only be visible when the accordion is open*/}
+			{
+		isAccordionOpen &&
 			<div className="student-milestone__body">
 				{/*Location and contents to be flex row with contents taking like 70%*/ }
 
@@ -76,6 +86,8 @@ const StudentMilestone = ({
 					</div>
 				</div>
 			</div>
+						}
+
 			</div>
 	)
 }
