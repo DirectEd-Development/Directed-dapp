@@ -1,12 +1,12 @@
 .milestone-progressbar {
-	height: 1rem;
+	height: 0.8rem;
 	background: var(--clr-accent-400);
-	width: 55%;
+	width: 45%;
 	position: relative;
 
 	&__milestone {
 		width: 2%;
-		height: 1rem;
+		height: 0.8rem;
 		background: var(--clr-accent-100);
 		top: 0;
 		position: absolute;
@@ -30,7 +30,7 @@
 
 	&__progress {
 		background: var(--clr-primary-400);
-		height: 1rem;
+		height: 0.8rem;
 		width: 0;
 	}
 }
