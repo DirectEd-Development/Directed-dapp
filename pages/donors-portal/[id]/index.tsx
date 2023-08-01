@@ -21,7 +21,6 @@ const StudentProgess: NextPage = ({ students }: any) => {
 						<div className='scholar-progress__student-list--head'>
 							<p>Name</p>
 							<p>Milestone Progress</p>
-							<p>Contact</p>
 						</div>
 						{students
 							.filter((student: any) => getLink(student.school) === schoolSlug)
