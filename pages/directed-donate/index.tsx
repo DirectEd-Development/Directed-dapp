@@ -35,12 +35,8 @@ const directeddonate: NextPage = () => {
 	//error message
 	const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
-
-
 	const router = useRouter()
 	const { wallet, connect, disconnect, connecting, connected } = useWallet()
-
-
 
 	//   const { walletConnected, wallet } = useWallet();
 	const [successfulTxHash, setSuccessfulTxHash] = useState<string | null>(null)

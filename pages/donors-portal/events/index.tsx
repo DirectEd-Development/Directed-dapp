@@ -27,6 +27,24 @@ const Events = () => {
 		description:
 		  'After this Workshop, you will have a full understanding of the building blocks of habits and you will have an actionable strategy that will get you to where you want in terms of consistent productivity in a healthy and balanced manner.',
 	  },
+    {
+      title: 'How to write Resumes & Cover Letters',
+      lecturer: 'Steven Berkun-Drevnig',
+      date: 'August 02',
+      time: '2 pm UTC',
+      location: 'https://lu-se.zoom.us/j/66085258419',
+      description:
+        '',
+      },
+      {
+        title: 'How to Ace Interviews',
+        lecturer: 'Jessica Pointing',
+        date: 'August 04',
+        time: '2 pm UTC',
+        location: 'https://lu-se.zoom.us/j/66085258419',
+        description:
+          '',
+        },
   ];
 
   const [activeEventIndex, setActiveEventIndex] = useState(0);
