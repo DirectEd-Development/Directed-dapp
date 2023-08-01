@@ -25,7 +25,7 @@
     "git": "^0.1.5",
     "moment-timezone": "^0.5.43",
     "mongoose": "^7.0.3",
-    "next": "13.2.4",
+    "next": "13.4.7",
     "next-redux-wrapper": "^8.1.0",
     "next-seo": "^5.15.0",
     "notion-client": "^6.16.0",
