@@ -5,7 +5,7 @@ import { Table, Tooltip } from '@nextui-org/react';
 
 
 const fetchFronNotion = async () => {
-    const res = await fetch('/api/MoneyIn')
+    const res = await fetch('/api/MoneyOut')
     const data = await res.json()
 
     console.log("data", data)
@@ -70,6 +70,7 @@ function index() {
 
   return (
     <DonorLayout>
+      
    
 
    
@@ -93,6 +94,7 @@ function index() {
     >
       <Table.Header>
         <Table.Column>DATE</Table.Column>
+        <Table.Column>CATEGORY</Table.Column>
         <Table.Column>FROM WALLET</Table.Column>
         <Table.Column>TO WALLET</Table.Column>
         <Table.Column>TX HASH</Table.Column>
@@ -109,7 +111,20 @@ function index() {
       data.map((item:any, index:any)=>{
         return(
         <Table.Row key={index}>
-          <Table.Cell><a>{item.date}</a></Table.Cell>
+          <Table.Cell><p
+          style={{
+            color: '#2b2b2b',
+            fontWeight: 'bold',
+            fontSize: '0.9rem',
+          }}
+          >{item.date}</p></Table.Cell>
+          <Table.Cell><p
+          style={{
+            color: '#2b2b2b',
+            fontWeight: 'bold',
+            fontSize: '0.9rem',
+          }}
+          >{item.category}</p></Table.Cell>
           <Table.Cell>
                 <Tooltip
                 color="success"
@@ -120,6 +135,8 @@ function index() {
               </Tooltip>
             
             </Table.Cell>
+          
+
           <Table.Cell>
             <Tooltip
                 color="success"
@@ -173,7 +190,6 @@ function index() {
 
           {truncateDescription(item.description)}
           </Tooltip>
-            
            </Table.Cell>
         </Table.Row>
         )
@@ -186,6 +202,7 @@ function index() {
         
           :
         <Table.Row>
+        <Table.Cell>...</Table.Cell>
         <Table.Cell>...</Table.Cell>
         <Table.Cell>...</Table.Cell>
         <Table.Cell>...</Table.Cell>
