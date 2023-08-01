@@ -4,6 +4,7 @@ import MilestoneProgressBar from '../MilestoneProgressBar/MilestoneProgressBar'
 import {AiOutlineDown, AiOutlineUp, AiFillGithub, AiOutlineWhatsApp, AiFillLinkedin} from 'react-icons/ai'
 import {BsTelegram} from 'react-icons/bs'
 import {BiSun} from 'react-icons/bi'
+import {CiLocationOn} from 'react-icons/ci'
 type StudentMilestoneProps = {
 	first_name: string
 	last_name: string
@@ -27,17 +28,38 @@ const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const toggleAccordion = () => {
     setIsAccordionOpen((prev) => !prev);
   };
+
+  function splitPseudonym(pseudonym:string) {
+	const words = [];
+	let currentWord = "";
+  
+	for (let i = 0; i < pseudonym.length; i++) {
+	  const char = pseudonym[i];
+	  if (char === char.toUpperCase() && currentWord !== "") {
+		words.push(currentWord);
+		currentWord = char;
+	  } else {
+		currentWord += char;
+	  }
+	}
+  
+	if (currentWord !== "") {
+	  words.push(currentWord);
+	}
+  
+	return words.join(" ");
+  }
 	return (
 	
 		<div className='student-milestone'>
 			{/*HEAD, all items in the gead to be siplayed inline. */}
-			<div className="student_milestone__head"
+			<div className="head"
 			onClick={
 				toggleAccordion
 			}
 			>
 				
-				<div className="student-milestone__image">
+				<div className="_image">
 				<Image
 						src={'https://drive.google.com/uc?id=1963abLb1o1rbjVX-LaifIkOE4ax0tmoN'}
 						alt='student'
@@ -46,8 +68,8 @@ const [isAccordionOpen, setIsAccordionOpen] = useState(false);
 						style={imageStyle}
 						/>
 				</div>
-				<div className="student-milestone__name">
-					<p>{pseudonym}</p>
+				<div className="_name">
+					<p>{splitPseudonym(pseudonym)}</p>
 				</div>
 				<MilestoneProgressBar
 					milestoneNumber={
@@ -55,9 +77,9 @@ const [isAccordionOpen, setIsAccordionOpen] = useState(false);
 					}
 				 />
 
-				 <div className="student-milestone__view">
+				 <div className="_view">
 					<p>view more</p>
-					{isAccordionOpen ? <AiOutlineUp size={20} /> : <AiOutlineDown size={20} />}
+					{isAccordionOpen ? <AiOutlineUp size={15} /> : <AiOutlineDown size={15} />}
 
 				 </div>
 			
@@ -65,24 +87,28 @@ const [isAccordionOpen, setIsAccordionOpen] = useState(false);
 			{/*BODY, should only be visible when the accordion is open*/}
 			{
 		isAccordionOpen &&
-			<div className="student-milestone__body">
+			<div className="_body">
 				{/*Location and contents to be flex row with contents taking like 70%*/ }
 
-				<div className="student-milestone__location">
+				<div className="_location">
+					<CiLocationOn size={12}/>
 					<p>Naivasha Kenya</p>
 				</div>
-				<div className="student-milestone__contents">
-					<div className="student-milestone__icons">
+				<div className="_contents">
+					<div className="_icons">
 						{/*Icons to be displayed inline: github, cardano, whatsapp, telegram, linkedIn*/}
-						<a href=""><AiFillGithub size={10}/></a>
-						<a href=""><BiSun size={10}/></a>
-						<a href=""><AiOutlineWhatsApp size={10}/></a>
-						<a href=""><BsTelegram size={10}/></a>
-						<a href=""><AiFillLinkedin size={10}/></a>
+						<a href=""><AiFillGithub size={15}/></a>
+						<a href=""><BiSun size={15}/></a>
+						<a href=""><AiOutlineWhatsApp size={15}/></a>
+						<a href=""><BsTelegram size={15}/></a>
+						<a href=""><AiFillLinkedin size={15}/></a>
 
 					</div>
 					<div className="student-milestone-description">
+						<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quidem labore nesciunt dolorem? Cumque, expedita delectus dolore ex dolor numquam, illo laudantium, est ad facilis accusantium excepturi non earum? Placeat.
+
+						</p>
 					</div>
 				</div>
 			</div>
