@@ -42,13 +42,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 description:"",
                 category:""
             }
-            newItem.date=item.properties.date.date.start
-            newItem.fromWallet=item.properties.From_Wallet.rich_text[0].text.content.toString()
-            newItem.amount=item.properties.Amount.rich_text[0].text.content.toString()
-            newItem.description=item.properties.Description.rich_text[0].text.content.toString()
-            newItem.toWallet=item.properties.To_Wallet.rich_text[0].text.content.toString()
-            newItem.txHash=item.properties.Tx_Hash.rich_text[0].text.content.toString()
-            newItem.category=item.properties.Category.title[0].text.content.toString()
+            if ("properties" in item) {
+                //date
+                if ("date" in item.properties) {
+                   if("date" in item.properties.date && item.properties.date.date!==null) {
+                    if("start" in item.properties.date.date){
+                        newItem.date=item.properties.date.date.start
+                    }
+                   }
+                }
+                if("rich_text" in item.properties.From_Wallet && "rich_text" in item.properties.Amount && "rich_text" in item.properties.Description && "rich_text" in item.properties.To_Wallet && "rich_text" in item.properties.Tx_Hash && "title" in item.properties.Category){
+                    if("text" in item.properties.From_Wallet.rich_text[0] && "text" in item.properties.Amount.rich_text[0] && "text" in item.properties.Description.rich_text[0] && "text" in item.properties.To_Wallet.rich_text[0] && "text" in item.properties.Tx_Hash.rich_text[0] && "text" in item.properties.Category.title[0]){
+                        newItem.fromWallet=item.properties.From_Wallet.rich_text[0].text.content.toString()
+                        newItem.amount=item.properties.Amount.rich_text[0].text.content.toString()
+                        newItem.description=item.properties.Description.rich_text[0].text.content.toString()
+                        newItem.toWallet=item.properties.To_Wallet.rich_text[0].text.content.toString()
+                        newItem.txHash=item.properties.Tx_Hash.rich_text[0].text.content.toString()
+                        newItem.category=item.properties.Category.title[0].text.content.toString()
+        
+            }
+        }
+    }
     
             newData.push(newItem)
     
