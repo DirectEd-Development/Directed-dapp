@@ -4,6 +4,12 @@ import { DonorLayout } from '../../../components';
 const Events = () => {
   const eventsData = [
     {
+      title: 'DirectEd Scholars 2023 Graduation ceremonyStudent presentations)',
+      link: 'https://lu-se.zoom.us/j/66085258419',
+      date: '	Wed 16 Aug 2023 12:30 - 13:30 (PST)',
+      recordingLink: 'https://bit.ly/DirectEdOpening',
+    },
+    {
       title: 'DirectEd Scholars 2023 Opening Ceremony',
       link: 'https://lu-se.zoom.us/j/66085258419',
       date: 'Sun May 14, 2023 11:00 PM PST',
