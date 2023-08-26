@@ -4,6 +4,19 @@ import { DonorLayout } from '../../../components';
 const Events = () => {
   const eventsData = [
     {
+      title: 'DirectEd Scholars 2023 Graduation Ceremony (Students\' presentations)',
+      link: 'https://lu-se.zoom.us/j/66085258419',
+      location: 'https://lu-se.zoom.us/j/66085258419',
+      date: '	Wed 16 Aug 2023 12:30 - 13:30 (PST)',
+      recordingLink: 'https://bit.ly/DirectEdOpening',
+    },
+    {
+      title: 'How to Ace Interviews with Jessica Pointing',
+      link: 'https://app.airgram.io/7062829254232244225/share/3a03ae2c32cf11ee9fe20a2cbd030b4d?from=A2abd9016f0e111ed8ce40a2cbd030b4d-7062829254232244225',
+      date: '	August 4th ',
+      recordingLink: 'https://app.airgram.io/7062829254232244225/share/3a03ae2c32cf11ee9fe20a2cbd030b4d?from=A2abd9016f0e111ed8ce40a2cbd030b4d-7062829254232244225',
+    },
+    {
       title: 'DirectEd Scholars 2023 Opening Ceremony',
       link: 'https://lu-se.zoom.us/j/66085258419',
       date: 'Sun May 14, 2023 11:00 PM PST',
