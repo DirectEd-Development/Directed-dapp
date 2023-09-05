@@ -243,23 +243,23 @@ emailModalRef.current?.openModal();
           <h2>🦁</h2>
           <p>Thank you for your generous donation. We would for you to see what difference you are making. </p>
           <p>To ensure we can keep you updated, Please provide your email below</p>
-          <div>
+          <div className='name-mail'>
             <input type="text" placeholder="Name/ Nickname" />
             <input type="text" placeholder="Your email" />
           </div>
-          <div>
-            <span>
+          <div className='checks'>
+            <div className='ckeck1'>
             <input type="checkbox" value='receipt' />
             <label>Send me a receipt</label>
-            </span>
-            <span>
+            </div>
+            <div className='ckeck2'>
             <input type="checkbox" value='news' />
             <label>Send me newsletter</label>
-            </span>
+            </div>
 
           </div>
-          <div>
-            <h3>Select donor tiar</h3>
+          <div className='tiars'>
+            <h3>Select a donors' tiar</h3>
             <div>
             <Button
         variant={selectedValue === 'warrior' ? 'primary' : 'light'}
@@ -283,7 +283,7 @@ emailModalRef.current?.openModal();
 
 
           </div>
-          <div>
+          <div className='submit_button'>
               <Button
               variant='primary'
               >Submit</Button>
