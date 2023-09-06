@@ -56,7 +56,7 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
       try {
         const network = await wallet.getNetworkId();
 
-        if (network === 0) {
+        if (network === 1) {
           setErrorMessage('This dapp only works on Cardano Mainnet.');
           errorModalRef.current?.openModal();
           setConfirmModalVisible(false);
@@ -101,6 +101,7 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
   };
 
 emailModalRef.current?.openModal();
+// successModalRef.current?.openModal()
   return (
     <Layout>
       <Meta title='Donate' description='Donate to student.' />
