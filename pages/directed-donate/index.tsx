@@ -21,10 +21,12 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
   const [isCustom, setIsCustom] = useState<boolean>(false);
   const [confirmModalVisible, setConfirmModalVisible] = useState<boolean>(false);
   const [processing, setProcessing] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successfulTxHash, setSuccessfulTxHash] = useState<string | null>(null);
 
   const confirmModalRef = useRef<ModalHandler>(null);
   const successModalRef = useRef<ModalHandler>(null);
+  const errorModalRef = useRef<ModalHandler>(null);
   const feedbackModalRef = useRef<ModalHandler>(null);
 
   const router = useRouter();
@@ -46,9 +48,8 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
         const network = await wallet.getNetworkId();
 
         if (network === 0) {
-          setSuccessfulTxHash('SimulatedTransactionHash'); // Simulated success
-          successModalRef.current?.openModal();
-          setAmount(sendAmount);
+          setErrorMessage('This dapp only works on Cardano Mainnet.');
+          errorModalRef.current?.openModal();
           setConfirmModalVisible(false);
           setProcessing(false);
         } else {
@@ -64,18 +65,22 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
           setProcessing(false);
         }
       } catch (error: any) {
-        setSuccessfulTxHash('SimulatedTransactionHash'); // Simulated success
-        successModalRef.current?.openModal();
-        setAmount(sendAmount);
-        setConfirmModalVisible(false);
+        if (error.info) {
+          setErrorMessage(error.info);
+        } else if (error.message.includes('Insufficient')) {
+          setErrorMessage(`Insufficient funds in your wallet to send ${amount} ADA. Please top up your wallet and try again.`);
+        } else {
+          setErrorMessage('Something went wrong. Please try again.');
+        }
+        errorModalRef.current?.openModal();
         setProcessing(false);
+        setConfirmModalVisible(false);
       }
     } else {
-      setSuccessfulTxHash('SimulatedTransactionHash'); // Simulated success
-      successModalRef.current?.openModal();
-      setAmount(sendAmount);
-      setConfirmModalVisible(false);
+      setErrorMessage('Please connect a wallet.');
+      errorModalRef.current?.openModal();
       setProcessing(false);
+      setConfirmModalVisible(false);
     }
   };
 
@@ -189,6 +194,26 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
               }}
             >
               CLOSE
+            </Button>
+          </div>
+        </div>
+      </Modal>
+
+      <Modal ref={errorModalRef}>
+        <div className='error__modal-content'>
+          <div className="error__modal-body">
+            <p>
+              {errorMessage}
+            </p>
+          </div>
+          <div className="error__modal-footer">
+            <Button
+              variant='primary'
+              onClick={() => {
+                errorModalRef.current?.closeModal();
+              }}
+            >
+              OK
             </Button>
           </div>
         </div>
