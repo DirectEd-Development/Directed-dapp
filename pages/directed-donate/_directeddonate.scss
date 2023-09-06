@@ -236,3 +236,87 @@
 		justify-content: center;
 	}
 }
+
+
+.email__modal{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 2rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 60rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h2{
+		text-align: center;
+		font-size: large;
+		margin-top: 1rem;
+	}
+	p {
+		font-size: small;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+	.name-mail {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		input{
+			border: 1px solid #7B9374;
+			padding:1rem;
+			margin: 1rem;
+			border-radius: 0.5rem;
+		}
+
+	}
+	.checks{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+		div{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+		}
+	}
+	.tiars {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 1rem;
+		h3{
+			font-size: large;
+		}
+		div{
+			display: flex;
+			gap: 1rem;
+			
+			button{
+				border-radius: 1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.6rem 1.5rem;
+				font-size: small;
+			}
+		}  
+	
+	}
+	.submit_button{
+		margin:1rem 0;
+		button{
+			border-radius: 0.2rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.9rem 2rem;
+				font-size: small;	
+		}
+	}
+}
