@@ -3,6 +3,15 @@ import Link from 'next/link'
 import Layout from '../Layout/Layout'
 import {AiOutlineRight} from 'react-icons/ai'
 import { usePathname } from 'next/navigation'
+import { 
+	NFTGalleryIcon,
+	ScholarProgressIcon,
+	EventsIcon,
+	BootcampIcon,
+	MoneyInIcon,
+	MoneyOutIcon
+
+} from '../../icons'
 
 
 type LayoutProps = {
@@ -56,10 +65,20 @@ const DonorLayout = ({ children }: LayoutProps) => {
 									color: path === link.link ?  '#fff':'#000',
 								}
 							}
-							 href={link.link} key={index}>
+							 href={link.link} key={index} className='link-container'>
+								
+								<div className='link-container'>
+									{link.name === 'NFT Gallery' && <NFTGalleryIcon />}
+									{link.name === 'Scholars\' Progress' && <ScholarProgressIcon/>}
+									{link.name === 'Events' && <EventsIcon/>}
+									{link.name === 'DirectEd Bootcamp' && <BootcampIcon />}
+									{link.name === 'Money In' && <MoneyInIcon />}
+									{link.name === 'Money Out' && <MoneyOutIcon />}
+								
 								<p>
 									{link.name}
 								</p>
+								</div>
 								
 									<AiOutlineRight
 										className='donors__link-icon'
