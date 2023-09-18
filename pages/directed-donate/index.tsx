@@ -10,7 +10,7 @@ import { Layout } from '../../components';
 import Survey from '../../components/Survey/Survey';
 
 const donationAddress =
-  'addr1x8kmhudzykxz3d87tr7jn27n34uulzed2asqvdpauhvrl78dh0c6yfvv9z60uk8a9x4a8rtee79j64mqqc6rmewc8luq4hm7e2';
+  'addr_test1qzzanma8z97ltgkg4nup2ta8fyzrgnsz9ur28undfzczsrjy9axchrqjt0rtk22rxr2zp5rquku4a2k4c4cw0duwug2s62nzxf';
 
 const amounts = ['1000', '300', '100'];
 
@@ -47,8 +47,8 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
       try {
         const network = await wallet.getNetworkId();
 
-        if (network === 0) {
-          setErrorMessage('This dapp only works on Cardano Mainnet.');
+        if (network === 1) {
+          setErrorMessage('This dapp only works on Cardano Testnet.');
           errorModalRef.current?.openModal();
           setConfirmModalVisible(false);
           setProcessing(false);
