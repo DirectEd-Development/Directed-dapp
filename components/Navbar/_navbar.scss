@@ -45,7 +45,11 @@
 		li.active {
 			border-bottom: 1.5px solid var(--clr-accent-100);
 		}
+
+		
 	}
+
+	
 
 	&__wallet {
 		display: none;
@@ -53,5 +57,20 @@
 		@media screen and (min-width: 1280px) {
 			display: block;
 		}
+
+		a {
+			background-color: var(--clr-accent-400); 
+			color: #000; 
+			font-weight: bold;
+			padding: 0.5rem 1rem;
+			border-radius: 0.25rem;
+			margin-right: 0.5rem;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+		  
+			&:hover {
+			  background-color: var(--clr-accent-100);; 
+			}
+		  }
 	}
 }

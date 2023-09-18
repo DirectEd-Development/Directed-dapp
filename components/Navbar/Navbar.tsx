@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
+import Button from '../Button/Button'
 import ConnectWallet from '../ConnectWallet/ConnectWallet'
 
 type LinksType = {
@@ -52,9 +53,18 @@ const Navbar = () => {
 							</Link>
 						))}
 					</ul>
-					<div className='nav__wallet'>
+					<div className="nav__wallet flex">
+						<a
+							href="https://docs.cardano.org/cardano-testnet/tools/faucet/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Get Test ADA
+						</a>
 						<ConnectWallet />
 					</div>
+
+
 				</div>
 			</nav>
 		</>
