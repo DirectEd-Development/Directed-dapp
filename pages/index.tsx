@@ -33,18 +33,7 @@ const Home: NextPage = () => {
 						width='750'
 						height='320'
 					></iframe>
-					{/* <video
-						controls
-						poster='/static/images/video-placeholder.png'
-						width='500'
-						height='320'
-						className='home__hero--video-content'
-					>
-						<source
-							src='https://drive.google.com/file/d/1FvXv7z6ry9kh5WTRoqEn-HjgKeyYvDlO/view'
-							type='video/mp4'
-						/>
-					</video> */}
+				
 				</section>
 				<section className='home__quote'>
 					<blockquote>

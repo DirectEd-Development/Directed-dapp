@@ -9,7 +9,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
 	return (
-		<div className='layout'>
+		<div className=''>
 			<Head>
 				<link rel='shortcut icon' href='/favicon.png' type='image/x-icon' />
 			</Head>
