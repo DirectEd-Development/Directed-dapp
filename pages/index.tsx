@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 						<div>
 							<Link href='/directed-donate'>
 								<Button variant='primary' size='small'>
-									SUPPORT THE NEXT ADA LOVELACE
+									Donate
 								</Button>
 							</Link>
 						</div>

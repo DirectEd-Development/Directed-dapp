@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Button from '../Button/Button'
-import {GiHamburgerMenu} from 'react-icons/gi'
 
 type LinksType = {
 	title: string
@@ -51,11 +50,20 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
 
           </div>
         </Link>
+		<div className='don-buttons'>
+		<Button
+			size='small'
+		>
+			Donate
+		</Button>
         <button className="mobile-menu__toggle" onClick={toggleMenu}>
+			
           <span className="hamburger-icon">
 
 		  </span>
         </button>
+		</div>
+
       </div>
       <ul className={`mobile-menu__list-items ${menuOpen ? '' : 'closed'}`}>
         {links.map((link: LinksType, index: number) => (
@@ -109,14 +117,15 @@ const DesktopNav: React.FC<MobileMenuProps> = ({ links }) => {
 					</li>
 				</Link>
 			))}
-		</ul>
-		<div className='nav__wallet'>
+			<li>
 			<Button
 			size='small'
 			>
 				Donate
 			</Button>
-		</div>
+			</li>
+		</ul>
+	
 	</div>
 );
 }

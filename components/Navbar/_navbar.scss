@@ -61,6 +61,12 @@
 }
 
 
+.don-buttons {
+	display: flex;
+	gap: 2rem;
+}
+
+
 
 /*Updates for mobile version*/
 @media only screen and (max-width: 768px) {
@@ -75,7 +81,6 @@
 	width: 100vw;
   
 	&__logo-box {
-		width: 100vw;
   
 	  .mobile-menu__toggle {
 		background: transparent;
@@ -88,11 +93,8 @@
 		  height: 3px;
 		  background: var(--clr-accent-100);
 		  display: block;
-		//   position: relative;
+		  position: relative;
 		  transition: transform 0.3s ease;
-		  position: fixed;
-			top: 2.5rem;
-			right: 1.5rem;
 			z-index: 12;
   
 		  &::before,
@@ -130,6 +132,7 @@
 		}
 	  }
 	}
+
   
 	.mobile-menu {
 	
