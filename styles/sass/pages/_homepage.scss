@@ -7,6 +7,8 @@
 	align-items: center;
 	overflow-x: hidden;
 	margin: 0;
+	color: rgb(77, 67, 67);
+
 	.desk{
 		display: none;
 		@include mq(medium) {
@@ -29,6 +31,12 @@
 		padding-inline: 2rem;
 		flex-direction: column-reverse;
 		gap: 3rem;
+		color: rgb(73, 62, 62);
+		p{
+			font-size: 2.4rem;
+			color: rgb(77, 67, 67);
+		}
+
 
 		@include mq(small) {
 			padding-inline: 4rem;
@@ -51,7 +59,6 @@
 			border-radius: 1rem;
 			object-fit: cover;
 			width: 100%;
-			//large screen
 			@include mq(medium) {
 				min-height: 30rem;
 			}
@@ -61,12 +68,28 @@
 	&__brands {
 		padding-block: 3rem;
 		display: flex;
-		align-items: flex-start;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		h3{
+			font-size: 2rem;
+			color: rgb(77, 67, 67);
+		}
+		
+	
 		gap: 3rem;
 
 		& > div {
 			gap: 4rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@include mq(small) {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				gap: 3rem;
+				margin-block: 4rem;
+			}
 		}
 	}
 
@@ -124,6 +147,8 @@
 		padding: 6rem;
 		text-align: center;
 		font-size: medium;
+		color: rgb(77, 67, 67);
+
 
 		& span {
 			display: block;
@@ -208,11 +233,18 @@
 		}
 
 		& > div {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			gap: 3rem;
-			margin-top: 8rem;
-			align-items: baseline;
+
+		
+			@include mq(small) {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 3rem;
+				margin-block: 4rem;
+			}
 		}
 
 		&--items {
@@ -245,6 +277,11 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		h3{
+			font-size: 2rem;
+			color: rgb(77, 67, 67);
+		}
+
 
 		@include mq(medium) {
 			padding: 2rem 10rem;
@@ -383,6 +420,10 @@
 	&__chart {
 		padding-block: 3rem;
 		text-align: center;
+		h3{
+			font-size: 2rem;
+			color: rgb(77, 67, 67);
+		}
 		& a {
 			padding: 0.5rem;
 			display: inline-block;
@@ -390,11 +431,18 @@
 			text-decoration: underline;
 			text-underline-offset: 0.1em;
 		  }
+		  p{
+			  font-size: 1.4rem;
+			  color: rgb(77, 67, 67);
+
+		  }
 	}
 
 	&__piechart {
 		margin: 2rem auto;
-		display: block;
+		object-fit: contain;
+		width: 90%;
+		min-height: fit-content;
 	}
 
 	&__impact {
@@ -410,7 +458,10 @@
 		background: var(--clr-accent-100);
 		border-radius: 1rem;
 		width: 85%;
-
+		h3{
+			font-size: 2rem;
+			color: rgb(77, 67, 67);
+		}
 		& strong {
 			text-underline-offset: 0.1em;
 			color:rgb(38, 38, 116);

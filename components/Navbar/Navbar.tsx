@@ -51,11 +51,17 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
           </div>
         </Link>
 		<div className='don-buttons'>
-		<Button
+		
+			<Button
 			size='small'
+			
 		>
-			Donate
+				<Link
+			href='/directed-donate'
+			>	Donate
+			</Link>
 		</Button>
+	
         <button className="mobile-menu__toggle" onClick={toggleMenu}>
 			
           <span className="hamburger-icon">
@@ -98,10 +104,7 @@ const DesktopNav: React.FC<MobileMenuProps> = ({ links }) => {
 					height={50}
 					alt='Direct Ed Logo'
 				/>
-				{/* <div className='nav__logo-text'>
-					<p>DirectEd Development</p>
-					<p>Foundation</p>
-				</div> */}
+				
 			</div>
 		</Link>
 
@@ -121,8 +124,11 @@ const DesktopNav: React.FC<MobileMenuProps> = ({ links }) => {
 			<Button
 			size='small'
 			>
-				Donate
-			</Button>
+				<Link
+			href='/directed-donate'
+			>	Donate
+			</Link>
+		</Button>
 			</li>
 		</ul>
 	

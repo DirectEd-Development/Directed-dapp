@@ -15,8 +15,7 @@ const Home: NextPage = () => {
 					<div className='home__hero--text-content'>
 						<h2>Direct Donations For Education and Development</h2>
 						<p>
-							For a world in which any person can realise their full potential,
-							regardless of their draw in the lottery of life.
+							Building a world where every person can realise their full potential.
 						</p>
 						<div>
 							<Link href='/directed-donate'>
@@ -88,8 +87,7 @@ const Home: NextPage = () => {
 					</div>
 				</section>
 				<section className='home__why-us'>
-					<h2>Solution</h2>
-					<h4>The Rocketship with 3 parts: broad base and pointy nose.</h4>
+					<h3>Solution</h3>
 					<div>
 						<div>
 							<h4>Introductory Course</h4>
@@ -138,7 +136,7 @@ const Home: NextPage = () => {
 					</Link>
 				</section>
 				<section className='home__steps'>
-					<h2>The Details</h2>
+					<h3>Learner's journey</h3>
 					<div className='home__step'>
 						<article>
 							<div className='flex-between'>
@@ -287,7 +285,7 @@ const Home: NextPage = () => {
 					</div>
 				</section>
 				<section className='home__solutions'>
-					<h2>Why Us Over Other Charities?</h2>
+					<h3>Why us?</h3>
 					<div>
 						<div className='home__solutions--items'>
 							<Image
@@ -365,47 +363,46 @@ const Home: NextPage = () => {
 					<div>
 						<Link href='/directed-donate'>
 							<Button variant='accent' size='small'>
-								SPONSOR THE NEXT ELON MUSK
+								Contribute to a scholarship pool
 							</Button>
 						</Link>
 					</div>
 				</section>
 				<section className='home__chart'>
-					<h3>How are Access Stipends Funds used?</h3>
-					<Image
+					<h3>Access stipends expenditure</h3>
+					<img
 						src='/static/images/piechart.png'
 						alt='piechart'
-						width='1000'
-						height='450'
+	
 						className='home__piechart'
 					/>
-					<h4>
+					<p>
 						Learn more about the handling of donated funds
 						<a href='https://docs.google.com/document/d/1hNUkd_nRpgZhilxuazm7BSH85XCm18NTmzlKYWTGGlA/edit'>
 							{' '}
 							here
 						</a>
-					</h4>
+					</p>
 				</section>
 				<section className='home__impact'>
 					<h3>What is the impact?</h3>
-					<h4>
+					<p>
 						$1 donated → $130 estimated direct&nbsp;
 						<Link href='https://directed.notion.site/Cost-Effectiveness-Analysis-c7ac254eba994d198e89d5ddb3edfa39'>
 							<strong>economic value</strong>
 						</Link>
 						&nbsp;over their lifetime
-					</h4>
-					<h4>
+					</p>
+					<p>
 						This would makes us one of the most effective development projects
 						in the world
-					</h4>
+					</p>
 					<Link href='/directed-donate'>
 						<Button variant='primary'>Donate Now</Button>
 					</Link>
 				</section>
 				<section className='home__brands'>
-					<p>Partners</p>
+					<h3>Partners</h3>
 					<div className='flex-gap-two'>
 						<Image
 							src='/static/images/coti-white.png'
