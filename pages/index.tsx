@@ -133,7 +133,7 @@ const Home: NextPage = () => {
 					</div>
 					<Link href='/directed-donate'>
 						<Button variant='accent' size='small'>
-							UNLOCK THE POTENTIAL OF AFRICA’S NEXT STEVE JOBS
+							Sponsor a Student
 						</Button>
 					</Link>
 				</section>
