@@ -29,10 +29,13 @@ const Home: NextPage = () => {
 					<iframe
 						src='https://www.youtube.com/embed/_dq9z-whX3Y'
 						frameBorder='0'
-						className='home__hero--video-content'
-						width='750'
-						height='320'
+						className='home__hero--video-content desk'
+				
+					
 					></iframe>
+					<img
+					className='home__hero--video-content mob'
+					 src="https://drive.google.com/uc?export=view&id=1EYBbSnCu3ChejOjhr3xNirjaqC7AHyMk" alt="DirectEd" />
 				
 				</section>
 				<section className='home__quote'>
@@ -45,12 +48,15 @@ const Home: NextPage = () => {
 					<span>- Satya Nadella, CEO and chairman of Microsoft</span>
 				</section>
 				<section className='home__statement'>
-					<Image
-						src='/static/images/question.png'
-						alt='question image'
-						width={500}
-						height={500}
+					<div className="main-img">
+					<img
+					className='main-img'
+						src='https://drive.google.com/uc?export=view&id=1JXkfnQvM9OLUsYELIaWuCPgYQiTOa-QI'
+						alt='Students'
+					
 					/>
+					</div>
+				
 					<div className='home__statement--text-content'>
 						<h2>Problem</h2>
 						<div className='flex-gap'>

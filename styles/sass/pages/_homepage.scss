@@ -7,6 +7,19 @@
 	align-items: center;
 	overflow-x: hidden;
 	margin: 0;
+	.desk{
+		display: none;
+		@include mq(medium) {
+			display: block;
+		}
+	}
+	.mob{
+		display: block;
+		@include mq(medium) {
+			display: none;
+		}
+	}
+
 
 	&__hero {
 		display: flex;
@@ -15,6 +28,7 @@
 		padding-block: 2rem;
 		padding-inline: 2rem;
 		flex-direction: column-reverse;
+		gap: 3rem;
 
 		@include mq(small) {
 			padding-inline: 4rem;
@@ -36,6 +50,11 @@
 		&--video-content {
 			border-radius: 1rem;
 			object-fit: cover;
+			width: 100%;
+			//large screen
+			@include mq(medium) {
+				min-height: 30rem;
+			}
 		}
 	}
 
@@ -88,20 +107,49 @@
 	}
 
 	&__quote {
-		font-size: medium;
-		font-weight: bold;
+		font-weight: 400;
 		padding: 6rem;
 		text-align: center;
+		font-size: medium;
 
 		& span {
 			display: block;
-
+			font-weight: bold;
 			margin-top: 2rem;
 		}
 	}
 
 	&__statement {
 		padding-block: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include mq(small) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.main-img{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include mq(small) {
+				width: 50%;
+			}
+
+			img{
+				width: 95%;
+				object-fit: cover;
+				min-height: 30rem;
+				border-radius: 1rem;
+				@include mq(medium) {
+					min-height: 20rem;
+					width: 90%;
+				}
+			}
+		
+
+		}
 
 		@include mq(small) {
 			display: flex;
