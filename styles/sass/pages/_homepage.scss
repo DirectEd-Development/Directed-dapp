@@ -82,10 +82,23 @@
 		text-align: center;
 
 		& > div {
+			display: flex;	
+			flex-direction: column;
+			align-items: center;
+			gap: 3rem;
+			@include mq(small) {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 3rem;
 			margin-block: 4rem;
+			}
+
+			& > div {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1rem;
+			}
 		}
 
 		& > div > div {
