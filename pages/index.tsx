@@ -188,7 +188,7 @@ const Home: NextPage = () => {
 					<div className='home__step alternate'>
 						<article>
 							<div className='flex-between'>
-								<h5>Access Stipend Pools</h5>
+								<h5>Access Scholarships</h5>
 								<Image
 									src='/static/images/Hover.png'
 									alt='image'
@@ -371,7 +371,7 @@ const Home: NextPage = () => {
 				<section className='home__chart'>
 					<h3>Access stipends expenditure</h3>
 					<img
-						src='/static/images/piechart.png'
+						src='/static/images/piechart.svg'
 						alt='piechart'
 	
 						className='home__piechart'
@@ -387,14 +387,14 @@ const Home: NextPage = () => {
 				<section className='home__impact'>
 					<h3>What is the impact?</h3>
 					<p>
-						$1 donated → $130 estimated direct&nbsp;
-						<Link href='https://directed.notion.site/Cost-Effectiveness-Analysis-c7ac254eba994d198e89d5ddb3edfa39'>
+						$1 donated → $66 estimated direct&nbsp;
+						<Link href='https://directeddev.gitbook.io/lions-lite-paper/introduction'>
 							<strong>economic value</strong>
 						</Link>
 						&nbsp;over their lifetime
 					</p>
 					<p>
-						This would makes us one of the most effective development projects
+						This makes us one of the most effective development projects
 						in the world
 					</p>
 					<Link href='/directed-donate'>
