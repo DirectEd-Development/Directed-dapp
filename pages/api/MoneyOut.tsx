@@ -12,8 +12,8 @@ type ItemType={
 }
 
 //database id type
-const notionSecret = process.env.NOTION_SECRET
-const databaseId = process.env.MONEY_OUT_ID
+const notionSecret = 'secret_rUSJrEcZEXaBbpCLv6QPWe3g8nZ5bxlmbymUoHI77oS' /*process.env.NOTION_SECRET*/
+const databaseId = '8b9c912359904ee9986e3e0a3316459e' /*process.env.MONEY_OUT_ID*/
 
 const notion = new Client({ auth: notionSecret })
 

@@ -141,7 +141,7 @@ function index() {
             textDecoration: 'underline',
           }}
           target="_blank"
-          href={`https://explorer.cardano.org/en/transaction?id=${item.txHash}`}
+          href={`cardanoscan.io/transaction/${item.txHash}`}
           >
             {formatTransactionHash(item.txHash)}
             </a>}
