@@ -30,7 +30,7 @@ export const WalletProvider = ({ children }: any) => {
 			setWalletNameConnected(walletName)
 			setWalletConnected(true)
 			setConnectedAddress(_address[0])
-			if (_network == 0) setCurrentNetwork('Testnet')
+			if (_network == 1) setCurrentNetwork('Testnet')
 			if (_network == 1) setCurrentNetwork('Mainnet')
 		}
 		setConnecting(false)
