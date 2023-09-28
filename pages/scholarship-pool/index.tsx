@@ -106,12 +106,6 @@ const ScholarshipPool: NextPage = () => {
 							height={50}
 						/>
 						<Image
-							src='/static/images/yali.png'
-							alt='yali'
-							width={65}
-							height={65}
-						/>
-						<Image
 							src='/static/images/snapbrillia.png'
 							alt='snapbrillia'
 							width={150}
