@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
 
-
 interface TransactionCount {
 	tx_hash: string
 }
@@ -82,17 +81,41 @@ const ScholarshipPool: NextPage = () => {
 						contribute to and see the DirectEd Lions minting tier options
 					</h5>
 					<div className='scholarship-pool__potrait-cards'>
-						<ScholarsCard
+					<ScholarsCard
 							donated={wallet2.length}
-							funded=''
-							fundsLeft=''
-							schoolName='DirectEd'
+							funded='3'
+							fundsLeft='3'
+							schoolName='DirectEd Scholars'
 							schoolAlias='Kagumo High'
-							infoLink=''
-							image='/static/images/directed.jpg'
+							infoLink='https://directed.notion.site/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'
+							image='/static/images/djed-scholars.jpg'
 							donateLink='/kagumo'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
-							nftsleft=''
+							nftsleft='3'
+						/>
+						<ScholarsCard
+							donated={wallet2.length}
+							funded='3'
+							fundsLeft='6'
+							schoolName="Girls Pool"
+							schoolAlias="Mang'u High"
+							infoLink='https://directed.notion.site/Mang-u-High-30fe2b6847864743b579dfd38f0d4f46'
+							image='/static/images/mangu.jpg'
+							donateLink='/mangu'
+							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
+							nftsleft='3'
+						/>
+						<ScholarsCard
+							donated={wallet1.length}
+							funded='2'
+							fundsLeft='2'
+							schoolName="Boys Pool"
+							schoolAlias="MaryHill Girl's High"
+							infoLink='https://directed.notion.site/Maryhill-Girl-s-High-School-ef8ca3c4c9d94935bb882a18799b2485'
+							image='/static/images/mary-hill.jpg'
+							donateLink='/maryhill'
+							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
+							nftsleft='1'
 						/>
 					</div>
 				</section>
