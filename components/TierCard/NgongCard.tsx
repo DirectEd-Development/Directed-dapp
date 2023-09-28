@@ -42,8 +42,8 @@ const NgongCard = ({
 		if (connected) {
 			setLoading(true)
 			const network = await wallet.getNetworkId()
-			if (network == 0) {
-				alert('This dapp only works on Cardano Mainnet.')
+			if (network == 1) {
+				alert('This dapp only works on Cardano Testnet.')
 			} else {
 				const tx = new Transaction({ initiator: wallet }).sendLovelace(
 					donationAddress,
