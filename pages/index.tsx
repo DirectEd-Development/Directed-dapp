@@ -410,12 +410,7 @@ const Home: NextPage = () => {
 							width={150}
 							height={50}
 						/>
-						<Image
-							src='/static/images/tally.svg'
-							alt='tally'
-							width={100}
-							height={100}
-						/>
+						
 						<Image
 							src='/static/images/snapbrillia.png'
 							alt='snapbrillia'
