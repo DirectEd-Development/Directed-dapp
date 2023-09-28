@@ -37,6 +37,7 @@ function index() {
     
       return `${firstChars}..${lastChars}`;
     };
+    
 
     const truncateDescription = (description:string) => {
       const maxLength = 75;
@@ -158,7 +159,7 @@ function index() {
             textDecoration: 'underline',
           }}
           target="_blank"
-          href={`https://explorer.cardano.org/en/transaction?id=${item.txHash}`}
+          href={`https://cardanoscan.io/transaction/${item.txHash}`}
           >
             {formatTransactionHash(item.txHash)}
             </a>}

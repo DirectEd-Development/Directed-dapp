@@ -188,7 +188,7 @@ const Home: NextPage = () => {
 					<div className='home__step alternate'>
 						<article>
 							<div className='flex-between'>
-								<h5>Access Stipend Pools</h5>
+								<h5>Access Scholarships</h5>
 								<Image
 									src='/static/images/Hover.png'
 									alt='image'
@@ -216,7 +216,7 @@ const Home: NextPage = () => {
 							<div className='home__step--content home__step--content-4'>
 								<p>
 									For each partner school, we set up one
-									<strong> Access Stipend</strong> pool in order to raise funds
+									<strong> Access scholarship</strong> pool in order to raise funds
 									to support students from low-income families through the
 									bootcamp.
 								</p>
@@ -299,7 +299,7 @@ const Home: NextPage = () => {
 								<p>
 									The vast majority of charities fail to be economically
 									self-sustaining, relying on continuous donations and grants.
-									Our <strong> Access Stipend</strong> pools are tied to
+									Our <strong> Access Scholarship</strong> pools are tied to
 									specific high schools. This way, successful alumni are more
 									likely to support the next generation of students as they
 									would have a shared background.
@@ -323,7 +323,7 @@ const Home: NextPage = () => {
 								<p>
 									Legacy charity donors cannot independently verify where their
 									funds went or how they were used. By using privacy-preserving
-									decentralised identifiers and facilitating stipends using
+									decentralised identifiers and facilitating scholarships using
 									blockchain smart contracts that release funds conditional on
 									reaching milestones, we achieve transparency by design and
 									accountability.
@@ -369,9 +369,9 @@ const Home: NextPage = () => {
 					</div>
 				</section>
 				<section className='home__chart'>
-					<h3>Access stipends expenditure</h3>
+					<h3>Access scholarships expenditure</h3>
 					<img
-						src='/static/images/piechart.png'
+						src='/static/images/piechart.svg'
 						alt='piechart'
 	
 						className='home__piechart'
@@ -387,14 +387,14 @@ const Home: NextPage = () => {
 				<section className='home__impact'>
 					<h3>What is the impact?</h3>
 					<p>
-						$1 donated → $130 estimated direct&nbsp;
-						<Link href='https://directed.notion.site/Cost-Effectiveness-Analysis-c7ac254eba994d198e89d5ddb3edfa39'>
+						$1 donated → $66 estimated direct&nbsp;
+						<Link href='https://directeddev.gitbook.io/lions-lite-paper/introduction'>
 							<strong>economic value</strong>
 						</Link>
 						&nbsp;over their lifetime
 					</p>
 					<p>
-						This would makes us one of the most effective development projects
+						This makes us one of the most effective development projects
 						in the world
 					</p>
 					<Link href='/directed-donate'>
