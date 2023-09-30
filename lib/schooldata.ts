@@ -2,18 +2,18 @@ import { SchoolDataType } from '../types/schoolDataType'
 
 export const schoolData: SchoolDataType[] = [
 	{
-		title: 'Djed Scholars',
+		title: 'DirectEd Scholars',
 		image: '/static/images/kagumo.jpg',
-		desc: 'Kagumo High',
+		desc: 'General Pool',
 	},
 	{
-		title: 'Mang’u-DirectEd Scholars',
+		title: 'Boys Pool',
 		image: '/static/images/person2.png',
-		desc: 'Mang’u High',
+		desc: 'Boys Pool',
 	},
 	{
-		title: 'Mary Hill Girls High School',
+		title: 'Girls Pool',
 		image: '/static/images/person2.png',
-		desc: 'Mary Hill Girls High',
+		desc: 'Girls Pool',
 	},
 ]
