@@ -30,7 +30,7 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
     const [amount, setAmount] = useState('')
     const [currency, setCurrency] = useState('');
     const [paymentMethod, setPaymentMethod] = useState('');
-    const [value, setValue] = useState(1250)
+    const [value, setValue] = useState(1250);
 
     /*Crypto processing states*/
         const [confirmModalVisible, setConfirmModalVisible] = useState<boolean>(false);
@@ -38,7 +38,7 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
         const [processing, setProcessing] = useState<boolean>(false);
         const [errorMessage, setErrorMessage] = useState<string | null>(null);
         const [successfulTxHash, setSuccessfulTxHash] = useState<string | null>(null);
-        const [triggerConfirm, setTriggerConfirm] = useState<boolean>(false);
+        const [triggerCryptoPayment, setTriggerCryptoPayment] = useState(false)
 
         const confirmModalRef = useRef<ModalHandler>(null);
         const successModalRef = useRef<ModalHandler>(null);
@@ -46,11 +46,38 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
         const feedbackModalRef = useRef<ModalHandler>(null);
 
         const { wallet, connected } = useWallet();
-      useEffect(() => {
-        if(triggerConfirm&& wallet ){
-            confirmModalRef.current?.openModal();
-        }
-    },[wallet, triggerConfirm])
+
+        useEffect(()=>{
+          if(currency==='ADA'){
+            switch(amount){
+              case '12':
+              setAmount('100');
+              break;
+              case '25':
+                setAmount('250')
+                break;
+              case '50':
+                setAmount('500')
+                break;
+            }
+          }
+          else if(currency==='USD'){
+            switch(amount){
+              case '100':
+              setAmount('12');
+              break;
+              case '250':
+                setAmount('25')
+                break;
+              case '500':
+                setAmount('50')
+                break;
+            } 
+          }
+         
+
+        },[currency, amount])
+    
 
         const handleDonate = async (sendAmount: string) => {
             setProcessing(true);
@@ -61,7 +88,7 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
               try {
                 const network = await wallet.getNetworkId();
         
-                if (network === 1) {
+                if (network === 0) {
                   setErrorMessage('This dapp only works on Cardano Testnet.');
                   errorModalRef.current?.openModal();
                   setConfirmModalVisible(false);
@@ -100,15 +127,82 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
         
       
     
+const WALLETJSX = ()=>{
+  return (
+    <div className="crypto_container">
+           
+    {
+      !connected?
+      <div>
+        <h5>Connect your wallet to continue</h5>
+         <ConnectWallet
+        />
+      </div>
+      :
+      <div className='crypto_content'>
+        <div className="head">
+          <ConnectWallet/>
+        
 
-    const connectWallet = () =>{
-        SETVARYING(
-            <ConnectWallet
-            />
-        )
-        setTriggerConfirm(true)
+        </div>
+        <div>
+          <h5>Proceed to Donate</h5>
+          <div>
+            Amount:
+            <input
+                type="number"
+                placeholder={amount==='custom'?value.toString():amount}
+                style={{
+                  outline:'none',
+                  width:'100px',
+                  height:'30px'
+                }}
+                onBlur={(e)=>{
+                    if(e.target.value === ''){
+                        setAmount('');
+                        return;
+                    }
+                    setValue(Number(e.target.value))
+                }}
+                />
+          </div>
+        </div>
+        <Button
+        onClick={()=>{
+          handleDonate(amount==='custom'?value.toString():amount.toString())
+        }}
+        >
+          Continue
+        </Button>
+      </div>
+
 
     }
+
+  </div>
+
+  )
+}
+    const connectWallet = () =>{
+        SETVARYING(
+          WALLETJSX
+        )
+
+    }
+
+    useEffect(
+      ()=>{
+        if(connected&& triggerCryptoPayment){
+          SETVARYING(
+            WALLETJSX
+          )
+        }
+        else{
+          return
+        }
+
+      }, [connected]
+    )
 
     const handleDonation = () => {
         let amountCase = amount;
@@ -116,28 +210,28 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
             if(period=== 'monthly'){
                 switch(amountCase){
                     case '12':
-                        window.location.href = ''
+                        window.location.href = 'https://buy.stripe.com/6oE6s98vi7zV4Ao4gi'
                         break;
                     case '25':
-                        window.location.href = ''
+                        window.location.href = 'https://buy.stripe.com/eVaaIpaDq3jFd6U4gt'
                         break;
                     case '50':
-                        window.location.href = ''
+                        window.location.href = 'https://buy.stripe.com/5kAdUBaDqcUf7MAaES'
                         break;
                     case 'custom':
-                        window.location.href = ''
+                        window.location.href = 'https://donate.stripe.com/aEU9El9zmf2n5EsdR2'
                         break;
             }
             }else if(period === 'one-off'){
                 switch(amountCase){
                     case '12':
-                        window.location.href = ''
+                        window.location.href = 'https://donate.stripe.com/6oEbMt4f23jF7MA7sv'
                         break;
                     case '25':
-                        window.location.href = ''
+                        window.location.href = 'https://donate.stripe.com/cN2dUB5j6dYj8QEeUY'
                         break;
                     case '50':
-                        window.location.href = ''
+                        window.location.href = 'https://donate.stripe.com/dR6aIpfXK2fB1oc288'
                         break;
                     case 'custom':
                         window.location.href = ''
@@ -147,6 +241,7 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
         }
     }       
         else if(paymentMethod === 'crypto'){
+          setTriggerCryptoPayment(true)
             connectWallet()
         }
     }
@@ -240,6 +335,7 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
                                 setCurrency('ADA')
                             } else{
                                 setCurrency('USD')
+
                             }
 
                         }} type="checkbox" />
@@ -251,8 +347,8 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
                     </div>
                     <div className="amount_buttons">
                         <button
-                        style={{backgroundColor:amount === '12' ? '#4D6F58' : '#fff',
-                        color: amount === '12' ? '#fff' : '#4D6F58'}}
+                        style={{backgroundColor:amount === '12' ||amount === '100' ? '#4D6F58' : '#fff',
+                        color: amount === '12'||amount === '100' ? '#fff' : '#4D6F58'}}
                         onClick={() => {
                             setAmount('12')
                         }}
@@ -260,8 +356,8 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
                             {currency === 'ADA' ? '₳100' : '$12'}
                         </button>
                         <button
-                        style={{backgroundColor:amount === '25' ? '#4D6F58' : '#fff',
-                        color: amount === '25' ? '#fff' : '#4D6F58'}}
+                        style={{backgroundColor:amount === '25'||amount === '250' ? '#4D6F58' : '#fff',
+                        color: amount === '25'||amount === '250' ? '#fff' : '#4D6F58'}}
                         onClick={() => {
                             setAmount('25')
                         }}
@@ -269,8 +365,8 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
                             {currency === 'ADA' ? '₳250' : '$25'}
                         </button>
                         <button
-                        style={{backgroundColor:amount === '50' ? '#4D6F58' : '#fff',
-                        color: amount === '50' ? '#fff' : '#4D6F58'}}
+                        style={{backgroundColor:amount === '50' ||amount === '500' ? '#4D6F58' : '#fff',
+                        color: amount === '50'||amount === '500' ? '#fff' : '#4D6F58'}}
                         onClick={() => {
                             setAmount('50')
                         }}
@@ -279,7 +375,9 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
                         </button>
                         <button
                         style={{backgroundColor:amount === 'custom' ? '#4D6F58' : '#fff',
-                        color: amount === 'custom' ? '#fff' : '#4D6F58'
+                        color: amount === 'custom' ? '#fff' : '#4D6F58',
+                        display: period === 'monthly' ? 'none' : 'flex'
+
                         }}
                         onClick={() => {
                             setAmount('custom')
