@@ -84,39 +84,39 @@ const ScholarshipPool: NextPage = () => {
 					<div className='scholarship-pool__potrait-cards'>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='3'
-							fundsLeft='3'
+							funded='0'
+							fundsLeft='10'
 							schoolName='DirectEd Scholars'
 							schoolAlias='DirectEd General Pool'
-							infoLink='https://directed.notion.site/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'
+							infoLink='https://directed.notion.site/DirectEd-s-Scholars-of-the-Nile-General-Pool-00d4076e859d4fb699e30e842b5901d2?pvs=4'
 							image='/static/images/djed-scholars.jpg'
 							donateLink='/generalpool'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
-							nftsleft='3'
+							nftsleft='10'
 						/>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='3'
-							fundsLeft='6'
+							funded='0'
+							fundsLeft='10'
 							schoolName="Boys Pool"
 							schoolAlias="DirecEd Boys Pool"
-							infoLink='https://directed.notion.site/Mang-u-High-30fe2b6847864743b579dfd38f0d4f46'
+							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHim-Boys-only-funding-pool-eab27b1341b04da0b0e330e0e999be07?pvs=4'
 							image='/static/images/mangu.jpg'
 							donateLink='/boyspool'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
-							nftsleft='3'
+							nftsleft='10'
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='2'
-							fundsLeft='2'
+							funded='0'
+							fundsLeft='10'
 							schoolName="Girls Pool"
 							schoolAlias="DirectEd Girls Pool"
-							infoLink='https://directed.notion.site/Maryhill-Girl-s-High-School-ef8ca3c4c9d94935bb882a18799b2485'
+							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHer-Girls-only-funding-pool-fa956750d38d4e98b58655a15f2e2c9e?pvs=4'
 							image='/static/images/mary-hill.jpg'
 							donateLink='/girlspool'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft='1'
+							nftsleft='10'
 						/>
 					</div>
 				</section>
