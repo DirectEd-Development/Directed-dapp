@@ -86,7 +86,7 @@ const ScholarshipPool: NextPage = () => {
 							donated={wallet2.length}
 							funded='0'
 							fundsLeft='10'
-							schoolName='DirectEd Scholars'
+							schoolName='General Pool'
 							schoolAlias='DirectEd General Pool'
 							infoLink='https://directed.notion.site/DirectEd-s-Scholars-of-the-Nile-General-Pool-00d4076e859d4fb699e30e842b5901d2?pvs=4'
 							image='/static/images/djed-scholars.jpg'
