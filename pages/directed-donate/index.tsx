@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NextPage } from 'next';
 
-import { Layout } from '../../components';
-import { Button } from '../../components';
+import { Layout, Button, ConnectWallet } from '../../components';
 
 import {AiFillCreditCard} from 'react-icons/ai'
 import {RiCoinsLine} from 'react-icons/ri'
@@ -19,7 +18,10 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
     
 
     const connectWallet = () =>{
-        alert('Connect Wallet')
+        SETVARYING(
+            <ConnectWallet
+            />
+        )
     }
 
     const handleDonation = () => {
