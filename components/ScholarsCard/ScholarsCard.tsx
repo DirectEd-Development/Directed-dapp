@@ -49,7 +49,7 @@ const ScholarsCard = ({
 					</Link>
 				</div>
 				<div className='scholars-card__stats'>
-					<div>
+					{/* <div>
 						<h5>
 							{funded}/{fundsLeft}
 						</h5>
@@ -60,7 +60,7 @@ const ScholarsCard = ({
 						<h5>{nftsleft?.toString() ?? 'No NFTs left'}</h5>
 						<span>remaining Hero </span>
 						<span>and Royals</span>
-					</div>
+					</div> */}
 					{/* <div className='scholars-card__donors'>
 						<Image
 							src='/static/images/clock.png'
