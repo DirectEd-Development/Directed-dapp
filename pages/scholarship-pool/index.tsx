@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Meta, DonorInfoTab, ScholarsCard, Layout } from '../../components'
+import { Meta, DonorInfoTab, ScholarsCard, Layout, Timer } from '../../components'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
@@ -60,9 +60,10 @@ const ScholarshipPool: NextPage = () => {
 			})
 	}, [])
 
+
 	return (
 		<Layout>
-			
+
 			<PopupModal isOpen={isModalOpen} closeModal={handleCloseModal} handleReopenModal={handleReopenModal} />
 			{isModalOpen && (
 				<button onClick={handleReopenModal}></button>
@@ -83,15 +84,39 @@ const ScholarshipPool: NextPage = () => {
 					<div className='scholarship-pool__potrait-cards'>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded=''
-							fundsLeft=''
-							schoolName='DirectEd'
-							schoolAlias='Kagumo High'
-							infoLink=''
-							image='/static/images/directed.jpg'
-							donateLink='/kagumo'
+							funded='0'
+							fundsLeft='10'
+							schoolName='DirectEd Scholars'
+							schoolAlias='DirectEd General Pool'
+							infoLink='https://directed.notion.site/DirectEd-s-Scholars-of-the-Nile-General-Pool-00d4076e859d4fb699e30e842b5901d2?pvs=4'
+							image='/static/images/djed-scholars.jpg'
+							donateLink='/generalpool'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
-							nftsleft=''
+							nftsleft='10'
+						/>
+						<ScholarsCard
+							donated={wallet2.length}
+							funded='0'
+							fundsLeft='10'
+							schoolName="Boys Pool"
+							schoolAlias="DirecEd Boys Pool"
+							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHim-Boys-only-funding-pool-eab27b1341b04da0b0e330e0e999be07?pvs=4'
+							image='/static/images/mangu.jpg'
+							donateLink='/boyspool'
+							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
+							nftsleft='10'
+						/>
+						<ScholarsCard
+							donated={wallet1.length}
+							funded='0'
+							fundsLeft='10'
+							schoolName="Girls Pool"
+							schoolAlias="DirectEd Girls Pool"
+							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHer-Girls-only-funding-pool-fa956750d38d4e98b58655a15f2e2c9e?pvs=4'
+							image='/static/images/mary-hill.jpg'
+							donateLink='/girlspool'
+							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
+							nftsleft='10'
 						/>
 					</div>
 				</section>
@@ -103,6 +128,18 @@ const ScholarshipPool: NextPage = () => {
 							alt='coti'
 							width={150}
 							height={50}
+						/>
+						<Image
+							src='/static/images/yali.png'
+							alt='yali'
+							width={65}
+							height={65}
+						/>
+						<Image
+							src='/static/images/tally.svg'
+							alt='tally'
+							width={100}
+							height={100}
 						/>
 						<Image
 							src='/static/images/snapbrillia.png'
@@ -123,7 +160,9 @@ const ScholarshipPool: NextPage = () => {
 							height={80}
 						/>
 					</div>
+					
 				</section>
+				
 				{/* <FilterMenu />
 				<section className='scholarship-pool__landscape-card'>
 					{schoolData.map((school: SchoolDataType) => (

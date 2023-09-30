@@ -11,7 +11,7 @@ import { Transaction } from '@meshsdk/core'
 import React from 'react'
 import axios from 'axios'
 
-type MaryHillsProps = {
+type GirlsCardProps = {
 	onClick?(event?: React.MouseEvent): void
 	title: string
 	amount: string
@@ -22,13 +22,13 @@ type MaryHillsProps = {
 const donationAddress =
 	'addr1x8c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5lu8sl0pkrzfm5t6qexkm8mxz5mrspm9rdhlh9shm7u0dflcqjcd9va'
 
-const MaryHills = ({
+const GirlsCard = ({
 	onClick,
 	title,
 	amount,
 	image,
 	school,
-}: MaryHillsProps) => {
+}: GirlsCardProps) => {
 	const [amountSent, setAmountSent] = useState('')
 	const [confirm, setConfirm] = useState(false)
 	const { wallet, connect, disconnect, connecting, connected } = useWallet()
@@ -294,4 +294,4 @@ const MaryHills = ({
 	)
 }
 
-export default MaryHills
+export default GirlsCard
