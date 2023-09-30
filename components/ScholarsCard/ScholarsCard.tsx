@@ -80,10 +80,10 @@ const ScholarsCard = ({
 							width='20'
 							height='20'
 						/>
-						<span>
+						{/* <span>
 							<span>{donated} person(s) have</span>
 							<span>donated</span>
-						</span>
+						</span> */}
 					</div>
 				</div>
 
