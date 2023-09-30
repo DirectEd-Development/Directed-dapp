@@ -61,17 +61,17 @@ const ScholarsCard = ({
 						<span>remaining Hero </span>
 						<span>and Royals</span>
 					</div>
-					<div className='scholars-card__donors'>
+					{/* <div className='scholars-card__donors'>
 						<Image
 							src='/static/images/clock.png'
 							alt='Pool Image'
 							width='20'
 							height='20'
 						/>
-						{/* <span>
+						<span>
 							<span>Fundraiser has Ended</span>
 							<span>Thank you for your donations</span>
-						</span> */}
+						</span>
 					</div>
 					<div className='scholars-card__donors'>
 						<Image
@@ -80,11 +80,11 @@ const ScholarsCard = ({
 							width='20'
 							height='20'
 						/>
-						{/* <span>
+						<span>
 							<span>{donated} person(s) have</span>
 							<span>donated</span>
-						</span> */}
-					</div>
+						</span>
+					</div> */}
 				</div>
 
 				{/* <ProgressBar stakeAddress={stakeAdd} /> */}
