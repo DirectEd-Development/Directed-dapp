@@ -89,7 +89,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolName='General Pool'
 							schoolAlias='DirectEd General Pool'
 							infoLink='https://directed.notion.site/DirectEd-s-Scholars-of-the-Nile-General-Pool-00d4076e859d4fb699e30e842b5901d2?pvs=4'
-							image='/static/images/djed-scholars.jpg'
+							image='/static/images/generalpool.jpg'
 							donateLink='/generalpool'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 							nftsleft='10'
@@ -101,7 +101,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolName="Boys Pool"
 							schoolAlias="DirecEd Boys Pool"
 							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHim-Boys-only-funding-pool-eab27b1341b04da0b0e330e0e999be07?pvs=4'
-							image='/static/images/mangu.jpg'
+							image='/static/images/boyspool.jpg'
 							donateLink='/boyspool'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 							nftsleft='10'
@@ -113,7 +113,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolName="Girls Pool"
 							schoolAlias="DirectEd Girls Pool"
 							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHer-Girls-only-funding-pool-fa956750d38d4e98b58655a15f2e2c9e?pvs=4'
-							image='/static/images/mary-hill.jpg'
+							image='/static/images/girlspool.jpg'
 							donateLink='/girlspool'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
 							nftsleft='10'
