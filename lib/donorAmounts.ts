@@ -8,11 +8,12 @@ export const lionOptions: OptionTiers[] = [
 		school: '',
 	},
 	{
-		amount: 'A2000/\$500',
+		amount: '2000/\$500',
 		title: 'Hero',
 		image: '/static/images/2.png',
 		school: '',
 	},
+
 	{
 		amount: '160/\$40',
 		title: 'Warrior',
