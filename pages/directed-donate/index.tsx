@@ -148,26 +148,11 @@ const WALLETJSX = ()=>{
         <div>
           <h5>Proceed to Donate</h5>
           <div>
-            Amount:
-            <input
-                type="number"
-                placeholder={amount==='custom'?value.toString():amount}
-                style={{
-                  outline:'none',
-                  width:'100px',
-                  height:'30px'
-                }}
-                onBlur={(e)=>{
-                    if(e.target.value === ''){
-                        setAmount('');
-                        return;
-                    }
-                    setValue(Number(e.target.value))
-                }}
-                />
+            Amount:{amount==='custom'?value.toString():amount}
           </div>
         </div>
         <Button
+        variant='primary'
         onClick={()=>{
           handleDonate(amount==='custom'?value.toString():amount.toString())
         }}
@@ -444,7 +429,7 @@ const WALLETJSX = ()=>{
                     }}
 
                     >
-                        Acess Scholarship
+                        Access Scholarship
                     </button>
                 </div>
                 <Button
