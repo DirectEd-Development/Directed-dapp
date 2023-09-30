@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Meta, DonorInfoTab, ScholarsCard, Layout } from '../../components'
+import { Meta, DonorInfoTab, ScholarsCard, Layout, Timer } from '../../components'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
@@ -147,6 +147,7 @@ const ScholarshipPool: NextPage = () => {
 							height={80}
 						/>
 					</div>
+					<Timer targetDay={0} targetMonth={0} targetYear={0} />
 				</section>
 				{/* <FilterMenu />
 				<section className='scholarship-pool__landscape-card'>
