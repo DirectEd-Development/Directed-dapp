@@ -29,6 +29,7 @@ const BoysCard = ({
 	image,
 	school,
 }: BoysCardProps) => {
+	console.log(school)
 	const [amountSent, setAmountSent] = useState('')
 	const [confirm, setConfirm] = useState(false)
 	const { wallet, connect, disconnect, connecting, connected } = useWallet()
