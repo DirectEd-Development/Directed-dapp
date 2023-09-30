@@ -21,7 +21,7 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 	const [milestones, setMilestones] = useState<number[]>([100,0,0,0,0,0]);
 	
 	  //  usage
-	  const url = 'http://directed.us-east-1.elasticbeanstalk.com/students/'; // Replace with the actual URL of the student data
+	  const url = 'http://directed.us-east-1.elasticbeanstalk.com/students/'; 
 	 
 	useEffect(()=>{
 		axios.post('/api/milestones', {
@@ -63,15 +63,13 @@ const SchoolCard = ({ schoolname, location, desc }: SchoolCardProps) => {
 		.join('')
 
 	const addImage = (name: string) => {
-		if (schoolname === "Ngong Road Children's Foundation") {
+		if (schoolname === "General Pool") {
 			return '/static/images/ngong.jpg'
-		} else if (schoolname === 'Kagumo High School') {
+		} else if (schoolname === "Girls Pool") {
 			return '/static/images/djed-scholars.jpg'
-		} else if (schoolname === "Mang'u High School") {
+		} else if (schoolname === "Boys Pool") {
 			return '/static/images/mangu.jpg'
-		} else if (schoolname === 'Maryhill Girls High School') {
-			return '/static/images/mary-hill.jpg'
-		}
+		} 
 	}
 
 	return (
