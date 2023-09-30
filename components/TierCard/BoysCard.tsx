@@ -198,7 +198,7 @@ const BoysCard = ({
 						</ul>
 						<Link
 							target='_blank'
-							href='https://pay.nmkr.io/?p=c24e598390e047219937c246e91913e6&c=1'
+							href='https://pay.nmkr.io/?p=2c4da26b40ea44b9bb876e6d36bd73f3&c=1'
 						>
 							<Button variant='primary'>Confirm Option</Button>
 						</Link>

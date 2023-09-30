@@ -37,7 +37,7 @@ const Warrior = () => {
         </ul>
         <Link
             target='_blank'
-            href='https://pay.nmkr.io/?p=6853ce853381406a8c56ba80fca6ff25&c=1'
+            href='https://pay.nmkr.io/?p=a151e45d5b5b4ac1a7fc7a8983338992&c=1'
         >
             <Button variant='primary'>Confirm Option</Button>
         </Link>
