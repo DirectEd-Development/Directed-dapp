@@ -55,13 +55,11 @@ return (
 				{params == "boyspool" ? (
 					boysNfts.map((nft) => {
 						return (
-							<Link
+							<a
 							target='_blank'
 							key={nft.id}
-							href={{
-								pathname: `/update-metadata`,
-								query: nft.uid,
-							}}
+							href={nft.paymentGatewayLinkForSpecificSale}
+							rel='noreferrer'
 						>
 							<img
 								src={`https://ipfs.io/ipfs/${nft.ipfsLink.split('/')[2]}`}
@@ -69,19 +67,17 @@ return (
 								width={200}
 								height={200}
 							/>
-						</Link>
+						</a>
 						)
 					})
 				):(
 					girlsNfts.map((nft) => {
 						return (
-							<Link
+							<a
 							target='_blank'
 							key={nft.id}
-							href={{
-								pathname: `/update-metadata`,
-								query: nft.uid,
-							}}
+							href={nft.paymentGatewayLinkForSpecificSale}
+							rel='noreferrer'
 						>
 							<img
 								src={`https://ipfs.io/ipfs/${nft.ipfsLink.split('/')[2]}`}
@@ -89,7 +85,7 @@ return (
 								width={200}
 								height={200}
 								/>
-						</Link>
+						</a>
 						)
 					})
 					)}
