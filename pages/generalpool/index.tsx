@@ -2,19 +2,18 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, CustomAmountInput, MaryHills, Meta, Layout, TierCard } from '../../components'
+import { Button, CustomAmountInput, Layout, Meta, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
-import Timer from '../../components/Timer/Timer';
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
-const MaryHill: NextPage = () => {
-	const [tier, setTier] = useState<OptionTiers | null>(null);
-	const [isCustom, setIsCustom] = useState(false);
-	const [custom, setCustom] = useState("");
+const GeneralPool: NextPage = () => {
+	const [tier, setTier] = useState<OptionTiers | null>(null)
+	const [isCustom, setIsCustom] = useState(false)
+	const [custom, setCustom] = useState('')
 
-	const dispatch = useDispatch();
+	const dispatch = useDispatch()
 	const router = useRouter()
 
 	const donationTier = (option: OptionTiers) => {
@@ -22,36 +21,35 @@ const MaryHill: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: "Maryhill",
-		});
+			school: 'generalpool',
+		})
 		dispatch(setClose())
 	}
 
 	const handleCustom = () => {
-		setIsCustom(false);
+		setIsCustom(false)
 		setTier({
-			title: "Custom",
+			title: 'Custom',
 			amount: custom,
-			image: "",
-			school: "Maryhill"
-		});
+			image: '',
+			school: 'generalpool',
+		})
 		dispatch(setOpen())
 	}
 
 	const fullDonationTier = (option: OptionTiers) => {
-		 if(option.amount == "custom"){
-			setIsCustom(true);
-		 } else {
+		if (option.amount == 'custom') {
+			setIsCustom(true)
+		} else {
 			setTier({
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: "Maryhill",
-			});
+				school: 'generalpool',
+			})
 			dispatch(setOpen())
-		 }
+		}
 	}
-
 
 	return (
 		<Layout>
@@ -59,7 +57,7 @@ const MaryHill: NextPage = () => {
 			<main className='donate container'>
 				<div className='donate__donations'>
 					<div className='donate__tier-options'>
-						<div className="donate__title-section">
+						<div className='donate__title-section'>
 							<FaChevronLeft
 								onClick={() => router.back()}
 								className='go-back'
@@ -68,21 +66,23 @@ const MaryHill: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to MaryHill Girl's High School</h3>
+							<h3>Donate to DirectEd Scholars Pool</h3>
 							<h4>DirectEd Lions Collection</h4>
+
 							<p>
 								<span>
 									Donate using using credit card, $ADA, $SOL, $ETH
 								</span>
 							</p>
+              
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
-								{lionOptions.map((option) => (
+								{lionOptions.map((option, index) => (
 									<Button
 										size='small'
 										variant={option.title === tier?.title ? 'primary' : ''}
 										onClick={() => donationTier(option)}
-										key={option.amount}
+										key={index}
 										noShadow
 									>
 										{option.title}
@@ -95,32 +95,28 @@ const MaryHill: NextPage = () => {
 							<p>No DirectEd Lions Collection NFT</p>
 							{isCustom ? (
 								<div className='donate__tiers'>
-								<input
-									 type="text"
-									 placeholder="Custom Amount"
-									 onChange={(e) => setCustom(e.target.value)}
-								/>
-								<Button
-									size='small'
-									noShadow
-									onClick={handleCustom}
-								>
-									Donate
-								</Button>
-							</div>
-							): (
-								<div className='donate__tiers'>
-								{noLionOptions.map((option) => (
-									<Button
-										size='small'
-										noShadow
-										variant={option.title === tier?.title ? 'primary' : ''}
-										onClick={() => fullDonationTier(option)}
-									>
-										{option.title}
+									<input
+										type='text'
+										placeholder='Custom Amount'
+										onChange={(e) => setCustom(e.target.value)}
+									/>
+									<Button size='small' noShadow onClick={handleCustom}>
+										Donate
 									</Button>
-								))}
-							</div>
+								</div>
+							) : (
+								<div className='donate__tiers'>
+									{noLionOptions.map((option) => (
+										<Button
+											size='small'
+											noShadow
+											variant={option.title === tier?.title ? 'primary' : ''}
+											onClick={() => fullDonationTier(option)}
+										>
+											{option.title}
+										</Button>
+									))}
+								</div>
 							)}
 						</div>
 					</div>
@@ -135,11 +131,10 @@ const MaryHill: NextPage = () => {
 							/>
 						)}
 					</div>
-					
 				</div>
 			</main>
 		</Layout>
 	)
 }
 
-export default MaryHill
+export default GeneralPool

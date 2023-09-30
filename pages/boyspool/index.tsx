@@ -2,14 +2,15 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, CustomAmountInput, Layout, Meta, TierCard } from '../../components'
+import { Button, Meta, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
 import Timer from '../../components/Timer/Timer'
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
+import { Layout } from '../../components'
 
-const Kagumo: NextPage = () => {
+const BoysPool: NextPage = () => {
 	const [tier, setTier] = useState<OptionTiers | null>(null)
 	const [isCustom, setIsCustom] = useState(false)
 	const [custom, setCustom] = useState('')
@@ -22,7 +23,7 @@ const Kagumo: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: 'kagumo',
+			school: 'boyspool',
 		})
 		dispatch(setClose())
 	}
@@ -33,12 +34,14 @@ const Kagumo: NextPage = () => {
 			title: 'Custom',
 			amount: custom,
 			image: '',
-			school: 'kagumo',
+			school: 'boyspool',
 		})
 		dispatch(setOpen())
 	}
 
 	const fullDonationTier = (option: OptionTiers) => {
+		console.log(option.image)
+
 		if (option.amount == 'custom') {
 			setIsCustom(true)
 		} else {
@@ -46,7 +49,7 @@ const Kagumo: NextPage = () => {
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: 'kagumo',
+				school: 'boyspool',
 			})
 			dispatch(setOpen())
 		}
@@ -67,7 +70,7 @@ const Kagumo: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to Kagumo High School</h3>
+							<h3>Donate to DirecEd Boys Pool</h3>
 							<h4>DirectEd Lions Collection</h4>
 
 							<p>
@@ -75,15 +78,15 @@ const Kagumo: NextPage = () => {
 									Donate using using credit card, $ADA, $SOL, $ETH
 								</span>
 							</p>
-              
+
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
-								{lionOptions.map((option, index) => (
+								{lionOptions.map((option) => (
 									<Button
 										size='small'
 										variant={option.title === tier?.title ? 'primary' : ''}
 										onClick={() => donationTier(option)}
-										key={index}
+										key={option.amount}
 										noShadow
 									>
 										{option.title}
@@ -138,4 +141,4 @@ const Kagumo: NextPage = () => {
 	)
 }
 
-export default Kagumo
+export default BoysPool
