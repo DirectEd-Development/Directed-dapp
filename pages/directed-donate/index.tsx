@@ -15,7 +15,7 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
     const [amount, setAmount] = useState('')
     const [currency, setCurrency] = useState('');
     const [paymentMethod, setPaymentMethod] = useState('');
-    const [value, setValue] = useState(1000)
+    const [value, setValue] = useState(1250)
     
 
     const connectWallet = () =>{
@@ -27,13 +27,37 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
         if(paymentMethod === 'card'){
             if(period=== 'monthly'){
                 switch(amountCase){
-                    case '10':
-//PROGRESSING....
+                    case '12':
+                        window.location.href = ''
+                        break;
+                    case '25':
+                        window.location.href = ''
+                        break;
+                    case '50':
+                        window.location.href = ''
+                        break;
+                    case 'custom':
+                        window.location.href = ''
+                        break;
             }
             }else if(period === 'one-off'){
+                switch(amountCase){
+                    case '12':
+                        window.location.href = ''
+                        break;
+                    case '25':
+                        window.location.href = ''
+                        break;
+                    case '50':
+                        window.location.href = ''
+                        break;
+                    case 'custom':
+                        window.location.href = ''
+                        break;
             }
 
         }
+    }       
         else if(paymentMethod === 'crypto'){
             connectWallet()
         }
@@ -139,22 +163,22 @@ const DirectedDonate: NextPage<DirectedDonateProps> = () => {
                     </div>
                     <div className="amount_buttons">
                         <button
-                        style={{backgroundColor:amount === '10' ? '#4D6F58' : '#fff',
-                        color: amount === '10' ? '#fff' : '#4D6F58'}}
+                        style={{backgroundColor:amount === '12' ? '#4D6F58' : '#fff',
+                        color: amount === '12' ? '#fff' : '#4D6F58'}}
                         onClick={() => {
-                            setAmount('10')
+                            setAmount('12')
                         }}
                         >
-                            {currency === 'ADA' ? '₳100' : '$10'}
+                            {currency === 'ADA' ? '₳100' : '$12'}
                         </button>
                         <button
-                        style={{backgroundColor:amount === '20' ? '#4D6F58' : '#fff',
-                        color: amount === '20' ? '#fff' : '#4D6F58'}}
+                        style={{backgroundColor:amount === '25' ? '#4D6F58' : '#fff',
+                        color: amount === '25' ? '#fff' : '#4D6F58'}}
                         onClick={() => {
-                            setAmount('20')
+                            setAmount('25')
                         }}
                         >
-                            {currency === 'ADA' ? '₳200' : '$20'}
+                            {currency === 'ADA' ? '₳250' : '$25'}
                         </button>
                         <button
                         style={{backgroundColor:amount === '50' ? '#4D6F58' : '#fff',
