@@ -66,7 +66,7 @@ const GeneralPool: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to DirectEd Scholars Pool</h3>
+							<h3>Donate to DirectEd General Pool</h3>
 							<h4>DirectEd Lions Collection</h4>
 
 							<p>
