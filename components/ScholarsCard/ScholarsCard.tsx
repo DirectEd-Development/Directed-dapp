@@ -68,10 +68,10 @@ const ScholarsCard = ({
 							width='20'
 							height='20'
 						/>
-						<span>
+						{/* <span>
 							<span>Fundraiser has Ended</span>
 							<span>Thank you for your donations</span>
-						</span>
+						</span> */}
 					</div>
 					<div className='scholars-card__donors'>
 						<Image
