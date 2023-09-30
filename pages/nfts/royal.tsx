@@ -26,7 +26,7 @@ export default function Home() {
           <div className="nft-portal__assets">
             <div className="nft-portal__assets_header">
               <h3>Pick which Royal you’d like</h3>
-              <Link href="/update-metadata">
+              <Link href="/nfts/nft">
                 <Button disabled variant='primary'>Edit Metadata</Button>
               </Link>
             </div>
