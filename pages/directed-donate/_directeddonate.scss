@@ -57,7 +57,11 @@
             border-radius: 5px;
             margin: 10px 0;
             cursor: 'pointer';
-            width: 16rem;
+            width: 10rem;
+
+            @include mq(small) {
+                width: 16rem;
+            }
         }
     }
 }
@@ -85,7 +89,10 @@
             border-radius: 5px;
             margin: 10px 0;
             cursor: 'pointer';
-            width: 16rem;
+            width: 10rem;
+            @include mq(small) {
+                width: 16rem;
+            }
         }
     }
     .amount{
@@ -120,6 +127,7 @@
             cursor: 'pointer';
             width: fit-content;
             padding: 10px 20px;
+            
         }
       }
 
@@ -165,8 +173,12 @@
         align-items: center;
         gap: 0.5rem;
         justify-content: center;
-        width: 150px;
+        width: 100px;
         height: 100px;
+        @include mq(small) {
+          width: 150px;
+          height: 100px;
+          }
         .icon {
             font-size: 2rem;
         }
