@@ -73,7 +73,7 @@ const DonorInfoTab = () => {
 									</div>
 								</div>
 							</div>
-							<p>Lions Collection</p>
+							<p className='donor-info__text'>Lions Collection</p>
 						</div>
 						<div>
 							<div className='donor-info__info-badge'>
