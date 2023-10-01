@@ -105,7 +105,7 @@ const DonorInfoTab = () => {
 									</div>
 								</div>
 							</div>
-							<p>Donor's Dinner</p>
+							<Link href='https://x.com/directeddev/status/1678724347316391936?s=46&t=7qeW1p3kfSxYwiu1nrDAwQ'><p>Donor Reception</p></Link>
 						</div>
 						<div>
 							<div className='donor-info__info-badge'>
@@ -138,7 +138,7 @@ const DonorInfoTab = () => {
 									</div>
 								</div>
 							</div>
-							<p>Name Plate</p>
+							<Link href='https://x.com/directeddev/status/1704442855735853548?s=46&t=7qeW1p3kfSxYwiu1nrDAwQ'><p>Donor plate</p></Link>
 						</div>
 						<div>
 							<div className='donor-info__info-badge'>
