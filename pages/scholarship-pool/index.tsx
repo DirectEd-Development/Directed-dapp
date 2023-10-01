@@ -76,9 +76,9 @@ const ScholarshipPool: NextPage = () => {
 					<DonorInfoTab />
 				</section>
 				<section className='scholarship-pool__potrait-section'>
-					<h3>Access Stipend Scholarship Crowdfunding Pools</h3>
+					<h3>Access Scholarship Crowdfunding Pools</h3>
 					<h5>
-						Press the ‘Donate now’ button of the stipend pool you want to
+						Press the ‘Donate now’ button of the pool you want to
 						contribute to and see the DirectEd Lions minting tier options
 					</h5>
 					<div className='scholarship-pool__potrait-cards'>
