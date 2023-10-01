@@ -69,7 +69,7 @@ const GirlsPool: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to DirectED Girls Pool</h3>
+							<h3>Donate to DirectEd Girls Pool</h3>
 							<h4>DirectEd Lions Collection</h4>
 							<p>
 								<span>
