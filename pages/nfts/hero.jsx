@@ -36,6 +36,7 @@ export default function Home() {
 	console.log(boysNfts)
 
 	return (
+		
 		<>
 			<Layout>
 				<Meta title="NFT's Portal" description="Directed Ed NFT's portal page" />
@@ -84,8 +85,9 @@ export default function Home() {
 						</>
 					</div>
 				</main>
-			</Layout>
+				</Layout>
 		</>
+		
 
 	);
 }
