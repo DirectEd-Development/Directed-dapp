@@ -73,11 +73,11 @@ const BoysPool: NextPage = () => {
 							<h3>Donate to DirecEd Boys Pool</h3>
 							<h4>DirectEd Lions Collection</h4>
 
-							<p>
+							{/* <p>
 								<span>
 									Donate using using credit card, $ADA, $SOL, $ETH
 								</span>
-							</p>
+							</p> */}
 
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
