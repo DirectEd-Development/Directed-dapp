@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useWallet, useAssets } from "@meshsdk/react";
-import { AssetCard, Meta } from "../../components";
+import { AssetCard, Meta, Layout } from "../../components";
 import Button from '../../components/Button/Button'
 import { data } from "../../data/royal"
 import Image from "next/image";
@@ -16,6 +16,7 @@ export default function Home() {
 
   return (
     <>
+    <Layout>
       <Meta
         title="NFT's Portal"
         description="Directed Ed NFT's portal page"
@@ -40,6 +41,7 @@ export default function Home() {
           </div>
         </>
       </main>
+      </Layout>
     </>
   );
 }

@@ -1,6 +1,12 @@
 @use "../../styles/sass/abstracts/mixins" as *;
 
 .nft-portal {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  color: #1A1A1A;
+  min-height: 80vh;
   padding: 2rem 1rem;
 
   &__assets {

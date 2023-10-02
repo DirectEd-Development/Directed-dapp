@@ -36,13 +36,14 @@ export default function Home() {
 	console.log(boysNfts)
 
 	return (
-		
+
 		<>
 			<Layout>
 				<Meta title="NFT's Portal" description="Directed Ed NFT's portal page" />
 				<main className='nft-portal'>
-					<div className='nft-portal__filter'>
-						<>
+					<>
+						<div className='nft-portal__filter'>
+
 							<div className="nft-portal__assets">
 								{params == "boyspool" ? (
 									boysNfts.map((nft) => {
@@ -82,12 +83,13 @@ export default function Home() {
 									})
 								)}
 							</div>
-						</>
-					</div>
+
+						</div>
+					</>
 				</main>
-				</Layout>
+			</Layout>
 		</>
-		
+
 
 	);
 }
