@@ -28,7 +28,7 @@ export default function nft() {
     const getNfts = async () => {
       console.log("All nfts")
       try {
-        const res = await axios.post("http://localhost:3000/api/transactions")
+        const res = await axios.post("http://app.directed.dev/api/transactions")
         // const res = await getAllNfts()
         console.log(res)
         // setNfts({res.id, res.uid, res.ipfsLink, res.title})
