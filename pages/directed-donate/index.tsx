@@ -17,7 +17,7 @@ import Survey from '../../components/Survey/Survey';
 import { ModalHandler } from '../../components/Modal/Modal';
 
 const donationAddress =
-  'addr_test1qzzanma8z97ltgkg4nup2ta8fyzrgnsz9ur28undfzczsrjy9axchrqjt0rtk22rxr2zp5rquku4a2k4c4cw0duwug2s62nzxf';
+  'addr1qxymrvaj86yv7awx7j8z4v8vqvkcudwx50glvcf35nk8m0u2pmzj6ea96sad8r49fuvtm3yjkl3lagjy7fknte5xt6gqqfjcta';
 
 
 
