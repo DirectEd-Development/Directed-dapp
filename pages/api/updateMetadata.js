@@ -1,6 +1,6 @@
 import { nftUpdate } from "../../lib/api/nftUpdate";
 const heroes = ['ab9ebe10-673b-43cb-a568-b2f54438dc48', '528af4d0-868a-4442-b5e2-caedd3979813'];
-const royals = ['1c73676d-d6d0-4e8b-b5e0-8d1eedd404ad', 'ed7a0468-9432-4291-8de5-cfba4fe8766d']
+const royals = ['ed7a0468-9432-4291-8de5-cfba4fe8766d', '1c73676d-d6d0-4e8b-b5e0-8d1eedd404ad'];
 
 export async function updateNftMetadata(data) {
     
@@ -22,31 +22,55 @@ export async function getNftDetailsById(uid) {
     }
 }
 
-export async function getAllNfts(params) {
+export async function getAllNfts() {
     let nfts = [];
-    if(params.params == "royals"){
-        await Promise.all(
-            royals.map(async(item) => {
-               try{
-                const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNfts/${item}/all/10/1`);
-                return  nfts.push(res.data);
-               }catch(err) {
+    await Promise.all([
+        ...heroes.map(async (item) => {
+            try {
+                const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNfts/${item}/free/5/1`);
+                nfts.push(res.data);
+            } catch (err) {
                 console.log(err);
-               }
-            })
-        )
+            }
+        }),
+        ...royals.map(async (item) => {
+            try {
+                const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNfts/${item}/free/5/1`);
+                nfts.push(res.data);
+            } catch (err) {
+                console.log(err);
+            }
+        }),
+    ]);
 
-    } else if (params.params == 'hero') {
-        await Promise.all(
-            heroes.map(async(item) => {
-               try{
-                const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNfts/${item}/all/10/1`);
-                return  nfts.push(res.data);
-               }catch(err) {
-                console.log(err);
-               }
-            })
-        )
-    }
     return nfts;
 }
+
+// export async function getAllNfts(params) {
+//     let nfts = [];
+//     if(params.params == "royals"){
+//         await Promise.all(
+//             royals.map(async(item) => {
+//                try{
+//                 const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNfts/${item}/all/10/1`);
+//                 return  nfts.push(res.data);
+//                }catch(err) {
+//                 console.log(err);
+//                }
+//             })
+//         )
+
+//     } else if (params.params == 'hero') {
+//         await Promise.all(
+//             heroes.map(async(item) => {
+//                try{
+//                 const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNfts/${item}/all/10/1`);
+//                 return  nfts.push(res.data);
+//                }catch(err) {
+//                 console.log(err);
+//                }
+//             })
+//         )
+//     }
+//     return nfts;
+// }
