@@ -121,19 +121,13 @@ const ScholarshipPool: NextPage = () => {
 					</div>
 				</section>
 				<section className='home__brands'>
-					<p>Partners</p>
+					<h3>Partners</h3>
 					<div className='flex-gap-two'>
 						<Image
 							src='/static/images/coti-white.png'
 							alt='coti'
 							width={150}
 							height={50}
-						/>
-						<Image
-							src='/static/images/tally.svg'
-							alt='tally'
-							width={100}
-							height={100}
 						/>
 						<Image
 							src='/static/images/snapbrillia.png'

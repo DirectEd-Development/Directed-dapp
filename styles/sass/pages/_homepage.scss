@@ -76,7 +76,7 @@
 		}
 		
 	
-		gap: 3rem;
+		gap: 0rem;
 
 		& > div {
 			gap: 4rem;
@@ -86,7 +86,7 @@
 
 			@include mq(small) {
 				display: grid;
-				grid-template-columns: repeat(5, 1fr);
+				grid-template-columns: repeat(4, 0fr);
 				gap: 3rem;
 				margin-block: 4rem;
 			}
