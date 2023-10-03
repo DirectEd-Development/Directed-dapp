@@ -25,91 +25,84 @@ export default function Home() {
 				const [boysRes, girlsRes] = await Promise.all([
 					axios.post("http://app.directed.dev/api/transactions"),
 					axios.post("http://app.directed.dev/api/transactions")
+					// axios.post("http://localhost:3001/api/transactions"),
+					// axios.post("http://localhost:3001/api/transactions")
 				]);
-	
+
 				setBoysNfts(boysRes.data[0]);
 				setGirlsNfts(girlsRes.data[1]);
 			} catch (err) {
 				console.error(err);
-		
+
 				// Check which request caused the error
 				if (err.config.url.includes("boys")) {
-				  setBoysError('An error occurred while fetching boys NFT details.');
+					setBoysError('An error occurred while fetching boys NFT details.');
 				} else if (err.config.url.includes("girls")) {
-				  setGirlsError('An error occurred while fetching girls NFT details.');
+					setGirlsError('An error occurred while fetching girls NFT details.');
 				} else {
-				  // Handle other errors or set a generic error message
-				  setError('An error occurred while fetching NFT details.');
+					// Handle other errors or set a generic error message
+					setError('An error occurred while fetching NFT details.');
 				}
-			  }
+			}
 		};
-	
+
 		getNfts();
 	}, []);
-	
+
 	console.log(boysNfts)
 
 	return (
-
 		<>
 			<Layout>
 				<Meta title="NFT's Portal" description="Directed Ed NFT's portal page" />
 				<main className='nft-portal'>
 					<>
 						<div className='nft-portal__filter'>
-
 							<div className="nft-portal__assets">
 								<div className="nft-portal__assets_header">
 									<h3>Pick which Hero you’d like</h3>
-
 									<Button disabled variant='primary'>Edit Metadata</Button>
-
 								</div>
-								{params == "boyspool" ? (
-									boysNfts.map((nft) => {
-										return (
-											<a
-												target='_blank'
-												key={nft.id}
-												href={nft.paymentGatewayLinkForSpecificSale}
-												rel='noreferrer'
-											>
-												<img
-													src={`https://ipfs.io/ipfs/${nft.ipfsLink.split('/')[2]}`}
-													alt={nft.title}
-													width={200}
-													height={200}
-												/>
-											</a>
-										)
-									})
+								{params === "boyspool" && boysNfts.length > 0 ? (
+									boysNfts.map((nft) => (
+										<a
+											target='_blank'
+											key={nft.id}
+											href={nft.paymentGatewayLinkForSpecificSale}
+											rel='noreferrer'
+										>
+											<img
+												src={`https://ipfs.io/ipfs/${nft.ipfsLink.split('/')[2]}`}
+												alt={nft.title}
+												width={200}
+												height={200}
+											/>
+										</a>
+									))
+								) : params === "girlspool" && girlsNfts.length > 0 ? (
+									girlsNfts.map((nft) => (
+										<a
+											target='_blank'
+											key={nft.id}
+											href={nft.paymentGatewayLinkForSpecificSale}
+											rel='noreferrer'
+										>
+											<img
+												src={`https://ipfs.io/ipfs/${nft.ipfsLink.split('/')[2]}`}
+												alt={nft.title}
+												width={200}
+												height={200}
+											/>
+										</a>
+									))
 								) : (
-									girlsNfts.map((nft) => {
-										return (
-											<a
-												target='_blank'
-												key={nft.id}
-												href={nft.paymentGatewayLinkForSpecificSale}
-												rel='noreferrer'
-											>
-												<img
-													src={`https://ipfs.io/ipfs/${nft.ipfsLink.split('/')[2]}`}
-													alt={nft.title}
-													width={200}
-													height={200}
-												/>
-											</a>
-										)
-									})
+									<p>No data available for the selected pool.</p>
 								)}
 							</div>
-
 						</div>
 					</>
 				</main>
 			</Layout>
 		</>
-
-
 	);
 }
