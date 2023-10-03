@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useWallet, useAssets } from '@meshsdk/react'
-import { AssetCard, Meta } from '../../components'
+import { AssetCard, Meta, Button } from '../../components'
 import { Layout } from '../../components'
 import axios, { AxiosResponse } from 'axios';
 import { useRouter } from 'next/router'
+import Link from 'next/link';
 
 export default function Home() {
 	const [nfts, setNfts] = useState([]);
@@ -46,6 +47,12 @@ export default function Home() {
 						<div className='nft-portal__filter'>
 
 							<div className="nft-portal__assets">
+								<div className="nft-portal__assets_header">
+									<h3>Pick which Hero you’d like</h3>
+									<Link href="/">
+										<Button disabled variant='primary'>Edit Metadata</Button>
+									</Link>
+								</div>
 								{params == "boyspool" ? (
 									boysNfts.map((nft) => {
 										return (
