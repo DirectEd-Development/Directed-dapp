@@ -1,6 +1,8 @@
 import { nftUpdate } from "../../lib/api/nftUpdate";
+
+const royals = ['ed7a0468-9432-4291-8de5-cfba4fe8766d', '1c73676d-d6d0-4e8b-b5e0-8d1eedd404ad'];
 const heroes = ['ab9ebe10-673b-43cb-a568-b2f54438dc48', '528af4d0-868a-4442-b5e2-caedd3979813'];
-const royals = ['ab9ebe10-673b-43cb-a568-b2f54438dc48', '528af4d0-868a-4442-b5e2-caedd3979813'];
+
 
 export async function updateNftMetadata(data) {
     
@@ -28,19 +30,22 @@ export async function getAllNfts() {
         ...heroes.map(async (item) => {
             try {
                 const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNfts/${item}/free/5/1`);
+                console.log(`Hero response: ${JSON.stringify(res.data)}`);
                 nfts.push(res.data);
             } catch (err) {
-                console.log(err);
+                console.log(`Error fetching hero NFTs: ${err}`);
             }
         }),
         ...royals.map(async (item) => {
             try {
                 const res = await nftUpdate.get(`https://studio-api.nmkr.io/v2/GetNfts/${item}/free/5/1`);
+                console.log(`Royals response: ${JSON.stringify(res.data)}`);
                 nfts.push(res.data);
             } catch (err) {
-                console.log(err);
+                console.log(`Error fetching royal NFTs: ${err}`);
             }
         }),
+        
     ]);
 
     return nfts;
