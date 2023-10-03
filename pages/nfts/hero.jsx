@@ -21,7 +21,8 @@ export default function Home() {
 		const getNfts = async () => {
 			console.log("All nfts")
 			try {
-				const res = await axios.post("https://app.directed.dev/api/transactions")
+				const res = await axios.post("http://localhost:3001/api/transactions")
+				// const res = await axios.post("https://app.directed.dev/api/transactions")
 				console.log(res)
 				setBoysNfts(res.data[0]);
 				setGirlsNfts(res.data[1]);
