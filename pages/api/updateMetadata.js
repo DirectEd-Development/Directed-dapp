@@ -1,6 +1,6 @@
 import { nftUpdate } from "../../lib/api/nftUpdate";
-const heroes = ['528af4d0-868a-4442-b5e2-caedd3979813', '528af4d0-868a-4442-b5e2-caedd3979813'];
-const royals = ['528af4d0-868a-4442-b5e2-caedd3979813', '528af4d0-868a-4442-b5e2-caedd3979813'];
+const heroes = ['ab9ebe10-673b-43cb-a568-b2f54438dc48', '528af4d0-868a-4442-b5e2-caedd3979813'];
+const royals = ['ab9ebe10-673b-43cb-a568-b2f54438dc48', '528af4d0-868a-4442-b5e2-caedd3979813'];
 
 export async function updateNftMetadata(data) {
     

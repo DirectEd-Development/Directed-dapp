@@ -4,12 +4,13 @@ import { AssetCard, Meta, Button } from '../../components'
 import { Layout } from '../../components'
 import axios, { AxiosResponse } from 'axios';
 import { useRouter } from 'next/router'
-import Link from 'next/link';
 
 export default function Home() {
 	const [nfts, setNfts] = useState([]);
 	const [boysNfts, setBoysNfts] = useState([]);
 	const [girlsNfts, setGirlsNfts] = useState([]);
+	const [boysError, setBoysError] = useState(null);
+	const [girlsError, setGirlsError] = useState(null);
 	const [hasPolicyIdAssetsChecked, setHasPolicyIdAssetsChecked] = useState(false);
 	const [error, setError] = useState(null);
 	const { connected, wallet } = useWallet();
@@ -20,21 +21,32 @@ export default function Home() {
 
 	useEffect(() => {
 		const getNfts = async () => {
-			console.log("All nfts")
 			try {
-				const res = await axios.post("http://localhost:3001/api/transactions")
-				// const res = await axios.post("https://app.directed.dev/api/transactions")
-				console.log(res)
-				setBoysNfts(res.data[0]);
-				setGirlsNfts(res.data[1]);
+				const [boysRes, girlsRes] = await Promise.all([
+					axios.post("http://localhost:3001/api/transactions"),
+					axios.post("http://localhost:3001/api/transactions")
+				]);
+	
+				setBoysNfts(boysRes.data[0]);
+				setGirlsNfts(girlsRes.data[1]);
 			} catch (err) {
 				console.error(err);
-				setError('An error occurred while fetching NFT details.');
-			}
+		
+				// Check which request caused the error
+				if (err.config.url.includes("boys")) {
+				  setBoysError('An error occurred while fetching boys NFT details.');
+				} else if (err.config.url.includes("girls")) {
+				  setGirlsError('An error occurred while fetching girls NFT details.');
+				} else {
+				  // Handle other errors or set a generic error message
+				  setError('An error occurred while fetching NFT details.');
+				}
+			  }
 		};
-
+	
 		getNfts();
 	}, []);
+	
 	console.log(boysNfts)
 
 	return (
