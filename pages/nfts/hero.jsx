@@ -49,9 +49,9 @@ export default function Home() {
 							<div className="nft-portal__assets">
 								<div className="nft-portal__assets_header">
 									<h3>Pick which Hero you’d like</h3>
-									<Link href="/">
-										<Button disabled variant='primary'>Edit Metadata</Button>
-									</Link>
+
+									<Button disabled variant='primary'>Edit Metadata</Button>
+
 								</div>
 								{params == "boyspool" ? (
 									boysNfts.map((nft) => {
