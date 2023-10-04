@@ -97,7 +97,23 @@ const BoysPool: NextPage = () => {
 						<div className='donate__info'>
 							<span> Direct Donation</span>
 							<p>No DirectEd Lions Collection NFT</p>
-							{isCustom ? (
+
+							<div className='donate__buttons'>
+
+								<a href="https://donate.stripe.com/00g5o56na3jF3wk4gm" target='_blank'>
+									<Button size='small' noShadow>
+										$500
+									</Button>
+								</a>
+								<a href="https://donate.stripe.com/fZe7wdaDq3jF8QE14d" target='_blank'>
+									<Button size='small' noShadow>
+										$1100
+									</Button>
+								</a>
+							</div>
+
+
+							{/* {isCustom ? (
 								<div className='donate__tiers'>
 									<input
 										type='text'
@@ -121,7 +137,7 @@ const BoysPool: NextPage = () => {
 										</Button>
 									))}
 								</div>
-							)}
+							)} */}
 						</div>
 					</div>
 					<div className='tier'>

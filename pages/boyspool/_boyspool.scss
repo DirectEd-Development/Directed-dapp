@@ -1,0 +1,30 @@
+.donate__info {
+    
+  
+    .donate__buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+  
+      a {
+        text-decoration: none;
+  
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+  
+        Button {
+          
+          background-color: #4D6F58;
+          outline: 1rem;
+          color: #fff;
+          
+          &:hover {
+            background-color: var(--clr-primary-400);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  

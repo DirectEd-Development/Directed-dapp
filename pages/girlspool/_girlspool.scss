@@ -1,0 +1,187 @@
+@use '../../styles/sass/abstracts/mixins' as *;
+
+.donate {
+	position: relative;
+	top: 30px;
+	width: 100%;
+	height: fit-content;
+	padding: 3rem 2.5rem;
+
+	
+	&__donations {
+		padding-left: 3rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-content: center;
+		gap: 3rem;
+		margin-block: 3rem;
+		
+		
+	}
+	
+	
+	&__tier-options {
+		height: 130vh;
+		flex-basis: 60%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		
+		& h4 {
+			margin-top: 5rem;
+		}
+
+		& h3 {
+			padding-top: 7.125rem;
+		}
+
+		& p {
+			:nth-child(1) {
+				margin-bottom: 1.5rem;
+				font-size: small;
+				& span {
+					background: var(--clr-accent-100);
+					
+				}
+
+
+			}
+
+
+			
+		}
+
+		& span {
+			margin-top: 2rem;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+		
+		&__timer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 60px;
+			font-size: 4rem;
+			font-weight: bold;
+			
+			& p {
+				margin: 0 1rem;
+			}
+			
+			
+			padding: 1rem;
+			
+		}
+		
+		&__tiers {
+			display: flex;
+			gap: 2.5rem;
+			justify-content: center;
+			margin: 2rem 0;
+
+			& button {
+				color: var(--clr-text-dark);
+				background-color: var(--clr-accent-400);
+				border: none;
+				border-radius: 5px;
+				padding: 10px 20px;
+				cursor: pointer;
+				font-size: 16px;
+			
+				&:hover {
+				  background-color: var(--clr-accent-300);
+				}
+			
+				&.active,
+				&:active,
+				&:focus {
+				  background-color: var(--clr-primary-400);
+				  color: #fff;
+				}
+			  }
+			
+			&:nth-child(2) {
+			margin-top: 3rem;
+		}
+
+		& input[type="text"] {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			width: 100%;
+			max-width: 300px;
+			margin-bottom: 10px;
+			background: var(--clr-accent-100);
+	  
+			&:focus {
+			  outline: none;
+			  background: var(--clr-accent-100);
+			}
+		  }
+	}
+
+	.tier {
+		height: 140vh;
+	}
+}
+
+.go-back {
+	justify-self: right;
+	display: grid;
+	position: absolute;
+	left: 50px;
+	padding: 1rem;
+	border-radius: 0.5rem;
+
+	&:hover {
+		background: grey;
+	}
+}
+
+
+//Confirm page
+
+.confirm-donation {
+	position: absolute;
+	width: 100%;
+	padding: 1rem 1rem;
+
+	&__container {
+		display: grid;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 3rem 0;
+	}
+
+	&__items {
+		margin: 1rem auto;
+		width: 60%;
+		height: fit-content;
+		padding: 1.25rem;
+		border-radius: 0.5rem;
+		background: var(--clr-accent-100);
+
+		@include mq(small) {
+			width: 50%;
+		}
+	}
+
+	&__list {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		font-size: var(--fs-300);
+		margin-bottom: 2rem;
+
+		& > span:nth-child(2) {
+			flex-basis: 60%;
+			text-align: left;
+		}
+	}
+}

@@ -40,9 +40,9 @@ const GirlsPool: NextPage = () => {
 	}
 
 	const fullDonationTier = (option: OptionTiers) => {
-		 if(option.amount == "custom"){
+		if (option.amount == "custom") {
 			setIsCustom(true);
-		 } else {
+		} else {
 			setTier({
 				title: option.title,
 				amount: option.amount,
@@ -50,7 +50,7 @@ const GirlsPool: NextPage = () => {
 				school: "girlspool",
 			});
 			dispatch(setOpen())
-		 }
+		}
 	}
 
 
@@ -94,7 +94,23 @@ const GirlsPool: NextPage = () => {
 						<div className='donate__info'>
 							<span> Direct Donation</span>
 							<p>No DirectEd Lions Collection NFT</p>
-							{isCustom ? (
+
+							<div className='donate__buttons'>
+								
+								<a href="https://donate.stripe.com/5kA17P26U6vR9UIdQV" target='_blank'>
+									<Button size='small' noShadow>
+										$500
+									</Button>
+								</a>
+								<a href="https://donate.stripe.com/5kAbMt12QbQb4Ao5ks" target='_blank'>
+									<Button size='small' noShadow>
+										$1100
+									</Button>
+								</a>
+							</div>
+
+
+							{/* {isCustom ? (
 								<div className='donate__tiers'>
 								<input
 									 type="text"
@@ -122,7 +138,7 @@ const GirlsPool: NextPage = () => {
 									</Button>
 								))}
 							</div>
-							)}
+							)} */}
 						</div>
 					</div>
 					<div className='tier'>
@@ -136,7 +152,7 @@ const GirlsPool: NextPage = () => {
 							/>
 						)}
 					</div>
-					
+
 				</div>
 			</main>
 		</Layout>
