@@ -70,11 +70,14 @@ const ScholarshipPool: NextPage = () => {
 			)}
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 			<main className='scholarship-pool container'>
-				<button className='OpenButton' onClick={handleOpenModal}><img src="/static/images/question_mark.png" alt="open modal icon" width="30px" height="30px" /></button>
+				<div className="scholarship-pool__header-text"><h2>DirectEd Lions Crowdfunding Scholarship </h2></div>
+
 				<section className='scholarship-pool__title'>
+					<button className='OpenButton' onClick={handleOpenModal}><img src="/static/images/question_mark.png" alt="open modal icon" width="30px" height="30px" /></button>
 					<h3>How We Show Appreciation To Our Supporters</h3>
-					<DonorInfoTab />
+					
 				</section>
+				<DonorInfoTab />
 				<section className='scholarship-pool__potrait-section'>
 					<h3>Access Scholarship Crowdfunding Pools</h3>
 					<h5>
@@ -148,9 +151,9 @@ const ScholarshipPool: NextPage = () => {
 							height={80}
 						/>
 					</div>
-					
+
 				</section>
-				
+
 				{/* <FilterMenu />
 				<section className='scholarship-pool__landscape-card'>
 					{schoolData.map((school: SchoolDataType) => (

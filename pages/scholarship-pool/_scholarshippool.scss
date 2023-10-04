@@ -15,6 +15,13 @@
 	&__title {
 		// font-size: var(--fs-700);
 		text-align: center;
+		display: flex;
+		gap: 1rem;
+		margin-top: 0;
+	}
+
+	&__header-text {
+		text-align: center;
 	}
 
 	&__potrait-section {
