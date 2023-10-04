@@ -93,31 +93,19 @@ const GeneralPool: NextPage = () => {
 						<div className='donate__info'>
 							<span> Direct Donation</span>
 							<p>No DirectEd Lions Collection NFT</p>
-							{isCustom ? (
-								<div className='donate__tiers'>
-									<input
-										type='text'
-										placeholder='Custom Amount'
-										onChange={(e) => setCustom(e.target.value)}
-									/>
-									<Button size='small' noShadow onClick={handleCustom}>
-										Donate
+							<div className='donate__buttons'>
+
+								<a href="https://donate.stripe.com/dR64k17ref2n8QE8wD" target='_blank'>
+									<Button size='small' noShadow>
+										$500
 									</Button>
-								</div>
-							) : (
-								<div className='donate__tiers'>
-									{noLionOptions.map((option) => (
-										<Button
-											size='small'
-											noShadow
-											variant={option.title === tier?.title ? 'primary' : ''}
-											onClick={() => fullDonationTier(option)}
-										>
-											{option.title}
-										</Button>
-									))}
-								</div>
-							)}
+								</a>
+								<a href="https://donate.stripe.com/14k3fX8vi6vR9UIcMW" target='_blank'>
+									<Button size='small' noShadow>
+										$1,100
+									</Button>
+								</a>
+							</div>
 						</div>
 					</div>
 					<div className='tier'>
