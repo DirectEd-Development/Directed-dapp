@@ -70,7 +70,7 @@ const ScholarshipPool: NextPage = () => {
 			)}
 			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 			<main className='scholarship-pool container'>
-				<div className="scholarship-pool__header-text"><h2>DirectEd Lions Crowdfunding Scholarship </h2></div>
+				<div className="scholarship-pool__header-text"><h2>DirectEd Lions Scholarship Crowdfunding </h2></div>
 
 				<section className='scholarship-pool__title'>
 					<h4>How We Show Appreciation To Our Supporters</h4>
