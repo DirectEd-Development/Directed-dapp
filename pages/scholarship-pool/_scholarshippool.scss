@@ -3,6 +3,7 @@
 	padding-bottom: 4rem;
 	display: grid;
 	gap: 5rem;
+	align-items: center;
 
 	.OpenButton {
 		background-color: transparent;
@@ -13,11 +14,11 @@
 	}
 
 	&__title {
-		// font-size: var(--fs-700);
 		text-align: center;
 		display: flex;
-		gap: 1rem;
-		margin-top: 0;
+		flex-direction: column;
+		align-items: center; 
+		gap: 3rem;
 	}
 
 	&__header-text {
@@ -28,7 +29,7 @@
 		text-align: center;
 		padding-inline: 6rem;
 
-		&>* {
+		& > * {
 			margin: 3rem 0;
 		}
 	}
@@ -56,8 +57,9 @@
 	padding-block: 3rem;
 	text-align: center;
 
-	& h3 {
-		width: 22.5ch;
+	& h3,
+	& h2 {
+		width: 22.5ch; // Center align h3 and h2
 	}
 
 	& p {
