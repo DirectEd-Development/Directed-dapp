@@ -2,7 +2,7 @@
 	padding-top: 6rem;
 	padding-bottom: 4rem;
 	display: grid;
-	gap: 5rem;
+	gap: 3rem;
 	align-items: center;
 
 	.OpenButton {
@@ -11,14 +11,19 @@
 		display: grid;
 		cursor: pointer;
 		justify-self: end;
+		margin-top: 0;
 	}
 
 	&__title {
 		text-align: center;
 		display: flex;
-		flex-direction: column;
-		align-items: center; 
+		align-items: center;
 		gap: 3rem;
+		justify-content: center;
+
+		button {
+			// Add styling for the button if needed later
+		}
 	}
 
 	&__header-text {

@@ -73,7 +73,7 @@ const ScholarshipPool: NextPage = () => {
 				<div className="scholarship-pool__header-text"><h2>DirectEd Lions Crowdfunding Scholarship </h2></div>
 
 				<section className='scholarship-pool__title'>
-					<h3>How We Show Appreciation To Our Supporters</h3>
+					<h4>How We Show Appreciation To Our Supporters</h4>
 					<button className='OpenButton' onClick={handleOpenModal}><img src="/static/images/question_mark.png" alt="open modal icon" width="30px" height="30px" /></button>
 				</section>
 				<div className="plates"><DonorInfoTab /></div>
