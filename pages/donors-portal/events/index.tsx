@@ -49,15 +49,6 @@ const Events = () => {
       description:
         '',
       },
-      {
-        title: 'How to Ace Interviews',
-        lecturer: 'Jessica Pointing',
-        date: 'August 04',
-        time: '2 pm UTC',
-        location: 'https://lu-se.zoom.us/j/66085258419',
-        description:
-          '',
-        },
   ];
 
   const [activeEventIndex, setActiveEventIndex] = useState(0);
