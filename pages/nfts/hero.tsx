@@ -43,6 +43,7 @@ export default function Home() {
                                                     height={200}
                                                 />
                                             </a>
+                                            <p className="display-name">{image.title}</p>
                                         </div>
                                     )
                                 )}

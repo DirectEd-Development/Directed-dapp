@@ -34,6 +34,7 @@ export default function Home() {
                   <a target="_blank" href={image.url}>
                     <Image src={image.image} alt={image.title} width={200} height={200} />
                   </a>
+                  <p className="display-name">{image.title}</p>
                 </div>
               ))}
             </div>

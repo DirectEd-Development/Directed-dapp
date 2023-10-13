@@ -16,6 +16,14 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 3rem;
 
+    .display-name {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px; 
+      font-size: 1.2rem; 
+      color: #333; 
+    }
+    
     @include mq(small) {
       grid-template-columns: repeat(5, 1fr);
     }
