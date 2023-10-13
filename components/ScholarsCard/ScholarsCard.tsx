@@ -47,6 +47,14 @@ const ScholarsCard = ({
 					<Link href={infoLink}>
 						<Button variant='link'>Learn More</Button>
 					</Link>
+					<div className='scholars-card__info'>
+						<div>
+						<h6>Number of students:&nbsp; {funded}/{fundsLeft}</h6>
+						</div>
+					   	<h6>
+						Goal: 7000 $
+						</h6>
+						</div>
 				</div>
 				<div className='scholars-card__stats'>
 					{/* <div>
