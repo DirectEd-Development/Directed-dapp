@@ -28,7 +28,7 @@ export const data = [
 	// Data for Boys Pool
 	{
 		title: 'Moja Nadka',
-		image: '/static/images/Directed Heros/boyspool/TheolasRokele.png',
+		image: '/static/images/Directed Heros/boyspool/MojaNadka.png',
 		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=92c94c93c92d45a7b80faedf4f61f339',
 		school: 'boyspool',
 	},
@@ -58,7 +58,7 @@ export const data = [
 	},
 
 	// Data for Girls Pool
-	
+
 	{
 		title: 'Mareo Razsam',
 		image: '/static/images/Directed Heros/girlspool/MareoRazsam.png',
