@@ -35,9 +35,9 @@ export const data = [
 		school: 'girlspool',
 	},
 	{
-		title: 'Cehua Epkal2',
-		image: '/static/images/Directed Royals/girlspool/CehuaEpkal2.png',
-		url: 'https://pay.nmkr.io/?p=1c73676dd6d04e8bb5e08d1eedd404ad&n=4fa8091981124dca9b4f0797aa8cef0b',
+		title: 'Marbye Yoxa',
+		image: '/static/images/Directed Royals/girlspool/MarbyeYoxa.png',
+		url: 'https://pay.nmkr.io/?p=1c73676dd6d04e8bb5e08d1eedd404ad&n=80551823895649bf855f537c5beb25b7',
 		school: 'girlspool',
 	},
 
