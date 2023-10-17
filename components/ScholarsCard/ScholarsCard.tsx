@@ -44,7 +44,12 @@ const ScholarsCard = ({
 						Access Scholarship Pools for {schoolAlias} students from low income
 						families
 					</span>
-					<Link href={infoLink}>
+					<div className='scholars-card__info'>
+					<h6>Number of students</h6>
+					{funded}/{fundsLeft}
+					<h6>GOAL AMOUNT: <span>7000$</span></h6>
+				</div>
+				<Link href={infoLink}>
 						<Button variant='link'>Learn More</Button>
 					</Link>
 				</div>
