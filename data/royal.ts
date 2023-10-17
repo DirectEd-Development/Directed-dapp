@@ -1,15 +1,15 @@
 export const data = [
 	// Data for DirectEd Scholars
 	{
-		title: 'Jonako Kariala',
-		image: '/static/images/Directed Royals/Kagumo-Royals/Jonako-Kariala.png',
-		url: '',
+		title: 'Heime Epkal',
+		image: '/static/images/Directed Royals/directedscholars/HeimeEpkal.png',
+		url: 'https://pay.nmkr.io/?p=7f8a7f0d11a74e559b925460aede951f&n=8479c38dd94c44638a156144ebaca0fb',
 		school: 'generalpool',
 	},
 	{
-		title: 'Mirca Teluji',
-		image: '/static/images/Directed Royals/Kagumo-Royals/Mirca-Teluji.png',
-		url: '',
+		title: 'Mited Edoria',
+		image: '/static/images/Directed Royals/directedscholars/MitedEdoria.png',
+		url: 'https://pay.nmkr.io/?p=7f8a7f0d11a74e559b925460aede951f&n=36ac9a0b6ba64462a85572e92e281580',
 		school: 'generalpool',
 	},
 
