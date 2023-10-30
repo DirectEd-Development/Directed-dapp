@@ -89,6 +89,7 @@ const ScholarshipPool: NextPage = () => {
 							funded='0'
 							fundsLeft='10'
 							schoolName='General Pool'
+							amount='7000$'
 							schoolAlias='DirectEd General Pool'
 							infoLink='https://directed.notion.site/DirectEd-s-Scholars-of-the-Nile-General-Pool-00d4076e859d4fb699e30e842b5901d2?pvs=4'
 							image='/static/images/generalpool.jpg'
@@ -101,6 +102,7 @@ const ScholarshipPool: NextPage = () => {
 							funded='0'
 							fundsLeft='10'
 							schoolName="Boys Pool"
+							amount='5000$'
 							schoolAlias="DirecEd Boys Pool"
 							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHim-Boys-only-funding-pool-eab27b1341b04da0b0e330e0e999be07?pvs=4'
 							image='/static/images/boyspool.jpg'
@@ -113,6 +115,7 @@ const ScholarshipPool: NextPage = () => {
 							funded='0'
 							fundsLeft='10'
 							schoolName="Girls Pool"
+							amount='2000$'
 							schoolAlias="DirectEd Girls Pool"
 							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHer-Girls-only-funding-pool-fa956750d38d4e98b58655a15f2e2c9e?pvs=4'
 							image='/static/images/girlspool.jpg'
