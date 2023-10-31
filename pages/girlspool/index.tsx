@@ -71,11 +71,6 @@ const GirlsPool: NextPage = () => {
 						<div>
 							<h3>Donate to DirectEd Girls Pool</h3>
 							<h4>DirectEd Lions Collection</h4>
-							{/* <p>
-								<span>
-									Donate using using credit card, $ADA, $SOL, $ETH
-								</span>
-							</p> */}
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
 								{lionOptions.map((option) => (
@@ -108,37 +103,6 @@ const GirlsPool: NextPage = () => {
 									</Button>
 								</a>
 							</div>
-
-
-							{/* {isCustom ? (
-								<div className='donate__tiers'>
-								<input
-									 type="text"
-									 placeholder="Custom Amount"
-									 onChange={(e) => setCustom(e.target.value)}
-								/>
-								<Button
-									size='small'
-									noShadow
-									onClick={handleCustom}
-								>
-									Donate
-								</Button>
-							</div>
-							): (
-								<div className='donate__tiers'>
-								{noLionOptions.map((option) => (
-									<Button
-										size='small'
-										noShadow
-										variant={option.title === tier?.title ? 'primary' : ''}
-										onClick={() => fullDonationTier(option)}
-									>
-										{option.title}
-									</Button>
-								))}
-							</div>
-							)} */}
 						</div>
 					</div>
 					<div className='tier'>

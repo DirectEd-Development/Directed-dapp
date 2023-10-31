@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button, Meta , Layout} from '../components'
+import { Button, Meta, Layout } from '../components'
 
 const Home: NextPage = () => {
 	return (
@@ -29,13 +29,13 @@ const Home: NextPage = () => {
 						src='https://www.youtube.com/embed/_dq9z-whX3Y'
 						frameBorder='0'
 						className='home__hero--video-content desk'
-				
-					
+
+
 					></iframe>
 					<img
-					className='home__hero--video-content mob'
-					 src="https://drive.google.com/uc?export=view&id=1EYBbSnCu3ChejOjhr3xNirjaqC7AHyMk" alt="DirectEd" />
-				
+						className='home__hero--video-content mob'
+						src="https://drive.google.com/uc?export=view&id=1EYBbSnCu3ChejOjhr3xNirjaqC7AHyMk" alt="DirectEd" />
+
 				</section>
 				<section className='home__quote'>
 					<blockquote>
@@ -48,14 +48,14 @@ const Home: NextPage = () => {
 				</section>
 				<section className='home__statement'>
 					<div className="main-img">
-					<img
-					className='main-img'
-						src='https://drive.google.com/uc?export=view&id=1JXkfnQvM9OLUsYELIaWuCPgYQiTOa-QI'
-						alt='Students'
-					
-					/>
+						<img
+							className='main-img'
+							src='https://drive.google.com/uc?export=view&id=1JXkfnQvM9OLUsYELIaWuCPgYQiTOa-QI'
+							alt='Students'
+
+						/>
 					</div>
-				
+
 					<div className='home__statement--text-content'>
 						<h2>Problem</h2>
 						<div className='flex-gap'>
@@ -373,7 +373,7 @@ const Home: NextPage = () => {
 					<img
 						src='/static/images/piechart.svg'
 						alt='piechart'
-	
+
 						className='home__piechart'
 					/>
 					<p>

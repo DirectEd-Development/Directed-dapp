@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
+    "@iconify/react": "^4.1.1",
     "@martifylabs/mesh": "^1.2.0",
     "@martifylabs/mesh-react": "^1.0.1-beta.2",
     "@meshsdk/core": "1.4.0",

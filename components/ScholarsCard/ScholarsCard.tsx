@@ -9,6 +9,7 @@ type ScholarsCardProps = {
 	funded: string
 	fundsLeft: string
 	donated: number
+	amount: string
 	infoLink: string
 	image: string
 	donateLink: string
@@ -22,6 +23,7 @@ const ScholarsCard = ({
 	schoolName,
 	schoolAlias,
 	donated,
+	amount,
 	infoLink,
 	image,
 	donateLink,
@@ -44,7 +46,12 @@ const ScholarsCard = ({
 						Access Scholarship Pools for {schoolAlias} students from low income
 						families
 					</span>
-					<Link href={infoLink}>
+					<div className='scholars-card__info'>
+					<h6>Number of students</h6>
+					{funded}/{fundsLeft}
+					<h6>GOAL AMOUNT: <span>{amount}</span></h6>
+				</div>
+				<Link href={infoLink}>
 						<Button variant='link'>Learn More</Button>
 					</Link>
 				</div>

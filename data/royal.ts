@@ -1,15 +1,15 @@
 export const data = [
 	// Data for DirectEd Scholars
 	{
-		title: 'Jonako Kariala',
-		image: '/static/images/Directed Royals/Kagumo-Royals/Jonako-Kariala.png',
-		url: '',
+		title: 'Heime Epkal',
+		image: '/static/images/Directed Royals/directedscholars/HeimeEpkal.png',
+		url: 'https://pay.nmkr.io/?p=7f8a7f0d11a74e559b925460aede951f&n=8479c38dd94c44638a156144ebaca0fb',
 		school: 'generalpool',
 	},
 	{
-		title: 'Mirca Teluji',
-		image: '/static/images/Directed Royals/Kagumo-Royals/Mirca-Teluji.png',
-		url: '',
+		title: 'Mited Edoria',
+		image: '/static/images/Directed Royals/directedscholars/MitedEdoria.png',
+		url: 'https://pay.nmkr.io/?p=7f8a7f0d11a74e559b925460aede951f&n=36ac9a0b6ba64462a85572e92e281580',
 		school: 'generalpool',
 	},
 
@@ -35,9 +35,9 @@ export const data = [
 		school: 'girlspool',
 	},
 	{
-		title: 'Cehua Epkal2',
-		image: '/static/images/Directed Royals/girlspool/CehuaEpkal2.png',
-		url: 'https://pay.nmkr.io/?p=1c73676dd6d04e8bb5e08d1eedd404ad&n=4fa8091981124dca9b4f0797aa8cef0b',
+		title: 'Marbye Yoxa',
+		image: '/static/images/Directed Royals/girlspool/MarbyeYoxa.png',
+		url: 'https://pay.nmkr.io/?p=1c73676dd6d04e8bb5e08d1eedd404ad&n=80551823895649bf855f537c5beb25b7',
 		school: 'girlspool',
 	},
 

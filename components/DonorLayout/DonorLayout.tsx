@@ -65,9 +65,10 @@ const DonorLayout = ({ children }: LayoutProps) => {
 									color: path === link.link ?  '#fff':'#000',
 								}
 							}
-							 href={link.link} key={index}>												
+							 to={link.link} key={index}>												
 								<p>									
 								{<link.icon />} {link.name}
+
 								</p>
 								
 									<AiOutlineRight
