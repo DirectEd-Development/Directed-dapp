@@ -1,16 +1,32 @@
 .scholars-card {
-	border: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	border-radius: 1rem;
 	background: var(--clr-accent-100);
-	// box-shadow: 0 0 1px 1px rgba(#000000, 0.3);
 	height: fit-content;
-	width: 35rem;
+	width: 95%;
+	
 
-	&__image {
+	
+
+	@media (min-width: 768px) {
+		width: 30%;
+		height: 75vh;
+
+	
+	}
+
+	&__image-container {
+		width: 100%;
+
+	.image{
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
-		object-position: center;
-		border-top-right-radius: 1rem;
-		border-top-left-radius: 1rem;
+
+	}
+	
 	}
 
 	&__content {
@@ -80,8 +96,12 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	position: absolute;
-	width: 50rem;
-	height: 30rem;
+	width: 90%;
+	height: 90%;
+	@media (min-width: 768px) {
+		width: 50%;
+		height: 50%;
+	}
 	.error__modal-body{
 		font-size: 1.4rem;
 		text-align: center;

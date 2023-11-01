@@ -1,9 +1,11 @@
 .scholarship-pool {
+	display: flex;
+	max-width: 100vw;
+	flex-direction: column;
+	align-items: center;
 	padding-top: 6rem;
 	padding-bottom: 4rem;
-	display: grid;
-	gap: 3rem;
-	align-items: center;
+	
 
 	.OpenButton {
 		background-color: transparent;
@@ -12,6 +14,9 @@
 		cursor: pointer;
 		justify-self: end;
 		margin-top: 0;
+		img{
+			max-width: 2rem;
+		}
 	}
 
 	&__title {
@@ -64,11 +69,11 @@
 
 	& h3,
 	& h2 {
-		width: 22.5ch; // Center align h3 and h2
+		// width: 22.5ch; // Center align h3 and h2
 	}
 
 	& p {
-		width: 50ch;
+		// width: 50ch;
 	}
 }
 
