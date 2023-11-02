@@ -68,22 +68,30 @@ const ScholarshipPool: NextPage = () => {
 			{isModalOpen && (
 				<button onClick={handleReopenModal}></button>
 			)}
-			<Meta title='Scholarship Pools' description='Scholarship Pools Page' />
-			<main className='scholarship-pool container'>
+			 <Meta title='Scholarship Pools' description='Scholarship Pools Page' />
+
+			<main className='scholarship-pool'>
+
+
 				<div className="scholarship-pool__header-text"><h2>DirectEd Lions Scholarship Crowdfunding </h2></div>
+
 
 				<section className='scholarship-pool__title'>
 					<h4>How We Show Appreciation To Our Supporters</h4>
-					<button className='OpenButton' onClick={handleOpenModal}><img src="/static/images/question_mark.png" alt="open modal icon" width="30px" height="30px" /></button>
+					<button className='OpenButton' onClick={handleOpenModal}><img src="/static/images/question_mark.png" alt="open modal icon" /></button>
 				</section>
-				<div className="plates"><DonorInfoTab /></div>
+				<DonorInfoTab />
+
+
 				<section className='scholarship-pool__potrait-section'>
 					<h3>Access Scholarship Crowdfunding Pools</h3>
 					<h5>
-						Press the ‘Donate now’ button of the pool you want to
+						Press the 'Donate now' button of the pool you want to
 						contribute to and see the DirectEd Lions minting tier options
 					</h5>
-					<div className='scholarship-pool__potrait-cards'>
+					<div 
+					className='scholarship-pool__potrait-cards'
+					>
 						<ScholarsCard
 							donated={wallet2.length}
 							funded='0'
@@ -156,15 +164,17 @@ const ScholarshipPool: NextPage = () => {
 
 				</section>
 
+			</main> 
+		</Layout>
+	)
+}
+
+export default ScholarshipPool
+
+
 				{/* <FilterMenu />
 				<section className='scholarship-pool__landscape-card'>
 					{schoolData.map((school: SchoolDataType) => (
 						<PoolCard key={school.title} {...school} />
 					))}
 				</section> */}
-			</main>
-		</Layout>
-	)
-}
-
-export default ScholarshipPool

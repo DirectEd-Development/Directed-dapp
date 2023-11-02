@@ -32,13 +32,14 @@ const ScholarsCard = ({
 }: ScholarsCardProps) => {
 	return (
 		<div className='scholars-card'>
-			<Image
-				src={image}
-				alt='djed-scholars'
-				width='350'
-				height='200'
-				className='scholars-card__image'
-			/>
+			<div
+			className='scholars-card__image-container'
+			>
+			
+			<img src={image} alt={'djed-scholars'} className='image'/>
+
+			</div>
+		
 			<div className='scholars-card__content'>
 				<div className='scholars-card__title'>
 					<h3>{schoolName}</h3>
@@ -56,48 +57,7 @@ const ScholarsCard = ({
 					</Link>
 				</div>
 				<div className='scholars-card__stats'>
-					{/* <div>
-						<h5>
-							{funded}/{fundsLeft}
-						</h5>
-						<span>Scholarships</span>
-						<span>funded</span>
-					</div>
-					<div>
-						<h5>{nftsleft?.toString() ?? 'No NFTs left'}</h5>
-						<span>remaining Hero </span>
-						<span>and Royals</span>
-					</div> */}
-					{/* <div className='scholars-card__donors'>
-						<Image
-							src='/static/images/clock.png'
-							alt='Pool Image'
-							width='20'
-							height='20'
-						/>
-						<span>
-							<span>Fundraiser has Ended</span>
-							<span>Thank you for your donations</span>
-						</span>
-					</div>
-					<div className='scholars-card__donors'>
-						<Image
-							src='/static/images/Vector.png'
-							alt='Pool Image'
-							width='20'
-							height='20'
-						/>
-						<span>
-							<span>{donated} person(s) have</span>
-							<span>donated</span>
-						</span>
-					</div> */}
 				</div>
-
-				{/* <ProgressBar stakeAddress={stakeAdd} /> */}
-				{/* <Link href={donateLink}>
-					<Button variant='primary'>Donate Now</Button>
-				</Link> */}
 				<Link href={donateLink}>
 					<Button variant='primary'>Donate Now</Button>
 				</Link>

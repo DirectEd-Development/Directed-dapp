@@ -48,7 +48,7 @@ export default function nft() {
       <main className='nft-assets'>
         <div className='nft-assets'></div>
         <>
-          <h3>Pick which nft you’d like</h3>
+          <h3>Pick which nft you'd like</h3>
           {error ? (
             <div style={{ color: 'red' }}>{error}</div>
           ) : (
