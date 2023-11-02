@@ -59,7 +59,10 @@ const GirlsPool: NextPage = () => {
 			<Meta title='Donate' description='Donate to student' />
 			<main className='donate container'>
 				<div className='donate__donations'>
-					<div className='donate__tier-options'>
+					<div
+						
+					 className={`donate__tier-options ${tier?'hideDonate':''} `}
+					 >
 						<div className="donate__title-section">
 							<FaChevronLeft
 								onClick={() => router.back()}

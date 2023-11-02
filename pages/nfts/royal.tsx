@@ -25,9 +25,7 @@ export default function Home() {
           <>
             <div className="nft-portal__assets">
               <div className="nft-portal__assets_header">
-                <h3>Pick which Royal you’d like</h3>
-                <Button disabled variant='primary'>Edit Metadata</Button>
-
+                <h3>Pick which Royal you'd like</h3>
               </div>
               {data.filter(item => item.school === query).map((image: { title: string, image: string, url: string, }, index: number) => (
                 <div key={index} className={image.url ? 'nft-portal__asset' : 'nft-portal__asset disabled'}>

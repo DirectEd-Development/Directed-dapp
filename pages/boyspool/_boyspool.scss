@@ -28,3 +28,10 @@
     }
   }
   
+
+  //small devices
+@media (max-width: 768px) {
+  .hideDonate {
+    display: none;
+  }
+}
