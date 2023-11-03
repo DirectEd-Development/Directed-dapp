@@ -480,7 +480,7 @@ const WALLETJSX = ()=>{
         >
             <div className="head">
                 <h3>Your support shapes the next generation of African tech leaders!</h3>
-                <p>Crypto donations goes to our Cardano wallet with ADA handle $directeddev</p>
+                <p>Donations to 'DirectEd' goes to our ADAhandle $directeddev</p>
             </div>
             {VARYING}
         </div>
