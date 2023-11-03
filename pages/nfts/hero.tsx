@@ -1,30 +1,26 @@
-import { useState, useEffect } from 'react'
-import { useWallet, useAssets } from '@meshsdk/react'
-import { AssetCard, Meta, Layout } from '../../components'
+import {  Meta, Layout } from '../../components'
 import { data } from '../../data/hero'
 import Image from 'next/image'
-import Button from '../../components/Button/Button'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export default function Home() {
-    const [selectedSchool, setSelectedSchool] = useState(null)
     const router = useRouter()
 
     const query = router.asPath.split('?')[1]
 
     return (
-        <>
             <Layout>
                 <Meta title="NFT's Portal" description="Directed Ed NFT's portal page" />
+
                 <main className='nft-portal'>
-                    <div className='nft-portal__filter'></div>
-                    <>
-                        <div className='nft-portal__assets'>
-                            <div className='nft-portal__assets_header'>
+
+                    <div className='nft-portal__assets_header'>
                                 <h3>Pick which Hero you'd like</h3>
 
-                            </div>
+                    </div>
+
+                        <div className='nft-portal__assets'>
                             {data
                                 .filter((item) => item.school === query)
                                 .map(
@@ -33,22 +29,21 @@ export default function Home() {
                                         index: number
                                     ) => (
                                         <div key={index} className={image.url ? 'nft-portal__asset' : 'nft-portal__asset disabled'}>
-                                            <a target='_blank' href={image.url}>
+                                            <Link target='_blank' href={image.url}>
                                                 <Image
                                                     src={image.image}
                                                     alt={image.title}
                                                     width={200}
                                                     height={200}
                                                 />
-                                            </a>
+                                            </Link>
                                             <p className="display-name">{image.title}</p>
                                         </div>
                                     )
                                 )}
                         </div>
-                    </>
+
                 </main>
             </Layout>
-        </>
     );
 }

@@ -1,0 +1,89 @@
+@use '../../styles/sass/abstracts/mixins' as *;
+
+.donors-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    width: 100vw;
+    min-height: 85vh;
+
+    h1{
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #4D6F58;
+        margin-bottom: 1rem;
+        // align-self: flex-start;
+    }
+.donors-content{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq(small) {
+        width: 75%;
+    }
+
+        .donors-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            gap: 1.5rem;
+            .donor{
+                color:#4D6F58;
+                border: 1px solid #4D6F58;
+                padding: 10px 20px;
+                border-radius: 5px;
+                margin: 10px 0;
+                width: 16rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                h3{
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    color: #4D6F58;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                    
+                }
+
+
+                //hover
+
+                &:hover{
+                    background-color: #4D6F58;
+
+                    h3{
+                        color: #fff;
+
+                    }
+
+                }
+                
+                @include mq(small) {
+                width: 150px;
+                height: 100px;
+                }
+
+            
+
+            
+            }
+        }
+}
+
+
+}
+
+

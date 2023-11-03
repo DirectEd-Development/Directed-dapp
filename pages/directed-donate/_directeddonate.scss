@@ -88,7 +88,7 @@
             padding: 10px 20px;
             border-radius: 5px;
             margin: 10px 0;
-            cursor: 'pointer';
+            cursor: pointer;
             width: 10rem;
             @include mq(small) {
                 width: 16rem;
@@ -166,7 +166,7 @@
         padding: 10px 20px;
         border-radius: 5px;
         margin: 10px 0;
-        cursor: 'pointer';
+        cursor: pointer;
         width: 16rem;
         display: flex;
         flex-direction: column;
