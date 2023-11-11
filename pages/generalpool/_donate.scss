@@ -17,6 +17,12 @@
 		gap: 3rem;
 		margin-block: 3rem;
 		
+		&__donate__info{
+
+			& span {
+				font-size: 10px;
+			}
+		}
 		
 	}
 	
@@ -34,6 +40,7 @@
 
 		& h3 {
 			padding-top: 7.125rem;
+			font-size: 25px;
 		}
 
 		& p {

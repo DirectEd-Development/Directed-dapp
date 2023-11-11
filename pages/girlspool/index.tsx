@@ -6,6 +6,7 @@ import GirlsCard from '../../components/TierCard/GirlsCard'
 import { Button, CustomAmountInput, Meta, Layout, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
+import Link from 'next/link'
 import { OptionTiers } from '../../types/tiers'
 import Timer from '../../components/Timer/Timer';
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
@@ -72,7 +73,7 @@ const GirlsPool: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to DirectEd Girls Pool</h3>
+							<h3>Fund scholarships with crypto - get a DirectEd Lion NFT</h3>
 							<h4>DirectEd Lions Collection</h4>
 							<p>Click tiers to learn more</p>
 							<div className='donate__tiers'>
@@ -90,21 +91,21 @@ const GirlsPool: NextPage = () => {
 							</div>
 						</div>
 						<div className='donate__info'>
-							<span> Direct Donation</span>
+							<span> Fund scholarships with credit card</span>
 							<p>No DirectEd Lions Collection NFT</p>
 
 							<div className='donate__buttons'>
 								
-								<a href="https://donate.stripe.com/5kA17P26U6vR9UIdQV" target='_blank'>
+								<Link href="https://donate.stripe.com/5kA17P26U6vR9UIdQV" target='_blank'>
 									<Button size='small' noShadow>
 										$500
 									</Button>
-								</a>
-								<a href="https://donate.stripe.com/5kAbMt12QbQb4Ao5ks" target='_blank'>
+								</Link>
+								<Link href="https://donate.stripe.com/5kAbMt12QbQb4Ao5ks" target='_blank'>
 									<Button size='small' noShadow>
 										$1100
 									</Button>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

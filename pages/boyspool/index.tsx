@@ -6,6 +6,7 @@ import { Button, Meta, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
+import Link from 'next/link'
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 import { Layout } from '../../components'
 
@@ -71,7 +72,7 @@ const BoysPool: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to DirecEd Boys Pool</h3>
+							<h3>Fund scholarships with crypto - get a DirectEd Lion NFT</h3>
 							<h4>DirectEd Lions Collection</h4>
 
 							{/* <p>
@@ -96,21 +97,21 @@ const BoysPool: NextPage = () => {
 							</div>
 						</div>
 						<div className='donate__info'>
-							<span> Direct Donation</span>
+							<span> Fund scholarships with credit card</span>
 							<p>No DirectEd Lions Collection NFT</p>
 
 							<div className='donate__buttons'>
 
-								<a href="https://donate.stripe.com/00g5o56na3jF3wk4gm" target='_blank'>
+								<Link href="https://donate.stripe.com/00g5o56na3jF3wk4gm" target='_blank'>
 									<Button size='small' noShadow>
 										$500
 									</Button>
-								</a>
-								<a href="https://donate.stripe.com/fZe7wdaDq3jF8QE14d" target='_blank'>
+								</Link>
+								<Link href="https://donate.stripe.com/fZe7wdaDq3jF8QE14d" target='_blank'>
 									<Button size='small' noShadow>
 										$1100
 									</Button>
-								</a>
+								</Link>
 							</div>
 
 

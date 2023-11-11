@@ -29,7 +29,7 @@ export const data = [
 	{
 		title: 'Moja Nadka',
 		image: '/static/images/Directed Heros/boyspool/MojaNadka.png',
-		url: 'https://pay.nmkr.io/?p=ab9ebe10673b43cba568b2f54438dc48&n=92c94c93c92d45a7b80faedf4f61f339',
+		url: '',
 		school: 'boyspool',
 	},
 	{
