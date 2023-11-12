@@ -1,29 +1,24 @@
 export const data = [
 	// Data for DirectEd Scholars
 	{
-		title: 'Jumbo Kylwo',
-		image: '/static/images/Directed Heros/',
-		url: '',
+		title: 'Kasandra Ribur',
+		image: '/static/images/Directed Heros/directedscholars/KasandraRibur.png',
+		url: 'https://pay.nmkr.io/?p=1ce018420cd247ac949c2427d34d6db3&n=0336d15025e04eba8b80a98cdd9d5015',
 		school: 'generalpool',
 	},
 	{
-		title: 'Sahara Mathi',
-		image: '/static/images/Directed Heros/',
-		url: '',
+		title: 'Nemea Colecha',
+		image: '/static/images/Directed Heros/directedscholars/NemeaColecha.png',
+		url: 'https://pay.nmkr.io/?p=1ce018420cd247ac949c2427d34d6db3&n=da0dc5713b1f4f37b1c70674bfa36396',
 		school: 'generalpool',
 	},
 	{
-		title: 'Shishu Darlido',
-		image: '/static/images/Directed Heros/',
-		url: '',
+		title: 'Kaleen Adrus',
+		image: '/static/images/Directed Heros/directedscholars/KaleenAdrus.jpeg',
+		url: 'https://pay.nmkr.io/?p=1ce018420cd247ac949c2427d34d6db3&n=bb908108a13344b79255d0680ca39e32',
 		school: 'generalpool',
 	},
-	{
-		title: 'Tanya Naigu',
-		image: '/static/images/Directed Heros/',
-		url: '',
-		school: 'generalpool',
-	},
+	
 
 	// Data for Boys Pool
 	{

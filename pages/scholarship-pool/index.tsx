@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import { Meta, DonorInfoTab, ScholarsCard, Layout, Timer } from '../../components'
-import Image from 'next/image'
+import Image from 'next/image';
+import { Button }  from '../../components';
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
 
@@ -66,7 +67,7 @@ const ScholarshipPool: NextPage = () => {
 
 			<PopupModal isOpen={isModalOpen} closeModal={handleCloseModal} handleReopenModal={handleReopenModal} />
 			{isModalOpen && (
-				<button onClick={handleReopenModal}></button>
+				<Button onClick={handleReopenModal}></Button>
 			)}
 			 <Meta title='Scholarship Pools' description='Scholarship Pools Page' />
 
