@@ -1,18 +1,18 @@
-import Image from 'next/image'
-import { GrFormClose } from 'react-icons/gr'
-import Button from '../Button/Button'
-import Modal, { ModalHandler } from '../Modal/Modal'
-import { useRef, useState } from 'react'
-import { useSelector } from 'react-redux'
-import { RootState } from './RootState'
-import { useWallet, useAddress } from '@meshsdk/react'
-import Link from 'next/link'
-import { Transaction } from '@meshsdk/core'
-import React from 'react'
-import axios from 'axios'
-import Royal from './Royal/Royal'
-import Hero from './Hero/Hero'
-import Warrior from './Warrior/Warrior'
+import Image from 'next/image';
+import { GrFormClose } from 'react-icons/gr';
+import Button from '../Button/Button';
+import Modal, { ModalHandler } from '../Modal/Modal';
+import { useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from './RootState';
+import { useWallet, useAddress } from '@meshsdk/react';
+import Link from 'next/link';
+import { Transaction } from '@meshsdk/core';
+import React from 'react';
+import axios from 'axios';
+import Royal from './Royal/Royal';
+import Hero from './Hero/Hero';
+import Warrior from './Warrior/Warrior';
 
 type TierCardProps = {
 	onClick?(event?: React.MouseEvent): void
@@ -116,7 +116,7 @@ const TierCard = ({ onClick, title, amount, image, school }: TierCardProps) => {
 					/>
 				)}
 
-				{title == 'Custom' && (
+				{title == '$500' && (
 					<>
 						<p>
 							You contribute to a Access Stipend pool where funds will be pooled
@@ -135,7 +135,7 @@ const TierCard = ({ onClick, title, amount, image, school }: TierCardProps) => {
 					</>
 				)}
 
-				{title == 'One Access Stipend' && (
+				{title == '$1000' && (
 					<>
 						<p>
 							You enable one highly-talented student from a low-income family

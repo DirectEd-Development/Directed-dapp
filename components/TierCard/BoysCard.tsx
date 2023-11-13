@@ -205,7 +205,7 @@ const BoysCard = ({
 					</>
 				)}
 
-				{title == 'Custom' && (
+				{title == '$500' && (
 					<>
 						<p>
 							You contribute to a Access Stipend pool where funds will be pooled
@@ -218,13 +218,16 @@ const BoysCard = ({
 							<li>Tutorial vouchers</li>
 							<li>Pocket money for living expenses</li>
 						</ul>
-						<Button onClick={() => handleDonate(amount)} variant='primary'>
-							Confirm Option
-						</Button>
+						<Link
+							target='_blank'
+							href="https://donate.stripe.com/00g5o56na3jF3wk4gm"
+						>
+							<Button variant='primary'>Confirm Option</Button>
+						</Link>
 					</>
 				)}
 
-				{title == 'One Access Stipend' && (
+				{title == '$1000' && (
 					<>
 						<p>
 							You enable one highly-talented student from a low-income family

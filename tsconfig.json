@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/nfts/hero.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/nfts/hero.tsx", "components/TierCard/CreditC1"],
   "exclude": ["node_modules"]
 }

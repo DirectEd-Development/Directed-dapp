@@ -24,13 +24,13 @@ export const lionOptions: OptionTiers[] = [
 
 export const noLionOptions: OptionTiers[] = [
 	{
-		amount: '2000/\$500',
-		title: 'One Access Stipend',
+		amount: '$500',
+		title: '$500',
 		school: '',
 	},
 	{
-		amount: 'custom',
-		title: 'Custom',
+		amount: '$1000',
+		title: '$1000',
 		school: '',
 	},
 ]
