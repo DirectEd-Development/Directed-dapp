@@ -19,6 +19,11 @@
 
 	&__image-container {
 		width: 100%;
+		@media (min-width: 768px) {
+			min-height: 38vh;
+	
+		
+		}
 
 	.image{
 		width: 100%;
