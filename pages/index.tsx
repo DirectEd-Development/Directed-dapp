@@ -371,7 +371,7 @@ const Home: NextPage = () => {
 				<section className='home__chart'>
 					<h3>Access scholarships expenditure</h3>
 					<img
-						src='/static/images/piechart.svg'
+						src='/static/images/Pie.svg'
 						alt='piechart'
 
 						className='home__piechart'
