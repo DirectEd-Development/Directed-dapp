@@ -111,7 +111,7 @@ const ScholarshipPool: NextPage = () => {
 							funded='0'
 							fundsLeft='10'
 							schoolName="Boys Pool"
-							amount='7000$'
+							amount='5000$'
 							schoolAlias="DirecEd Boys Pool"
 							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHim-Boys-only-funding-pool-eab27b1341b04da0b0e330e0e999be07?pvs=4'
 							image='/static/images/boyspool.jpg'
@@ -124,7 +124,7 @@ const ScholarshipPool: NextPage = () => {
 							funded='0'
 							fundsLeft='4'
 							schoolName="Girls Pool"
-							amount='7000$'
+							amount='2000$'
 							schoolAlias="DirectEd Girls Pool"
 							infoLink='https://directed.notion.site/DirectEd-s-EmpowerHer-Girls-only-funding-pool-fa956750d38d4e98b58655a15f2e2c9e?pvs=4'
 							image='/static/images/girlspool.jpg'
