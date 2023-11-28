@@ -22,7 +22,7 @@ const Donors: NextPage<Donors> = () => {
             name: "Coleen Chase",
         },
         {
-            name:"Kyle Wood",   
+            name:"CLOVR",   
 
         },
         {
