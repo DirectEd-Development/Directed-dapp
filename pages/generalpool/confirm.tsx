@@ -48,7 +48,7 @@ const Confirm: NextPage = () => {
 							<span className='w-1/4 flex items-center space-x-2'>
 								<span>Deadline</span> <AiOutlineQuestionCircle />
 							</span>
-							<span>11/23/24</span>
+							<span>12/30/24</span>
 						</li>
 					</ul>
 					<Button

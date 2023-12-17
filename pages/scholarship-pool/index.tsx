@@ -95,7 +95,7 @@ const ScholarshipPool: NextPage = () => {
 					>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='0'
+							funded='2'
 							fundsLeft='14'
 							schoolName='General Pool'
 							amount='7000$'
@@ -108,7 +108,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet2.length}
-							funded='0'
+							funded='1'
 							fundsLeft='10'
 							schoolName="Boys Pool"
 							amount='5000$'
@@ -121,7 +121,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 						<ScholarsCard
 							donated={wallet1.length}
-							funded='0'
+							funded='1'
 							fundsLeft='4'
 							schoolName="Girls Pool"
 							amount='2000$'
