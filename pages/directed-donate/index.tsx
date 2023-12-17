@@ -219,7 +219,7 @@ const WALLETJSX = ()=>{
                         window.location.href = 'https://donate.stripe.com/dR6aIpfXK2fB1oc288'
                         break;
                     case 'custom':
-                        window.location.href = ''
+                        window.location.href = 'https://donate.stripe.com/4gwbMtcLy7zVc2Q28n'
                         break;
             }
 
